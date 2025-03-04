@@ -1,6 +1,7 @@
 import { Box } from "@mui/material";
 import IntroSection from "./components/sections/intro/IntroSection";
 import OurServices from "./components/sections/ourServices/OurServices";
+import HowToOrderUs from "./components/sections/howToOrderUs/HowToOrderUs";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
     >
       <IntroSection />
       <OurServices />
+      <HowToOrderUs />
     </Box>
   );
 }
