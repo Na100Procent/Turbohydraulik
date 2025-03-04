@@ -1,4 +1,3 @@
-import theme from "@/app/theme/theme";
 import { Box, SxProps, Theme } from "@mui/material";
 import React, { JSX } from "react";
 
@@ -6,13 +5,12 @@ interface Props {
   children: JSX.Element;
   sx?: SxProps<Theme>;
   bgImage?: string;
+  bgColor?: string;
 }
 
-const BackgroundWrapper = ({ children, sx, bgImage }: Props) => {
+const BackgroundWrapper = ({ children, sx, bgImage, bgColor }: Props) => {
   const containerSx: SxProps<Theme> = {
-    background: bgImage
-      ? `url(${bgImage}) center  /cover no-repeat`
-      : theme.palette.custom.background,
+    background: bgImage ? `url(${bgImage}) center  /cover no-repeat` : bgColor,
     backgroundPosition: "10% 20%",
     position: "relative",
     padding: {
