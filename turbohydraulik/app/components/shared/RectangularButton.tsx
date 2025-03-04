@@ -6,23 +6,25 @@ interface Props {
   title: string;
   onClick?: () => void;
   icon?: JSX.Element;
+  bgColor?: string;
 }
-
-const buttonSx = {
-  background: theme.palette.secondary.main,
-  textTransform: "none",
-  display: "flex",
-  justifyContent: "center",
-  alignItems: "center",
-  padding: "10px 20px",
-  gap: "10px",
-};
 
 const titleSx = {
   color: theme.palette.primary.main,
   fontWeight: "600",
 };
-const RectangularButton = ({ title, onClick, icon }: Props) => {
+const RectangularButton = ({ title, onClick, icon, bgColor }: Props) => {
+  const buttonSx = {
+    background: bgColor
+      ? theme.palette.secondary.main
+      : theme.palette.custom.background,
+    textTransform: "none",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    padding: "10px 20px",
+    gap: "10px",
+  };
   return (
     <Button onClick={onClick} sx={buttonSx}>
       <Typography sx={titleSx}>{title}</Typography>

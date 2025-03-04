@@ -107,7 +107,6 @@ const theme = createTheme({
       styleOverrides: {
         root: {
           cursor: "inherit",
-
           textTransform: "none",
           userSelect: "none",
           fontFamily: "Inter",

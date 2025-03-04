@@ -1,5 +1,6 @@
 import { Box } from "@mui/material";
 import IntroSection from "./components/sections/intro/IntroSection";
+import OurServices from "./components/sections/ourServices/OurServices";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       flexDirection="column"
     >
       <IntroSection />
+      <OurServices />
     </Box>
   );
 }
