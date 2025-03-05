@@ -3,7 +3,6 @@ import BackgroundWrapper from "../../shared/BackgroundWrapper";
 import theme from "@/app/theme/theme";
 import SectionHeader from "../../shared/SectionHeader";
 import RectangularButton from "../../shared/RectangularButton";
-import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
 import { Box } from "@mui/material";
 import ServiceVerticalScrollList from "./ServicesHorizontalList";
 import { sectionXPadding } from "@/app/constants/styles";
@@ -26,18 +25,7 @@ const OurServices = () => {
               subHeader="services we offer"
               header="Our Plumbing Services"
             />
-            <RectangularButton
-              title="View All  Services"
-              icon={
-                <ArrowOutwardIcon
-                  sx={{
-                    width: "20px",
-                    height: "20px",
-                    color: theme.palette.primary.main,
-                  }}
-                />
-              }
-            />
+            <RectangularButton title="View All  Services" />
           </Box>
         </SectionPaddingWrapper>
         <ServiceVerticalScrollList />
