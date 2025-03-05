@@ -5,6 +5,8 @@ import HowToOrderUs from "./components/sections/howToOrderUs/HowToOrderUs";
 import InNumbers from "./components/sections/inNumbers/InNumbers";
 import AboutUs from "./components/sections/aboutUs/AboutUs";
 import CustomerReviews from "./components/sections/customerReviews/CustomerReviews";
+import RecentWorks from "./components/sections/recentWorks/RecentWorks";
+import FAQsection from "./components/sections/faqSection/FAQsection";
 
 export default function Home() {
   return (
@@ -20,6 +22,8 @@ export default function Home() {
       <HowToOrderUs />
       <CustomerReviews />
       <InNumbers />
+      <RecentWorks />
+      <FAQsection />
     </Box>
   );
 }

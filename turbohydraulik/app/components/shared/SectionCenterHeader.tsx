@@ -18,11 +18,11 @@ const SectionCenterHeader = ({
 }: Props) => {
   const headerSx = {
     fontWeight: "900",
-    fontSize: "40px",
+    fontSize: "50px",
     color: headerColor,
-    maxWidth: "600px",
+    maxWidth: "700px",
     textAlign: "center",
-    lineHeight: "40px",
+    lineHeight: "50px",
   };
   const topHeaderSx = {
     color: topHeaderColor as string,

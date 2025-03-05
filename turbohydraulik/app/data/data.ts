@@ -34,3 +34,26 @@ export const services: Service[] = [
   { id: 2, name: "Montaź Łazienki", slug: "montaz_lazienki" },
   { id: 3, name: "Naprawa", slug: "naprawa" },
 ];
+
+export const faqs = [
+  {
+    question: "What is Next.js?",
+    answer:
+      "Next.js is a React framework for building server-side rendered applications.",
+  },
+  {
+    question: "What is Next.js?",
+    answer:
+      "Next.js is a React framework for building server-side rendered applications.",
+  },
+  {
+    question: "What is Next.js?",
+    answer:
+      "Next.js is a React framework for building server-side rendered applications.",
+  },
+  {
+    question: "How do I install Next.js?",
+    answer:
+      "You can install Next.js by running npm install next react react-dom.",
+  },
+];
