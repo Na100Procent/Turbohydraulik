@@ -1,1 +1,1 @@
-export const sectionXPadding = "0 60px";
+export const sectionXPadding = "0 100px";

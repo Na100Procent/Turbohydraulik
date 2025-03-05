@@ -29,7 +29,8 @@ const theme = createTheme({
 
     custom: {
       background: "#F9FAFB",
-      darkGray: "#374151",
+      yellowLight: "#fff8e2",
+      darkGray: "#5A5A5A",
       lightGray: "#6B7280",
       errorRed: "#ff3333",
       lightBorder: "#F3F4F6",

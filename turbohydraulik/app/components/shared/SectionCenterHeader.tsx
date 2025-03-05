@@ -20,7 +20,7 @@ const SectionCenterHeader = ({
     fontWeight: "900",
     fontSize: "40px",
     color: headerColor,
-    maxWidth: "400px",
+    maxWidth: "600px",
     textAlign: "center",
     lineHeight: "40px",
   };
@@ -33,9 +33,9 @@ const SectionCenterHeader = ({
   };
 
   const bottomHeaderSx = {
-    fontWeight: "900",
+    fontWeight: "500",
     fontSize: "15px",
-    color: headerColor,
+    color: "rgb(68, 68, 68)",
     marginTop: "20px",
   };
 
