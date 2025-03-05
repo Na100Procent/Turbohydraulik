@@ -8,7 +8,6 @@ import { Box } from "@mui/material";
 import ServiceVerticalScrollList from "./ServicesHorizontalList";
 import { sectionXPadding } from "@/app/constants/styles";
 import SectionPaddingWrapper from "../../shared/SectionWrapper";
-import { serviceCardsData } from "@/app/constants/mockedData";
 
 const OurServices = () => {
   return (
@@ -41,7 +40,7 @@ const OurServices = () => {
             />
           </Box>
         </SectionPaddingWrapper>
-        <ServiceVerticalScrollList items={serviceCardsData} />
+        <ServiceVerticalScrollList />
       </>
     </BackgroundWrapper>
   );

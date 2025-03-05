@@ -16,16 +16,19 @@ const SectionHeader = ({
 }: Props) => {
   const headerSx = {
     fontWeight: "900",
-    lineHeight: "60px",
-    fontSize: "60px",
+    zIndex: 10,
+    lineHeight: "50px",
+    fontSize: "50px",
     color: headerColor,
   };
   const subHeaderSx = {
     color: subHeaderColor,
     fontWeight: "600",
+    zIndex: 10,
     textTransform: "uppercase",
     letterSpacing: "1px",
     fontSize: "15px",
+    marginBottom: "10px",
   };
 
   return (

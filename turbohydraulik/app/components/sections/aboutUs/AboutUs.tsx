@@ -30,18 +30,21 @@ const AboutUs = () => {
 
             <ServiceCircularLink />
           </Box>
-          <Box display="flex" mt="80px" gap="100px" maxHeight="500px">
-            <Image src={aboutUsUrl} alt="About img" width={400} height={490} />
+          <Box display="flex" mt="80px" gap="100px">
+            <Image
+              src={aboutUsUrl}
+              alt="About img"
+              width={400}
+              height={490}
+              style={{}}
+            />
             <Box
               display="flex"
               flexDirection="column"
               gap="30px"
               justifyContent="space-between"
             >
-              <Typography
-                maxWidth="700px"
-                sx={{ color: theme.palette.custom.darkGray }}
-              >
+              <Typography sx={{ color: theme.palette.custom.darkGray }}>
                 Turbo Hydraulik is a company with many years of experience in
                 the hydraulics industry, which specializes in comprehensive
                 repair, assembly and maintenance services. We have been

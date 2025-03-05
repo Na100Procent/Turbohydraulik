@@ -30,6 +30,7 @@ const theme = createTheme({
     custom: {
       background: "#F9FAFB",
       yellowLight: "#fff8e2",
+      blueLight: "#e5edf1",
       darkGray: "#5A5A5A",
       lightGray: "#6B7280",
       errorRed: "#ff3333",

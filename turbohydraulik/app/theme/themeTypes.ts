@@ -15,6 +15,7 @@ declare module "@mui/material/styles" {
     custom: {
       background: string;
       yellowLight: string;
+      blueLight: string;
       darkGray: string;
       lightGray: string;
       errorRed: string;
@@ -27,6 +28,7 @@ declare module "@mui/material/styles" {
     custom: {
       background: string;
       yellowLight: string;
+      blueLight: string;
       darkGray: string;
       lightGray: string;
       errorRed: string;
