@@ -7,6 +7,7 @@ import { Box } from "@mui/material";
 import ServiceVerticalScrollList from "./ServicesHorizontalList";
 import { sectionXPadding } from "@/app/constants/styles";
 import SectionPaddingWrapper from "../../shared/SectionWrapper";
+import { YellowLeftOrnament } from "@/app/assets/icons/icons";
 
 const OurServices = () => {
   return (
@@ -28,6 +29,9 @@ const OurServices = () => {
             <RectangularButton title="View All  Services" />
           </Box>
         </SectionPaddingWrapper>
+        <Box position={"absolute"} top={"-130px"} right={"-10px"}>
+          <YellowLeftOrnament />
+        </Box>
         <ServiceVerticalScrollList />
       </>
     </BackgroundWrapper>
