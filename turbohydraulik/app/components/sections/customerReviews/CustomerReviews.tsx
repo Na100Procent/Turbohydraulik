@@ -6,7 +6,7 @@ import { Box, Typography } from "@mui/material";
 import { sectionXPadding } from "@/app/constants/styles";
 import SectionPaddingWrapper from "../../shared/SectionWrapper";
 import ReviewsHorizontalScrollList from "./ReviewsHorizontalScrollList";
-import { CommasIcon } from "@/app/assets/icons/icons";
+import { CommasIcon, YellowRightOrnament } from "@/app/assets/icons/icons";
 
 const CustomerReviews = () => {
   const mainColor = theme.palette.primary.main;
@@ -32,6 +32,9 @@ const CustomerReviews = () => {
             </Typography>
           </Box>
         </SectionPaddingWrapper>
+        <Box position={"absolute"} top={"-130px"} left={"-10px"}>
+          <YellowRightOrnament />
+        </Box>
         <Box
           sx={{ position: "absolute", top: "100px", right: "100px", zIndex: 0 }}
         >

@@ -7,6 +7,7 @@ import AboutUs from "./components/sections/aboutUs/AboutUs";
 import CustomerReviews from "./components/sections/customerReviews/CustomerReviews";
 import RecentWorks from "./components/sections/recentWorks/RecentWorks";
 import FAQsection from "./components/sections/faqSection/FAQsection";
+import Footer from "./components/sections/footer/Footer";
 
 export default function Home() {
   return (
@@ -24,6 +25,7 @@ export default function Home() {
       <InNumbers />
       <RecentWorks />
       <FAQsection />
+      <Footer />
     </Box>
   );
 }

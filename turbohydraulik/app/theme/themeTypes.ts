@@ -21,6 +21,7 @@ declare module "@mui/material/styles" {
       errorRed: string;
       lightBorder: string;
       positiveGreen: string;
+      darkBlue: string;
     };
   }
 
@@ -34,6 +35,7 @@ declare module "@mui/material/styles" {
       errorRed: string;
       lightBorder: string;
       positiveGreen: string;
+      darkBlue: string;
     };
   }
 

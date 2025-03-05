@@ -36,6 +36,7 @@ const theme = createTheme({
       errorRed: "#ff3333",
       lightBorder: "#F3F4F6",
       positiveGreen: "#1F7640",
+      darkBlue: "#003F67",
     },
   },
   typography: {

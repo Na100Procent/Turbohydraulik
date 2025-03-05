@@ -4,7 +4,6 @@ import { Box, Typography, IconButton, Collapse } from "@mui/material";
 import AddIcon from "@mui/icons-material/Add";
 import ClearOutlinedIcon from "@mui/icons-material/ClearOutlined";
 import theme from "@/app/theme/theme";
-import { min } from "class-validator";
 
 interface FAQItem {
   question: string;

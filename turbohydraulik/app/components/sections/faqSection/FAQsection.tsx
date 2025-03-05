@@ -33,8 +33,8 @@ const FAQsection = () => {
               <Image
                 src="https://github.com/user-attachments/assets/ca378ab7-a9b2-4736-ac5f-fe20ad776b11"
                 alt="image"
-                width={380}
-                height={450}
+                width={320}
+                height={350}
                 style={{ marginBottom: "20px" }}
               />
               <RectangularButton

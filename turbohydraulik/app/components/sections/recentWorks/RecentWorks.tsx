@@ -4,6 +4,8 @@ import BackgroundWrapper from "../../shared/BackgroundWrapper";
 import SectionPaddingWrapper from "../../shared/SectionWrapper";
 import SectionCenterHeader from "../../shared/SectionCenterHeader";
 import MosaicGrid from "./MosaicGrid";
+import { YellowLeftOrnament } from "@/app/assets/icons/icons";
+import { Box } from "@mui/material";
 
 const RecentWorks = () => {
   return (
@@ -18,6 +20,10 @@ const RecentWorks = () => {
             headerColor={theme.palette.primary.main}
           />
         </SectionPaddingWrapper>
+        <Box position={"absolute"} top={"-130px"} right={"-10px"}>
+          <YellowLeftOrnament />
+        </Box>
+
         <MosaicGrid />
       </>
     </BackgroundWrapper>
