@@ -10,7 +10,12 @@ const HowToOrderUs = () => {
   return (
     <BackgroundWrapper bgColor={theme.palette.custom.background}>
       <SectionPaddingWrapper>
-        <Box display="flex" flexDirection="column" gap="60px">
+        <Box
+          display="flex"
+          flexDirection="column"
+          gap="60px"
+          padding="0 0 100px 0"
+        >
           <SectionCenterHeader
             header="How to order a Plumbing service?"
             bottomHeader="To order a plumbing service, contact us by phone or via the contact form on our website."

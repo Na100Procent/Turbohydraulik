@@ -4,6 +4,7 @@ import OurServices from "./components/sections/ourServices/OurServices";
 import HowToOrderUs from "./components/sections/howToOrderUs/HowToOrderUs";
 import InNumbers from "./components/sections/inNumbers/InNumbers";
 import AboutUs from "./components/sections/aboutUs/AboutUs";
+import CustomerReviews from "./components/sections/customerReviews/CustomerReviews";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       <AboutUs />
       <OurServices />
       <HowToOrderUs />
+      <CustomerReviews />
       <InNumbers />
     </Box>
   );
