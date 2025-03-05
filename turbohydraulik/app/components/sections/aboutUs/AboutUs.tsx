@@ -1,0 +1,65 @@
+import React from "react";
+import BackgroundWrapper from "../../shared/BackgroundWrapper";
+import theme from "@/app/theme/theme";
+import SectionHeader from "../../shared/SectionHeader";
+import { Box, Typography } from "@mui/material";
+import { sectionXPadding } from "@/app/constants/styles";
+import SectionPaddingWrapper from "../../shared/SectionWrapper";
+import ServiceCircularLink from "./components/ServiceCircularLink";
+import Image from "next/image";
+import { aboutUsUrl } from "@/app/assets/images/imagesUrls";
+import OurMission from "./components/OurMission";
+import ReadMoreButton from "./components/ReadMoreButton";
+
+const AboutUs = () => {
+  return (
+    <BackgroundWrapper bgColor={theme.palette.custom.background}>
+      <SectionPaddingWrapper>
+        <Box padding={sectionXPadding}>
+          <Box
+            display="flex"
+            alignItems="center"
+            justifyContent="space-between"
+          >
+            <SectionHeader
+              subHeaderColor={theme.palette.secondary.main}
+              headerColor={theme.palette.primary.main}
+              subHeader="ABOUT US"
+              header="Provide the highest level Of Plumbing services"
+            />
+
+            <ServiceCircularLink />
+          </Box>
+          <Box display="flex" mt="80px" gap="100px" maxHeight="500px">
+            <Image src={aboutUsUrl} alt="About img" width={400} height={490} />
+            <Box
+              display="flex"
+              flexDirection="column"
+              gap="30px"
+              justifyContent="space-between"
+            >
+              <Typography
+                maxWidth="700px"
+                sx={{ color: theme.palette.custom.darkGray }}
+              >
+                Turbo Hydraulik is a company with many years of experience in
+                the hydraulics industry, which specializes in comprehensive
+                repair, assembly and maintenance services. We have been
+                operating on the market for many years, gaining the trust of
+                customers thanks to our reliability, professionalism and express
+                response to notifications. Our team consists of qualified
+                plumbers who guarantee the highest quality of services.
+              </Typography>
+              <OurMission />
+              <div>
+                <ReadMoreButton />
+              </div>
+            </Box>
+          </Box>
+        </Box>
+      </SectionPaddingWrapper>
+    </BackgroundWrapper>
+  );
+};
+
+export default AboutUs;

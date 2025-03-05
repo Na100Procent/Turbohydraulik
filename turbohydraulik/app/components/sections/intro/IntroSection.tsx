@@ -1,12 +1,11 @@
 import React from "react";
 import BackgroundWrapper from "../../shared/BackgroundWrapper";
-import RectangularButton from "../../shared/RectangularButton";
-import PhoneIcon from "@mui/icons-material/Phone";
 import theme from "@/app/theme/theme";
 import HeaderBox from "./HeaderBox";
 import { Box } from "@mui/material";
 import { introBgUrl } from "@/app/assets/images/imagesUrls";
 import HorizontalBanner from "./HorizontalBanner";
+import CallUsButton from "../../shared/CallUsButton";
 
 const heroSx = {
   borderRadius: "15px",
@@ -32,18 +31,7 @@ const IntroSection = () => {
           <Box sx={heroSx}>
             <HeaderBox />
             <Box mt="30px">
-              <RectangularButton
-                title="Call: 501 420 212"
-                icon={
-                  <PhoneIcon
-                    sx={{
-                      width: "20px",
-                      height: "20px",
-                      color: theme.palette.primary.main,
-                    }}
-                  />
-                }
-              />
+              <CallUsButton />
             </Box>
           </Box>
         </Box>

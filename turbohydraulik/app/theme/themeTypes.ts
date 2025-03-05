@@ -14,6 +14,7 @@ declare module "@mui/material/styles" {
   interface Palette {
     custom: {
       background: string;
+      yellowLight: string;
       darkGray: string;
       lightGray: string;
       errorRed: string;
@@ -25,6 +26,7 @@ declare module "@mui/material/styles" {
   interface PaletteOptions {
     custom: {
       background: string;
+      yellowLight: string;
       darkGray: string;
       lightGray: string;
       errorRed: string;
