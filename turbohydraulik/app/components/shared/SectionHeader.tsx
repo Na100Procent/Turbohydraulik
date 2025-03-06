@@ -15,16 +15,19 @@ const SectionHeader = ({
   headerColor,
 }: Props) => {
   const headerSx = {
-    fontWeight: "900",
+    fontWeight: "700",
     zIndex: 10,
     lineHeight: "50px",
+    fontFamily: "UniteaSans",
     fontSize: "50px",
+    maxWidth: "700px",
     color: headerColor,
   };
   const subHeaderSx = {
     color: subHeaderColor,
     fontWeight: "600",
     zIndex: 10,
+    fontFamily: "UniteaSans",
     textTransform: "uppercase",
     letterSpacing: "1px",
     fontSize: "15px",

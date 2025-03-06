@@ -5,6 +5,7 @@ import SectionCenterHeader from "../../shared/SectionCenterHeader";
 import SectionPaddingWrapper from "../../shared/SectionWrapper";
 import HowToList from "./HowToList";
 import { Box } from "@mui/material";
+import CallUsButton from "../../shared/CallUsButton";
 
 const HowToOrderUs = () => {
   return (
@@ -15,6 +16,7 @@ const HowToOrderUs = () => {
           flexDirection="column"
           gap="60px"
           padding="0 0 100px 0"
+          sx={{ fontFamily: "UniteaSans" }}
         >
           <SectionCenterHeader
             header="How to order a Plumbing service?"
@@ -22,6 +24,9 @@ const HowToOrderUs = () => {
             headerColor={theme.palette.primary.main}
           />
           <HowToList />
+          <Box display={"flex"} justifyContent={"center"} marginTop={"50px"}>
+            <CallUsButton />
+          </Box>
         </Box>
       </SectionPaddingWrapper>
     </BackgroundWrapper>

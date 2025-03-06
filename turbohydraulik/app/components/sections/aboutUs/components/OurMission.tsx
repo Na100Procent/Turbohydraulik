@@ -11,10 +11,15 @@ const OurMission = () => {
         background: "#f0f4f7",
       }}
     >
-      <Typography sx={{ fontWeight: "900", fontSize: "30px" }}>
+      <Typography
+        sx={{ fontWeight: "600", fontSize: "30px", fontFamily: "UniteaSans" }}
+      >
         Our Mission
       </Typography>
-      <Typography mt="15px">
+      <Typography
+        mt="15px"
+        sx={{ fontFamily: "UniteaSans", fontWeight: "500" }}
+      >
         Our mission is to provide the highest level of plumbing services that
         meet the expectations of our customers. We focus on timeliness,
         precision and safety, taking care of every detail of the orders we carry

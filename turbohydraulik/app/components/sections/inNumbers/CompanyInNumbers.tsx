@@ -35,8 +35,9 @@ export default function CompanyInNumbers() {
           <Box sx={{ textAlign: "center", px: 3 }}>
             <Typography
               sx={{
-                fontSize: "65px",
-                fontWeight: "900",
+                fontSize: "75px",
+                fontWeight: "800",
+                fontFamily: "UniteaSans",
                 color: theme.palette.secondary.main,
               }}
             >

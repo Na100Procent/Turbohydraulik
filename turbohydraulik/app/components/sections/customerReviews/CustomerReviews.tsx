@@ -7,6 +7,7 @@ import { sectionXPadding } from "@/app/constants/styles";
 import SectionPaddingWrapper from "../../shared/SectionWrapper";
 import ReviewsHorizontalScrollList from "./ReviewsHorizontalScrollList";
 import { CommasIcon, YellowRightOrnament } from "@/app/assets/icons/icons";
+import RectangularButton from "../../shared/RectangularButton";
 
 const CustomerReviews = () => {
   const mainColor = theme.palette.primary.main;
@@ -26,7 +27,11 @@ const CustomerReviews = () => {
               subHeader="OUR TESTIMONIALS"
               header="Customer Reviews About Turbo Hydraulik"
             />
-            <Typography mt="30px" color={mainColor}>
+            <Typography
+              mt="30px"
+              color={mainColor}
+              sx={{ fontFamily: "UniteaSans", fontWeight: "500" }}
+            >
               To order a plumbing service, contact us by phone or via the
               contact form on our website.
             </Typography>
@@ -42,6 +47,9 @@ const CustomerReviews = () => {
         </Box>
 
         <ReviewsHorizontalScrollList />
+        <Box display={"flex"} justifyContent={"center"} marginTop={"50px"}>
+          <RectangularButton title="View All Reviews" />
+        </Box>
       </>
     </BackgroundWrapper>
   );

@@ -15,7 +15,7 @@ const LogoContact = () => {
     >
       <LogoIcon />
 
-      <Box display={"flex"} gap={"20px"}>
+      <Box display={"flex"} gap={"50px"}>
         <ContactForm
           subHeader="PHONE NO"
           header="+1 (555) 000-0000"

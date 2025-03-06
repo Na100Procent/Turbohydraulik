@@ -7,13 +7,13 @@ import FAQElements from "./FAQElements";
 import { faqs } from "@/app/data/data";
 import { Box } from "@mui/material";
 import Image from "next/image";
-import RectangularButton from "../../shared/RectangularButton";
+import CallUsButton from "../../shared/CallUsButton";
 
 const FAQsection = () => {
   return (
     <BackgroundWrapper bgColor={theme.palette.custom.background}>
       <SectionPaddingWrapper>
-        <>
+        <Box paddingBottom={"200px"}>
           <SectionCenterHeader
             topHeaderColor={theme.palette.secondary.main}
             topHeader="FAQ’S QUESTIONS"
@@ -37,14 +37,15 @@ const FAQsection = () => {
                 height={350}
                 style={{ marginBottom: "20px" }}
               />
-              <RectangularButton
+              {/* <RectangularButton
                 title="View all faq's"
                 bgColor={theme.palette.secondary.main}
                 titleColor={theme.palette.primary.main}
-              />
+              /> */}
+              <CallUsButton />
             </Box>
           </Box>
-        </>
+        </Box>
       </SectionPaddingWrapper>
     </BackgroundWrapper>
   );

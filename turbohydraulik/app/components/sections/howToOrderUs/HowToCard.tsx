@@ -32,15 +32,26 @@ const HowToCard: React.FC<HowToCardProps> = ({
         justifyContent: "start",
         gap: "20px",
         alignItems: "center",
+
         p: 2,
       }}
     >
       <Box sx={{ mt: 2 }}>{icon}</Box>
       <Box sx={{ textAlign: "center" }}>
-        <Typography variant="h6" sx={{ fontWeight: "bold", mb: "10px" }}>
+        <Typography
+          variant="h6"
+          sx={{ fontFamily: "UniteaSans", fontWeight: "bold", mb: "10px" }}
+        >
           {title}
         </Typography>
-        <Typography variant="body2" sx={{ maxWidth: "300px" }}>
+        <Typography
+          variant="body2"
+          sx={{
+            fontFamily: "UniteaSans",
+            maxWidth: "300px",
+            fontWeight: "500",
+          }}
+        >
           {subtitle}
         </Typography>
       </Box>

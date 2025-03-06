@@ -31,7 +31,8 @@ const RectangularButton = ({
   const titleSx = {
     color: titleColor ? titleColor : theme.palette.primary.main,
     fontWeight: "900",
-    fontSize: "13px",
+    fontSize: "14px",
+    fontFamily: "UniteaSans",
     textTransform: "uppercase",
   };
   return (

@@ -9,15 +9,17 @@ interface ContactFormProps {
 }
 
 const subHeaderSx = {
-  fontWeight: "200",
-  fontSize: "12px",
+  fontWeight: "400",
+  fontSize: "11px",
   color: theme.palette.custom.background,
+  fontFamily: "UniteaSans",
 };
 
 const headerSx = {
-  fontWeight: "900",
+  fontWeight: "600",
   fontSize: "17px",
   color: theme.palette.custom.background,
+  fontFamily: "UniteaSans",
 };
 
 const ContactForm = ({ subHeader, header, icon }: ContactFormProps) => {
