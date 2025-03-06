@@ -4,11 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "export": "output: export",
-    "deploy": "npm run build && mkdir -p out && touch out/.nojekyll && gh-pages -d out"
+    "build": "next build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@emotion/cache": "^11.14.0",
