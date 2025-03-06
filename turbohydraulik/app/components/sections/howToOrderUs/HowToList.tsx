@@ -5,7 +5,7 @@ import {
   AppointmentIcon,
   InfosIcon,
   MessageIcon,
-} from "@/app/assets/icons/icons";
+} from "@/public/fonts/assets/icons/icons";
 
 export const verticalInfoCardsData = [
   {

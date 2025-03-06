@@ -4,7 +4,7 @@ import theme from "@/app/theme/theme";
 import TopMenuButtons from "./TopMenuButtons";
 import { Box } from "@mui/material";
 import ContactElements from "./ContactElements";
-import { TopMenuLogo } from "@/app/assets/icons/icons";
+import { TopMenuLogo } from "@/public/fonts/assets/icons/icons";
 import ContactUsButton from "../../shared/ContactUsButton";
 
 const container = {

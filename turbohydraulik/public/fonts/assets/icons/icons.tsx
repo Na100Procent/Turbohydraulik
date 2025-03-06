@@ -14,7 +14,6 @@ import Logo from "./Logo.svg";
 export const AppointmentIcon = () => (
   <Image src={Appointment} alt="Appointment" />
 );
-
 export const InfosIcon = () => <Image src={Infos} alt="Infos" />;
 export const MessageIcon = () => <Image src={Message} alt="Message" />;
 

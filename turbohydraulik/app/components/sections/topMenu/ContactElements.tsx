@@ -7,7 +7,7 @@ import VerticalSeparator from "../../shared/VerticalSeparator";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import EmailIcon from "@mui/icons-material/Email";
-import { TopMenuOrnament } from "@/app/assets/icons/icons";
+import { TopMenuOrnament } from "@/public/fonts/assets/icons/icons";
 
 const contactElement = {
   display: "flex",

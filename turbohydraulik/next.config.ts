@@ -20,22 +20,13 @@ const nextConfig = {
     module: {
       rules: {
         test: RegExp;
-        issuer: RegExp;
-        use: { loader: string; options: { svgo: boolean } }[];
+        use: string[];
       }[];
     };
   }) {
     config.module.rules.push({
       test: /\.svg$/,
-      issuer: /\.[jt]sx?$/,
-      use: [
-        {
-          loader: "@svgr/webpack",
-          options: {
-            svgo: false,
-          },
-        },
-      ],
+      use: ["@svgr/webpack"],
     });
     return config;
   },

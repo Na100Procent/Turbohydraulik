@@ -7,7 +7,7 @@ import LogoContact from "./LogoContact";
 import HorizontalSeparator from "./components/HorizontalSeparator";
 import LinksAndServices from "./components/LinksAndServices";
 import SocialMediasSeparator from "./components/SocialMediasSeparator";
-import { YellowRightOrnament } from "@/app/assets/icons/icons";
+import { YellowRightOrnament } from "@/public/fonts/assets/icons/icons";
 import PlumberBanner from "./components/PlumberBanner";
 import { sectionIds } from "@/app/constants/appConstants";
 
