@@ -4,13 +4,14 @@ import BackgroundWrapper from "../../shared/BackgroundWrapper";
 import SectionPaddingWrapper from "../../shared/SectionWrapper";
 import SectionCenterHeader from "../../shared/SectionCenterHeader";
 import MosaicGrid from "./MosaicGrid";
-// import { YellowLeftOrnament } from "@/app/assets/icons/icons";
+import { YellowLeftOrnament } from "@/app/assets/icons/icons";
 import { Box } from "@mui/material";
+import { sectionIds } from "@/app/constants/appConstants";
 
 const RecentWorks = () => {
   return (
     <BackgroundWrapper bgColor={theme.palette.custom.yellowLight}>
-      <>
+      <Box id={sectionIds.projects}>
         <SectionPaddingWrapper>
           <SectionCenterHeader
             topHeaderColor={theme.palette.secondary.main}
@@ -21,11 +22,11 @@ const RecentWorks = () => {
           />
         </SectionPaddingWrapper>
         <Box position={"absolute"} top={"-130px"} right={"-10px"}>
-          {/* <YellowLeftOrnament /> */}
+          <YellowLeftOrnament />
         </Box>
 
         <MosaicGrid />
-      </>
+      </Box>
     </BackgroundWrapper>
   );
 };

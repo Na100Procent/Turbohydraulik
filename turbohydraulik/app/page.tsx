@@ -9,6 +9,7 @@ import RecentWorks from "./components/sections/recentWorks/RecentWorks";
 import FAQsection from "./components/sections/faqSection/FAQsection";
 import Footer from "./components/sections/footer/Footer";
 import TopMenu from "./components/sections/topMenu/TopMenu";
+import { sectionIds } from "./constants/appConstants";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       justifyContent="center"
       alignItems="center"
       flexDirection="column"
+      id={sectionIds.home}
     >
       <TopMenu />
       <IntroSection />

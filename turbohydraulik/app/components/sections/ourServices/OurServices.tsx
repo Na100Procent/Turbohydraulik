@@ -6,8 +6,9 @@ import { Box } from "@mui/material";
 import ServiceVerticalScrollList from "./ServicesHorizontalList";
 import { sectionXPadding } from "@/app/constants/styles";
 import SectionPaddingWrapper from "../../shared/SectionWrapper";
-// import { YellowLeftOrnament } from "@/app/assets/icons/icons";
+import { YellowLeftOrnament } from "@/app/assets/icons/icons";
 import CallUsButton from "../../shared/CallUsButton";
+import RectangularButton from "../../shared/RectangularButton";
 
 const OurServices = () => {
   return (
@@ -26,11 +27,11 @@ const OurServices = () => {
               subHeader="services we offer"
               header="Our Plumbing Services"
             />
-            {/* <RectangularButton title="View All  Services" /> */}
+            <RectangularButton title="View All  Services" />
           </Box>
         </SectionPaddingWrapper>
         <Box position={"absolute"} top={"-130px"} right={"-10px"}>
-          {/* <YellowLeftOrnament /> */}
+          <YellowLeftOrnament />
         </Box>
         <ServiceVerticalScrollList />
         <Box display={"flex"} justifyContent={"center"}>
