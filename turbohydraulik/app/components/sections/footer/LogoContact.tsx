@@ -1,4 +1,4 @@
-// import { LogoIcon } from "@/app/assets/icons/icons";
+import { LogoIcon } from "@/app/assets/icons/icons";
 import { Box } from "@mui/material";
 import React from "react";
 import ContactForm from "./components/ContactForm";
@@ -13,7 +13,7 @@ const LogoContact = () => {
       alignItems={"center"}
       justifyContent={"space-between"}
     >
-      {/* <LogoIcon /> */}
+      <LogoIcon />
 
       <Box display={"flex"} gap={"50px"}>
         <ContactForm

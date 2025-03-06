@@ -7,8 +7,9 @@ import LogoContact from "./LogoContact";
 import HorizontalSeparator from "./components/HorizontalSeparator";
 import LinksAndServices from "./components/LinksAndServices";
 import SocialMediasSeparator from "./components/SocialMediasSeparator";
-// import { YellowRightOrnament } from "@/app/assets/icons/icons";
+import { YellowRightOrnament } from "@/app/assets/icons/icons";
 import PlumberBanner from "./components/PlumberBanner";
+import { sectionIds } from "@/app/constants/appConstants";
 
 const Footer = () => {
   return (
@@ -16,7 +17,7 @@ const Footer = () => {
       bgColor={theme.palette.primary.main}
       sx={{ padding: "0" }}
     >
-      <Box>
+      <Box id={sectionIds.contact}>
         <PlumberBanner />
         <Box
           padding={"150px 0 0 0"}
@@ -31,7 +32,7 @@ const Footer = () => {
           <SocialMediasSeparator />
           <Policy />
           <Box position={"absolute"} top={"-130px"} left={"-10px"}>
-            {/* <YellowRightOrnament /> */}
+            <YellowRightOrnament />
           </Box>
         </Box>
       </Box>

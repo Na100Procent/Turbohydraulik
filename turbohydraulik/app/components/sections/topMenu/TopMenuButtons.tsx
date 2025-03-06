@@ -2,6 +2,7 @@ import { Box, Typography } from "@mui/material";
 import React from "react";
 import TopMenuButton from "./TopMenuButton";
 import theme from "@/app/theme/theme";
+import { sectionIds } from "@/app/constants/appConstants";
 
 const Separator = () => (
   <Typography
@@ -24,17 +25,17 @@ const container = {
 const TopMenuButtons = () => {
   return (
     <Box sx={container}>
-      <TopMenuButton title="Home" />
+      <TopMenuButton title="Home" section={sectionIds.home} />
       <Separator />
-      <TopMenuButton title="About Us" />
+      <TopMenuButton title="About Us" section={sectionIds.about} />
       <Separator />
-      <TopMenuButton title="Order us" />
+      <TopMenuButton title="Order us" section={sectionIds.orderUs} />
       <Separator />
-      <TopMenuButton title="Reviews" />
+      <TopMenuButton title="Reviews" section={sectionIds.reviews} />
       <Separator />
-      <TopMenuButton title="Projects" />
+      <TopMenuButton title="Projects" section={sectionIds.projects} />
       <Separator />
-      <TopMenuButton title="FAQ's" />
+      <TopMenuButton title="FAQ's" section={sectionIds.faq} />
     </Box>
   );
 };

@@ -6,6 +6,7 @@ import SectionPaddingWrapper from "../../shared/SectionWrapper";
 import HowToList from "./HowToList";
 import { Box } from "@mui/material";
 import CallUsButton from "../../shared/CallUsButton";
+import { sectionIds } from "@/app/constants/appConstants";
 
 const HowToOrderUs = () => {
   return (
@@ -17,6 +18,7 @@ const HowToOrderUs = () => {
           gap="60px"
           padding="0 0 100px 0"
           sx={{ fontFamily: "UniteaSans" }}
+          id={sectionIds.orderUs}
         >
           <SectionCenterHeader
             header="How to order a Plumbing service?"

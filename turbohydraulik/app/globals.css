@@ -41,6 +41,7 @@ body,
   background: #575757;
   font-family: "UniteaSans";
   box-sizing: border-box;
+  overflow: auto;
   scroll-behavior: smooth !important;
   height: 100% !important;
   width: 100%;

@@ -1,4 +1,3 @@
-import TopMenuOrn from "../../../assets/icons/TopMenuOrnament.svg";
 import { Box, IconButton, Typography } from "@mui/material";
 import React from "react";
 import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
@@ -8,6 +7,7 @@ import VerticalSeparator from "../../shared/VerticalSeparator";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import EmailIcon from "@mui/icons-material/Email";
+import { TopMenuOrnament } from "@/app/assets/icons/icons";
 
 const contactElement = {
   display: "flex",
@@ -20,7 +20,13 @@ const contactElement = {
 const ornamentSx = {
   position: "absolute",
   top: "-60px",
-  right: "-1200px",
+  right: {
+    xl: "-900px",
+    lg: "-1250px",
+    md: "-1550px",
+    sm: "-1700px",
+    xs: "-1200px",
+  },
   zIndex: 1,
 };
 
@@ -53,7 +59,7 @@ const ContactElements = () => {
   return (
     <Box mb="-15px">
       <Box sx={ornamentSx}>
-        <TopMenuOrn />
+        <TopMenuOrnament />
       </Box>
       <Box display="flex" justifyContent="right" alignItems="center" gap="20px">
         <Box sx={contactElement}>

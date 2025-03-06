@@ -3,10 +3,9 @@ import BackgroundWrapper from "../../shared/BackgroundWrapper";
 import theme from "@/app/theme/theme";
 import TopMenuButtons from "./TopMenuButtons";
 import { Box } from "@mui/material";
-import RectangularButton from "../../shared/RectangularButton";
 import ContactElements from "./ContactElements";
-import Image from "next/image";
-import TMLogo from "../../../assets/icons/TopMenuLogo.svg";
+import { TopMenuLogo } from "@/app/assets/icons/icons";
+import ContactUsButton from "../../shared/ContactUsButton";
 
 const container = {
   padding: "0 20px 20px 20px",
@@ -24,13 +23,10 @@ const TopMenu = () => {
       <Box>
         <ContactElements />
         <Box sx={container}>
-          <Image priority src={TMLogo} alt="TMLogo" />
+          <TopMenuLogo />
           <TopMenuButtons />
           <Box mb="-5px">
-            <RectangularButton
-              title="Contact us"
-              bgColor={theme.palette.secondary.main}
-            />
+            <ContactUsButton />
           </Box>
         </Box>
       </Box>
