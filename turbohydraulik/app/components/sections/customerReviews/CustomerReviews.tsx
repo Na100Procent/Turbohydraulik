@@ -6,7 +6,10 @@ import { Box, Typography } from "@mui/material";
 import { sectionXPadding } from "@/app/constants/styles";
 import SectionPaddingWrapper from "../../shared/SectionWrapper";
 import ReviewsHorizontalScrollList from "./ReviewsHorizontalScrollList";
-import { CommasIcon, YellowRightOrnament } from "@/app/assets/icons/icons";
+import {
+  CommasIcon,
+  YellowRightOrnament,
+} from "@/public/fonts/assets/icons/icons";
 import RectangularButton from "../../shared/RectangularButton";
 import { sectionIds } from "@/app/constants/appConstants";
 

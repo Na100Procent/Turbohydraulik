@@ -2,7 +2,7 @@ import { Box, Typography } from "@mui/material";
 import React from "react";
 import CallUsButton from "@/app/components/shared/CallUsButton";
 import theme from "@/app/theme/theme";
-import { Plumber } from "@/app/assets/images/Images";
+import { Plumber } from "@/public/fonts/assets/images/Images";
 
 const container = {
   display: "flex",
