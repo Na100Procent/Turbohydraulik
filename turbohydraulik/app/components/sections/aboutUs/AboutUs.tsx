@@ -6,8 +6,8 @@ import { Box, Typography } from "@mui/material";
 import { sectionXPadding } from "@/app/constants/styles";
 import SectionPaddingWrapper from "../../shared/SectionWrapper";
 import ServiceCircularLink from "./components/ServiceCircularLink";
-import Image from "next/image";
-import { aboutUsUrl } from "@/app/assets/images/imagesUrls";
+// import Image from "next/image";
+// import { aboutUsUrl } from "@/app/assets/images/imagesUrls";
 import OurMission from "./components/OurMission";
 import CallUsButton from "../../shared/CallUsButton";
 
@@ -31,7 +31,7 @@ const AboutUs = () => {
             <ServiceCircularLink />
           </Box>
           <Box display="flex" mt="80px" gap="100px">
-            <Image src={aboutUsUrl} alt="About img" width={400} height={490} />
+            {/* <Image src={aboutUsUrl} alt="About img" width={400} height={490} /> */}
             <Box
               display="flex"
               flexDirection="column"

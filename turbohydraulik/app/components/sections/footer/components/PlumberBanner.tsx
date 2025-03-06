@@ -1,4 +1,4 @@
-import { Plumber } from "@/app/assets/images/Images";
+// import { Plumber } from "@/app/assets/images/Images";
 import { Box, Typography } from "@mui/material";
 import React from "react";
 import CallUsButton from "@/app/components/shared/CallUsButton";
@@ -69,7 +69,7 @@ const PlumberBanner = () => {
           },
         }}
       >
-        <Plumber />
+        {/* <Plumber /> */}
       </Box>
     </Box>
   );
