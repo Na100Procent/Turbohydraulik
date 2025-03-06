@@ -1,6 +1,11 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
+module.exports = {
+  output: "export",
+  distDir: "dist",
+  reactStrictMode: true,
+  trailingSlash: true,
   images: {
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: "https",
@@ -13,15 +18,24 @@ const nextConfig = {
     ],
   },
   webpack(config: {
-    module: { rules: { test: RegExp; issuer: RegExp; use: string[] }[] };
+    module: {
+      rules: {
+        test: RegExp;
+        use: { loader: string; options: { svgo: boolean } }[];
+      }[];
+    };
   }) {
     config.module.rules.push({
       test: /\.svg$/,
-      issuer: /\.[jt]sx?$/,
-      use: ["@svgr/webpack"],
+      use: [
+        {
+          loader: "@svgr/webpack",
+          options: {
+            svgo: false,
+          },
+        },
+      ],
     });
     return config;
   },
 };
-
-module.exports = nextConfig;

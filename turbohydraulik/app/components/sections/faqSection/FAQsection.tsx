@@ -3,10 +3,10 @@ import React from "react";
 import BackgroundWrapper from "../../shared/BackgroundWrapper";
 import SectionPaddingWrapper from "../../shared/SectionWrapper";
 import SectionCenterHeader from "../../shared/SectionCenterHeader";
-import FAQElements from "./FAQElements";
-import { faqs } from "@/app/data/data";
+// import FAQElements from "./FAQElements";
+// import { faqs } from "@/app/data/data";
 import { Box } from "@mui/material";
-import Image from "next/image";
+// import Image from "next/image";
 import CallUsButton from "../../shared/CallUsButton";
 
 const FAQsection = () => {
@@ -28,15 +28,15 @@ const FAQsection = () => {
             gap="30px"
             justifyContent="center"
           >
-            <FAQElements faqs={faqs} />
+            {/* <FAQElements faqs={faqs} /> */}
             <Box>
-              <Image
+              {/* <Image
                 src="https://github.com/user-attachments/assets/ca378ab7-a9b2-4736-ac5f-fe20ad776b11"
                 alt="image"
                 width={320}
                 height={350}
                 style={{ marginBottom: "20px" }}
-              />
+              /> */}
               {/* <RectangularButton
                 title="View all faq's"
                 bgColor={theme.palette.secondary.main}

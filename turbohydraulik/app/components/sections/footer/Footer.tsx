@@ -7,7 +7,7 @@ import LogoContact from "./LogoContact";
 import HorizontalSeparator from "./components/HorizontalSeparator";
 import LinksAndServices from "./components/LinksAndServices";
 import SocialMediasSeparator from "./components/SocialMediasSeparator";
-import { YellowRightOrnament } from "@/app/assets/icons/icons";
+// import { YellowRightOrnament } from "@/app/assets/icons/icons";
 import PlumberBanner from "./components/PlumberBanner";
 
 const Footer = () => {
@@ -31,7 +31,7 @@ const Footer = () => {
           <SocialMediasSeparator />
           <Policy />
           <Box position={"absolute"} top={"-130px"} left={"-10px"}>
-            <YellowRightOrnament />
+            {/* <YellowRightOrnament /> */}
           </Box>
         </Box>
       </Box>
