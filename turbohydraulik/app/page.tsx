@@ -8,6 +8,7 @@ import CustomerReviews from "./components/sections/customerReviews/CustomerRevie
 import RecentWorks from "./components/sections/recentWorks/RecentWorks";
 import FAQsection from "./components/sections/faqSection/FAQsection";
 import Footer from "./components/sections/footer/Footer";
+import TopMenu from "./components/sections/topMenu/TopMenu";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       alignItems="center"
       flexDirection="column"
     >
+      <TopMenu />
       <IntroSection />
       <AboutUs />
       <OurServices />

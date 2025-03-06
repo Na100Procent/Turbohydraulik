@@ -31,13 +31,7 @@ const AboutUs = () => {
             <ServiceCircularLink />
           </Box>
           <Box display="flex" mt="80px" gap="100px">
-            <Image
-              src={aboutUsUrl}
-              alt="About img"
-              width={400}
-              height={490}
-              style={{}}
-            />
+            <Image src={aboutUsUrl} alt="About img" width={400} height={490} />
             <Box
               display="flex"
               flexDirection="column"

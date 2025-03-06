@@ -26,7 +26,6 @@ const RectangularButton = ({
     alignItems: "center",
     padding: "10px 20px",
     gap: "10px",
-    minWidth: "220px",
   };
   const titleSx = {
     color: titleColor ? titleColor : theme.palette.primary.main,
