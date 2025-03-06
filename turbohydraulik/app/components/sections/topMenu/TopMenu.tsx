@@ -5,6 +5,7 @@ import TopMenuButtons from "./TopMenuButtons";
 import { Box } from "@mui/material";
 import RectangularButton from "../../shared/RectangularButton";
 import ContactElements from "./ContactElements";
+import Image from "next/image";
 import TMLogo from "../../../assets/icons/TopMenuLogo.svg";
 
 const container = {
@@ -23,7 +24,7 @@ const TopMenu = () => {
       <Box>
         <ContactElements />
         <Box sx={container}>
-          <TMLogo />
+          <Image priority src={TMLogo} alt="TMLogo" />
           <TopMenuButtons />
           <Box mb="-5px">
             <RectangularButton

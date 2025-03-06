@@ -8,6 +8,7 @@ import VerticalSeparator from "../../shared/VerticalSeparator";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import EmailIcon from "@mui/icons-material/Email";
+import Image from "next/image";
 
 const contactElement = {
   display: "flex",
@@ -53,7 +54,7 @@ const ContactElements = () => {
   return (
     <Box mb="-15px">
       <Box sx={ornamentSx}>
-        <TopMenuOrn />
+        <Image priority src={TopMenuOrn} alt="TopMenuOrn" />;
       </Box>
       <Box display="flex" justifyContent="right" alignItems="center" gap="20px">
         <Box sx={contactElement}>
