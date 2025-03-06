@@ -9,7 +9,7 @@ import ServiceCircularLink from "./components/ServiceCircularLink";
 import Image from "next/image";
 import { aboutUsUrl } from "@/app/assets/images/imagesUrls";
 import OurMission from "./components/OurMission";
-import ReadMoreButton from "./components/ReadMoreButton";
+import CallUsButton from "../../shared/CallUsButton";
 
 const AboutUs = () => {
   return (
@@ -44,7 +44,13 @@ const AboutUs = () => {
               gap="30px"
               justifyContent="space-between"
             >
-              <Typography sx={{ color: theme.palette.custom.darkGray }}>
+              <Typography
+                sx={{
+                  color: theme.palette.custom.darkGray,
+                  fontFamily: "UniteaSans",
+                  fontWeight: "500",
+                }}
+              >
                 Turbo Hydraulik is a company with many years of experience in
                 the hydraulics industry, which specializes in comprehensive
                 repair, assembly and maintenance services. We have been
@@ -55,7 +61,8 @@ const AboutUs = () => {
               </Typography>
               <OurMission />
               <div>
-                <ReadMoreButton />
+                {/* <ReadMoreButton /> */}
+                <CallUsButton />
               </div>
             </Box>
           </Box>

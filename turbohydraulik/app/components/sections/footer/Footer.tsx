@@ -7,6 +7,8 @@ import LogoContact from "./LogoContact";
 import HorizontalSeparator from "./components/HorizontalSeparator";
 import LinksAndServices from "./components/LinksAndServices";
 import SocialMediasSeparator from "./components/SocialMediasSeparator";
+import { YellowRightOrnament } from "@/app/assets/icons/icons";
+import PlumberBanner from "./components/PlumberBanner";
 
 const Footer = () => {
   return (
@@ -14,17 +16,24 @@ const Footer = () => {
       bgColor={theme.palette.primary.main}
       sx={{ padding: "0" }}
     >
-      <Box
-        padding={"100px 0 0 0"}
-        display={"flex"}
-        flexDirection={"column"}
-        gap="50px"
-      >
-        <LogoContact />
-        <HorizontalSeparator />
-        <LinksAndServices />
-        <SocialMediasSeparator />
-        <Policy />
+      <Box>
+        <PlumberBanner />
+        <Box
+          padding={"150px 0 0 0"}
+          display={"flex"}
+          flexDirection={"column"}
+          gap="50px"
+          position={"relative"}
+        >
+          <LogoContact />
+          <HorizontalSeparator />
+          <LinksAndServices />
+          <SocialMediasSeparator />
+          <Policy />
+          <Box position={"absolute"} top={"-130px"} left={"-10px"}>
+            <YellowRightOrnament />
+          </Box>
+        </Box>
       </Box>
     </BackgroundWrapper>
   );

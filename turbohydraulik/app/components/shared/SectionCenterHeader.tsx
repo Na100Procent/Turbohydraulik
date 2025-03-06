@@ -17,12 +17,13 @@ const SectionCenterHeader = ({
   headerColor,
 }: Props) => {
   const headerSx = {
-    fontWeight: "900",
+    fontWeight: "700",
     fontSize: "50px",
     color: headerColor,
     maxWidth: "700px",
     textAlign: "center",
     lineHeight: "50px",
+    fontFamily: "UniteaSans",
   };
   const topHeaderSx = {
     color: topHeaderColor as string,
@@ -37,6 +38,7 @@ const SectionCenterHeader = ({
     fontSize: "15px",
     color: "rgb(68, 68, 68)",
     marginTop: "20px",
+    fontFamily: "UniteaSans",
   };
 
   return (

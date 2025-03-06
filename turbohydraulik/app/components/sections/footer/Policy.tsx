@@ -21,6 +21,7 @@ const verticalDivider = {
 const textSx = {
   fontSize: "12px",
   fontWeight: "600",
+  fontFamily: "UniteaSans",
 };
 
 const Policy: React.FC = () => {

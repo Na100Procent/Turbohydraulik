@@ -40,7 +40,6 @@ const theme = createTheme({
     },
   },
   typography: {
-    fontFamily: "Roboto, sans-serif",
     subtitle1: {
       fontStyle: "normal",
       fontWeight: 700,
@@ -112,7 +111,6 @@ const theme = createTheme({
           cursor: "inherit",
           textTransform: "none",
           userSelect: "none",
-          fontFamily: "Inter",
         },
       },
     },

@@ -1,0 +1,77 @@
+import { Plumber } from "@/app/assets/images/Images";
+import { Box, Typography } from "@mui/material";
+import React from "react";
+import CallUsButton from "@/app/components/shared/CallUsButton";
+import theme from "@/app/theme/theme";
+
+const container = {
+  display: "flex",
+  justifyContent: "left",
+  alignItems: "center",
+  backgroundColor: theme.palette.secondary.main,
+  position: "absolute",
+  top: "-200px",
+  left: "50%",
+  transform: "translateX(-50%)",
+  padding: "30px 0px 60px 50px",
+  zIndex: 10,
+  minHeight: "300px",
+  width: "100%",
+  maxWidth: "700px",
+  "@media (max-width: 768px)": {
+    flexDirection: "column",
+    padding: "20px",
+    top: "-150px",
+  },
+};
+const headerSx = {
+  fontWeight: "700",
+  fontSize: "40px",
+  color: theme.palette.primary.main,
+  maxWidth: "400px",
+  textAlign: "left",
+  lineHeight: "50px",
+  fontFamily: "UniteaSans",
+  "@media (max-width: 768px)": {
+    fontSize: "30px",
+    lineHeight: "40px",
+  },
+};
+const PlumberBanner = () => {
+  return (
+    <Box sx={container}>
+      <Box
+        display={"flex"}
+        flexDirection={"column"}
+        alignItems={"start"}
+        gap="20px"
+        zIndex={1}
+      >
+        <Typography sx={headerSx}>
+          Share your opinion about Turbo Hydraulik
+        </Typography>
+        <CallUsButton bgColor={theme.palette.custom.background} />
+      </Box>
+      <Box
+        position={"absolute"}
+        bottom={"-12px"}
+        right={"-10px"}
+        zIndex={0}
+        sx={{
+          "@media (max-width: 768px)": {
+            position: "relative",
+            bottom: "0",
+            right: "0",
+            width: "100%",
+            display: "flex",
+            justifyContent: "center",
+          },
+        }}
+      >
+        <Plumber />
+      </Box>
+    </Box>
+  );
+};
+
+export default PlumberBanner;

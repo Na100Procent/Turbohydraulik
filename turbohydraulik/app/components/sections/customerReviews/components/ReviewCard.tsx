@@ -31,10 +31,19 @@ const ReviewCard: React.FC<ReviewCardProps> = ({
   };
   return (
     <Box sx={container}>
-      <Typography variant="h5" fontWeight="900" color={isFirst ? gold : blue}>
+      <Typography
+        variant="h5"
+        fontWeight="700"
+        color={isFirst ? gold : blue}
+        sx={{ fontFamily: "UniteaSans" }}
+      >
         {reviewer}
       </Typography>
-      <Typography minHeight="130px" mt={1}>
+      <Typography
+        minHeight="130px"
+        mt={1}
+        sx={{ fontFamily: "UniteaSans", fontWeight: "500" }}
+      >
         {review}
       </Typography>
       <Box display="flex" alignItems="center" mt={3}>

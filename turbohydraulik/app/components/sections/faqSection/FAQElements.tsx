@@ -43,7 +43,11 @@ const FAQElements = ({ faqs }: FAQProps) => {
           >
             <Typography
               variant="h6"
-              sx={{ fontWeight: "bold", color: theme.palette.primary.main }}
+              sx={{
+                fontWeight: "bold",
+                color: theme.palette.primary.main,
+                fontFamily: "UniteaSans",
+              }}
             >
               {faq.question}
             </Typography>
@@ -61,7 +65,11 @@ const FAQElements = ({ faqs }: FAQProps) => {
             <Typography
               mt="10px"
               variant="body1"
-              sx={{ color: theme.palette.custom.darkGray }}
+              sx={{
+                color: theme.palette.custom.darkGray,
+                fontFamily: "UniteaSans",
+                fontWeight: 500,
+              }}
             >
               {faq.answer}
             </Typography>
