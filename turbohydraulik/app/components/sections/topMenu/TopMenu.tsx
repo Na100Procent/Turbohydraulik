@@ -1,14 +1,13 @@
 import React from "react";
 import BackgroundWrapper from "../../shared/BackgroundWrapper";
 import theme from "@/app/theme/theme";
-
 import TopMenuButtons from "./TopMenuButtons";
 import { Box } from "@mui/material";
 import RectangularButton from "../../shared/RectangularButton";
 import ContactElements from "./ContactElements";
+import Image from "next/image";
+import TMLogo from "../../../assets/icons/TopMenuLogo.svg";
 
-// import Image from "next/image";
-// import TMLogo from "../../../assets/icons/TopMenuLogo.svg";
 const container = {
   padding: "0 20px 20px 20px",
   display: "flex",
@@ -25,7 +24,7 @@ const TopMenu = () => {
       <Box>
         <ContactElements />
         <Box sx={container}>
-          {/* <Image src={TMLogo} alt="TMLogo" />; */}
+          <Image src={TMLogo} alt="TMLogo" />
           <TopMenuButtons />
           <Box mb="-5px">
             <RectangularButton
