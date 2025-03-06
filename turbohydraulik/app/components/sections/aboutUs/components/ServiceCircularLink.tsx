@@ -12,8 +12,16 @@ export default function ServiceCircularLink() {
             d="M 60,60 m -50,0 a 50,50 0 1,1 100,0 a 50,50 0 1,1 -100,0"
           />
         </defs>
-        <text fill="black" fontSize="12px" letterSpacing="0.5px">
-          <textPath href="#circlePath" startOffset="0%">
+        <text fontSize="12px" letterSpacing="0.8px">
+          <textPath
+            href="#circlePath"
+            startOffset="0%"
+            style={{
+              fontFamily: "UniteaSans",
+              fontWeight: 600,
+              fill: theme.palette.primary.main,
+            }}
+          >
             VIEW SERVICE • VIEW SERVICE • VIEW SERVICE •
           </textPath>
         </text>

@@ -7,6 +7,7 @@ import theme from "@/app/theme/theme";
 const container = {
   display: "flex",
   justifyContent: "left",
+  borderRadius: "10px",
   alignItems: "center",
   backgroundColor: theme.palette.secondary.main,
   position: "absolute",

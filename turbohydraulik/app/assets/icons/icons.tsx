@@ -6,7 +6,8 @@ import Message from "./messageIcon.svg";
 import commas from "./commasIcon.svg";
 import YellowL from "./YellowOrnamentL.svg";
 import YellowR from "./YellowOrnamentR.svg";
-
+import TopMenuOrn from "./TopMenuOrnament.svg";
+import TMLogo from "./TopMenuLogo.svg";
 import Logo from "./Logo.svg";
 
 // how to icons
@@ -22,6 +23,10 @@ export const CommasIcon = () => <Image src={commas} alt="commas" />;
 // ornaments
 export const YellowLeftOrnament = () => <Image src={YellowL} alt="YellowL" />;
 export const YellowRightOrnament = () => <Image src={YellowR} alt="YellowR" />;
+export const TopMenuOrnament = () => (
+  <Image src={TopMenuOrn} alt="TopMenuOrn" />
+);
 
 // logo
 export const LogoIcon = () => <Image src={Logo} alt="Logo" />;
+export const TopMenuLogo = () => <Image src={TMLogo} alt="TMLogo" />;
