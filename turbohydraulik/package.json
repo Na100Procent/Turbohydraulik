@@ -2,6 +2,7 @@
   "name": "turbohydraulik",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://kacperwolanski.github.io/Turbohydraulik/",
   "scripts": {
     "dev": "next dev --turbopack",
     "start": "next start",
