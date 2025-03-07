@@ -12,8 +12,15 @@ import {
 } from "@/public/fonts/assets/icons/icons";
 import RectangularButton from "../../shared/RectangularButton";
 import { sectionIds } from "@/app/constants/appConstants";
+import { CityData } from "@/app/data/types";
+import { websiteData } from "@/app/data/data";
 
-const CustomerReviews = () => {
+interface Props {
+  city?: CityData;
+  content: string;
+}
+
+const CustomerReviews = ({ city, content }: Props) => {
   const mainColor = theme.palette.primary.main;
   return (
     <BackgroundWrapper bgColor={theme.palette.custom.blueLight}>
@@ -30,15 +37,16 @@ const CustomerReviews = () => {
               subHeaderColor={mainColor}
               headerColor={mainColor}
               subHeader="OUR TESTIMONIALS"
-              header="Customer Reviews About Turbo Hydraulik"
+              header={`Customer Reviews About Turbo Hydraulik ${
+                city ? city.name : ""
+              }`}
             />
             <Typography
               mt="30px"
               color={mainColor}
               sx={{ fontFamily: "UniteaSans", fontWeight: "500" }}
             >
-              To order a plumbing service, contact us by phone or via the
-              contact form on our website.
+              {content ? content : websiteData.home.reviews}
             </Typography>
           </Box>
         </SectionPaddingWrapper>

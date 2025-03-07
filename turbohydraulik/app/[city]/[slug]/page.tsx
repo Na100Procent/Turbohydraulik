@@ -1,11 +1,6 @@
-import {
-  cities,
-  City,
-  District,
-  districts,
-  Service,
-  services,
-} from "@/app/data/data";
+import { websiteData } from "@/app/data/data";
+import ServicePage from "./ServicePage";
+import DistrictPage from "./DistrictPage";
 
 interface Params {
   params: {
@@ -16,30 +11,17 @@ interface Params {
 
 const DynamicPage = ({ params }: Params) => {
   const { city: cityParam, slug: slugParam } = params;
-
-  console.log(params);
-  const foundCity = cities.find(
-    (city: City) => city.slug.toLowerCase() === cityParam
-  );
-  const service = services.find(
-    (service: Service) => service.slug.toLowerCase() === slugParam
-  );
-  const district = districts.find(
-    (district: District) => district.name.toLowerCase() === slugParam
-  );
-
-  if (!foundCity || (!service && !district)) {
-    return <p>Nie znaleziono odpowiedniej usługi ani dzielnicy.</p>;
-  }
-
+  const service = websiteData.services[slugParam];
+  const foundCity = websiteData.cities[cityParam];
+  const district = foundCity.districts[slugParam];
   return (
     <div>
       <h1>
-        {service
-          ? `Usługa: ${service.name} w ${foundCity.name}`
-          : district
-          ? `Dzielnica: ${district.name} w ${foundCity.name}`
-          : null}
+        {service ? (
+          <ServicePage service={service} city={foundCity} />
+        ) : district ? (
+          <DistrictPage slug={district} city={foundCity} />
+        ) : null}
       </h1>
     </div>
   );

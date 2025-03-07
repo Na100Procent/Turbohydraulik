@@ -2,6 +2,10 @@ import theme from "@/app/theme/theme";
 import { Box, Typography } from "@mui/material";
 import React from "react";
 
+interface Props {
+  slug?: string;
+  subHeaderContent?: string;
+}
 const container = {
   maxWidth: "400px",
 };
@@ -16,7 +20,8 @@ const subHeader = {
   fontWeight: 500,
   letterSpacing: "1px",
 };
-const HeaderBox = () => {
+
+const HeaderBox = ({ slug, subHeaderContent }: Props) => {
   return (
     <Box sx={container}>
       <Box>
@@ -25,17 +30,13 @@ const HeaderBox = () => {
             color: theme.palette.custom.background,
           }}
         >
-          <Typography sx={headerSx}> Reliable </Typography>
-          <Typography sx={headerSx}>& Efficient</Typography>
+          <Typography sx={headerSx}> Turbo </Typography>
         </Box>
         <Typography sx={{ color: theme.palette.secondary.main, ...headerSx }}>
-          Plumbing.
+          Hydraulik {slug}
         </Typography>
       </Box>
-      <p style={subHeader}>
-        Repair, installation and plumbing service – quickly, reliably and
-        professionally.
-      </p>
+      <p style={subHeader}>{subHeaderContent}</p>
     </Box>
   );
 };

@@ -6,6 +6,13 @@ import { Box } from "@mui/material";
 import { introBgUrl } from "@/public/fonts/assets/images/imagesUrls";
 import HorizontalBanner from "./HorizontalBanner";
 import CallUsButton from "../../shared/CallUsButton";
+import { CityData, DistrictData, ServiceData } from "@/app/data/types";
+import { websiteData } from "@/app/data/data";
+
+interface Props {
+  slug?: CityData | ServiceData | DistrictData;
+  content?: string;
+}
 
 const heroSx = {
   borderRadius: "15px",
@@ -13,7 +20,7 @@ const heroSx = {
   padding: "40px",
   background: theme.palette.primary.main,
 };
-const content = {
+const contentSx = {
   padding: {
     xl: "50px 50px",
     lg: "50px 50px",
@@ -23,20 +30,23 @@ const content = {
     xxs: "10px 10px",
   },
 };
-const IntroSection = () => {
+const IntroSection = ({ slug, content }: Props) => {
   return (
-    <BackgroundWrapper bgImage={introBgUrl} sx={{ padding: 0 }}>
-      <>
-        <Box sx={content}>
+    <BackgroundWrapper bgImage={introBgUrl} sx={{ padding: "100px 0 0 0" }}>
+      <Box padding="50px 0 0 0">
+        <Box sx={contentSx}>
           <Box sx={heroSx}>
-            <HeaderBox />
+            <HeaderBox
+              slug={slug?.name}
+              subHeaderContent={content ? content : websiteData.home.home}
+            />
             <Box mt="30px">
               <CallUsButton />
             </Box>
           </Box>
         </Box>
         <HorizontalBanner />
-      </>
+      </Box>
     </BackgroundWrapper>
   );
 };
