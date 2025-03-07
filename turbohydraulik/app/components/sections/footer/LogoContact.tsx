@@ -1,4 +1,4 @@
-import { LogoIcon } from "@/public/fonts/assets/icons/icons";
+import { LogoIcon } from "@/public/assets/icons/icons";
 import { Box } from "@mui/material";
 import React from "react";
 import ContactForm from "./components/ContactForm";

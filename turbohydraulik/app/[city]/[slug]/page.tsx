@@ -1,28 +1,24 @@
 import { websiteData } from "@/app/data/data";
 import ServicePage from "./ServicePage";
 import DistrictPage from "./DistrictPage";
+import { FC } from "react";
+import { PageProps } from "@/.next/types/app/[city]/[slug]/page";
 
-interface Params {
-  params: {
-    city: string;
-    slug: string;
-  };
-}
-
-const DynamicPage = ({ params }: Params) => {
-  const { city: cityParam, slug: slugParam } = params;
+const DynamicPage: FC<PageProps> = async ({ params }) => {
+  const { city: cityParam, slug: slugParam } = await params;
   const service = websiteData.services[slugParam];
   const foundCity = websiteData.cities[cityParam];
-  const district = foundCity.districts[slugParam];
+  const district = foundCity?.districts[slugParam];
+
   return (
     <div>
-      <h1>
-        {service ? (
-          <ServicePage service={service} city={foundCity} />
-        ) : district ? (
-          <DistrictPage slug={district} city={foundCity} />
-        ) : null}
-      </h1>
+      {service ? (
+        <ServicePage service={service} city={foundCity} />
+      ) : district ? (
+        <DistrictPage slug={district} city={foundCity} />
+      ) : (
+        <h1>Not Found</h1>
+      )}
     </div>
   );
 };

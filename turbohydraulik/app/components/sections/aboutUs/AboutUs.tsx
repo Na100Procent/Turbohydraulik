@@ -7,7 +7,7 @@ import { sectionXPadding } from "@/app/constants/styles";
 import SectionPaddingWrapper from "../../shared/SectionWrapper";
 import ServiceCircularLink from "./components/ServiceCircularLink";
 import Image from "next/image";
-import { aboutUsUrl } from "@/public/fonts/assets/images/imagesUrls";
+import { aboutUsUrl } from "@/public/assets/images/imagesUrls";
 import OurMission from "./components/OurMission";
 import CallUsButton from "../../shared/CallUsButton";
 import { sectionIds } from "@/app/constants/appConstants";
