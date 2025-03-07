@@ -10,6 +10,7 @@ import FAQsection from "./components/sections/faqSection/FAQsection";
 import Footer from "./components/sections/footer/Footer";
 import TopMenu from "./components/sections/topMenu/TopMenu";
 import { sectionIds } from "./constants/appConstants";
+import OurCities from "./components/sections/ourCities/OurCities";
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
     >
       <TopMenu />
       <IntroSection />
+      <OurCities />
       <AboutUs />
       <OurServices />
       <HowToOrderUs />

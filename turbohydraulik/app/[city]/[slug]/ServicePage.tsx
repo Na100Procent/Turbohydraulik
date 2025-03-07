@@ -11,6 +11,7 @@ import CustomerReviews from "../../components/sections/customerReviews/CustomerR
 import RecentWorks from "../../components/sections/recentWorks/RecentWorks";
 import FAQsection from "../../components/sections/faqSection/FAQsection";
 import { CityData, SectionContent, ServiceData } from "@/app/data/types";
+import OurCities from "@/app/components/sections/ourCities/OurCities";
 
 interface Props {
   service: ServiceData;
@@ -32,6 +33,7 @@ export default function ServicePage({ service, city }: Props) {
     >
       <TopMenu />
       <IntroSection slug={city} content={getContent("home")} />
+      <OurCities />
       <AboutUs city={city} content={getContent("about")} />
       <OurServices city={city} />
       <HowToOrderUs />

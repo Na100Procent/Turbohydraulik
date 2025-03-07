@@ -69,6 +69,7 @@ const HorizontalScrollList: React.FC<HorizontalScrollListProps> = ({
       <Box
         sx={{
           display: "flex",
+          gap: "20px",
           transition: "transform 0.3s ease",
           transform: `translateX(${scrollPosition}px)`,
         }}

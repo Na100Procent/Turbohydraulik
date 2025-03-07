@@ -21,7 +21,7 @@ interface Props {
 
 const AboutUs = ({ city, content }: Props) => {
   return (
-    <BackgroundWrapper bgColor={theme.palette.custom.background}>
+    <BackgroundWrapper bgColor={theme.palette.custom.yellowLight}>
       <SectionPaddingWrapper>
         <Box padding={sectionXPadding} id={sectionIds.about}>
           <Box

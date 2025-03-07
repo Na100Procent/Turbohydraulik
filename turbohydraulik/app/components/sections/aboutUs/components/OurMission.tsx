@@ -2,15 +2,16 @@ import theme from "@/app/theme/theme";
 import { Box, Typography } from "@mui/material";
 import React from "react";
 
+const container = {
+  padding: "40px 50px",
+  color: theme.palette.primary.main,
+  background: "rgba(207, 219, 228, 0.59)",
+  borderRadius: "10px",
+};
+
 const OurMission = () => {
   return (
-    <Box
-      sx={{
-        padding: "40px 50px",
-        color: theme.palette.primary.main,
-        background: "#f0f4f7",
-      }}
-    >
+    <Box sx={container}>
       <Typography
         sx={{ fontWeight: "600", fontSize: "30px", fontFamily: "UniteaSans" }}
       >

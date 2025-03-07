@@ -5,19 +5,19 @@ export const AppointmentIcon = () => (
   <Image
     src="assets/icons/appointmentIcon.svg"
     alt="Appointment"
-    width={40}
-    height={40}
+    width={45}
+    height={45}
   />
 );
 export const InfosIcon = () => (
-  <Image src="assets/icons/infosIcon.svg" alt="Infos" width={40} height={40} />
+  <Image src="assets/icons/infosIcon.svg" alt="Infos" width={45} height={45} />
 );
 export const MessageIcon = () => (
   <Image
     src="assets/icons/messageIcon.svg"
     alt="Message"
-    width={40}
-    height={40}
+    width={45}
+    height={45}
   />
 );
 
@@ -26,8 +26,8 @@ export const CommasIcon = () => (
   <Image
     src="assets/icons/commasIcon.svg"
     alt="Commas"
-    width={40}
-    height={40}
+    width={346}
+    height={272}
   />
 );
 
@@ -59,7 +59,7 @@ export const TopMenuOrnament = () => (
 
 // logo
 export const LogoIcon = () => (
-  <Image src="assets/icons/Logo.svg" alt="Logo" width={40} height={40} />
+  <Image src="assets/icons/Logo.svg" alt="Logo" width={197} height={80} />
 );
 export const TopMenuLogo = () => (
   <Image

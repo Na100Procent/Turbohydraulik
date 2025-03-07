@@ -20,7 +20,7 @@ const SectionCenterHeader = ({
     fontWeight: "700",
     fontSize: "50px",
     color: headerColor,
-    maxWidth: "700px",
+    maxWidth: "750px",
     textAlign: "center",
     lineHeight: "50px",
     fontFamily: "UniteaSans",
