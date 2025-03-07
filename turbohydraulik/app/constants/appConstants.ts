@@ -7,3 +7,5 @@ export const sectionIds = {
   reviews: "reviewsSection",
   faq: "faqSection",
 };
+
+export const homePageLink = "/";

@@ -1,5 +1,6 @@
 import theme from "@/app/theme/theme";
 import { Box, Typography } from "@mui/material";
+import Link from "next/link";
 import React from "react";
 
 interface LinkElement {
@@ -34,19 +35,14 @@ const TitledVerticalList = ({ title, list, separator }: Props) => {
       </Typography>
 
       {list.map((item, index) => (
-        <a
-          key={item.title + index}
-          target="_blank"
-          rel="noopener noreferrer"
-          href={item.url}
-        >
+        <Link href={item.url} key={item.title + index}>
           <Box sx={elementSx}>
             <Typography mt="-2px"> {separator ? separator : "> "}</Typography>
             <Typography sx={{ fontFamily: "UniteaSans", fontWeight: 500 }}>
               {item.title}
             </Typography>
           </Box>
-        </a>
+        </Link>
       ))}
     </Box>
   );

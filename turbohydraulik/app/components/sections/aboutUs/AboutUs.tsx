@@ -11,8 +11,15 @@ import { aboutUsUrl } from "@/public/fonts/assets/images/imagesUrls";
 import OurMission from "./components/OurMission";
 import CallUsButton from "../../shared/CallUsButton";
 import { sectionIds } from "@/app/constants/appConstants";
+import { CityData } from "@/app/data/types";
+import { websiteData } from "@/app/data/data";
 
-const AboutUs = () => {
+interface Props {
+  city?: CityData;
+  content?: string;
+}
+
+const AboutUs = ({ city, content }: Props) => {
   return (
     <BackgroundWrapper bgColor={theme.palette.custom.background}>
       <SectionPaddingWrapper>
@@ -26,7 +33,9 @@ const AboutUs = () => {
               subHeaderColor={theme.palette.secondary.main}
               headerColor={theme.palette.primary.main}
               subHeader="ABOUT US"
-              header="Provide the highest level Of Plumbing services"
+              header={`Provide the highest level Of Plumbing services ${
+                city ? city.name : ""
+              }`}
             />
 
             <ServiceCircularLink />
@@ -46,13 +55,7 @@ const AboutUs = () => {
                   fontWeight: "500",
                 }}
               >
-                Turbo Hydraulik is a company with many years of experience in
-                the hydraulics industry, which specializes in comprehensive
-                repair, assembly and maintenance services. We have been
-                operating on the market for many years, gaining the trust of
-                customers thanks to our reliability, professionalism and express
-                response to notifications. Our team consists of qualified
-                plumbers who guarantee the highest quality of services.
+                {content ? content : websiteData.home.about}
               </Typography>
               <OurMission />
               <div>

@@ -1,0 +1,44 @@
+import { Box } from "@mui/material";
+import { sectionIds } from "../constants/appConstants";
+import TopMenu from "../components/sections/topMenu/TopMenu";
+import IntroSection from "../components/sections/intro/IntroSection";
+import AboutUs from "../components/sections/aboutUs/AboutUs";
+import OurServices from "../components/sections/ourServices/OurServices";
+import Footer from "../components/sections/footer/Footer";
+import InNumbers from "../components/sections/inNumbers/InNumbers";
+import HowToOrderUs from "../components/sections/howToOrderUs/HowToOrderUs";
+import CustomerReviews from "../components/sections/customerReviews/CustomerReviews";
+import RecentWorks from "../components/sections/recentWorks/RecentWorks";
+import FAQsection from "../components/sections/faqSection/FAQsection";
+import { CityData, SectionContent } from "../data/types";
+
+interface Props {
+  city: CityData;
+}
+
+export default function CityPage({ city }: Props) {
+  const getContent = (section: keyof SectionContent) => {
+    return city.content[section];
+  };
+
+  return (
+    <Box
+      display="flex"
+      justifyContent="center"
+      alignItems="center"
+      flexDirection="column"
+      id={sectionIds.home}
+    >
+      <TopMenu />
+      <IntroSection slug={city} content={getContent("home")} />
+      <AboutUs city={city} content={getContent("about")} />
+      <OurServices city={city} />
+      <HowToOrderUs />
+      <CustomerReviews city={city} content={getContent("reviews")} />
+      <InNumbers />
+      <RecentWorks />
+      <FAQsection />
+      <Footer />
+    </Box>
+  );
+}

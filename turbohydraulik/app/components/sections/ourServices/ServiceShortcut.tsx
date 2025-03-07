@@ -2,37 +2,39 @@ import React from "react";
 import { Box, Typography, IconButton } from "@mui/material";
 import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
 import theme from "@/app/theme/theme";
+import { ServiceData } from "@/app/data/types";
+import Link from "next/link";
 
 interface Props {
-  title: string;
-  imageUrl: string;
+  cityName?: string;
+  service: ServiceData;
 }
 
-const ServiceCard = ({ title, imageUrl }: Props) => {
+const container = {
+  minWidth: "350px",
+  width: "100%",
+  height: "400px",
+  borderRadius: "12px",
+  overflow: "hidden",
+  backgroundColor: "#f5f5f5",
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center",
+  boxShadow: 2,
+};
+const imgSx = {
+  marginTop: "10px",
+  width: "90%",
+  height: "65%",
+  objectFit: "cover",
+};
+const ServiceCard = ({ cityName, service }: Props) => {
   return (
-    <Box
-      sx={{
-        minWidth: "250px",
-        minHeight: "400px",
-        borderRadius: "12px",
-        overflow: "hidden",
-        backgroundColor: "#f5f5f5",
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        boxShadow: 2,
-      }}
-    >
+    <Box sx={container}>
       <Box
         component="img"
-        src={imageUrl}
-        alt={title}
-        sx={{
-          marginTop: "10px",
-          width: "90%",
-          height: "65%",
-          objectFit: "cover",
-        }}
+        src="https://github.com/user-attachments/assets/b9581ef8-d7c5-407f-b233-4fad19ee0f70"
+        sx={imgSx}
       />
 
       <Box
@@ -40,25 +42,31 @@ const ServiceCard = ({ title, imageUrl }: Props) => {
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
-          width: "100%",
           padding: "16px",
         }}
       >
         <Typography
           variant="h6"
-          sx={{ fontWeight: "bold", color: theme.palette.primary.main }}
-        >
-          {title}
-        </Typography>
-
-        <IconButton
           sx={{
-            backgroundColor: theme.palette.secondary.main,
+            fontWeight: "bold",
             color: theme.palette.primary.main,
+            width: "100%",
+            maxWidth: "200px",
           }}
         >
-          <ArrowOutwardIcon />
-        </IconButton>
+          {service.name + " " + cityName}
+        </Typography>
+
+        <Link href={`${service.slug}`}>
+          <IconButton
+            sx={{
+              backgroundColor: theme.palette.secondary.main,
+              color: theme.palette.primary.main,
+            }}
+          >
+            <ArrowOutwardIcon />
+          </IconButton>
+        </Link>
       </Box>
     </Box>
   );
