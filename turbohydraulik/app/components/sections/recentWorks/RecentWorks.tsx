@@ -4,7 +4,7 @@ import BackgroundWrapper from "../../shared/BackgroundWrapper";
 import SectionPaddingWrapper from "../../shared/SectionWrapper";
 import SectionCenterHeader from "../../shared/SectionCenterHeader";
 import MosaicGrid from "./MosaicGrid";
-import { YellowLeftOrnament } from "@/public/fonts/assets/icons/icons";
+import { YellowLeftOrnament } from "@/public/assets/icons/icons";
 import { Box } from "@mui/material";
 import { sectionIds } from "@/app/constants/appConstants";
 

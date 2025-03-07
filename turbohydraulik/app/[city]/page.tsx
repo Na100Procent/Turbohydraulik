@@ -1,14 +1,12 @@
+import { FC } from "react";
 import { websiteData } from "../data/data";
 import { CityData, ServiceData } from "../data/types";
 import CityPage from "./CityPage";
 import ServicePage from "./ServicePage";
+import { PageProps } from "@/.next/types/app/[city]/[slug]/page";
 
-export default function CityOrServicePage({
-  params,
-}: {
-  params: { city: string };
-}) {
-  const currentSlug = params.city;
+const CityOrServicePage: FC<PageProps> = async ({ params }) => {
+  const { city: currentSlug } = await params;
 
   const slugIsCity = Object.keys(websiteData.cities).includes(currentSlug);
   const slug = slugIsCity
@@ -24,4 +22,6 @@ export default function CityOrServicePage({
       )}
     </>
   );
-}
+};
+
+export default CityOrServicePage;

@@ -4,7 +4,7 @@ import theme from "@/app/theme/theme";
 import TopMenuButtons from "./TopMenuButtons";
 import { Box } from "@mui/material";
 import ContactElements from "./ContactElements";
-import { TopMenuLogo } from "@/public/fonts/assets/icons/icons";
+import { TopMenuLogo } from "@/public/assets/icons/icons";
 import ContactUsButton from "../../shared/ContactUsButton";
 import Link from "next/link";
 import { homePageLink } from "@/app/constants/appConstants";

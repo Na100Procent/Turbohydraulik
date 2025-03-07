@@ -6,7 +6,7 @@ import { Box } from "@mui/material";
 import ServiceVerticalScrollList from "./ServicesHorizontalList";
 import { sectionXPadding } from "@/app/constants/styles";
 import SectionPaddingWrapper from "../../shared/SectionWrapper";
-import { YellowLeftOrnament } from "@/public/fonts/assets/icons/icons";
+import { YellowLeftOrnament } from "@/public/assets/icons/icons";
 import CallUsButton from "../../shared/CallUsButton";
 import RectangularButton from "../../shared/RectangularButton";
 import { CityData } from "@/app/data/types";
