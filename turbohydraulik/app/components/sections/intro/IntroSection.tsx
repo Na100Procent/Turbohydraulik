@@ -14,10 +14,22 @@ interface Props {
   content?: string;
 }
 
+const containerSx = {
+  padding: {
+    xl: "120px 0 0 0",
+    lg: "120px 0 0 0",
+    md: "120px 0 0 0",
+    sm: "150px 0 0 0",
+    xs: "150px 0 0 0",
+    xxs: "150px 0 0 0",
+  },
+};
+
 const heroSx = {
   borderRadius: "15px",
   maxWidth: "400px",
   padding: "40px",
+  minWidth: "300px",
   background: theme.palette.primary.main,
 };
 const contentSx = {
@@ -32,7 +44,7 @@ const contentSx = {
 };
 const IntroSection = ({ slug, content }: Props) => {
   return (
-    <BackgroundWrapper bgImage={introBgUrl} sx={{ padding: "100px 0 0 0" }}>
+    <BackgroundWrapper bgImage={introBgUrl} sx={containerSx}>
       <Box padding="50px 0 0 0">
         <Box sx={contentSx}>
           <Box sx={heroSx}>

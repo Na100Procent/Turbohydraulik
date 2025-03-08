@@ -2,6 +2,7 @@ import React from "react";
 import HorizontalScrollList from "../../shared/HorizontalScrollList";
 import { websiteData } from "@/app/data/data";
 import CityCard from "./CityCard";
+import { Box } from "@mui/material";
 
 const ScrollCityList = () => {
   const cityNamesUrls = Object.values(websiteData.cities).map((city) => ({
@@ -10,7 +11,9 @@ const ScrollCityList = () => {
   }));
 
   const citiesElements = cityNamesUrls.map((city) => (
-    <CityCard key={city.title} cityName={city.title} cityUrl={city.url} />
+    <Box key={city.title} sx={{ margin: "0 10px" }}>
+      <CityCard cityName={city.title} cityUrl={city.url} />
+    </Box>
   ));
   return <HorizontalScrollList mappedItems={citiesElements} />;
 };

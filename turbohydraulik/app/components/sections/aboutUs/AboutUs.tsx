@@ -19,16 +19,44 @@ interface Props {
   content?: string;
 }
 
+const contentSx = {
+  display: "flex",
+  flexDirection: {
+    xl: "row",
+    lg: "row",
+    md: "column",
+    sm: "column",
+    xs: "column",
+    xxs: "column",
+  },
+  justifyContent: "center",
+  alignItems: "center",
+  mt: "80px",
+  gap: "100px",
+};
+
+const headerSx = {
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "space-between",
+  gap: "10px",
+};
+
+const imgSx = {
+  maxWidth: "400px",
+  width: "100%",
+  height: "100%",
+  maxHeight: "490px",
+  borderRadius: "15px",
+  overflow: "hidden",
+};
+
 const AboutUs = ({ city, content }: Props) => {
   return (
     <BackgroundWrapper bgColor={theme.palette.custom.yellowLight}>
       <SectionPaddingWrapper>
         <Box padding={sectionXPadding} id={sectionIds.about}>
-          <Box
-            display="flex"
-            alignItems="center"
-            justifyContent="space-between"
-          >
+          <Box sx={headerSx}>
             <SectionHeader
               subHeaderColor={theme.palette.secondary.main}
               headerColor={theme.palette.primary.main}
@@ -40,8 +68,16 @@ const AboutUs = ({ city, content }: Props) => {
 
             <ServiceCircularLink />
           </Box>
-          <Box display="flex" mt="80px" gap="100px">
-            <Image src={aboutUsUrl} alt="About img" width={400} height={490} />
+          <Box sx={contentSx}>
+            <Box sx={imgSx}>
+              <Image
+                layout="responsive"
+                src={aboutUsUrl}
+                alt="About img"
+                width={400}
+                height={490}
+              />
+            </Box>
             <Box
               display="flex"
               flexDirection="column"

@@ -9,7 +9,36 @@ import { Box } from "@mui/material";
 import Image from "next/image";
 import CallUsButton from "../../shared/CallUsButton";
 import { sectionIds } from "@/app/constants/appConstants";
+import { sectionXPadding } from "@/app/constants/styles";
 
+const contentSx = {
+  mt: "50px",
+  display: "flex",
+  padding: sectionXPadding,
+  gap: "30px",
+  alignItems: {
+    xl: "start",
+    lg: "start",
+    md: "start",
+    sm: "center",
+    xs: "center",
+    xxs: "center",
+  },
+  justifyContent: "center",
+  flexDirection: {
+    xl: "row",
+    lg: "row",
+    md: "row",
+    sm: "column",
+    xs: "column",
+    xxs: "column",
+  },
+};
+
+const imageSx = {
+  marginBottom: "20px",
+  borderRadius: "15px",
+};
 const FAQsection = () => {
   return (
     <BackgroundWrapper bgColor={theme.palette.custom.background}>
@@ -22,13 +51,7 @@ const FAQsection = () => {
             bottomHeader="Find answers to the most frequently asked questions about our plumbing services. If you can't find the answer, please contact us!"
             headerColor={theme.palette.primary.main}
           />
-          <Box
-            mt="50px"
-            display="flex"
-            padding="0 100px"
-            gap="30px"
-            justifyContent="center"
-          >
+          <Box sx={contentSx}>
             <FAQElements faqs={faqs} />
             <Box>
               <Image
@@ -36,13 +59,9 @@ const FAQsection = () => {
                 alt="image"
                 width={320}
                 height={350}
-                style={{ marginBottom: "20px" }}
+                style={imageSx}
               />
-              {/* <RectangularButton
-                title="View all faq's"
-                bgColor={theme.palette.secondary.main}
-                titleColor={theme.palette.primary.main}
-              /> */}
+
               <CallUsButton />
             </Box>
           </Box>

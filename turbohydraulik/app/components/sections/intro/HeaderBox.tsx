@@ -6,14 +6,23 @@ interface Props {
   slug?: string;
   subHeaderContent?: string;
 }
+
+const fontSize = {
+  xl: "60px",
+  lg: "60px",
+  md: "50px",
+  sm: "50px",
+  xs: "50px",
+  xxs: "40px",
+};
 const container = {
   maxWidth: "400px",
 };
 const headerSx = {
   fontWeight: "600",
   fontFamily: "UniteaSans",
-  lineHeight: "65px",
-  fontSize: "60px",
+  lineHeight: fontSize,
+  fontSize: fontSize,
 };
 const subHeader = {
   color: theme.palette.custom.background,
@@ -25,14 +34,13 @@ const HeaderBox = ({ slug, subHeaderContent }: Props) => {
   return (
     <Box sx={container}>
       <Box>
-        <Box
-          sx={{
-            color: theme.palette.custom.background,
-          }}
-        >
+        <Box color={theme.palette.custom.background}>
           <Typography sx={headerSx}> Turbo </Typography>
         </Box>
-        <Typography sx={{ color: theme.palette.secondary.main, ...headerSx }}>
+        <Typography
+          mb="20px"
+          sx={{ color: theme.palette.secondary.main, ...headerSx }}
+        >
           Hydraulik {slug}
         </Typography>
       </Box>
