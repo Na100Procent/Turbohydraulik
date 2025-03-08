@@ -3,7 +3,6 @@
 const nextConfig = {
   trailingSlash: true,
   output: "export",
-  basePath: "/Turbohydraulik",
   images: {
     unoptimized: true,
     remotePatterns: [
