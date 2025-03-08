@@ -3,7 +3,20 @@ import { websiteData } from "../data/data";
 import { CityData, ServiceData } from "../data/types";
 import CityPage from "./CityPage";
 import ServicePage from "./ServicePage";
-import { PageProps } from "@/.next/types/app/[city]/[slug]/page";
+import { PageProps } from "@/.next/types/app/[city]/page";
+
+export const generateStaticParams = async () => {
+  // Get all city slugs and service slugs
+  const citySlugs = Object.keys(websiteData.cities);
+  const serviceSlugs = Object.keys(websiteData.services);
+
+  // Combine both into paths
+  const paths = [...citySlugs, ...serviceSlugs].map((slug) => ({
+    city: slug, // `city` matches the `[city]` dynamic segment
+  }));
+
+  return paths;
+};
 
 const CityOrServicePage: FC<PageProps> = async ({ params }) => {
   const { city: currentSlug } = await params;

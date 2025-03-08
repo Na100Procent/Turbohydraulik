@@ -5,6 +5,7 @@ const nextConfig = {
   output: "export",
   basePath: "/Turbohydraulik",
   images: {
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: "https",
