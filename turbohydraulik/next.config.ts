@@ -2,6 +2,8 @@
 
 const nextConfig = {
   trailingSlash: true,
+  output: "export",
+  basePath: "/Turbohydraulik",
   images: {
     remotePatterns: [
       {
@@ -14,8 +16,7 @@ const nextConfig = {
       },
     ],
   },
-  assetPrefix: process.env.NODE_ENV === "production" ? "/Turbohydraulik/" : "",
-  basePath: process.env.NODE_ENV === "production" ? "/Turbohydraulik" : "",
+
   webpack(config: {
     module: {
       rules: {

@@ -7,9 +7,8 @@
     "dev": "next dev --turbopack",
     "start": "next start",
     "lint": "next lint",
-    "build": "next build",
-    "export": "next export",
-    "deploy": "next build && gh-pages -d out -b gh-pages"
+    "build": "next build && next export",
+    "deploy": "gh-pages -d out"
   },
   "dependencies": {
     "@emotion/cache": "^11.14.0",
