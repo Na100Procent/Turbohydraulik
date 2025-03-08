@@ -27,11 +27,19 @@ const RectangularButton = ({
     alignItems: "center",
     padding: "10px 20px",
     gap: "10px",
+    minWidth: "200px",
   };
   const titleSx = {
     color: titleColor ? titleColor : theme.palette.primary.main,
     fontWeight: "900",
-    fontSize: "14px",
+    fontSize: {
+      xl: "14px",
+      lg: "14px",
+      md: "13px",
+      sm: "12px",
+      xs: "12px",
+      xxs: "11px",
+    },
     fontFamily: "UniteaSans",
     textTransform: "uppercase",
   };

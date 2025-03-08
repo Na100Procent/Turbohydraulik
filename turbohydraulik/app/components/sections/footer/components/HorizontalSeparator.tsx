@@ -5,7 +5,7 @@ const HorizontalSeparator = () => {
   return (
     <Box width="100%" display="flex" justifyContent="center">
       <Box
-        width="85%"
+        width="95%"
         borderTop="1px solid white"
         padding="10px 0"
         sx={{ opacity: 0.4 }}

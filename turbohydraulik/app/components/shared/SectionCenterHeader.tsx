@@ -9,6 +9,30 @@ interface Props {
   bottomHeader?: string;
 }
 
+const containerSx = {
+  display: "flex",
+  justifyContent: "center",
+  flexDirection: "column",
+  alignItems: "center",
+};
+const fontSize = {
+  xl: "50px",
+  lg: "50px",
+  md: "40px",
+  sm: "40px",
+  xs: "40px",
+  xxs: "30px",
+};
+
+const bottomHeaderSx = {
+  fontWeight: "500",
+  fontSize: "15px",
+  color: "rgb(68, 68, 68)",
+  marginTop: "20px",
+  fontFamily: "UniteaSans",
+  textAlign: "center",
+};
+
 const SectionCenterHeader = ({
   topHeader,
   bottomHeader,
@@ -18,11 +42,11 @@ const SectionCenterHeader = ({
 }: Props) => {
   const headerSx = {
     fontWeight: "700",
-    fontSize: "50px",
+    fontSize: fontSize,
     color: headerColor,
     maxWidth: "750px",
     textAlign: "center",
-    lineHeight: "50px",
+    lineHeight: fontSize,
     fontFamily: "UniteaSans",
   };
   const topHeaderSx = {
@@ -33,23 +57,8 @@ const SectionCenterHeader = ({
     fontSize: "15px",
   };
 
-  const bottomHeaderSx = {
-    fontWeight: "500",
-    fontSize: "15px",
-    color: "rgb(68, 68, 68)",
-    marginTop: "20px",
-    fontFamily: "UniteaSans",
-  };
-
   return (
-    <Box
-      sx={{
-        display: "flex",
-        justifyContent: "center",
-        flexDirection: "column",
-        alignItems: "center",
-      }}
-    >
+    <Box sx={containerSx}>
       {topHeader && <Typography sx={topHeaderSx}>{topHeader}</Typography>}
       <Typography sx={headerSx}>{header}</Typography>
       {bottomHeader && (

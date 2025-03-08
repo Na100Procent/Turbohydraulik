@@ -51,7 +51,7 @@ const CityCard = ({ cityName, cityUrl }: Props) => {
             fontWeight: "bold",
             color: theme.palette.primary.main,
             width: "100%",
-            maxWidth: "200px",
+            minWidth: "200px",
           }}
         >
           {cityName}

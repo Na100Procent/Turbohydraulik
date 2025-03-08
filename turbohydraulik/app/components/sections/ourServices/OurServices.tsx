@@ -15,17 +15,28 @@ interface Props {
   city?: CityData;
 }
 
+const headerSx = {
+  padding: sectionXPadding,
+  display: "flex",
+  alignItems: "center",
+  gap: "20px",
+  justifyContent: "space-between",
+  flexDirection: {
+    xl: "row",
+    lg: "row",
+    md: "row",
+    sm: "row",
+    xs: "column",
+    xxs: "column",
+  },
+};
+
 const OurServices = ({ city }: Props) => {
   return (
     <BackgroundWrapper bgColor={theme.palette.primary.main}>
       <Box display={"flex"} flexDirection={"column"} gap="0px">
         <SectionPaddingWrapper>
-          <Box
-            padding={sectionXPadding}
-            display="flex"
-            alignItems="center"
-            justifyContent="space-between"
-          >
+          <Box sx={headerSx}>
             <SectionHeader
               subHeaderColor={theme.palette.secondary.main}
               headerColor={theme.palette.custom.background}

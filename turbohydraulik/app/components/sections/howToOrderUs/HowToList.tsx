@@ -36,7 +36,7 @@ const HowToList = () => {
     <Box
       sx={{
         display: "flex",
-        gap: 2,
+        gap: 10,
         flexWrap: "wrap",
         justifyContent: "center",
       }}

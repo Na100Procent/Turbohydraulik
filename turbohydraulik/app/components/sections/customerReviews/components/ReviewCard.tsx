@@ -26,7 +26,14 @@ const ReviewCard: React.FC<ReviewCardProps> = ({
     borderRadius: "8px",
     boxShadow: "2px 2px 10px rgba(0,0,0,0.1)",
     width: "100%",
-    minWidth: "400px",
+    minWidth: {
+      xl: "400px",
+      lg: "400px",
+      md: "350px",
+      sm: "300px",
+      xs: "250px",
+      xxs: "250px",
+    },
     color: isFirst ? theme.palette.custom.background : blue,
   };
   return (
@@ -40,7 +47,7 @@ const ReviewCard: React.FC<ReviewCardProps> = ({
         {reviewer}
       </Typography>
       <Typography
-        minHeight="130px"
+        minHeight="190px"
         mt={1}
         sx={{ fontFamily: "UniteaSans", fontWeight: "500" }}
       >

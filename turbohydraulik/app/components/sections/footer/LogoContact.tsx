@@ -4,18 +4,30 @@ import React from "react";
 import ContactForm from "./components/ContactForm";
 import LocalPhoneOutlinedIcon from "@mui/icons-material/LocalPhoneOutlined";
 import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
+import { sectionXPadding } from "@/app/constants/styles";
+
+const container = {
+  display: "flex",
+  gap: "20px",
+  padding: sectionXPadding,
+  alignItems: "left",
+  justifyContent: "space-between",
+  flexDirection: {
+    xl: "row",
+    lg: "row",
+    md: "row",
+    sm: "column",
+    xs: "column",
+    xxs: "column",
+  },
+};
 const LogoContact = () => {
   return (
-    <Box
-      display={"flex"}
-      gap={"20px"}
-      padding={"0 80px"}
-      alignItems={"center"}
-      justifyContent={"space-between"}
-    >
-      <LogoIcon />
-
-      <Box display={"flex"} gap={"50px"}>
+    <Box sx={container}>
+      <Box ml="-20px">
+        <LogoIcon />
+      </Box>
+      <Box display={"flex"} gap={"50px"} flexWrap="wrap">
         <ContactForm
           subHeader="PHONE NO"
           header="+1 (555) 000-0000"

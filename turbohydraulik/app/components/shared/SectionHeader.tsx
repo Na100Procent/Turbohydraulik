@@ -8,6 +8,15 @@ interface Props {
   headerColor: string;
 }
 
+const fontSize = {
+  xl: "50px",
+  lg: "50px",
+  md: "40px",
+  sm: "35px",
+  xs: "30px",
+  xxs: "30px",
+};
+
 const SectionHeader = ({
   subHeader,
   subHeaderColor,
@@ -17,9 +26,9 @@ const SectionHeader = ({
   const headerSx = {
     fontWeight: "700",
     zIndex: 10,
-    lineHeight: "50px",
+    lineHeight: fontSize,
     fontFamily: "UniteaSans",
-    fontSize: "50px",
+    fontSize: fontSize,
     maxWidth: "700px",
     color: headerColor,
   };

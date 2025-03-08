@@ -3,11 +3,58 @@ import { Box } from "@mui/material";
 import React from "react";
 import FailureForm from "./FailureForm";
 import { websiteData } from "@/app/data/data";
+import { sectionXPadding } from "@/app/constants/styles";
 
 interface LinkElement {
   title: string;
   url: string;
 }
+
+const containerSx = {
+  display: "flex",
+  padding: sectionXPadding,
+  justifyContent: "space-between",
+  flexDirection: {
+    xl: "row",
+    lg: "row",
+    md: "row",
+    sm: "column",
+    xs: "column",
+    xxs: "column",
+  },
+  alignItems: "center",
+};
+
+const linkListsSx = {
+  display: "flex",
+
+  flexDirection: {
+    xl: "row",
+    lg: "row",
+    md: "row",
+    sm: "row",
+    xs: "column",
+    xxs: "column",
+  },
+  justifyContent: {
+    xl: "left",
+    lg: "left",
+    md: "left",
+    sm: "space-between",
+    xs: "space-between",
+    xxs: "space-between",
+  },
+  width: "100%",
+  gap: {
+    xl: "200px",
+    lg: "200px",
+    md: "80px",
+    sm: "50px",
+    xs: "50px",
+    xxs: "50px",
+  },
+  mb: "40px",
+};
 
 const LinksAndServices = () => {
   const cityNamesUrls: LinkElement[] = Object.values(websiteData.cities).map(
@@ -24,9 +71,11 @@ const LinksAndServices = () => {
     url: `/${service.slug}`,
   }));
   return (
-    <Box display={"flex"} padding={"0 100px"} justifyContent={"space-between"}>
-      <TitledVerticalList title="LOKALIZACJE" list={cityNamesUrls} />
-      <TitledVerticalList title="USŁUGI" list={servicesNamesUrls} />
+    <Box sx={containerSx}>
+      <Box sx={linkListsSx}>
+        <TitledVerticalList title="LOKALIZACJE" list={cityNamesUrls} />
+        <TitledVerticalList title="USŁUGI" list={servicesNamesUrls} />
+      </Box>
       <FailureForm />
     </Box>
   );

@@ -28,6 +28,14 @@ const imgSx = {
   height: "65%",
   objectFit: "cover",
 };
+
+const titleIconSx = {
+  display: "flex",
+  justifyContent: "space-between",
+  alignItems: "center",
+  padding: "16px",
+  gap: "10px",
+};
 const ServiceCard = ({ cityName, service }: Props) => {
   return (
     <Box sx={container}>
@@ -37,14 +45,7 @@ const ServiceCard = ({ cityName, service }: Props) => {
         sx={imgSx}
       />
 
-      <Box
-        sx={{
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-          padding: "16px",
-        }}
-      >
+      <Box sx={titleIconSx}>
         <Typography
           variant="h6"
           sx={{
