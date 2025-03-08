@@ -1,7 +1,9 @@
 import React from "react";
 import { Box, Typography } from "@mui/material";
-import StarIcon from "@mui/icons-material/Star";
 import theme from "@/app/theme/theme";
+import Score from "./Score";
+import HorizontalSeparator from "../../footer/components/HorizontalSeparator";
+import { GoogleIcon } from "@/public/assets/icons/icons";
 
 interface ReviewCardProps {
   reviewer: string;
@@ -9,7 +11,6 @@ interface ReviewCardProps {
   score: number;
   index: number;
 }
-
 const ReviewCard: React.FC<ReviewCardProps> = ({
   reviewer,
   review,
@@ -27,12 +28,12 @@ const ReviewCard: React.FC<ReviewCardProps> = ({
     boxShadow: "2px 2px 10px rgba(0,0,0,0.1)",
     width: "100%",
     minWidth: {
-      xl: "400px",
-      lg: "400px",
-      md: "350px",
-      sm: "300px",
-      xs: "250px",
-      xxs: "250px",
+      xl: "500px",
+      lg: "500px",
+      md: "450px",
+      sm: "400px",
+      xs: "350px",
+      xxs: "350px",
     },
     color: isFirst ? theme.palette.custom.background : blue,
   };
@@ -46,27 +47,31 @@ const ReviewCard: React.FC<ReviewCardProps> = ({
       >
         {reviewer}
       </Typography>
+      <Box
+        display={"flex"}
+        alignItems={"center"}
+        justifyContent={"space-between"}
+      >
+        <Score score={score} />
+        <Box position={"relative"} top="10px" right="10px">
+          <GoogleIcon />
+        </Box>
+      </Box>
+
+      <HorizontalSeparator
+        addSx={{
+          opacity: 0.1,
+          borderTop: `2px solid ${isFirst ? "white" : "gray"}`,
+          width: "100%",
+          mt: "20px",
+        }}
+      />
       <Typography
         minHeight="190px"
-        mt={1}
         sx={{ fontFamily: "UniteaSans", fontWeight: "500" }}
       >
         {review}
       </Typography>
-      <Box display="flex" alignItems="center" mt={3}>
-        {Array.from({ length: 5 }).map((_, index) => (
-          <StarIcon
-            key={index}
-            sx={{
-              color: index < score ? gold : "#ccc",
-              fontSize: "20px",
-            }}
-          />
-        ))}
-        <Typography ml={1} color={gold}>
-          {score}/5
-        </Typography>
-      </Box>
     </Box>
   );
 };

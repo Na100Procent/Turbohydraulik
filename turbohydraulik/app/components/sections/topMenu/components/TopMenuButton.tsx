@@ -1,8 +1,8 @@
 "use client";
+import { scrollToSection } from "@/app/components/shared/helpers/scrollToSection";
 import theme from "@/app/theme/theme";
 import { Button } from "@mui/material";
 import React from "react";
-import { scrollToSection } from "../../shared/helpers/scrollToSection";
 
 interface TopMenuButtonProps {
   title: string;
@@ -14,6 +14,7 @@ const buttonSx = {
   fontSize: "14px",
   fontFamily: "UniteaSans",
   fontWeight: 500,
+  minWidth: "100px",
 };
 const TopMenuButton = ({ title, section }: TopMenuButtonProps) => {
   const handleClick = () => {

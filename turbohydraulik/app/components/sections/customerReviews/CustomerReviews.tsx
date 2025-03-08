@@ -52,7 +52,6 @@ const CustomerReviews = ({ city, content }: Props) => {
           <YellowRightOrnament />
         </Box>
         <CommaIcon />
-
         <ReviewsHorizontalScrollList />
         <Box display={"flex"} justifyContent={"center"} marginTop={"50px"}>
           <RectangularButton title="View All Reviews" />

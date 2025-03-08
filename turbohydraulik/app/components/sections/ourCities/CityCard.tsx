@@ -1,8 +1,8 @@
 import React from "react";
-import { Box, Typography, IconButton } from "@mui/material";
-import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
+import { Box, Typography } from "@mui/material";
 import theme from "@/app/theme/theme";
 import Link from "next/link";
+import RectangularButton from "../../shared/RectangularButton";
 
 interface Props {
   cityName: string;
@@ -10,16 +10,16 @@ interface Props {
 }
 
 const container = {
-  maxWidth: "350px",
+  minWidth: "400px",
   width: "100%",
-  height: "400px",
+  padding: "0px 10px 10px 10px ",
   borderRadius: "12px",
   overflow: "hidden",
   backgroundColor: "#f5f5f5",
   display: "flex",
   flexDirection: "column",
   alignItems: "center",
-  boxShadow: 2,
+  boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
 };
 const imgSx = {
   marginTop: "10px",
@@ -39,33 +39,28 @@ const CityCard = ({ cityName, cityUrl }: Props) => {
       <Box
         sx={{
           display: "flex",
-          justifyContent: "center",
+          justifyContent: "space-between",
           width: "100%",
           alignItems: "center",
-          padding: "16px",
+          padding: "20px",
         }}
       >
         <Typography
-          variant="h6"
           sx={{
             fontWeight: "bold",
             color: theme.palette.primary.main,
-            width: "100%",
-            minWidth: "200px",
+
+            fontSize: "25px",
           }}
         >
           {cityName}
         </Typography>
 
         <Link href={`${cityUrl}`}>
-          <IconButton
-            sx={{
-              backgroundColor: theme.palette.secondary.main,
-              color: theme.palette.primary.main,
-            }}
-          >
-            <ArrowOutwardIcon />
-          </IconButton>
+          <RectangularButton
+            title="VIEW SERVICES"
+            bgColor={theme.palette.secondary.main}
+          />
         </Link>
       </Box>
     </Box>

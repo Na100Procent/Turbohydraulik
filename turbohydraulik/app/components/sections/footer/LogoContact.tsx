@@ -5,6 +5,7 @@ import ContactForm from "./components/ContactForm";
 import LocalPhoneOutlinedIcon from "@mui/icons-material/LocalPhoneOutlined";
 import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
 import { sectionXPadding } from "@/app/constants/styles";
+import { email, phoneNUmber } from "@/app/constants/appConstants";
 
 const container = {
   display: "flex",
@@ -30,12 +31,12 @@ const LogoContact = () => {
       <Box display={"flex"} gap={"50px"} flexWrap="wrap">
         <ContactForm
           subHeader="PHONE NO"
-          header="+1 (555) 000-0000"
+          header={phoneNUmber}
           icon={<LocalPhoneOutlinedIcon />}
         />
         <ContactForm
           subHeader="EMAIL ADDRESS"
-          header="info@turnohydraulik.pl"
+          header={email}
           icon={<EmailOutlinedIcon />}
         />
       </Box>

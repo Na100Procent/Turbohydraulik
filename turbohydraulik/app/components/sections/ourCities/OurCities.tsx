@@ -4,7 +4,6 @@ import BackgroundWrapper from "../../shared/BackgroundWrapper";
 import SectionPaddingWrapper from "../../shared/SectionWrapper";
 import SectionCenterHeader from "../../shared/SectionCenterHeader";
 import { Box } from "@mui/material";
-import { sectionIds } from "@/app/constants/appConstants";
 import ScrollCityList from "./ScrollCityList";
 import CallUsButton from "../../shared/CallUsButton";
 
@@ -12,7 +11,6 @@ const OurCities = () => {
   return (
     <BackgroundWrapper bgColor={theme.palette.custom.background}>
       <Box
-        id={sectionIds.projects}
         display={"flex"}
         flexDirection={"column"}
         alignItems={"center"}
