@@ -48,6 +48,14 @@ export const YellowRightOrnament = () => (
     height={183}
   />
 );
+export const AboutMeOrnament = () => (
+  <Image
+    src="assets/icons/AboutMeOrnament.svg"
+    alt="YellowR"
+    width={143}
+    height={183}
+  />
+);
 export const TopMenuOrnament = () => (
   <Image
     src="assets/icons/TopMenuOrnament.svg"
@@ -67,5 +75,14 @@ export const TopMenuLogo = () => (
     alt="TMLogo"
     width={197}
     height={80}
+  />
+);
+
+export const GoogleIcon = () => (
+  <Image
+    src="assets/icons/GoogleIcon.svg"
+    alt="TMLogo"
+    width={30}
+    height={30}
   />
 );

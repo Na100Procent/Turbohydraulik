@@ -1,15 +1,14 @@
 import React from "react";
 import BackgroundWrapper from "../../shared/BackgroundWrapper";
 import theme from "@/app/theme/theme";
-import SectionHeader from "../../shared/SectionHeader";
 import { Box } from "@mui/material";
-import ServiceVerticalScrollList from "./ServicesHorizontalList";
+import ServiceContainer from "./ServiceContainer";
 import { sectionXPadding } from "@/app/constants/styles";
 import SectionPaddingWrapper from "../../shared/SectionWrapper";
-import { YellowLeftOrnament } from "@/public/assets/icons/icons";
+import { AboutMeOrnament } from "@/public/assets/icons/icons";
 import CallUsButton from "../../shared/CallUsButton";
-import RectangularButton from "../../shared/RectangularButton";
 import { CityData } from "@/app/data/types";
+import SectionCenterHeader from "../../shared/SectionCenterHeader";
 
 interface Props {
   city?: CityData;
@@ -20,7 +19,7 @@ const headerSx = {
   display: "flex",
   alignItems: "center",
   gap: "20px",
-  justifyContent: "space-between",
+  justifyContent: "center",
   flexDirection: {
     xl: "row",
     lg: "row",
@@ -37,20 +36,19 @@ const OurServices = ({ city }: Props) => {
       <Box display={"flex"} flexDirection={"column"} gap="0px">
         <SectionPaddingWrapper>
           <Box sx={headerSx}>
-            <SectionHeader
-              subHeaderColor={theme.palette.secondary.main}
+            <SectionCenterHeader
+              topHeaderColor={theme.palette.secondary.main}
               headerColor={theme.palette.custom.background}
-              subHeader="services we offer"
+              topHeader="services we offer"
               header={`Our Plumbing Services ${city ? city.name : ""}`}
             />
-            <RectangularButton title="View All  Services" />
           </Box>
         </SectionPaddingWrapper>
         <Box position={"absolute"} top={"-130px"} right={"-10px"}>
-          <YellowLeftOrnament />
+          <AboutMeOrnament />
         </Box>
-        <ServiceVerticalScrollList city={city ? city.name : ""} />
-        <Box display={"flex"} justifyContent={"center"}>
+        <ServiceContainer city={city ? city.name : ""} />
+        <Box display={"flex"} justifyContent={"center"} mt="20px">
           <CallUsButton />
         </Box>
       </Box>

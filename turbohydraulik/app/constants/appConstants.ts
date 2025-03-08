@@ -9,3 +9,6 @@ export const sectionIds = {
 };
 
 export const homePageLink = "/";
+
+export const phoneNUmber = "+48 923 423 123";
+export const email = "info@turnohydraulik.pl";

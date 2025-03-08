@@ -14,6 +14,7 @@ const containerSx = {
   justifyContent: "center",
   flexDirection: "column",
   alignItems: "center",
+  gap: "10px",
 };
 const fontSize = {
   xl: "50px",
@@ -27,7 +28,7 @@ const fontSize = {
 const bottomHeaderSx = {
   fontWeight: "500",
   fontSize: "15px",
-  color: "rgb(68, 68, 68)",
+  color: "#565656",
   marginTop: "20px",
   fontFamily: "UniteaSans",
   textAlign: "center",

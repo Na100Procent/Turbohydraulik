@@ -3,18 +3,19 @@ import React from "react";
 import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
 import theme from "@/app/theme/theme";
 import LocalPhoneOutlinedIcon from "@mui/icons-material/LocalPhoneOutlined";
-import VerticalSeparator from "../../shared/VerticalSeparator";
+import VerticalSeparator from "../../../shared/VerticalSeparator";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import EmailIcon from "@mui/icons-material/Email";
 import { TopMenuOrnament } from "@/public/assets/icons/icons";
+import { email, phoneNUmber } from "@/app/constants/appConstants";
 
 const contactElement = {
   display: "flex",
   alignItems: "center",
   zIndex: 3,
   padding: "10px",
-  gap: "10px",
+  gap: "6px",
 };
 
 const ornamentSx = {
@@ -23,17 +24,38 @@ const ornamentSx = {
   right: {
     xl: "-900px",
     lg: "-1250px",
-    md: "-1550px",
+    md: "-1500px",
     sm: "-1700px",
-    xs: "-1200px",
+    xs: "-1400px",
   },
   zIndex: 1,
 };
 
+const elementsContainer = {
+  display: "flex",
+  justifyContent: {
+    xl: "right",
+    lg: "right",
+    md: "right",
+    sm: "right",
+    xs: "center",
+    xxs: "center",
+  },
+  alignItems: "center",
+  gap: {
+    xl: "20px",
+    lg: "20px",
+    md: "10px",
+    sm: "8px",
+    xs: "5px",
+    xxs: "5px",
+  },
+};
 const contactTitleSx = {
   color: theme.palette.custom.background,
   fontFamily: "UniteaSans",
   fontSize: "14px",
+  minWidth: "100px",
   fontWeight: 500,
 };
 
@@ -42,6 +64,21 @@ const contactIconSx = {
   height: "20px",
   mt: "-4px",
   color: theme.palette.secondary.main,
+};
+
+const socialMedias = {
+  justifyContent: "center",
+  alignItems: "center",
+  mx: 2,
+  display: {
+    xl: "flex",
+    lg: "flex",
+    md: "flex",
+    sm: "flex",
+    xs: "none",
+    xxs: "none",
+  },
+  gap: "10px",
 };
 
 const socialIconSx = {
@@ -61,22 +98,20 @@ const ContactElements = () => {
       <Box sx={ornamentSx}>
         <TopMenuOrnament />
       </Box>
-      <Box display="flex" justifyContent="right" alignItems="center" gap="20px">
+      <Box sx={elementsContainer}>
         <Box sx={contactElement}>
           <LocalPhoneOutlinedIcon sx={contactIconSx} />
-          <Typography sx={contactTitleSx}>+1 (555) 000-0000</Typography>
+          <Typography sx={contactTitleSx}>{phoneNUmber}</Typography>
         </Box>
-
         <VerticalSeparator />
-
         <Box sx={contactElement}>
           <EmailOutlinedIcon sx={contactIconSx} />
-          <Typography sx={contactTitleSx}>info@turbohydraulik.pl</Typography>
+          <Typography sx={contactTitleSx}>{email}</Typography>
         </Box>
 
-        <VerticalSeparator />
+        <Box sx={socialMedias}>
+          <VerticalSeparator />
 
-        <Box display="flex" justifyContent="center" alignItems="center" mx={2}>
           <IconButton
             sx={{
               backgroundColor: theme.palette.custom.darkBlue,

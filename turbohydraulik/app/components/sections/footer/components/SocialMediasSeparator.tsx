@@ -5,11 +5,18 @@ import TwitterIcon from "@mui/icons-material/Twitter";
 import EmailIcon from "@mui/icons-material/Email";
 import theme from "@/app/theme/theme";
 
+interface Props {
+  separatorColor?: string;
+}
 const iconBtn = {
   borderRadius: "50%",
   margin: "0 5px",
+  "&:hover": {
+    backgroundColor: theme.palette.custom.blueLight,
+    color: theme.palette.primary.main,
+  },
 };
-const SocialMediasSeparator: React.FC = () => {
+const SocialMediasSeparator = ({ separatorColor }: Props) => {
   return (
     <Box
       width="100%"
@@ -20,7 +27,7 @@ const SocialMediasSeparator: React.FC = () => {
       <Box flex="1">
         <Box
           width="85%"
-          borderTop="1px solid white"
+          borderTop={`1px solid ${separatorColor ? separatorColor : "white"}`}
           padding="10px 0"
           sx={{ opacity: 0.4, margin: "0 auto" }}
         />
@@ -63,7 +70,7 @@ const SocialMediasSeparator: React.FC = () => {
       <Box flex="1">
         <Box
           width="85%"
-          borderTop="1px solid white"
+          borderTop={`1px solid ${separatorColor ? separatorColor : "white"}`}
           padding="10px 0"
           sx={{ opacity: 0.4, margin: "0 auto" }}
         />
