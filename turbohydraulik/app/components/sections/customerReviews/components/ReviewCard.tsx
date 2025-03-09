@@ -21,6 +21,7 @@ const ReviewCard: React.FC<ReviewCardProps> = ({
   const gold = theme.palette.secondary.main;
 
   const isFirst = !index;
+
   const container = {
     padding: "50px 30px",
     background: isFirst ? blue : theme.palette.custom.background,
@@ -67,7 +68,7 @@ const ReviewCard: React.FC<ReviewCardProps> = ({
         }}
       />
       <Typography
-        minHeight="190px"
+        minHeight="100px"
         sx={{ fontFamily: "UniteaSans", fontWeight: "500" }}
       >
         {review}

@@ -1,7 +1,7 @@
 "use client";
 
 import { Box, Drawer } from "@mui/material";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import SideMenuContent from "./SideMenuContent";
 
 interface Props {
@@ -10,27 +10,29 @@ interface Props {
 }
 
 const SideMenu = ({ menuOpened, handleDrawerToggle }: Props) => {
+  const drawerRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
-    const handlePointerDown = (event: PointerEvent) => {
-      const drawerPaper = document.querySelector(".MuiDrawer-paper");
-      if (drawerPaper && !drawerPaper.contains(event.target as Node)) {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        drawerRef.current &&
+        !drawerRef.current.contains(event.target as Node)
+      ) {
         handleDrawerToggle();
       }
     };
 
     if (menuOpened) {
-      setTimeout(() => {
-        document.addEventListener("pointerdown", handlePointerDown);
-      }, 100);
+      document.addEventListener("mousedown", handleClickOutside);
       document.documentElement.style.overflow = "hidden";
       document.body.style.overflow = "hidden";
     } else {
+      document.removeEventListener("mousedown", handleClickOutside);
       document.documentElement.style.overflow = "auto";
       document.body.style.overflow = "auto";
     }
 
     return () => {
-      document.removeEventListener("pointerdown", handlePointerDown);
+      document.removeEventListener("mousedown", handleClickOutside);
       document.documentElement.style.overflow = "auto";
       document.body.style.overflow = "auto";
     };
@@ -38,6 +40,7 @@ const SideMenu = ({ menuOpened, handleDrawerToggle }: Props) => {
 
   return (
     <Drawer
+      ref={drawerRef}
       hideBackdrop={false}
       sx={{
         "& .MuiDrawer-paper": {
@@ -53,7 +56,7 @@ const SideMenu = ({ menuOpened, handleDrawerToggle }: Props) => {
       ModalProps={{ keepMounted: true }}
     >
       <Box sx={{ padding: "20px", height: "100%" }}>
-        <SideMenuContent />
+        <SideMenuContent handleDrawerToggle={handleDrawerToggle} />
       </Box>
     </Drawer>
   );

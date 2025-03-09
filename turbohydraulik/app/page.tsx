@@ -13,14 +13,17 @@ import { sectionIds } from "./constants/appConstants";
 import OurCities from "./components/sections/ourCities/OurCities";
 
 export default function Home() {
+  const containerSx = {
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+    overflowX: "hidden",
+    width: "100%",
+    position: "relative",
+  };
   return (
-    <Box
-      display="flex"
-      justifyContent="center"
-      alignItems="center"
-      flexDirection="column"
-      id={sectionIds.home}
-    >
+    <Box sx={containerSx} id={sectionIds.home}>
       <TopMenu />
       <IntroSection />
       <OurCities />

@@ -38,13 +38,13 @@ body,
 #root {
   margin: 0;
   padding: 0;
-  background: #575757;
+  background: #02578c;
   font-family: "UniteaSans";
   box-sizing: border-box;
-  overflow: auto;
   height: 100% !important;
   width: 100%;
   overflow-x: hidden;
+  overscroll-behavior: none;
 }
 
 * {
