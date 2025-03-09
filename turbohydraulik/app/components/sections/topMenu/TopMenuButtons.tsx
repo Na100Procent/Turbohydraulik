@@ -8,9 +8,15 @@ interface Props {
   isVertical?: boolean;
   withSeparators?: boolean;
   addSx?: SxProps<Theme>;
+  onButtonClick?: () => void;
 }
 
-const TopMenuButtons = ({ isVertical, withSeparators, addSx }: Props) => {
+const TopMenuButtons = ({
+  isVertical,
+  withSeparators,
+  addSx,
+  onButtonClick,
+}: Props) => {
   const Separator = () => (
     <Typography
       sx={{
@@ -35,7 +41,10 @@ const TopMenuButtons = ({ isVertical, withSeparators, addSx }: Props) => {
     },
   };
   return (
-    <Box sx={{ ...container, ...(addSx && { ...addSx }) }}>
+    <Box
+      sx={{ ...container, ...(addSx && { ...addSx }) }}
+      onClick={onButtonClick && onButtonClick}
+    >
       <TopMenuButton title="Home" section={sectionIds.home} />
       <Separator />
       <TopMenuButton title="About Us" section={sectionIds.about} />

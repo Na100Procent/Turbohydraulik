@@ -6,6 +6,9 @@ import ContactUsButton from "@/app/components/shared/ContactUsButton";
 import SocialMediasSeparator from "../../../footer/components/SocialMediasSeparator";
 import theme from "@/app/theme/theme";
 
+interface Props {
+  handleDrawerToggle: () => void;
+}
 const container = {
   display: "flex",
   justifyContent: "space-between",
@@ -13,6 +16,7 @@ const container = {
   height: "100%",
   flexDirection: "column",
   gap: "50px",
+  paddingBottom: "20px",
 };
 const buttonsSx = {
   gap: {
@@ -21,11 +25,15 @@ const buttonsSx = {
     xxs: "20px",
   },
 };
-const SideMenuContent = () => {
+const SideMenuContent = ({ handleDrawerToggle }: Props) => {
   return (
     <Box sx={container}>
       <TopMenuLogo />
-      <TopMenuButtons isVertical addSx={buttonsSx} />
+      <TopMenuButtons
+        isVertical
+        addSx={buttonsSx}
+        onButtonClick={handleDrawerToggle}
+      />
       <SocialMediasSeparator separatorColor={theme.palette.primary.main} />
       <ContactUsButton />
     </Box>
