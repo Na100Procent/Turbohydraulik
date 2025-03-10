@@ -13,9 +13,9 @@ export const websiteData: WebsiteData = {
     faq: "Find answers to the most frequently asked questions about our plumbing services. If you can't find the answer, please contact us!",
   },
   services: {
-    instalacja_i_wymiana_zaworów: {
+    instalacja_i_wymiana_zaworow: {
       name: "Instalacja i wymiana zaworów",
-      slug: "instalacja_i_wymiana_zaworów",
+      slug: "instalacja_i_wymiana_zaworow",
       content: {
         home: "Skorzystaj z naszej kompleksowej usługi instalacji i wymiany zaworów już dziś!",
         about: "Dokładne i szybkie usuwanie zabrudzeń.",
@@ -129,7 +129,7 @@ export const websiteData: WebsiteData = {
     },
     wymiana_pralki: {
       name: "Wymiana pralki",
-      slug: "montaz_toalety",
+      slug: "wymiana_pralki",
       content: {
         home: "Profesjonalny Wymiana pralki!",
         about: "Dokładny i szybki montaż toalet.",
@@ -167,7 +167,7 @@ export const websiteData: WebsiteData = {
     },
     usuniecie_usterek: {
       name: "Usunięcie usterek",
-      slug: "montaz_toalety",
+      slug: "usuniecie_usterek",
       content: {
         home: "Profesjonalny Usunięcie usterek!",
         about: "Dokładny i szybki montaż toalet.",
@@ -205,7 +205,7 @@ export const websiteData: WebsiteData = {
     },
     renowacja_toalety: {
       name: "Renowacja toalety",
-      slug: "montaz_toalety",
+      slug: "renowacja_toalety",
       content: {
         home: "Profesjonalny Renowacja toalety!",
         about: "Dokładny i szybki montaż toalet.",
@@ -269,16 +269,16 @@ export const websiteData: WebsiteData = {
         },
       },
     },
-    katowice: {
-      name: "Katowice",
-      slug: "katowice",
+    torun: {
+      name: "Toruń",
+      slug: "torun",
       content: {
-        home: "Turbo Hydraulik Katowice - Twój Superbohater w Świecie Hydrauliki!",
+        home: "Turbo Hydraulik torun - Twój Superbohater w Świecie Hydrauliki!",
         about: "Hydraulik Toruń - satysfakcja i pełen profesjonalizm.",
-        projects: "Zobacz nasze projekty w Katowicach!",
-        orderUs: "Zamów hydraulika w Katowicach!",
+        projects: "Zobacz nasze projekty w Toruniu!",
+        orderUs: "Zamów hydraulika w Toruniu!",
         reviews: "Opinie klientów z Katowic.",
-        faq: "Najczęściej zadawane pytania w Katowicach.",
+        faq: "Najczęściej zadawane pytania w Toruniu.",
       },
       districts: {
         starowka: {
@@ -295,16 +295,16 @@ export const websiteData: WebsiteData = {
         },
       },
     },
-    czestochowa: {
-      name: "Częstochowa",
-      slug: "czestochowa",
+    gdynia: {
+      name: "Gdynia",
+      slug: "gdynia",
       content: {
-        home: "Najlepsze prace hydrauliczne w Częstochowie!",
-        about: "Hydraulik w Częstochowie - pasja i profesjonalizm.",
-        projects: "Zobacz nasze projekty w Częstochowie!",
-        orderUs: "Zamów hydraulika w Częstochowie!",
-        reviews: "Opinie klientów z Częstochowy.",
-        faq: "Najczęściej zadawane pytania w Częstochowie.",
+        home: "Najlepsze prace hydrauliczne w gdyni!",
+        about: "Hydraulik w gdyni - pasja i profesjonalizm.",
+        projects: "Zobacz nasze projekty w gdyni!",
+        orderUs: "Zamów hydraulika w gdyni!",
+        reviews: "Opinie klientów z Gdyni.",
+        faq: "Najczęściej zadawane pytania w gdyni.",
       },
       districts: {
         orlowo: {

@@ -3,3 +3,6 @@ export const introBgUrl =
 
 export const aboutUsUrl =
   "https://github.com/user-attachments/assets/9a949cec-703c-4c7e-85af-f96cbcd1963d";
+
+export const serviceCardUrl =
+  "https://github.com/user-attachments/assets/b9581ef8-d7c5-407f-b233-4fad19ee0f70";

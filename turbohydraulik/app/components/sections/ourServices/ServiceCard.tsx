@@ -1,11 +1,15 @@
+"use client";
+
 import React from "react";
 import { Box, Typography } from "@mui/material";
 import theme from "@/app/theme/theme";
-import { ServiceData } from "@/app/data/types";
+import { CityData, ServiceData } from "@/app/data/types";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { serviceCardUrl } from "@/app/constants/imagesUrls";
 
 interface Props {
-  cityName?: string;
+  city?: CityData;
   service: ServiceData;
 }
 
@@ -18,7 +22,6 @@ const container = {
     xs: "350px",
     xxs: "350px",
   },
-
   height: "470px",
   borderRadius: "12px",
   overflow: "hidden",
@@ -28,7 +31,6 @@ const container = {
   alignItems: "left",
   boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
   padding: "10px 20px 60px 20px",
-
   transition: "background-color 0.3s ease, scale 0.3s ease",
   "&:hover": {
     cursor: "pointer",
@@ -61,17 +63,23 @@ const descriptionSx = {
   opacity: 0.8,
   mt: "5px",
 };
-const ServiceCard = ({ cityName, service }: Props) => {
-  return (
-    <Link href={`${service.slug}`}>
-      <Box sx={container}>
-        <Box
-          component="img"
-          src="https://github.com/user-attachments/assets/b9581ef8-d7c5-407f-b233-4fad19ee0f70"
-          sx={imgSx}
-        />
 
-        <Typography sx={titleSx}>{service.name + " " + cityName}</Typography>
+const ServiceCard = ({ city, service }: Props) => {
+  const pathname = usePathname();
+  const pathSegments = pathname.split("/").filter(Boolean);
+
+  let newPath = `/${service.slug}`;
+
+  if (pathSegments.length > 0) {
+    if (city?.slug) {
+      newPath = `/${city?.slug}/${service.slug}`;
+    }
+  }
+  return (
+    <Link href={newPath}>
+      <Box sx={container}>
+        <Box component="img" src={serviceCardUrl} sx={imgSx} />
+        <Typography sx={titleSx}>{service.name + " " + city?.name}</Typography>
         <Typography sx={descriptionSx}>
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui dolores
           enim officiis suscipit aperiam tenetur recusandae illo accusantium.

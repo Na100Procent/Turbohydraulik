@@ -6,7 +6,7 @@ import React from "react";
 import FailureForm from "./FailureForm";
 import { websiteData } from "@/app/data/data";
 import { sectionXPadding } from "@/app/constants/styles";
-import CitiesList from "./CitiesList";
+import CitiesList from "./LocationsList";
 
 const containerSx = {
   display: "flex",
@@ -61,10 +61,16 @@ const LinksAndServices = () => {
     title: service.name,
     url: `/${service.slug}`,
   }));
+  const cityNamesUrls: LinkElement[] = Object.values(websiteData.cities).map(
+    (city) => ({
+      title: city.name,
+      url: `/${city.slug}`,
+    })
+  );
   return (
     <Box sx={containerSx}>
       <Box sx={linkListsSx}>
-        <CitiesList />
+        <CitiesList locationsList={cityNamesUrls} />
         <TitledVerticalList title="USŁUGI" list={servicesNamesUrls} />
       </Box>
       <FailureForm />

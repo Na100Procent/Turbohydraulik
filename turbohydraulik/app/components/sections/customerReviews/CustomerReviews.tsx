@@ -6,7 +6,6 @@ import { Box, Typography } from "@mui/material";
 import { sectionXPadding } from "@/app/constants/styles";
 import SectionPaddingWrapper from "../../shared/SectionWrapper";
 import ReviewsHorizontalScrollList from "./ReviewsHorizontalScrollList";
-import { YellowRightOrnament } from "@/public/assets/icons/icons";
 import RectangularButton from "../../shared/RectangularButton";
 import { sectionIds } from "@/app/constants/appConstants";
 import { CityData } from "@/app/data/types";
@@ -48,9 +47,9 @@ const CustomerReviews = ({ city, content }: Props) => {
             </Typography>
           </Box>
         </SectionPaddingWrapper>
-        <Box position={"absolute"} top={"-130px"} left={"-10px"}>
+        {/* <Box position={"absolute"} top={"-130px"} left={"-10px"}>
           <YellowRightOrnament />
-        </Box>
+        </Box> */}
         <CommaIcon />
         <ReviewsHorizontalScrollList />
         <Box display={"flex"} justifyContent={"center"} marginTop={"50px"}>

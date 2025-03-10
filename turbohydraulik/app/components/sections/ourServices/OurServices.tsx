@@ -5,7 +5,6 @@ import { Box } from "@mui/material";
 import ServiceContainer from "./ServiceContainer";
 import { sectionXPadding } from "@/app/constants/styles";
 import SectionPaddingWrapper from "../../shared/SectionWrapper";
-import { AboutMeOrnament } from "@/public/assets/icons/icons";
 import CallUsButton from "../../shared/CallUsButton";
 import { CityData } from "@/app/data/types";
 import SectionCenterHeader from "../../shared/SectionCenterHeader";
@@ -44,10 +43,10 @@ const OurServices = ({ city }: Props) => {
             />
           </Box>
         </SectionPaddingWrapper>
-        <Box position={"absolute"} top={"-130px"} right={"-10px"}>
+        {/* <Box position={"absolute"} top={"-130px"} right={"-10px"}>
           <AboutMeOrnament />
-        </Box>
-        <ServiceContainer city={city ? city.name : ""} />
+        </Box> */}
+        <ServiceContainer city={city} />
         <Box display={"flex"} justifyContent={"center"} mt="20px">
           <CallUsButton />
         </Box>

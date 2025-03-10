@@ -4,7 +4,6 @@ import BackgroundWrapper from "../../shared/BackgroundWrapper";
 import SectionPaddingWrapper from "../../shared/SectionWrapper";
 import SectionCenterHeader from "../../shared/SectionCenterHeader";
 import MosaicGrid from "./MosaicGrid";
-import { YellowLeftOrnament } from "@/public/assets/icons/icons";
 import { Box } from "@mui/material";
 import { sectionIds } from "@/app/constants/appConstants";
 
@@ -18,12 +17,11 @@ const RecentWorks = () => {
             topHeader="OUR LATEST PROJECTS"
             header="Recently completed works"
             bottomHeader="See our latest projects and see how professionally we perform every plumbing service."
-            headerColor={theme.palette.primary.main}
           />
         </SectionPaddingWrapper>
-        <Box position={"absolute"} top={"-130px"} right={"-10px"}>
+        {/* <Box position={"absolute"} top={"-130px"} right={"-10px"}>
           <YellowLeftOrnament />
-        </Box>
+        </Box> */}
         <MosaicGrid />
       </Box>
     </BackgroundWrapper>

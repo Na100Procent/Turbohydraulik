@@ -1,17 +1,18 @@
 import React from "react";
 import { Box } from "@mui/material";
-import ServiceCard from "./ServiceShortcut";
+import ServiceCard from "./ServiceCard";
 import { websiteData } from "@/app/data/data";
+import { CityData } from "@/app/data/types";
 
 interface Props {
-  city?: string;
+  city?: CityData;
 }
 
 const ServiceContainer = ({ city }: Props) => {
   const mappedServiceElements = Object.values(websiteData.services).map(
     (service, index) => (
       <Box key={index} sx={{ margin: "0 10px" }}>
-        <ServiceCard service={service} cityName={city} />
+        <ServiceCard service={service} city={city} />
       </Box>
     )
   );

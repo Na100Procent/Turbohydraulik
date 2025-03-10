@@ -5,7 +5,6 @@ import SectionHeader from "../../shared/SectionHeader";
 import { Box, Typography } from "@mui/material";
 import { sectionXPadding } from "@/app/constants/styles";
 import SectionPaddingWrapper from "../../shared/SectionWrapper";
-import ServiceCircularLink from "./components/ServiceCircularLink";
 import Image from "next/image";
 import { aboutUsUrl } from "@/app/constants/imagesUrls";
 import OurMission from "./components/OurMission";
@@ -36,13 +35,6 @@ const contentSx = {
   gap: "100px",
 };
 
-const headerSx = {
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "space-between",
-  gap: "10px",
-};
-
 const imgSx = {
   maxWidth: "400px",
   width: "100%",
@@ -52,35 +44,21 @@ const imgSx = {
   overflow: "hidden",
 };
 
-const AboutUs = ({ city, content, bgColor }: Props) => {
+const AboutCity = ({ city, content, bgColor }: Props) => {
   return (
     <BackgroundWrapper
-      bgColor={bgColor ? bgColor : theme.palette.custom.yellowLight}
+      bgColor={bgColor ? bgColor : theme.palette.custom.background}
     >
       <SectionPaddingWrapper>
         <Box padding={sectionXPadding} id={sectionIds.about}>
-          <Box sx={headerSx}>
-            <SectionHeader
-              subHeaderColor={theme.palette.secondary.main}
-              headerColor={theme.palette.primary.main}
-              subHeader="ABOUT US"
-              header={`Provide the highest level Of Plumbing services ${
-                city ? city.name : ""
-              }`}
-            />
+          <SectionHeader
+            subHeaderColor={theme.palette.secondary.main}
+            headerColor={theme.palette.primary.main}
+            subHeader="ABOUT CITY"
+            header={`About Plumbing in city ${city ? city.name : ""}`}
+          />
 
-            <ServiceCircularLink />
-          </Box>
           <Box sx={contentSx}>
-            <Box sx={imgSx}>
-              <Image
-                layout="responsive"
-                src={aboutUsUrl}
-                alt="About img"
-                width={400}
-                height={490}
-              />
-            </Box>
             <Box
               display="flex"
               flexDirection="column"
@@ -101,6 +79,15 @@ const AboutUs = ({ city, content, bgColor }: Props) => {
                 <CallUsButton />
               </div>
             </Box>
+            <Box sx={imgSx}>
+              <Image
+                layout="responsive"
+                src={aboutUsUrl}
+                alt="About img"
+                width={400}
+                height={490}
+              />
+            </Box>
           </Box>
         </Box>
       </SectionPaddingWrapper>
@@ -108,4 +95,4 @@ const AboutUs = ({ city, content, bgColor }: Props) => {
   );
 };
 
-export default AboutUs;
+export default AboutCity;

@@ -15,7 +15,6 @@ const InNumbers = () => {
           <SectionCenterHeader
             header="Turbo Plumber in numbers"
             bottomHeader="Hundreds of satisfied customers, dozens of successful projects and thousands of hours of work – Turbo Hydraulik in numbers!"
-            headerColor={theme.palette.primary.main}
           />
           <CompanyInNumbers />
           <Box display="flex" justifyContent="center" mt="10px">

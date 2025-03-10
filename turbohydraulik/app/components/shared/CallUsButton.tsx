@@ -11,7 +11,7 @@ const CallUsButton = ({ bgColor }: Props) => {
   return (
     <RectangularButton
       bgColor={bgColor ? bgColor : theme.palette.secondary.main}
-      title={`Call: ${phoneNUmber}`}
+      title={`Dzwoń: ${phoneNUmber}`}
       icon={
         <PhoneIcon
           sx={{

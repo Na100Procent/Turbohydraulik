@@ -6,12 +6,18 @@ import ServicePage from "./ServicePage";
 import { PageProps } from "@/.next/types/app/[city]/page";
 
 export const generateStaticParams = async () => {
-  const citySlugs = Object.keys(websiteData.cities);
-  const serviceSlugs = Object.keys(websiteData.services);
+  const cities = Object.keys(websiteData.cities);
+  const services = Object.keys(websiteData.services);
 
-  const paths = [...citySlugs, ...serviceSlugs].map((slug) => ({
-    city: slug,
-  }));
+  const paths: { city: string; slug: string }[] = [];
+
+  cities.forEach((city) => {
+    paths.push({ city, slug: "" });
+  });
+
+  services.forEach((service) => {
+    paths.push({ city: service, slug: "" });
+  });
 
   return paths;
 };
