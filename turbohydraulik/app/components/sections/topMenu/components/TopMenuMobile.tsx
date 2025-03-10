@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { TopMenuLogo } from "@/public/assets/icons/icons";
 import Link from "next/link";
-import { homePageLink } from "@/app/constants/appConstants";
+import { homePagePath } from "@/app/constants/appConstants";
 import { Box, IconButton } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import theme from "@/app/theme/theme";
@@ -23,7 +23,7 @@ const TopMenuMobile = () => {
 
   return (
     <Box sx={containerSx}>
-      <Link href={homePageLink}>
+      <Link href={homePagePath}>
         <Box sx={{ scale: 0.6 }}>
           <TopMenuLogo />
         </Box>

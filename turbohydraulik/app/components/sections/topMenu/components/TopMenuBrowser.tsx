@@ -1,7 +1,7 @@
 import React from "react";
 import { TopMenuLogo } from "@/public/assets/icons/icons";
 import Link from "next/link";
-import { homePageLink } from "@/app/constants/appConstants";
+import { homePagePath } from "@/app/constants/appConstants";
 import { Box } from "@mui/material";
 import TopMenuButtons from "../TopMenuButtons";
 import ContactUsButton from "@/app/components/shared/ContactUsButton";
@@ -16,7 +16,7 @@ const logoButtonSx = {
 const TopMenuBrowser = () => {
   return (
     <Box sx={logoButtonSx}>
-      <Link href={homePageLink}>
+      <Link href={homePagePath}>
         <TopMenuLogo />
       </Link>
       <TopMenuButtons withSeparators />
