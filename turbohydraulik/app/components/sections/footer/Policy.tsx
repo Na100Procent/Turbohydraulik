@@ -1,7 +1,14 @@
+"use client";
 import React from "react";
 import { Box, Typography } from "@mui/material";
 import theme from "@/app/theme/theme";
 import { sectionXPadding } from "@/app/constants/styles";
+import Link from "next/link";
+import {
+  phoneNUmber,
+  policyPath,
+  termsPath,
+} from "@/app/constants/appConstants";
 
 const container = {
   display: "flex",
@@ -34,20 +41,40 @@ const textSx = {
   fontWeight: "600",
   fontFamily: "UniteaSans",
   textAlign: "center",
+  borderRadius: "15px",
+};
+
+const linkSx = {
+  "&:hover": {
+    backgroundColor: "rgba(243, 239, 239, 0.1)",
+    cursor: "pointer",
+  },
+  transition: "background 0.3s ease-in-out",
 };
 
 const Policy: React.FC = () => {
+  const handlePhoneClick = () => {
+    window.open(`tel:${phoneNUmber}`);
+  };
   return (
     <Box sx={container}>
       <Typography sx={{ ...textSx, opacity: 0.5 }}>
         Copyright ©2025. Turbo Hydraulik.pl, All right reserved
       </Typography>
       <Box display="flex" alignItems="center">
-        <Typography sx={textSx}>Privacy Policy</Typography>
+        <Link href={policyPath}>
+          <Typography sx={{ ...textSx, ...linkSx }}>
+            Polityka Prywatności
+          </Typography>
+        </Link>
         <Box sx={verticalDivider} />
-        <Typography sx={textSx}>Terms of Service</Typography>
+        <Link href={termsPath}>
+          <Typography sx={{ ...textSx, ...linkSx }}>Regulamin</Typography>
+        </Link>
         <Box sx={verticalDivider} />
-        <Typography sx={textSx}>Contact Us</Typography>
+        <Box onClick={handlePhoneClick}>
+          <Typography sx={{ ...textSx, ...linkSx }}>Contact Us</Typography>
+        </Box>
       </Box>
     </Box>
   );

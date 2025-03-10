@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import PhoneIcon from "@mui/icons-material/Phone";
 import theme from "@/app/theme/theme";
@@ -8,8 +9,12 @@ interface Props {
   bgColor?: string;
 }
 const CallUsButton = ({ bgColor }: Props) => {
+  const handlePhoneClick = () => {
+    window.open(`tel:${phoneNUmber}`);
+  };
   return (
     <RectangularButton
+      onClick={handlePhoneClick}
       bgColor={bgColor ? bgColor : theme.palette.secondary.main}
       title={`Dzwoń: ${phoneNUmber}`}
       icon={
