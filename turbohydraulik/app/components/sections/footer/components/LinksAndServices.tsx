@@ -1,14 +1,12 @@
-import TitledVerticalList from "@/app/components/shared/TitledVerticalList";
+import TitledVerticalList, {
+  LinkElement,
+} from "@/app/components/shared/TitledVerticalList";
 import { Box } from "@mui/material";
 import React from "react";
 import FailureForm from "./FailureForm";
 import { websiteData } from "@/app/data/data";
 import { sectionXPadding } from "@/app/constants/styles";
-
-interface LinkElement {
-  title: string;
-  url: string;
-}
+import CitiesList from "./LocationsList";
 
 const containerSx = {
   display: "flex",
@@ -57,23 +55,22 @@ const linkListsSx = {
 };
 
 const LinksAndServices = () => {
-  const cityNamesUrls: LinkElement[] = Object.values(websiteData.cities).map(
-    (city) => ({
-      title: city.name,
-      url: `/${city.slug}`,
-    })
-  );
-
   const servicesNamesUrls: LinkElement[] = Object.values(
     websiteData.services
   ).map((service) => ({
     title: service.name,
     url: `/${service.slug}`,
   }));
+  const cityNamesUrls: LinkElement[] = Object.values(websiteData.cities).map(
+    (city) => ({
+      title: city.name,
+      url: `/${city.slug}`,
+    })
+  );
   return (
     <Box sx={containerSx}>
       <Box sx={linkListsSx}>
-        <TitledVerticalList title="LOKALIZACJE" list={cityNamesUrls} />
+        <CitiesList locationsList={cityNamesUrls} />
         <TitledVerticalList title="USŁUGI" list={servicesNamesUrls} />
       </Box>
       <FailureForm />

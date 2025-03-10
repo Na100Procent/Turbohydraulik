@@ -23,7 +23,6 @@ const HowToOrderUs = () => {
           <SectionCenterHeader
             header="How to order a Plumbing service?"
             bottomHeader="To order a plumbing service, contact us by phone or via the contact form on our website."
-            headerColor={theme.palette.primary.main}
           />
           <HowToList />
           <Box display={"flex"} justifyContent={"center"} marginTop={"50px"}>

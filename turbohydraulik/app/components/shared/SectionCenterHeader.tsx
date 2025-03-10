@@ -1,3 +1,4 @@
+import theme from "@/app/theme/theme";
 import { Box, Typography } from "@mui/material";
 import React from "react";
 
@@ -5,7 +6,7 @@ interface Props {
   topHeader?: string;
   topHeaderColor?: string;
   header: string;
-  headerColor: string;
+  headerColor?: string;
   bottomHeader?: string;
 }
 
@@ -44,7 +45,7 @@ const SectionCenterHeader = ({
   const headerSx = {
     fontWeight: "700",
     fontSize: fontSize,
-    color: headerColor,
+    color: headerColor ? headerColor : theme.palette.primary.main,
     maxWidth: "750px",
     textAlign: "center",
     lineHeight: fontSize,

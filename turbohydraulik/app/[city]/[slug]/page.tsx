@@ -11,15 +11,16 @@ export const generateStaticParams = async () => {
   const paths: { city: string; slug: string }[] = [];
 
   cities.forEach((city) => {
-    const cityData = websiteData.cities[city];
-
-    Object.keys(cityData.districts).forEach((district) => {
-      paths.push({ city, slug: district });
+    services.forEach((service) => {
+      paths.push({ city, slug: service });
     });
   });
 
-  services.forEach((service) => {
-    paths.push({ city: "global", slug: service });
+  cities.forEach((city) => {
+    const cityData = websiteData.cities[city];
+    Object.keys(cityData.districts).forEach((district) => {
+      paths.push({ city, slug: district });
+    });
   });
 
   return paths;
@@ -36,7 +37,7 @@ const DynamicPage: FC<PageProps> = async ({ params }) => {
       {service ? (
         <ServicePage service={service} city={foundCity} />
       ) : district ? (
-        <DistrictPage slug={district} city={foundCity} />
+        <DistrictPage district={district} city={foundCity} />
       ) : (
         <h1>Not Found</h1>
       )}

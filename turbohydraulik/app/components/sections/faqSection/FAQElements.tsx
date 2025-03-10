@@ -18,7 +18,7 @@ const container = {
   marginBottom: 2,
   borderBottom: "2px solid #ccc",
   paddingBottom: 1,
-  padding: "40px 20px",
+  padding: "20px 20px",
   background: theme.palette.custom.lightGray,
   maxWidth: "900px",
   minWidth: {
@@ -36,12 +36,12 @@ const questionSx = {
   color: theme.palette.primary.main,
   fontFamily: "UniteaSans",
   fontSize: {
-    xl: "22px",
-    lg: "22px",
-    md: "20px",
-    sm: "20px",
-    xs: "15px",
-    xxs: "15px",
+    xl: "18px",
+    lg: "18px",
+    md: "15px",
+    sm: "15px",
+    xs: "12px",
+    xxs: "12px",
   },
 };
 const FAQElements = ({ faqs }: FAQProps) => {

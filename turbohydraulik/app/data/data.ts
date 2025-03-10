@@ -13,11 +13,11 @@ export const websiteData: WebsiteData = {
     faq: "Find answers to the most frequently asked questions about our plumbing services. If you can't find the answer, please contact us!",
   },
   services: {
-    zmywanie_kranu: {
-      name: "Zmywanie kranu",
-      slug: "zmywanie_kranu",
+    instalacja_i_wymiana_zaworow: {
+      name: "Instalacja i wymiana zaworów",
+      slug: "instalacja_i_wymiana_zaworow",
       content: {
-        home: "Profesjonalne zmywanie kranu!",
+        home: "Skorzystaj z naszej kompleksowej usługi instalacji i wymiany zaworów już dziś!",
         about: "Dokładne i szybkie usuwanie zabrudzeń.",
         projects: "Zobacz nasze realizacje zmywania kranu!",
         orderUs: "Zamów usługę zmywania kranu już teraz!",
@@ -129,7 +129,7 @@ export const websiteData: WebsiteData = {
     },
     wymiana_pralki: {
       name: "Wymiana pralki",
-      slug: "montaz_toalety",
+      slug: "wymiana_pralki",
       content: {
         home: "Profesjonalny Wymiana pralki!",
         about: "Dokładny i szybki montaż toalet.",
@@ -167,7 +167,7 @@ export const websiteData: WebsiteData = {
     },
     usuniecie_usterek: {
       name: "Usunięcie usterek",
-      slug: "montaz_toalety",
+      slug: "usuniecie_usterek",
       content: {
         home: "Profesjonalny Usunięcie usterek!",
         about: "Dokładny i szybki montaż toalet.",
@@ -205,7 +205,7 @@ export const websiteData: WebsiteData = {
     },
     renowacja_toalety: {
       name: "Renowacja toalety",
-      slug: "montaz_toalety",
+      slug: "renowacja_toalety",
       content: {
         home: "Profesjonalny Renowacja toalety!",
         about: "Dokładny i szybki montaż toalet.",
@@ -273,11 +273,11 @@ export const websiteData: WebsiteData = {
       name: "Toruń",
       slug: "torun",
       content: {
-        home: "Najlepsze usługi hydraulika w Toruniu!",
+        home: "Turbo Hydraulik torun - Twój Superbohater w Świecie Hydrauliki!",
         about: "Hydraulik Toruń - satysfakcja i pełen profesjonalizm.",
         projects: "Zobacz nasze projekty w Toruniu!",
         orderUs: "Zamów hydraulika w Toruniu!",
-        reviews: "Opinie klientów z Torunia.",
+        reviews: "Opinie klientów z Katowic.",
         faq: "Najczęściej zadawane pytania w Toruniu.",
       },
       districts: {
@@ -299,12 +299,12 @@ export const websiteData: WebsiteData = {
       name: "Gdynia",
       slug: "gdynia",
       content: {
-        home: "Najlepsze prace hydrauliczne w Gdyni!",
-        about: "Hydraulik w Gdyni - pasja i profesjonalizm.",
-        projects: "Zobacz nasze projekty w Gdyni!",
-        orderUs: "Zamów hydraulika w Gdyni!",
+        home: "Najlepsze prace hydrauliczne w gdyni!",
+        about: "Hydraulik w gdyni - pasja i profesjonalizm.",
+        projects: "Zobacz nasze projekty w gdyni!",
+        orderUs: "Zamów hydraulika w gdyni!",
         reviews: "Opinie klientów z Gdyni.",
-        faq: "Najczęściej zadawane pytania w Gdyni.",
+        faq: "Najczęściej zadawane pytania w gdyni.",
       },
       districts: {
         orlowo: {

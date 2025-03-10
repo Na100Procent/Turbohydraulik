@@ -1,9 +1,9 @@
 import theme from "@/app/theme/theme";
-import { Box, Typography } from "@mui/material";
+import { Box, SxProps, Theme, Typography } from "@mui/material";
 import Link from "next/link";
 import React from "react";
 
-interface LinkElement {
+export interface LinkElement {
   title: string;
   url: string;
 }
@@ -11,6 +11,7 @@ interface Props {
   title: string;
   list: LinkElement[];
   separator?: string;
+  addSx?: SxProps<Theme>;
 }
 
 const elementSx = {
@@ -20,11 +21,22 @@ const elementSx = {
   display: "flex",
   gap: "10px",
   opacity: 0.8,
+  transition: "background-color 0.3s ease",
+  "&:hover": {
+    cursor: "pointer",
+    backgroundColor: "rgba(15, 14, 14, 0.1)",
+  },
+  padding: "5px",
+  borderRadius: "5px",
 };
 
-const TitledVerticalList = ({ title, list, separator }: Props) => {
+const containerSx = {
+  color: theme.palette.custom.background,
+};
+
+const TitledVerticalList = ({ title, list, separator, addSx }: Props) => {
   return (
-    <Box color={theme.palette.custom.background}>
+    <Box sx={{ ...containerSx, ...addSx }}>
       <Typography
         fontWeight="600"
         mb="30px"
@@ -34,7 +46,7 @@ const TitledVerticalList = ({ title, list, separator }: Props) => {
         {title}
       </Typography>
 
-      {list.map((item, index) => (
+      {list?.map((item, index) => (
         <Link href={item.url} key={item.title + index}>
           <Box sx={elementSx}>
             <Typography mt="-2px"> {separator ? separator : "> "}</Typography>

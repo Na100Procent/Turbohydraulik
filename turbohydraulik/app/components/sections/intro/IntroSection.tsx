@@ -3,7 +3,7 @@ import BackgroundWrapper from "../../shared/BackgroundWrapper";
 import theme from "@/app/theme/theme";
 import HeaderBox from "./HeaderBox";
 import { Box } from "@mui/material";
-import { introBgUrl } from "@/public/assets/images/imagesUrls";
+import { introBgUrl } from "@/app/constants/imagesUrls";
 import HorizontalBanner from "./HorizontalBanner";
 import CallUsButton from "../../shared/CallUsButton";
 import { CityData, DistrictData, ServiceData } from "@/app/data/types";

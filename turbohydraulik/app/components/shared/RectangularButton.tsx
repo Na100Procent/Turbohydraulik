@@ -27,21 +27,28 @@ const RectangularButton = ({
     alignItems: "center",
     padding: "10px 20px",
     gap: "10px",
-    minWidth: "200px",
+
+    "&:hover": {
+      cursor: "pointer",
+      background: theme.palette.custom.lightGray,
+      scale: 1.05,
+    },
+    transition: "background-color 0.3s ease, scale 0.3s ease",
   };
   const titleSx = {
     color: titleColor ? titleColor : theme.palette.primary.main,
     fontWeight: "900",
     fontSize: {
-      xl: "14px",
-      lg: "14px",
-      md: "13px",
+      xl: "13px",
+      lg: "13px",
+      md: "12px",
       sm: "12px",
-      xs: "12px",
-      xxs: "11px",
+      xs: "11px",
+      xxs: "10px",
     },
     fontFamily: "UniteaSans",
     textTransform: "uppercase",
+    minWidth: "100px",
   };
   return (
     <Button onClick={onClick} sx={buttonSx}>

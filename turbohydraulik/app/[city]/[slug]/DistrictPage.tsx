@@ -1,24 +1,27 @@
 import { Box } from "@mui/material";
 import { sectionIds } from "../../constants/appConstants";
 import TopMenu from "../../components/sections/topMenu/TopMenu";
-// import IntroSection from "../../components/sections/intro/IntroSection";
-// import AboutUs from "../../components/sections/aboutUs/AboutUs";
-// import OurServices from "../../components/sections/ourServices/OurServices";
+import IntroSection from "../../components/sections/intro/IntroSection";
+import AboutUs from "../../components/sections/aboutUs/AboutUs";
+import OurServices from "../../components/sections/ourServices/OurServices";
 import Footer from "../../components/sections/footer/Footer";
 import InNumbers from "../../components/sections/inNumbers/InNumbers";
-// import HowToOrderUs from "../../components/sections/howToOrderUs/HowToOrderUs";
-// import CustomerReviews from "../../components/sections/customerReviews/CustomerReviews";
+import HowToOrderUs from "../../components/sections/howToOrderUs/HowToOrderUs";
+import CustomerReviews from "../../components/sections/customerReviews/CustomerReviews";
 import RecentWorks from "../../components/sections/recentWorks/RecentWorks";
 import FAQsection from "../../components/sections/faqSection/FAQsection";
-import { CityData, DistrictData } from "@/app/data/types";
+import { CityData, DistrictData, SectionContent } from "@/app/data/types";
+import theme from "@/app/theme/theme";
+import OurCities from "@/app/components/sections/ourCities/OurCities";
 
 interface Props {
-  slug: DistrictData;
+  district: DistrictData;
   city: CityData;
 }
-export default function DistrictPage({ slug, city }: Props) {
-  console.log("DistrictPage slug", slug);
-  console.log("DistrictPage city", city);
+export default function DistrictPage({ district, city }: Props) {
+  const getContent = (section: keyof SectionContent) => {
+    return district.content[section];
+  };
   return (
     <Box
       display="flex"
@@ -28,14 +31,19 @@ export default function DistrictPage({ slug, city }: Props) {
       id={sectionIds.home}
     >
       <TopMenu />
-      {/* <IntroSection slug={slug} /> */}
-      {/* <AboutUs slug={slug} />
-      <OurServices slug={slug} />
+      <IntroSection slug={city} content={getContent("home")} />
+      <OurServices city={city} />
+      <CustomerReviews city={city} content={getContent("reviews")} />
       <HowToOrderUs />
-      <CustomerReviews slug={slug} /> */}
-      <InNumbers />
+      <AboutUs
+        city={city}
+        content={getContent("about")}
+        bgColor={theme.palette.custom.blueLight}
+      />
       <RecentWorks />
+      <InNumbers />
       <FAQsection />
+      <OurCities />
       <Footer />
     </Box>
   );

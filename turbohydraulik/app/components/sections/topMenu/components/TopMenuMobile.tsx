@@ -24,12 +24,12 @@ const TopMenuMobile = () => {
   return (
     <Box sx={containerSx}>
       <Link href={homePageLink}>
-        <Box sx={{ scale: 0.6, position: "relative", top: "15px" }}>
+        <Box sx={{ scale: 0.6 }}>
           <TopMenuLogo />
         </Box>
       </Link>
       <IconButton
-        sx={{ mr: "20px", mt: "20px", color: theme.palette.primary.main }}
+        sx={{ mr: "20px", color: theme.palette.primary.main }}
         onClick={handleDrawerToggle}
       >
         <MenuIcon />
