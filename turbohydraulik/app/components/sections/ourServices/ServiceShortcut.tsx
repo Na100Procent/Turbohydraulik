@@ -28,6 +28,13 @@ const container = {
   alignItems: "left",
   boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
   padding: "10px 20px 60px 20px",
+
+  transition: "background-color 0.3s ease, scale 0.3s ease",
+  "&:hover": {
+    cursor: "pointer",
+    backgroundColor: "rgba(243, 239, 239, 0.9)",
+    scale: 1.05,
+  },
 };
 const imgSx = {
   marginTop: "10px",

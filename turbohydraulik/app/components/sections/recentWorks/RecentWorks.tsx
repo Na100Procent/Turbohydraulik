@@ -24,7 +24,6 @@ const RecentWorks = () => {
         <Box position={"absolute"} top={"-130px"} right={"-10px"}>
           <YellowLeftOrnament />
         </Box>
-
         <MosaicGrid />
       </Box>
     </BackgroundWrapper>

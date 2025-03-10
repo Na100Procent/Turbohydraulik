@@ -11,7 +11,7 @@ const ScrollCityList = () => {
   }));
 
   const citiesElements = cityNamesUrls.map((city) => (
-    <Box key={city.title} sx={{ margin: "0 10px" }}>
+    <Box key={city.title} padding="5px">
       <CityCard cityName={city.title} cityUrl={city.url} />
     </Box>
   ));

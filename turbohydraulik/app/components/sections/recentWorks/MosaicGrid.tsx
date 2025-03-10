@@ -1,42 +1,32 @@
 import React from "react";
 import { Box } from "@mui/material";
-import Image from "next/image";
 import RectangularButton from "../../shared/RectangularButton";
 import theme from "@/app/theme/theme";
+import MosaicElement from "./MocaicElement";
 
 const images = [
-  "https://github.com/user-attachments/assets/ca378ab7-a9b2-4736-ac5f-fe20ad776b11", // Top Left (Wider)
-  "https://github.com/user-attachments/assets/3d7c0dba-1f19-4d53-b7c2-15743f2b7408", // Top Right (Narrower)
-  "https://github.com/user-attachments/assets/9a949cec-703c-4c7e-85af-f96cbcd1963d", // Bottom Left (Narrower)
-  "https://github.com/user-attachments/assets/ca378ab7-a9b2-4736-ac5f-fe20ad776b11", // Bottom Right (Wider)
+  "https://github.com/user-attachments/assets/ca378ab7-a9b2-4736-ac5f-fe20ad776b11",
+  "https://github.com/user-attachments/assets/3d7c0dba-1f19-4d53-b7c2-15743f2b7408",
+  "https://github.com/user-attachments/assets/9a949cec-703c-4c7e-85af-f96cbcd1963d",
+  "https://github.com/user-attachments/assets/ca378ab7-a9b2-4736-ac5f-fe20ad776b11",
 ];
 
-interface Props {
-  src: string;
-}
-const MosaicImage = ({ src }: Props) => {
-  return (
-    <Image src={src} alt="project image" layout="fill" objectFit="cover" />
-  );
-};
-
 const imgContainer = {
-  display: "grid",
+  display: {
+    xl: "grid",
+    lg: "grid",
+    md: "grid",
+    sm: "column",
+    xs: "column",
+    xxs: "column",
+  },
   gridTemplateColumns: "1fr 1.5fr",
-  gridTemplateRows: "250px 250px",
-  gap: 3,
+
+  gap: 2,
   width: "100%",
-  maxWidth: "700px",
-  maxHeight: "260px",
+  maxWidth: "1200px",
 };
 
-const singleImg = {
-  position: "relative",
-  gridColumn: "span 1",
-  height: "250px",
-  borderRadius: "8px",
-  overflow: "hidden",
-};
 const MosaicGrid = () => {
   return (
     <Box
@@ -45,26 +35,17 @@ const MosaicGrid = () => {
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "center",
-        gap: 3,
       }}
     >
       <Box sx={{ ...imgContainer, gridTemplateColumns: "1.5fr 1fr" }}>
-        <Box sx={singleImg}>
-          <MosaicImage src={images[0]} />
-        </Box>
-        <Box sx={singleImg}>
-          <MosaicImage src={images[1]} />
-        </Box>
+        <MosaicElement bgImage={images[0]} />
+        <MosaicElement bgImage={images[1]} />
       </Box>
       <Box sx={imgContainer}>
-        <Box sx={singleImg}>
-          <MosaicImage src={images[2]} />
-        </Box>
-        <Box sx={singleImg}>
-          <MosaicImage src={images[3]} />
-        </Box>
+        <MosaicElement bgImage={images[2]} />
+        <MosaicElement bgImage={images[3]} />
       </Box>
-      <Box>
+      <Box mt="30px">
         <RectangularButton
           title="VIEW ALL PROJECTS"
           bgColor={theme.palette.secondary.main}

@@ -6,7 +6,14 @@ import SectionCenterHeader from "../../shared/SectionCenterHeader";
 import { Box } from "@mui/material";
 import ScrollCityList from "./ScrollCityList";
 import CallUsButton from "../../shared/CallUsButton";
+import CitiesList from "../footer/components/CitiesList";
 
+const citiesListSx = {
+  width: "100%",
+  display: "flex",
+  justifyContent: "left",
+  mt: "50px",
+};
 const OurCities = () => {
   return (
     <BackgroundWrapper bgColor={theme.palette.custom.background}>
@@ -28,6 +35,9 @@ const OurCities = () => {
         <div>
           <CallUsButton />
         </div>
+        <Box sx={citiesListSx}>
+          <CitiesList addSx={{ color: theme.palette.primary.main }} />
+        </Box>
       </Box>
     </BackgroundWrapper>
   );

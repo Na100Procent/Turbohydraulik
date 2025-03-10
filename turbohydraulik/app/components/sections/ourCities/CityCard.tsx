@@ -10,6 +10,12 @@ interface Props {
 }
 
 const container = {
+  transition: "background-color 0.3s ease, transform 0.3s ease",
+  "&:hover": {
+    cursor: "pointer",
+    backgroundColor: "rgba(41, 40, 40, 0.1)",
+    transform: "scale(1.02)",
+  },
   width: {
     xl: "400px",
     lg: "400px",
@@ -31,14 +37,14 @@ const container = {
 const imgSx = {
   marginTop: "10px",
   width: "90%",
-  height: "65%",
+  maxHeight: "180px",
   objectFit: "cover",
 };
 const cityNameSx = {
   fontWeight: "bold",
   color: theme.palette.primary.main,
-  fontSize: "20px",
-  minWidth: "120px",
+  fontSize: "18px",
+  minWidth: "100px",
 };
 
 const titleButtonSx = {
@@ -67,24 +73,24 @@ const titleButtonSx = {
 };
 const CityCard = ({ cityName, cityUrl }: Props) => {
   return (
-    <Box sx={container}>
-      <Box
-        component="img"
-        src="https://falstaff.b-cdn.net/storage/2023/03/Header-Long-weekend-warsaw.jpg?aspect_ratio=4:3"
-        sx={imgSx}
-      />
+    <Link href={`${cityUrl}`}>
+      <Box sx={container}>
+        <Box
+          component="img"
+          src="https://falstaff.b-cdn.net/storage/2023/03/Header-Long-weekend-warsaw.jpg?aspect_ratio=4:3"
+          sx={imgSx}
+        />
 
-      <Box sx={titleButtonSx}>
-        <Typography sx={cityNameSx}>{cityName}</Typography>
+        <Box sx={titleButtonSx}>
+          <Typography sx={cityNameSx}>{cityName}</Typography>
 
-        <Link href={`${cityUrl}`}>
           <RectangularButton
             title="VIEW SERVICES"
             bgColor={theme.palette.secondary.main}
           />
-        </Link>
+        </Box>
       </Box>
-    </Box>
+    </Link>
   );
 };
 

@@ -6,7 +6,7 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import EmailIcon from "@mui/icons-material/Email";
 
-const socialMedias = {
+const socialMediasSx = {
   justifyContent: "center",
   alignItems: "center",
   mx: 2,
@@ -19,6 +19,7 @@ const socialMedias = {
     xxs: "none",
   },
   gap: "10px",
+  padding: "8px 0",
 };
 
 const socialIconSx = {
@@ -39,7 +40,7 @@ const iconBtn = {
 
 const SocialMedias = () => {
   return (
-    <Box sx={socialMedias}>
+    <Box sx={socialMediasSx}>
       <VerticalSeparator />
       <IconButton
         sx={{

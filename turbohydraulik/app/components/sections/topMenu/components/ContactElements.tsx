@@ -57,10 +57,11 @@ const contactElement = {
   padding: "10px",
   gap: "6px",
   borderRadius: "10px",
-  transition: "background-color 0.3s ease",
+  transition: "background-color 0.3s ease, scale 0.3s ease",
   "&:hover": {
     cursor: "pointer",
     backgroundColor: "rgba(255,255,255,0.1)",
+    scale: 1.05,
   },
 };
 
