@@ -1,7 +1,6 @@
 import { Box } from "@mui/material";
 import { sectionIds } from "../constants/appConstants";
 import TopMenu from "../components/sections/topMenu/TopMenu";
-import IntroSection from "../components/sections/intro/IntroSection";
 import AboutUs from "../components/sections/aboutUs/AboutUs";
 import OurServices from "../components/sections/ourServices/OurServices";
 import Footer from "../components/sections/footer/Footer";
@@ -11,9 +10,9 @@ import CustomerReviews from "../components/sections/customerReviews/CustomerRevi
 import RecentWorks from "../components/sections/recentWorks/RecentWorks";
 import FAQsection from "../components/sections/faqSection/FAQsection";
 import { SectionContent, ServiceData } from "../data/types";
-import OurCities from "../components/sections/ourCities/OurCities";
 import PriceList from "../components/sections/priceList/PriceList";
 import { websiteData } from "../data/data";
+import HeroService from "../components/sections/heroService/HeroService";
 
 interface Props {
   service: ServiceData;
@@ -37,16 +36,15 @@ export default function ServicePage({ service }: Props) {
       id={sectionIds.home}
     >
       <TopMenu />
-      <IntroSection slug={service} content={getContent("home")} />
-      <OurCities />
+      <HeroService slug={service} content={getContent("home")} />
+      <CustomerReviews content={getContent("reviews")} />
       <AboutUs content={getContent("about")} />
-      <OurServices />
       <HowToOrderUs />
-      <CustomerReviews />
       <InNumbers />
       <PriceList items={servicesPrices} />
       <RecentWorks />
       <FAQsection />
+      <OurServices />
       <Footer />
     </Box>
   );

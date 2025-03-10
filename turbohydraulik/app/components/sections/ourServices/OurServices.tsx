@@ -11,6 +11,8 @@ import SectionCenterHeader from "../../shared/SectionCenterHeader";
 
 interface Props {
   city?: CityData;
+  bgColor?: string;
+  headerColor?: string;
 }
 
 const headerSx = {
@@ -29,14 +31,16 @@ const headerSx = {
   },
 };
 
-const OurServices = ({ city }: Props) => {
+const OurServices = ({ city, bgColor, headerColor }: Props) => {
   return (
-    <BackgroundWrapper bgColor={theme.palette.primary.main}>
+    <BackgroundWrapper bgColor={bgColor ? bgColor : theme.palette.primary.main}>
       <Box display={"flex"} flexDirection={"column"} gap="0px">
         <SectionPaddingWrapper>
           <Box sx={headerSx}>
             <SectionCenterHeader
-              headerColor={theme.palette.custom.background}
+              headerColor={
+                headerColor ? headerColor : theme.palette.custom.background
+              }
               topHeader="services we offer"
               header={`Our Plumbing Services ${city ? city.name : ""}`}
             />

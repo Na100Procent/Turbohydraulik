@@ -9,3 +9,6 @@ export const serviceCardUrl =
 
 export const mockedCityCardUrl =
   "https://falstaff.b-cdn.net/storage/2023/03/Header-Long-weekend-warsaw.jpg?aspect_ratio=4:3";
+
+export const serviceHeroBg =
+  "https://www.majsteria.pl/_next/image?url=https%3A%2F%2Fapi.majsteria.pl%2Fmedia%2Fdownload%2Fblog-grafiki%2Fgrudzie-2023%2F4-p56a-usugi-hydrauliczne-co-obejmuj-i-co-moe-hydraulik%2Fuslugi-hydrauliczne-hydraulik-klucz-syfon-umywalka.jpeg&w=1920&q=75";
