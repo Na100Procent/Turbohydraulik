@@ -29,7 +29,6 @@ const PriceList = ({ items, city }: Props) => {
       >
         <SectionCenterHeader
           topHeader="CENNIK"
-          topHeaderColor={theme.palette.secondary.main}
           header={`Ceny naszych usług ${city ? "w mieście " + city.name : ""}`}
         />
         <Box sx={contentSx}>

@@ -52,7 +52,9 @@ const SectionCenterHeader = ({
     fontFamily: "UniteaSans",
   };
   const topHeaderSx = {
-    color: topHeaderColor as string,
+    color: topHeaderColor
+      ? (topHeaderColor as string)
+      : theme.palette.secondary.main,
     fontWeight: "600",
     textTransform: "uppercase",
     letterSpacing: "1px",
@@ -61,10 +63,18 @@ const SectionCenterHeader = ({
 
   return (
     <Box sx={containerSx}>
-      {topHeader && <Typography sx={topHeaderSx}>{topHeader}</Typography>}
-      <Typography sx={headerSx}>{header}</Typography>
+      {topHeader && (
+        <Typography variant="h4" sx={topHeaderSx}>
+          {topHeader}
+        </Typography>
+      )}
+      <Typography variant="h1" sx={headerSx}>
+        {header}
+      </Typography>
       {bottomHeader && (
-        <Typography sx={bottomHeaderSx}>{bottomHeader}</Typography>
+        <Typography variant="h2" sx={bottomHeaderSx}>
+          {bottomHeader}
+        </Typography>
       )}
     </Box>
   );

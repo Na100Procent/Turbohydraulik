@@ -36,7 +36,6 @@ const OurServices = ({ city }: Props) => {
         <SectionPaddingWrapper>
           <Box sx={headerSx}>
             <SectionCenterHeader
-              topHeaderColor={theme.palette.secondary.main}
               headerColor={theme.palette.custom.background}
               topHeader="services we offer"
               header={`Our Plumbing Services ${city ? city.name : ""}`}

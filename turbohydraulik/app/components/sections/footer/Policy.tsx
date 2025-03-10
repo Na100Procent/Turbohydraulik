@@ -52,6 +52,19 @@ const linkSx = {
   transition: "background 0.3s ease-in-out",
 };
 
+const policyButtonsSx = {
+  display: "flex",
+  alignItems: "center",
+  mb: {
+    xl: "0",
+    lg: "0",
+    md: "0",
+    sm: "60px",
+    xs: "70px",
+    xxs: "70px",
+  },
+};
+
 const Policy: React.FC = () => {
   const handlePhoneClick = () => {
     window.open(`tel:${phoneNUmber}`);
@@ -61,7 +74,7 @@ const Policy: React.FC = () => {
       <Typography sx={{ ...textSx, opacity: 0.5 }}>
         Copyright ©2025. Turbo Hydraulik.pl, All right reserved
       </Typography>
-      <Box display="flex" alignItems="center">
+      <Box sx={policyButtonsSx}>
         <Link href={policyPath}>
           <Typography sx={{ ...textSx, ...linkSx }}>
             Polityka Prywatności

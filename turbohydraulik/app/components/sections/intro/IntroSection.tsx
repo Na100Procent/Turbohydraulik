@@ -27,7 +27,7 @@ const containerSx = {
 
 const heroSx = {
   borderRadius: "15px",
-  maxWidth: "400px",
+  maxWidth: "500px",
   padding: "40px",
   minWidth: "300px",
   background: theme.palette.primary.main,

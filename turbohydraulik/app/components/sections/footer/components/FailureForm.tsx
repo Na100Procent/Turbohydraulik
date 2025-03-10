@@ -43,7 +43,9 @@ const problemInput = {
 const FailureForm = () => {
   return (
     <Box sx={container}>
-      <Typography sx={headerSx}>SUBSCRIBE OUR NEWSLETTER</Typography>
+      <Typography variant="h6" sx={headerSx}>
+        SUBSCRIBE OUR NEWSLETTER
+      </Typography>
       <Input
         disableUnderline
         sx={{ ...phoneInput, ...input }}

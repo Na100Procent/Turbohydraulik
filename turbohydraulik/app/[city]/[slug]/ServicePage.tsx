@@ -11,7 +11,6 @@ import CustomerReviews from "../../components/sections/customerReviews/CustomerR
 import RecentWorks from "../../components/sections/recentWorks/RecentWorks";
 import FAQsection from "../../components/sections/faqSection/FAQsection";
 import { CityData, SectionContent, ServiceData } from "@/app/data/types";
-import OurCities from "@/app/components/sections/ourCities/OurCities";
 import PriceList from "@/app/components/sections/priceList/PriceList";
 import { websiteData } from "@/app/data/data";
 
@@ -41,15 +40,15 @@ export default function ServicePage({ service, city }: Props) {
     >
       <TopMenu />
       <IntroSection slug={city} content={getContent("home")} />
-      <OurCities />
-      <AboutUs city={city} content={getContent("about")} />
-      <OurServices city={city} />
-      <HowToOrderUs />
+      {/* <HeroService/> */}
       <CustomerReviews city={city} content={getContent("reviews")} />
+      <AboutUs city={city} content={getContent("about")} />
+      <HowToOrderUs />
       <InNumbers />
       <PriceList items={servicesPrices} city={city} />
       <RecentWorks />
       <FAQsection />
+      <OurServices city={city} />
       <Footer />
     </Box>
   );

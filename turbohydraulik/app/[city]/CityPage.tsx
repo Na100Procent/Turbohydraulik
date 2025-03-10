@@ -52,11 +52,19 @@ export default function CityPage({ city }: Props) {
         bgColor={theme.palette.custom.blueLight}
       />
       <AboutCity city={city} />
-      <DistrictsList city={city} />
-      <PriceList items={servicesPrices} city={city} />
+
       <RecentWorks />
       <InNumbers />
+      <PriceList items={servicesPrices} city={city} />
       <FAQsection />
+
+      <Box
+        width={"100%"}
+        bgcolor={theme.palette.custom.background}
+        padding="0px 0px 400px 0 "
+      >
+        <DistrictsList city={city} />
+      </Box>
       <Footer />
     </Box>
   );

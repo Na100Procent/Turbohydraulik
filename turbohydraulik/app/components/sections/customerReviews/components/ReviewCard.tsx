@@ -68,7 +68,7 @@ const ReviewCard: React.FC<ReviewCardProps> = ({
         }}
       />
       <Typography
-        minHeight="100px"
+        minHeight="130px"
         sx={{ fontFamily: "UniteaSans", fontWeight: "500" }}
       >
         {review}

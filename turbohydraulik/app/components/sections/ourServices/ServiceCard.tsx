@@ -49,7 +49,6 @@ const titleSx = {
   fontWeight: "bold",
   color: theme.palette.primary.main,
   width: "100%",
-  maxWidth: "250px",
   mt: "20px",
   textAlign: "left",
   fontSize: "20px",
@@ -75,11 +74,14 @@ const ServiceCard = ({ city, service }: Props) => {
       newPath = `/${city?.slug}/${service.slug}`;
     }
   }
+  const cityTitle = city ? city?.name : "";
   return (
     <Link href={newPath}>
       <Box sx={container}>
         <Box component="img" src={serviceCardUrl} sx={imgSx} />
-        <Typography sx={titleSx}>{service.name + " " + city?.name}</Typography>
+        <Typography variant="h5" sx={titleSx}>
+          {service.name + " " + cityTitle}
+        </Typography>
         <Typography sx={descriptionSx}>
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui dolores
           enim officiis suscipit aperiam tenetur recusandae illo accusantium.

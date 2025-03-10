@@ -6,11 +6,13 @@ import { Box, Typography } from "@mui/material";
 import { sectionXPadding } from "@/app/constants/styles";
 import SectionPaddingWrapper from "../../shared/SectionWrapper";
 import ReviewsHorizontalScrollList from "./ReviewsHorizontalScrollList";
-import RectangularButton from "../../shared/RectangularButton";
 import { sectionIds } from "@/app/constants/appConstants";
 import { CityData } from "@/app/data/types";
 import { websiteData } from "@/app/data/data";
 import CommaIcon from "./components/CommaIcon";
+import CallUsButton from "../../shared/CallUsButton";
+import SubHeaders from "./components/SubHeaders";
+import RectangularButton from "../../shared/RectangularButton";
 
 interface Props {
   city?: CityData;
@@ -47,13 +49,13 @@ const CustomerReviews = ({ city, content }: Props) => {
             </Typography>
           </Box>
         </SectionPaddingWrapper>
-        {/* <Box position={"absolute"} top={"-130px"} left={"-10px"}>
-          <YellowRightOrnament />
-        </Box> */}
+
         <CommaIcon />
         <ReviewsHorizontalScrollList />
-        <Box display={"flex"} justifyContent={"center"} marginTop={"50px"}>
-          <RectangularButton title="View All Reviews" />
+        <SubHeaders />
+        <Box display={"flex"} justifyContent={"center"} mt="50px" gap="20px">
+          <CallUsButton />
+          <RectangularButton title="Dodaj opinię" />
         </Box>
       </>
     </BackgroundWrapper>

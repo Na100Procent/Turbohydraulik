@@ -3,6 +3,7 @@ import { Box, Typography } from "@mui/material";
 import theme from "@/app/theme/theme";
 import Link from "next/link";
 import RectangularButton from "../../shared/RectangularButton";
+import { mockedCityCardUrl } from "@/app/constants/imagesUrls";
 
 interface Props {
   cityName: string;
@@ -71,24 +72,34 @@ const titleButtonSx = {
     xxs: "column",
   },
 };
+
+const description = {
+  color: theme.palette.custom.darkGray,
+  padding: "0 0 10px 20px",
+  fontFamily: "UniteaSans",
+  fontWeight: 500,
+  opacity: 0.8,
+  mt: "5px",
+};
 const CityCard = ({ cityName, cityUrl }: Props) => {
   return (
     <Link href={`${cityUrl}`}>
       <Box sx={container}>
-        <Box
-          component="img"
-          src="https://falstaff.b-cdn.net/storage/2023/03/Header-Long-weekend-warsaw.jpg?aspect_ratio=4:3"
-          sx={imgSx}
-        />
+        <Box component="img" src={mockedCityCardUrl} sx={imgSx} />
 
         <Box sx={titleButtonSx}>
-          <Typography sx={cityNameSx}>{cityName}</Typography>
+          <Typography variant="h3" sx={cityNameSx}>
+            {cityName}
+          </Typography>
 
           <RectangularButton
             title="VIEW SERVICES"
             bgColor={theme.palette.secondary.main}
           />
         </Box>
+        <Typography sx={description}>
+          Lorem ipsum dolor sit amet consectetuectetur adipir adipisicing elit.
+        </Typography>
       </Box>
     </Link>
   );

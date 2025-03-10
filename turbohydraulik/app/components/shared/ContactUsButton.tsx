@@ -12,7 +12,7 @@ const ContactUsButton = () => {
   return (
     <RectangularButton
       onClick={handleContactBtnClick}
-      title="Contact us"
+      title="Kontakt"
       bgColor={theme.palette.secondary.main}
     />
   );

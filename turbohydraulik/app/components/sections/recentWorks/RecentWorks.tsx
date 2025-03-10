@@ -13,7 +13,6 @@ const RecentWorks = () => {
       <Box id={sectionIds.projects}>
         <SectionPaddingWrapper>
           <SectionCenterHeader
-            topHeaderColor={theme.palette.secondary.main}
             topHeader="OUR LATEST PROJECTS"
             header="Recently completed works"
             bottomHeader="See our latest projects and see how professionally we perform every plumbing service."
