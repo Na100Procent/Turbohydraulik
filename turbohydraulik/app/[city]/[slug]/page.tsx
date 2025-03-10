@@ -16,6 +16,12 @@ export const generateStaticParams = async () => {
     Object.keys(cityData.districts).forEach((district) => {
       paths.push({ city, slug: district });
     });
+
+    Object.keys(cityData).forEach((city) => {
+      services.forEach((service) => {
+        paths.push({ city: city, slug: service });
+      });
+    });
   });
 
   services.forEach((service) => {

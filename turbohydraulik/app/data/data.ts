@@ -13,11 +13,11 @@ export const websiteData: WebsiteData = {
     faq: "Find answers to the most frequently asked questions about our plumbing services. If you can't find the answer, please contact us!",
   },
   services: {
-    zmywanie_kranu: {
-      name: "Zmywanie kranu",
-      slug: "zmywanie_kranu",
+    instalacja_i_wymiana_zaworów: {
+      name: "Instalacja i wymiana zaworów",
+      slug: "instalacja_i_wymiana_zaworów",
       content: {
-        home: "Profesjonalne zmywanie kranu!",
+        home: "Skorzystaj z naszej kompleksowej usługi instalacji i wymiany zaworów już dziś!",
         about: "Dokładne i szybkie usuwanie zabrudzeń.",
         projects: "Zobacz nasze realizacje zmywania kranu!",
         orderUs: "Zamów usługę zmywania kranu już teraz!",
@@ -269,16 +269,16 @@ export const websiteData: WebsiteData = {
         },
       },
     },
-    torun: {
-      name: "Toruń",
-      slug: "torun",
+    katowice: {
+      name: "Katowice",
+      slug: "katowice",
       content: {
-        home: "Najlepsze usługi hydraulika w Toruniu!",
+        home: "Turbo Hydraulik Katowice - Twój Superbohater w Świecie Hydrauliki!",
         about: "Hydraulik Toruń - satysfakcja i pełen profesjonalizm.",
-        projects: "Zobacz nasze projekty w Toruniu!",
-        orderUs: "Zamów hydraulika w Toruniu!",
-        reviews: "Opinie klientów z Torunia.",
-        faq: "Najczęściej zadawane pytania w Toruniu.",
+        projects: "Zobacz nasze projekty w Katowicach!",
+        orderUs: "Zamów hydraulika w Katowicach!",
+        reviews: "Opinie klientów z Katowic.",
+        faq: "Najczęściej zadawane pytania w Katowicach.",
       },
       districts: {
         starowka: {
@@ -295,16 +295,16 @@ export const websiteData: WebsiteData = {
         },
       },
     },
-    gdynia: {
-      name: "Gdynia",
-      slug: "gdynia",
+    czestochowa: {
+      name: "Częstochowa",
+      slug: "czestochowa",
       content: {
-        home: "Najlepsze prace hydrauliczne w Gdyni!",
-        about: "Hydraulik w Gdyni - pasja i profesjonalizm.",
-        projects: "Zobacz nasze projekty w Gdyni!",
-        orderUs: "Zamów hydraulika w Gdyni!",
-        reviews: "Opinie klientów z Gdyni.",
-        faq: "Najczęściej zadawane pytania w Gdyni.",
+        home: "Najlepsze prace hydrauliczne w Częstochowie!",
+        about: "Hydraulik w Częstochowie - pasja i profesjonalizm.",
+        projects: "Zobacz nasze projekty w Częstochowie!",
+        orderUs: "Zamów hydraulika w Częstochowie!",
+        reviews: "Opinie klientów z Częstochowy.",
+        faq: "Najczęściej zadawane pytania w Częstochowie.",
       },
       districts: {
         orlowo: {

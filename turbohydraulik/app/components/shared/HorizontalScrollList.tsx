@@ -28,6 +28,7 @@ const arrowSx = {
     cursor: "pointer",
     background: "transparent",
   },
+  transition: "background 0.3s ease-in-out",
 };
 
 const HorizontalScrollList: React.FC<HorizontalScrollListProps> = ({

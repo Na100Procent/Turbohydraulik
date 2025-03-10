@@ -10,17 +10,24 @@ interface Props {
 }
 
 const container = {
-  minWidth: "400px",
-  width: "100%",
+  width: {
+    xl: "400px",
+    lg: "400px",
+    md: "400px",
+    sm: "350px",
+    xs: "350px",
+    xxs: "350px",
+  },
+
   height: "470px",
   borderRadius: "12px",
   overflow: "hidden",
-  backgroundColor: "#f5f5f5",
+  backgroundColor: theme.palette.custom.background,
   display: "flex",
   flexDirection: "column",
   alignItems: "left",
   boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
-  padding: "10px 20px 50px 20px ",
+  padding: "10px 20px 60px 20px",
 };
 const imgSx = {
   marginTop: "10px",
@@ -36,7 +43,7 @@ const titleSx = {
   maxWidth: "250px",
   mt: "20px",
   textAlign: "left",
-  fontSize: "22px",
+  fontSize: "20px",
 };
 
 const descriptionSx = {

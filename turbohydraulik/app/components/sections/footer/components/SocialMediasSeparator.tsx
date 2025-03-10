@@ -15,6 +15,7 @@ const iconBtn = {
     backgroundColor: theme.palette.custom.blueLight,
     color: theme.palette.primary.main,
   },
+  transition: "background 0.3s ease-in-out, color 0.3s ease-in-out",
 };
 const SocialMediasSeparator = ({ separatorColor }: Props) => {
   return (

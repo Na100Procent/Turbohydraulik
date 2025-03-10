@@ -28,6 +28,11 @@ const RectangularButton = ({
     padding: "10px 20px",
     gap: "10px",
     minWidth: "200px",
+    "&:hover": {
+      cursor: "pointer",
+      background: theme.palette.custom.lightGray,
+    },
+    transition: "background 0.2s ease-in-out",
   };
   const titleSx = {
     color: titleColor ? titleColor : theme.palette.primary.main,

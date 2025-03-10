@@ -6,13 +6,11 @@ import ServicePage from "./ServicePage";
 import { PageProps } from "@/.next/types/app/[city]/page";
 
 export const generateStaticParams = async () => {
-  // Get all city slugs and service slugs
   const citySlugs = Object.keys(websiteData.cities);
   const serviceSlugs = Object.keys(websiteData.services);
 
-  // Combine both into paths
   const paths = [...citySlugs, ...serviceSlugs].map((slug) => ({
-    city: slug, // `city` matches the `[city]` dynamic segment
+    city: slug,
   }));
 
   return paths;

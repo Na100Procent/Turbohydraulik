@@ -10,8 +10,15 @@ interface Props {
 }
 
 const container = {
-  minWidth: "400px",
-  width: "100%",
+  width: {
+    xl: "400px",
+    lg: "400px",
+    md: "400px",
+    sm: "350px",
+    xs: "350px",
+    xxs: "350px",
+  },
+
   padding: "0px 10px 10px 10px ",
   borderRadius: "12px",
   overflow: "hidden",
@@ -27,6 +34,37 @@ const imgSx = {
   height: "65%",
   objectFit: "cover",
 };
+const cityNameSx = {
+  fontWeight: "bold",
+  color: theme.palette.primary.main,
+  fontSize: "20px",
+  minWidth: "120px",
+};
+
+const titleButtonSx = {
+  display: "flex",
+  justifyContent: "space-between",
+  width: "100%",
+
+  alignItems: {
+    xl: "center",
+    lg: "center",
+    md: "center",
+    sm: "left",
+    xs: "left",
+    xxs: "left",
+  },
+  padding: "20px 20px 10px 20px",
+  gap: "20px",
+  flexDirection: {
+    xl: "row",
+    lg: "row",
+    md: "row",
+    sm: "column",
+    xs: "column",
+    xxs: "column",
+  },
+};
 const CityCard = ({ cityName, cityUrl }: Props) => {
   return (
     <Box sx={container}>
@@ -36,25 +74,8 @@ const CityCard = ({ cityName, cityUrl }: Props) => {
         sx={imgSx}
       />
 
-      <Box
-        sx={{
-          display: "flex",
-          justifyContent: "space-between",
-          width: "100%",
-          alignItems: "center",
-          padding: "20px",
-        }}
-      >
-        <Typography
-          sx={{
-            fontWeight: "bold",
-            color: theme.palette.primary.main,
-
-            fontSize: "25px",
-          }}
-        >
-          {cityName}
-        </Typography>
+      <Box sx={titleButtonSx}>
+        <Typography sx={cityNameSx}>{cityName}</Typography>
 
         <Link href={`${cityUrl}`}>
           <RectangularButton
