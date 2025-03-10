@@ -20,12 +20,11 @@ const containerSx = {
     xs: "column",
     xxs: "column",
   },
-  alignItems: "center",
+  alignItems: "top",
 };
 
 const linkListsSx = {
   display: "flex",
-
   flexDirection: {
     xl: "row",
     lg: "row",

@@ -45,7 +45,6 @@ const FAQsection = () => {
       <SectionPaddingWrapper>
         <Box paddingBottom={"200px"} id={sectionIds.faq}>
           <SectionCenterHeader
-            topHeaderColor={theme.palette.secondary.main}
             topHeader="FAQ’S QUESTIONS"
             header="Frequently Asked Questions"
             bottomHeader="Find answers to the most frequently asked questions about our plumbing services. If you can't find the answer, please contact us!"

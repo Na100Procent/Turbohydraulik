@@ -15,9 +15,7 @@ const fontSize = {
   xs: "50px",
   xxs: "40px",
 };
-const container = {
-  maxWidth: "400px",
-};
+
 const headerSx = {
   fontWeight: "600",
   fontFamily: "UniteaSans",
@@ -32,20 +30,26 @@ const subHeader = {
 
 const HeaderBox = ({ slug, subHeaderContent }: Props) => {
   return (
-    <Box sx={container}>
+    <>
       <Box>
         <Box color={theme.palette.custom.background}>
-          <Typography sx={headerSx}> Turbo </Typography>
+          <Typography variant="h1" sx={headerSx}>
+            Turbo
+          </Typography>
         </Box>
         <Typography
+          variant="h1"
           mb="20px"
           sx={{ color: theme.palette.secondary.main, ...headerSx }}
         >
           Hydraulik {slug}
         </Typography>
       </Box>
+      <Typography sx={subHeader} variant="h4">
+        h4 content
+      </Typography>
       <p style={subHeader}>{subHeaderContent}</p>
-    </Box>
+    </>
   );
 };
 

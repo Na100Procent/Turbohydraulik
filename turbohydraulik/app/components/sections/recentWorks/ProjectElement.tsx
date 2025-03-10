@@ -2,6 +2,7 @@ import { Box, Typography } from "@mui/material";
 import React from "react";
 import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
 import theme from "@/app/theme/theme";
+import MosaicElement from "../../shared/mosaic/MosaicElement";
 
 interface Props {
   bgImage: string;
@@ -40,17 +41,9 @@ const overlaySx = {
   zIndex: 0,
 };
 
-const MosaicElement = ({ bgImage }: Props) => {
+const ProjectElement = ({ bgImage }: Props) => {
   return (
-    <Box
-      sx={{
-        position: "relative",
-        background: `url(${bgImage}) center /cover no-repeat`,
-        borderRadius: "10px",
-        overflow: "hidden",
-        mt: "20px",
-      }}
-    >
+    <MosaicElement bgImage={bgImage}>
       <Box sx={overlaySx} />
       <Box sx={contentSx}>
         <Typography
@@ -87,8 +80,8 @@ const MosaicElement = ({ bgImage }: Props) => {
           </Box>
         </Box>
       </Box>
-    </Box>
+    </MosaicElement>
   );
 };
 
-export default MosaicElement;
+export default ProjectElement;

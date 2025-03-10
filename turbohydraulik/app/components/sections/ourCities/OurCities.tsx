@@ -34,7 +34,6 @@ const OurCities = () => {
       >
         <SectionPaddingWrapper>
           <SectionCenterHeader
-            topHeaderColor={theme.palette.secondary.main}
             topHeader="OUR LOCATIONS"
             header="Plumbing Services in Your City"
           />

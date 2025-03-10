@@ -1,13 +1,18 @@
 import React from "react";
 import BackgroundWrapper from "../../shared/BackgroundWrapper";
 import theme from "@/app/theme/theme";
-import HeaderBox from "./HeaderBox";
 import { Box } from "@mui/material";
-import { introBgUrl } from "@/app/constants/imagesUrls";
-import HorizontalBanner from "./HorizontalBanner";
 import CallUsButton from "../../shared/CallUsButton";
 import { CityData, DistrictData, ServiceData } from "@/app/data/types";
 import { websiteData } from "@/app/data/data";
+import HeaderBox from "../intro/HeaderBox";
+import {
+  aboutUsUrl,
+  serviceCardUrl,
+  serviceHeroBg,
+} from "@/app/constants/imagesUrls";
+import MosaicGrid from "../../shared/mosaic/MosaicGrid";
+import MosaicElement from "../../shared/mosaic/MosaicElement";
 
 interface Props {
   slug?: CityData | ServiceData | DistrictData;
@@ -29,7 +34,8 @@ const heroSx = {
   borderRadius: "15px",
   maxWidth: "500px",
   padding: "40px",
-  minWidth: "300px",
+  minWidth: "100%",
+
   background: theme.palette.primary.main,
 };
 const contentSx = {
@@ -42,10 +48,19 @@ const contentSx = {
     xxs: "10px 10px",
   },
 };
-const IntroSection = ({ slug, content }: Props) => {
+const HeroService = ({ slug, content }: Props) => {
+  const serviceImages = [
+    <MosaicElement key={0} bgImage={serviceHeroBg} />,
+    <MosaicElement key={1} bgImage={aboutUsUrl} />,
+    <MosaicElement key={2} bgImage={serviceCardUrl} />,
+    <MosaicElement key={3} bgImage={serviceHeroBg} />,
+  ];
   return (
-    <BackgroundWrapper bgImage={introBgUrl} sx={containerSx}>
-      <Box padding="50px 0 0 0">
+    <BackgroundWrapper
+      sx={containerSx}
+      bgColor={theme.palette.custom.yellowLight}
+    >
+      <Box paddingBottom="50px">
         <Box sx={contentSx}>
           <Box sx={heroSx}>
             <HeaderBox
@@ -57,10 +72,10 @@ const IntroSection = ({ slug, content }: Props) => {
             </Box>
           </Box>
         </Box>
-        <HorizontalBanner />
+        <MosaicGrid elements={serviceImages} />
       </Box>
     </BackgroundWrapper>
   );
 };
 
-export default IntroSection;
+export default HeroService;

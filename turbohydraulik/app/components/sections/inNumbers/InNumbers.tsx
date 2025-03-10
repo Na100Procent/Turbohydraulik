@@ -6,10 +6,14 @@ import theme from "@/app/theme/theme";
 import CompanyInNumbers from "./CompanyInNumbers";
 import CallUsButton from "../../shared/CallUsButton";
 import { Box } from "@mui/material";
-
-const InNumbers = () => {
+interface Props {
+  bgColor?: string;
+}
+const InNumbers = ({ bgColor }: Props) => {
   return (
-    <BackgroundWrapper bgColor={theme.palette.custom.background}>
+    <BackgroundWrapper
+      bgColor={bgColor ? bgColor : theme.palette.custom.background}
+    >
       <SectionPaddingWrapper>
         <Box display="flex" flexDirection="column" justifyContent="center">
           <SectionCenterHeader
