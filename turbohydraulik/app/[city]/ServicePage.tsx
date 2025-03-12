@@ -13,6 +13,7 @@ import { SectionContent, ServiceData } from "../data/types";
 import PriceList from "../components/sections/priceList/PriceList";
 import { websiteData } from "../data/data";
 import HeroService from "../components/sections/heroService/HeroService";
+import theme from "../theme/theme";
 
 interface Props {
   service: ServiceData;
@@ -42,9 +43,19 @@ export default function ServicePage({ service }: Props) {
       <HowToOrderUs />
       <InNumbers />
       <PriceList items={servicesPrices} />
-      <RecentWorks />
       <FAQsection />
-      <OurServices />
+      <RecentWorks />
+      <Box
+        width={"100%"}
+        bgcolor={theme.palette.custom.background}
+        padding="0px 0px 400px 0 "
+      >
+        <OurServices
+          bgColor={theme.palette.custom.background}
+          headerColor={theme.palette.primary.main}
+        />
+      </Box>
+
       <Footer />
     </Box>
   );
