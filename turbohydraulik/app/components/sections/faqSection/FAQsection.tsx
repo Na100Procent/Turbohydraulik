@@ -3,13 +3,12 @@ import React from "react";
 import BackgroundWrapper from "../../shared/BackgroundWrapper";
 import SectionPaddingWrapper from "../../shared/SectionWrapper";
 import SectionCenterHeader from "../../shared/SectionCenterHeader";
-import FAQElements from "./FAQElements";
-import { faqs } from "@/app/data/data";
 import { Box } from "@mui/material";
 import Image from "next/image";
 import CallUsButton from "../../shared/CallUsButton";
 import { sectionIds } from "@/app/constants/appConstants";
 import { sectionXPadding } from "@/app/constants/styles";
+import FAQElements from "./FAQElements";
 
 const contentSx = {
   mt: "50px",
@@ -51,7 +50,7 @@ const FAQsection = () => {
             headerColor={theme.palette.primary.main}
           />
           <Box sx={contentSx}>
-            <FAQElements faqs={faqs} />
+            <FAQElements />
             <Box>
               <Image
                 src="https://github.com/user-attachments/assets/ca378ab7-a9b2-4736-ac5f-fe20ad776b11"

@@ -323,26 +323,3 @@ export const websiteData: WebsiteData = {
     },
   },
 };
-
-export const faqs = [
-  {
-    question: "What is Next.js?",
-    answer:
-      "Next.js is a React framework for building server-side rendered applications.",
-  },
-  {
-    question: "Can I cancel my plumber appointment?",
-    answer:
-      "Next.js is a React framework for bujs is a React framework for  js is a React framework for ilding server-side rendered applications.",
-  },
-  {
-    question: "What is Turbo Plumber?",
-    answer:
-      "Next.js is a React framjs is a React framework for ework for building server-side rendered applications.",
-  },
-  {
-    question: "How do I install Next.js?",
-    answer:
-      "js is a React framework for You can install Next.js by running npm install next react react-dom.",
-  },
-];

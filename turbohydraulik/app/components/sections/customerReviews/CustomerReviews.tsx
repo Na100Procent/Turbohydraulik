@@ -49,7 +49,6 @@ const CustomerReviews = ({ city, content }: Props) => {
             </Typography>
           </Box>
         </SectionPaddingWrapper>
-
         <CommaIcon />
         <ReviewsHorizontalScrollList />
         <SubHeaders />

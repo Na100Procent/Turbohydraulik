@@ -51,12 +51,7 @@
         "ser_faq_text": "Nasza ekipa odpowie na wszystkie pytania związane z instalacją i wymianą zaworów. Zadzwoń lub napisz, aby uzyskać więcej informacji!",
         "submittedAt": "2025-03-08T20:51:23.238+01:00",
         "formMode": "test"
-      },
-      "citiesContent": [{
-        "citySlug": "warszawa",
-        "content": {...tutaj kontent tak jak w mainContent}
-         
-      }]
+      }
     }
   },
   "cities": {
