@@ -1,6 +1,6 @@
 import { FC } from "react";
-import { websiteData } from "../data/data";
-import { CityData, ServiceData } from "../data/types";
+import websiteData from "../data/toBeData.json";
+import { CityContent, ServiceContent } from "../data/types";
 import CityPage from "./CityPage";
 import ServicePage from "./ServicePage";
 import { PageProps } from "@/.next/types/app/[city]/page";
@@ -26,16 +26,16 @@ const CityOrServicePage: FC<PageProps> = async ({ params }) => {
   const { city: currentSlug } = await params;
 
   const slugIsCity = Object.keys(websiteData.cities).includes(currentSlug);
-  const slug = slugIsCity
-    ? websiteData.cities[currentSlug]
-    : websiteData.services[currentSlug];
+  const slug: CityContent | ServiceContent = slugIsCity
+    ? websiteData.cities[currentSlug as keyof typeof websiteData.cities]
+    : websiteData.services[currentSlug as keyof typeof websiteData.services];
 
   return (
     <>
       {slugIsCity ? (
-        <CityPage city={slug as CityData} />
+        <CityPage city={slug as CityContent} />
       ) : (
-        <ServicePage service={slug as ServiceData} />
+        <ServicePage service={slug as ServiceContent} />
       )}
     </>
   );

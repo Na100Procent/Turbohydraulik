@@ -10,27 +10,28 @@ import HowToOrderUs from "../components/sections/howToOrderUs/HowToOrderUs";
 import CustomerReviews from "../components/sections/customerReviews/CustomerReviews";
 import RecentWorks from "../components/sections/recentWorks/RecentWorks";
 import FAQsection from "../components/sections/faqSection/FAQsection";
-import { CityData, SectionContent } from "../data/types";
+import { CityContent, HeroContent } from "../data/types";
 import theme from "../theme/theme";
 import AboutCity from "../components/sections/aboutCity/AboutCity";
-import { websiteData } from "../data/data";
 import PriceList from "../components/sections/priceList/PriceList";
 import DistrictsList from "../components/shared/DistrictsList";
-
+import websiteData from "../data//toBeData.json";
 interface Props {
-  city: CityData;
+  cityContent: CityContent;
 }
 
-export default function CityPage({ city }: Props) {
-  const getContent = (section: keyof SectionContent) => {
-    return city.content[section];
-  };
-
+export default function CityPage({ cityContent }: Props) {
   const services = Object.values(websiteData.services);
   const servicesPrices = services.map((service) => ({
     title: service.name,
     price: "100$",
   }));
+
+  const heroContent: HeroContent = {
+    hero_h1: cityContent.content.hero_h1,
+    hero_h2: cityContent.content.hero_h2,
+    hero_text: cityContent.content.hero_text,
+  };
 
   return (
     <Box
@@ -41,7 +42,7 @@ export default function CityPage({ city }: Props) {
       id={sectionIds.home}
     >
       <TopMenu />
-      <IntroSection slug={city} content={getContent("home")} />
+      <IntroSection content={heroContent} />
 
       <OurServices city={city} />
       <CustomerReviews city={city} content={getContent("reviews")} />
