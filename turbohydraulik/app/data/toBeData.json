@@ -3,6 +3,26 @@
     "instalacja-i-wymiana-zaworow": {
       "name": "Instalacja i wymiana zaworów",
       "slug": "instalacja-i-wymiana-zaworow",
+      "price": "100",
+      "cardImageUrl": "https://images.unsplash.com/photo-1612838320302-4b3b3b3b3b3b",
+      "heroServiceImages": [
+        "https://images.unsplash.com/photo-1612838320302-4b3b3b3b3b3b",
+        "https://images.unsplash.com/photo-1612838320302-4b3b3b3b3b3b",
+        "https://images.unsplash.com/photo-1612838320302-4b3b3b3b3b3b",
+        "https://images.unsplash.com/photo-1612838320302-4b3b3b3b3b3b"
+      ],
+      "subservices": [
+        {
+          "name": "Wymiana Zaworów",
+          "price": "50",
+          "description": "Najlepsza wymiana zaworow "
+        },
+        {
+          "name": "Wymiana toalet",
+          "price": "35",
+          "description": "Najlepsza wymiana toalet profesjonalna "
+        }
+      ],
       "content": {
         "content": "<h2>Instalacja i wymiana zaworów</h2><p>Nasza usługa obejmuje profesjonalną instalację oraz wymianę zaworów wodnych, które są kluczowe dla prawidłowego funkcjonowania Twojej instalacji wodociągowej. Dzięki doświadczonym specjalistom możesz być pewny, że wszystko zostanie wykonane zgodnie z najwyższymi standardami.</p><p>Oferujemy pełen zakres usług związanych z zaworami, dzięki czemu nie musisz się martwić o dalsze problemy z instalacją. Skontaktuj się z nami, aby umówić wizytę!</p>",
         "ser_hero_text": "<strong>Skorzystaj z naszej kompleksowej usługi instalacji i wymiany zaworów już dziś!</strong>",
@@ -29,42 +49,7 @@
         "ser_portfolio_h2": "Ostatnio zrealizowane prace",
         "ser_faq_h2": "Odpowiadamy na najczęstsze pytania.",
         "ser_faq_text": "Nasza ekipa odpowie na wszystkie pytania związane z instalacją i wymianą zaworów. Zadzwoń lub napisz, aby uzyskać więcej informacji!",
-        "cena": 100,
         "submittedAt": "2025-03-08T20:51:23.238+01:00",
-        "formMode": "test"
-      }
-    },
-    "kompleksowy-serwis-toalet": {
-      "name": "Kompleksowy serwis toalet",
-      "slug": "kompleksowy-serwis-toalet",
-      "content": {
-        "content": "<h2>Kompleksowy serwis toalet – Twoje zaufanie jest dla nas najważniejsze</h2><p>Oferujemy szeroki wachlarz usług związanych z serwisem toalet, które zaspokoją wszystkie Twoje potrzeby. Nasz zespół ekspertów zadba o to, aby każda toaleta działała doskonale, a Ty mógł cieszyć się komfortem użytkowania.</p><h2>Dlaczego warto wybrać nasz serwis?</h2><p>Nasze usługi wyróżniają się wysoką jakością i profesjonalizmem. Wybierając nas, wybierasz szybkość, niezawodność oraz konkurencyjne ceny. Skontaktuj się z nami już teraz!</p>",
-        "ser_hero_text": "<b>Zadzwoń do nas i zamów kompleksowy serwis toalet!</b>",
-        "ser_service_h2": "Kompleksowy serwis toalet – najlepsze rozwiązania dla Ciebie",
-        "ser_service_text_short": "Sprawdź nasze profesjonalne usługi związane z toaletami.",
-        "ser_service_h3_1": "Montaż Toalety",
-        "ser_service_text_1": "Zaufaj nam przy montażu toalety – szybko, sprawnie i bezproblemowo.",
-        "ser_service_h3_2": "Naprawa Spłuczki",
-        "ser_service_text_2": "Nie działa spłuczka? Nasz serwis zajmie się jej szybką naprawą, zapewniając Ci wygodę i oszczędność w zużyciu wody.",
-        "ser_service_h3_3": "Naprawa Toalety Podtynkowej",
-        "ser_service_text_3": "Masz problem z toaletą podtynkową? Nasz fachowiec szybko usunie usterkę, przywracając pełną sprawność i funkcjonalność Twojej instalacji.",
-        "ser_service_h3_4": "Wymiana Toalety",
-        "ser_service_text_4": "Stara toaleta nie spełnia swoich funkcji? Wymień ją na nowoczesny model, który będzie niezawodny i estetyczny przez wiele lat.",
-        "ser_testimonials_h2": "Opinie naszych klientów",
-        "ser_testimonials_h3": "Sprawdź co mówią o nas klienci",
-        "ser_testimonials_text_1": "\"Szybka i fachowa obsługa! Montaż toalety był bezproblemowy.\"",
-        "ser_testimonials_text_2": "\"Naprawili moją spłuczkę w 20 minut! Gorąco polecam.\"",
-        "ser_aboutus_h2": "Kompleksowy Serwis Toalet – Twój partner w utrzymaniu sanitariatów",
-        "ser_aboutus_text": "Jesteśmy specjalistami w zakresie serwisu toalet. Nasze doświadczenie i zaangażowanie sprawiają, że cieszymy się zaufaniem klientów.",
-        "ser_steps_h2": "Jak zamówić kompleksowy serwis toalet w 3 krokach?",
-        "ser_aboutusnumbers_h2": "Nasze liczby mówią same za siebie",
-        "ser_aboutusnumbers_text": "Ponad 10 lat doświadczenia w branży, setki zadowolonych klientów i tysiące wykonanych usług.",
-        "ser_pricelist_h2": "Cennik usługi",
-        "ser_portfolio_h2": "Ostatnio zrealizowane prace",
-        "ser_faq_h2": "Odpowiadamy na najczęstsze pytania",
-        "ser_faq_text": "Czy oferujecie gwarancję na wykonane usługi? Tak, wszystkie nasze usługi objęte są gwarancją satysfakcji.",
-        "cena": 100,
-        "submittedAt": "2025-03-08T21:26:33.698+01:00",
         "formMode": "test"
       }
     }
@@ -73,6 +58,21 @@
     "warszawa": {
       "name": "Turbo Hydraulik + Warszawa",
       "slug": "warszawa",
+      "cityCardUrl": "https://images.unsplash.com/photo-1612838320302-4b3b3b3b3b3b",
+
+      "availableServices": ["instalacja-i-wymiana-zaworow"],
+
+      "districts": [
+        {
+          "name": "Bemowo",
+          "slug": "bemowo"
+        },
+        {
+          "name": "Źoliborz",
+          "slug": "zoliborz"
+        }
+      ],
+
       "content": {
         "hero_h2": "Najlepszy Hydraulik w Warszawie",
         "hero_text": "Turbo Hydraulik – Twój niezawodny bohater w świecie hydrauliki. Szybkość, skuteczność i gotowość do akcji sprawiają, że jesteśmy numerem jeden w Warszawie.",
@@ -99,68 +99,6 @@
         "faq_h2": "FAQ – Najczęściej Zadawane Pytania - Turbo Hydraulik Warszawa",
         "contact_h2": "Turbo Hydraulik Warszawa – szybki kontakt, błyskawiczna pomoc!",
         "contact_text": "Turbo Hydraulik na wezwanie – szybki kontakt, błyskawiczna pomoc!"
-      }
-    },
-    "katowice": {
-      "name": "Turbo Hydraulik Katowice",
-      "slug": "katowice",
-      "content": {
-        "hero_h2": "Turbo Hydraulik Katowice - Twój Superbohater w Świecie Hydrauliki!",
-        "hero_text": "Kiedy problem z hydrauliką staje się krytyczny, Turbo Hydraulik jest zawsze gotowy do akcji! Nasza ekipa jest niezawodna, szybka i skuteczna, gotowa dostarczyć Ci rozwiązania na najwyższym poziomie!",
-        "service_1_h2": "Nasze usługi hydrauliczne w Katowicach",
-        "service_1_text": "Oferujemy szeroki zakres usług hydraulicznych w Katowicach, w tym naprawy i montaż systemów wodno-kanalizacyjnych, serwis grzewczy oraz instalacje sanitarno-hydrauliczne. Niezależnie od problemu, nasz zespół jest do Twojej dyspozycji 24/7!",
-        "testimonials_h2": "Opinie o Turbo Hydrauliku Katowice",
-        "testimonials_h3": "Sprawdź, co mówią nasi zadowoleni klienci o naszych usługach.",
-        "testimonials_text_1": "Klienci cenią nas za szybką reakcję i profesjonalne podejście. Zawsze staramy się przekraczać oczekiwania!",
-        "testimonials_h3_2": "Zadowolenie naszych klientów jest dla nas najważniejsze!",
-        "service_2_h2": "Kompleksowe usługi hydrauliczne w Katowicach",
-        "service_2_text": "Nasze kompleksowe usługi hydraliczne obejmują wszystko, od drobnych napraw po skomplikowane dostępne instalacje. Jesteśmy tutaj, aby zapewnić Ci najwyższej jakości usługi. Zaufaj ekspertom!",
-        "steps_h2": "Jak Zamówić Usługę Hydrauliczną w Katowicach?",
-        "aboutus_h2": "O nas – Turbo Hydraulik Katowice",
-        "aboutus_text": "Turbo Hydraulik to lokalna firma hydrauliczna z wieloletnim doświadczeniem w Katowicach. Nasza ekipa to profesjonalni hydraulicy gotowi zrealizować każdą usługę hydrauliczną szybko i efektywnie. Zaufaj lokalnym specjalistom!",
-        "aboutcity_h2": "Usługi Hydrauliczne w Katowicach",
-        "aboutcity_text": "Oferujemy usługi hydrauliczne w sercu Górnego Śląska. Z naszym wieloletnim doświadczeniem i lokalnym know-how, jesteśmy idealnym wyborem dla każdego mieszkańca Katowic, który potrzebuje szybkiej i skutecznej pomocy hydrauliczej.",
-        "portfolio_h2": "Ostatnie realizacje – Turbo Hydraulik Katowice",
-        "portfolio_text": "Zapraszamy do zapoznania się z naszą galerią! Zobacz, jak skutecznie pomagaliśmy naszym klientom w Katowicach, a nasze realizacje mówią same za siebie!",
-        "aboutusnumbers_h2": "Nasze liczby mówią same za siebie.",
-        "aboutusnumbers_text": "10 lat doświadczenia, setki zadowolonych klientów. Jesteśmy dumni z jakości naszej pracy!",
-        "pricelist_h2": "Cennik Usług Hydraulicznych",
-        "pricelist_h3": "Potrzebujesz innej usługi Hydraulicznej?",
-        "pricelist_text": "Oferujemy przejrzyste ceny naszych usług hydraulicznych, bez ukrytych kosztów. Skontaktuj się z nami, aby uzyskać szczegółowy cennik.",
-        "faq_h2": "FAQ – Najczęściej Zadawane Pytania - Turbo Hydraulik Katowice",
-        "contact_h2": "Turbo Hydraulik Katowice – szybki kontakt, błyskawiczna pomoc!",
-        "contact_text": "Nie czekaj, kiedy hydraulika Cię zawiedzie! Skontaktuj się z nami już teraz, a nasz Turbo Hydraulik pojawi się u Ciebie w mgnieniu oka!"
-      }
-    },
-    "czestochowa": {
-      "name": "Turbo Hydraulik + Częstochowa",
-      "slug": "czestochowa",
-      "content": {
-        "hero_h2": "Hydraulik Częstochowa - Twoja szybka pomoc przy problemach z hydrauliką!",
-        "hero_text": "Turbo Hydraulik, niezawodny bohater hydrauliki, gotowy w każdej chwili do akcji! Szybkość, skuteczność i pełna gotowość, by rozwiązać każdy hydrauliczny problem.",
-        "service_1_h2": "Nasze usługi hydrauliczne w Częstochowie",
-        "service_1_text": "Oferujemy szeroki zakres usług hydraulicznych, w tym naprawy, instalacje oraz konserwację systemów wodno-kanalizacyjnych. Nasi doświadczeni hydraulicy są dostępni 24/7, aby zapewnić Ci pomoc w każdej sytuacji.",
-        "testimonials_h2": "Opinie klientów o Turbo Hydrauliku w Częstochowie",
-        "testimonials_h3": "Sprawdź, co mówią nasi zadowoleni klienci o naszych usługach.",
-        "testimonials_text_1": "Nasi klienci cenią sobie szybkość reakcji i jakość naszych usług - dołącz do grona zadowolonych klientów!",
-        "testimonials_h3_2": "Przekonaj się, co sądzą o nas klienci!",
-        "service_2_h2": "Kompleksowe usługi hydrauliczne w Częstochowie",
-        "service_2_text": "Nasza oferta obejmuje nie tylko awaryjne naprawy, ale również kompleksowe usługi instalacyjne. Zaufaj nam w kwestii Twojego systemu hydraulicznego!",
-        "steps_h2": "Jak zamówić usługę hydrauliczną w Częstochowie?",
-        "aboutus_h2": "O nas – Turbo Hydraulik Częstochowa",
-        "aboutus_text": "Turbo Hydraulik to firma z wieloletnim doświadczeniem w świadczeniu usług hydraulicznych w Częstochowie. Nasz zespół to wykwalifikowani specjaliści, którzy dbają o wysoką jakość i satysfakcję klientów.",
-        "aboutcity_h2": "Usługi hydrauliczne w Częstochowie",
-        "aboutcity_text": "Działamy na terenie Częstochowy, oferując profesjonalne usługi hydrauliczne w atrakcyjnych cenach. Nasza lokalna działalność pozwala nam lepiej rozumieć potrzeby mieszkańców.",
-        "portfolio_h2": "Ostatnie realizacje – Turbo Hydraulik Częstochowa",
-        "portfolio_text": "Zapoznaj się z naszą galerią realizacji, gdzie prezentujemy efekty naszej pracy w Częstochowie. Wysoka jakość gwarantowana!",
-        "aboutusnumbers_h2": "Nasze liczby mówią same za siebie.",
-        "aboutusnumbers_text": "Ponad 10 lat doświadczenia, setki zadowolonych klientów i tysiące wykonanych usług hydraulicznych.",
-        "pricelist_h2": "Cennik usług hydraulicznych",
-        "pricelist_h3": "Potrzebujesz innej usługi hydraulicznej?",
-        "pricelist_text": "Oferujemy przejrzyste ceny bez ukrytych kosztów. Skontaktuj się z nami, aby poznać szczegóły!",
-        "faq_h2": "FAQ – Najczęściej zadawane pytania - Turbo Hydraulik Częstochowa",
-        "contact_h2": "Turbo Hydraulik Częstochowa – szybki kontakt, błyskawiczna pomoc!",
-        "contact_text": "Zadzwoń do nas lub napisz, a my błyskawicznie przybędziemy z pomocą!"
       }
     }
   }

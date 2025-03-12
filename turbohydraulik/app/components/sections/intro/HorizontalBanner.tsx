@@ -30,10 +30,10 @@ const contentSx = {
 
 const HorizontalBanner = () => {
   const positions = [
-    "Pipe Unclogging & Cleaning",
-    "Siliconizing and Sealing",
-    "Service, Installation and Battery Replacement",
-    "Plumbing Services",
+    "Odkurzanie i czyszczenie rur",
+    "Silikonowanie i uszczelnianie",
+    "Serwis, instalacja i wymiana baterii",
+    "Usługi hydrauliczne",
   ];
   const separator = " * ";
 
