@@ -1,17 +1,14 @@
 "use client";
 import React, { useState } from "react";
-import { Box, Typography, IconButton, Collapse } from "@mui/material";
+import { Box, Typography, IconButton, Collapse, Button } from "@mui/material";
 import AddIcon from "@mui/icons-material/Add";
 import ClearOutlinedIcon from "@mui/icons-material/ClearOutlined";
 import theme from "@/app/theme/theme";
+import faqData from "../../../data/faqData.json";
 
 interface FAQItem {
   question: string;
   answer: string;
-}
-
-interface FAQProps {
-  faqs: FAQItem[];
 }
 
 const container = {
@@ -44,16 +41,24 @@ const questionSx = {
     xxs: "12px",
   },
 };
-const FAQElements = ({ faqs }: FAQProps) => {
+
+const FAQElements = () => {
   const [expandedIndex, setExpandedIndex] = useState<null | number>(null);
+  const [showAll, setShowAll] = useState(false);
 
   const handleToggle = (index: number) => {
     setExpandedIndex(expandedIndex === index ? null : index);
   };
 
+  const handleShowAll = () => {
+    setShowAll(!showAll);
+  };
+
+  const displayedFaqs = showAll ? faqData : faqData.slice(0, 6);
+
   return (
     <Box>
-      {faqs.map((faq, index) => (
+      {displayedFaqs.map((faq: FAQItem, index) => (
         <Box key={index} sx={container}>
           <Box
             sx={{
@@ -90,6 +95,16 @@ const FAQElements = ({ faqs }: FAQProps) => {
           </Collapse>
         </Box>
       ))}
+      <Button
+        onClick={handleShowAll}
+        sx={{
+          mt: 2,
+          color: theme.palette.primary.main,
+          background: theme.palette.secondary.main,
+        }}
+      >
+        {showAll ? "Pokaż mniej" : "Pokaż wszystkie"}
+      </Button>
     </Box>
   );
 };

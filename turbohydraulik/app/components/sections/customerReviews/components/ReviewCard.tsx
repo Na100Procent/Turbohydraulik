@@ -5,12 +5,16 @@ import Score from "./Score";
 import HorizontalSeparator from "../../footer/components/HorizontalSeparator";
 import { GoogleIcon } from "@/public/assets/icons/icons";
 
-interface ReviewCardProps {
-  reviewer: string;
+export interface ReviewCardProps {
+  reviewerName: string;
   review: string;
   score: number;
 }
-const ReviewCard: React.FC<ReviewCardProps> = ({ reviewer, review, score }) => {
+const ReviewCard: React.FC<ReviewCardProps> = ({
+  reviewerName,
+  review,
+  score,
+}) => {
   const blue = theme.palette.primary.main;
 
   const container = {
@@ -37,7 +41,7 @@ const ReviewCard: React.FC<ReviewCardProps> = ({ reviewer, review, score }) => {
         color={blue}
         sx={{ fontFamily: "UniteaSans" }}
       >
-        {reviewer}
+        {reviewerName}
       </Typography>
       <Box
         display={"flex"}

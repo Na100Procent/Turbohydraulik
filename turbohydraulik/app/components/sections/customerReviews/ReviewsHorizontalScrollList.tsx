@@ -1,10 +1,11 @@
 "use client";
-import { reviewsCardsData } from "@/app/constants/mockedData";
+
 import { Box, useMediaQuery } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import { useSpring, animated } from "@react-spring/web";
-import ReviewCard from "./components/ReviewCard";
+import ReviewCard, { ReviewCardProps } from "./components/ReviewCard";
 import theme from "@/app/theme/theme";
+import reviewsData from "../../../data/reviewsData.json";
 
 const ReviewsHorizontalScrollList = () => {
   const [start, setStart] = useState(false);
@@ -21,12 +22,13 @@ const ReviewsHorizontalScrollList = () => {
   });
   const AnimatedBox = animated(Box);
 
-  const multiplePositions = [...reviewsCardsData, ...reviewsCardsData];
-  const mappedServiceElements = multiplePositions.map((review, index) => (
-    <Box key={index} sx={{ margin: "0 10px" }}>
-      <ReviewCard {...review} />
-    </Box>
-  ));
+  const mappedServiceElements = reviewsData.map(
+    (review: ReviewCardProps, index) => (
+      <Box key={index} sx={{ margin: "0 10px" }}>
+        <ReviewCard {...review} />
+      </Box>
+    )
+  );
 
   useEffect(() => {
     setStart(true);
