@@ -10,8 +10,6 @@ import SocialMedias from "./SocialMedias";
 
 const containerSx = {
   position: {
-    xl: "relative",
-    lg: "relative",
     md: "relative",
     sm: "fixed",
     xs: "fixed",
@@ -24,16 +22,12 @@ const containerSx = {
 const elementsContainer = {
   display: "flex",
   justifyContent: {
-    xl: "right",
-    lg: "right",
-    md: "right",
     sm: "right",
     xs: "center",
     xxs: "center",
   },
   alignItems: "center",
   gap: {
-    xl: "20px",
     lg: "20px",
     md: "10px",
     sm: "8px",
@@ -68,8 +62,6 @@ const contactElement = {
 const ornamentSx = {
   position: "absolute",
   top: {
-    xl: "-60px",
-    lg: "-60px",
     md: "-60px",
     sm: "-10px",
     xs: "-10px",
@@ -86,9 +78,6 @@ const ornamentSx = {
 
 const emailSx = {
   display: {
-    xl: "flex",
-    lg: "flex",
-    md: "flex",
     sm: "flex",
     xs: "none",
     xxs: "none",
@@ -97,29 +86,29 @@ const emailSx = {
 
 const phoneSx = {
   scale: {
-    xl: "1",
-    lg: "1",
-    md: "1",
     sm: "1",
     xs: "2",
     xxs: "2",
   },
   marginRight: {
-    xl: "0",
-    lg: "0",
-    md: "0",
     sm: "0",
     xs: "31vw",
     xxs: "28vw",
   },
 
   padding: {
-    xl: "10px",
-    lg: "10px",
-    md: "10px",
     sm: "10px",
     xs: "20px",
     xxs: "20px",
+  },
+  "&:hover": {
+    cursor: "pointer",
+    backgroundColor: "rgba(255,255,255,0.1)",
+    scale: {
+      sm: "1.05",
+      xs: "2.02",
+      xxs: "2.02",
+    },
   },
 };
 

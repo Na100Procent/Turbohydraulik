@@ -1,6 +1,8 @@
+"use client";
 import theme from "@/app/theme/theme";
 import { Box } from "@mui/material";
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { useSpring, animated } from "@react-spring/web";
 
 const styles = {
   background: theme.palette.secondary.main,
@@ -28,23 +30,47 @@ const contentSx = {
   alignItems: "center",
 };
 
-const HorizontalBanner = () => {
-  const positions = [
-    "Odkurzanie i czyszczenie rur",
-    "Silikonowanie i uszczelnianie",
-    "Serwis, instalacja i wymiana baterii",
-    "Usługi hydrauliczne",
-  ];
-  const separator = " * ";
+const positions = [
+  "Odkurzanie i czyszczenie rur",
+  "Silikonowanie i uszczelnianie",
+  "Serwis, instalacja i wymiana baterii",
+  "Usługi hydrauliczne",
+];
+const separator = " * ";
 
+const HorizontalBanner = () => {
+  const [start, setStart] = useState(false);
+
+  const scrollAnimation = useSpring({
+    from: { transform: "translateX(25%)" },
+    to: { transform: start ? "translateX(-35%)" : "translateX(25%)" },
+    loop: true,
+    config: { duration: 35000 },
+  });
+  const AnimatedBox = animated(Box);
+
+  const multiplePositions = [
+    ...positions,
+    ...positions,
+    ...positions,
+    ...positions,
+    ...positions,
+    ...positions,
+  ];
+
+  useEffect(() => {
+    setStart(true);
+  }, []);
   return (
     <Box sx={styles}>
-      {[...positions, ...positions, ...positions].map((position, index) => (
-        <Box key={index} sx={contentSx}>
-          <span>{position}</span>
-          <span style={separatorSx}>{separator}</span>
-        </Box>
-      ))}
+      <AnimatedBox style={scrollAnimation} sx={contentSx}>
+        {multiplePositions.map((position, index) => (
+          <Box key={index} sx={contentSx}>
+            <span>{position}</span>
+            <span style={separatorSx}>{separator}</span>
+          </Box>
+        ))}
+      </AnimatedBox>
     </Box>
   );
 };
