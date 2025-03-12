@@ -34,8 +34,8 @@ const OurCities = () => {
       >
         <SectionPaddingWrapper>
           <SectionCenterHeader
-            topHeader="OUR LOCATIONS"
-            header="Plumbing Services in Your City"
+            topHeader="LOKALIZACJE"
+            header="Hydraulika w Twoim mieście"
           />
         </SectionPaddingWrapper>
         <ScrollCityList />

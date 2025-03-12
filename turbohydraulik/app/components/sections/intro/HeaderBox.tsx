@@ -26,6 +26,7 @@ const subHeader = {
   color: theme.palette.custom.background,
   fontWeight: 500,
   letterSpacing: "1px",
+  mt: "-10px",
 };
 
 const HeaderBox = ({ slug, subHeaderContent }: Props) => {
@@ -46,7 +47,7 @@ const HeaderBox = ({ slug, subHeaderContent }: Props) => {
         </Typography>
       </Box>
       <Typography sx={subHeader} variant="h4">
-        h4 content
+        Profesjonalna hydraulika
       </Typography>
       <p style={subHeader}>{subHeaderContent}</p>
     </>

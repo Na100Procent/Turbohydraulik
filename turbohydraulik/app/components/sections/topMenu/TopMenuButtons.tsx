@@ -47,13 +47,13 @@ const TopMenuButtons = ({
     >
       <TopMenuButton title="Home" section={sectionIds.home} />
       <Separator />
-      <TopMenuButton title="About Us" section={sectionIds.about} />
+      <TopMenuButton title="O nas" section={sectionIds.about} />
       <Separator />
-      <TopMenuButton title="Order us" section={sectionIds.orderUs} />
+      <TopMenuButton title="Zamów" section={sectionIds.orderUs} />
       <Separator />
-      <TopMenuButton title="Reviews" section={sectionIds.reviews} />
+      <TopMenuButton title="Opinie" section={sectionIds.reviews} />
       <Separator />
-      <TopMenuButton title="Projects" section={sectionIds.projects} />
+      <TopMenuButton title="Prace" section={sectionIds.projects} />
       <Separator />
       <TopMenuButton title="FAQ's" section={sectionIds.faq} />
     </Box>

@@ -2,7 +2,7 @@ import { WebsiteData } from "./types";
 
 export const websiteData: WebsiteData = {
   home: {
-    home: "intro home content Witamy na głównej stronie hydraulika w całej Polsce! Oferujemy profesjonalne usługi hydrauliczne w Warszawie, Toruniu, Gdyni i okolicach.",
+    home: "Oferujemy usługi hydrauliczne na najwyższym poziomie w Twoim mieście. Skorzystaj z naszej profesjonalnej pomocy już dziś!",
     about: "about home content",
     projects:
       "See our latest projects and see how professionally we perform every plumbing service",
