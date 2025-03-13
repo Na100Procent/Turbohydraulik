@@ -7,15 +7,12 @@ import { sectionXPadding } from "@/app/constants/styles";
 import SectionPaddingWrapper from "../../shared/SectionWrapper";
 import Image from "next/image";
 import { aboutUsUrl } from "@/app/constants/imagesUrls";
-import OurMission from "./components/OurMission";
 import CallUsButton from "../../shared/CallUsButton";
 import { sectionIds } from "@/app/constants/appConstants";
-import { CityData } from "@/app/data/types";
-import { websiteData } from "@/app/data/data";
+import { AboutCityContent } from "@/app/data/types/sectionTypes";
 
 interface Props {
-  city?: CityData;
-  content?: string;
+  content: AboutCityContent;
   bgColor?: string;
 }
 
@@ -30,7 +27,7 @@ const contentSx = {
     xxs: "column",
   },
   justifyContent: "center",
-  alignItems: "center",
+  alignItems: "top",
   mt: "80px",
   gap: "100px",
 };
@@ -44,7 +41,9 @@ const imgSx = {
   overflow: "hidden",
 };
 
-const AboutCity = ({ city, content, bgColor }: Props) => {
+const AboutCity = ({ content, bgColor }: Props) => {
+  const { aboutCity_h2, aboutCity_text } = content;
+
   return (
     <BackgroundWrapper
       bgColor={bgColor ? bgColor : theme.palette.custom.background}
@@ -54,8 +53,8 @@ const AboutCity = ({ city, content, bgColor }: Props) => {
           <SectionHeader
             subHeaderColor={theme.palette.secondary.main}
             headerColor={theme.palette.primary.main}
-            subHeader="ABOUT CITY"
-            header={`About Plumbing in city ${city ? city.name : ""}`}
+            subHeader="O MIEŚCIE"
+            header={aboutCity_h2}
           />
 
           <Box sx={contentSx}>
@@ -72,9 +71,9 @@ const AboutCity = ({ city, content, bgColor }: Props) => {
                   fontWeight: "500",
                 }}
               >
-                {content ? content : websiteData.home.about}
+                {aboutCity_text}
               </Typography>
-              <OurMission />
+
               <div>
                 <CallUsButton />
               </div>

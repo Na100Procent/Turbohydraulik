@@ -1,5 +1,5 @@
 import { websiteData } from "@/app/data/data";
-import { CityData } from "@/app/data/types";
+import { CityData } from "@/app/data/types/dataTypes";
 
 const getCityFromName = (cityName: string): CityData | null => {
   const cityKey = Object.keys(websiteData.cities).find(

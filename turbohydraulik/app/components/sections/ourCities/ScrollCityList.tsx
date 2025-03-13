@@ -1,6 +1,6 @@
 import React from "react";
 import HorizontalScrollList from "../../shared/HorizontalScrollList";
-import { websiteData } from "@/app/data/data";
+import websiteData from "../../../data/toBeData.json";
 import CityCard from "./CityCard";
 import { Box } from "@mui/material";
 

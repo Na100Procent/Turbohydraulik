@@ -6,8 +6,8 @@ import { Box } from "@mui/material";
 import { introBgUrl } from "@/app/constants/imagesUrls";
 import HorizontalBanner from "./HorizontalBanner";
 import CallUsButton from "../../shared/CallUsButton";
-import { HeroContent } from "@/app/data/types";
-import websiteData from "../../../data/toBeData.json";
+import { HeroContent } from "@/app/data/types/sectionTypes";
+import { websiteData } from "@/app/data/data";
 
 interface Props {
   content?: HeroContent;

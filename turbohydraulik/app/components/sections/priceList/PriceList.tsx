@@ -3,12 +3,13 @@ import React from "react";
 import SectionCenterHeader from "../../shared/SectionCenterHeader";
 import BackgroundWrapper from "../../shared/BackgroundWrapper";
 import theme from "@/app/theme/theme";
-import { CityData } from "@/app/data/types";
 import CallUsButton from "../../shared/CallUsButton";
+import { PriceListContent } from "@/app/data/types/sectionTypes";
+import { websiteData } from "@/app/data/data";
 
 interface Props {
-  items: { title: string; price: string }[];
-  city?: CityData;
+  items: { title: string; price: number }[];
+  content?: PriceListContent;
 }
 
 const contentSx = {
@@ -18,7 +19,21 @@ const contentSx = {
   my: 2,
   color: theme.palette.primary.main,
 };
-const PriceList = ({ items, city }: Props) => {
+const bottomHeaderSx = {
+  fontWeight: "500",
+  fontSize: "20px",
+  mt: "20px",
+  mb: "40px",
+  color: "#565656",
+  marginTop: "20px",
+  fontFamily: "UniteaSans",
+  textAlign: "center",
+};
+
+const PriceList = ({ items, content }: Props) => {
+  const priceListContent = content ? content : websiteData.homepageContent;
+  const { priceList_h2, priceList_h3, priceList_text } = priceListContent;
+
   return (
     <BackgroundWrapper bgColor={theme.palette.custom.blueLight}>
       <Box
@@ -29,7 +44,8 @@ const PriceList = ({ items, city }: Props) => {
       >
         <SectionCenterHeader
           topHeader="CENNIK"
-          header={`Ceny naszych usług ${city ? "w mieście " + city.name : ""}`}
+          bottomHeader={priceList_text}
+          header={priceList_h2}
         />
         <Box sx={contentSx}>
           {items.map((item, index) => (
@@ -57,6 +73,9 @@ const PriceList = ({ items, city }: Props) => {
             </Box>
           ))}
         </Box>
+        <Typography sx={bottomHeaderSx} variant="h3">
+          {priceList_h3}
+        </Typography>
         <CallUsButton />
       </Box>
     </BackgroundWrapper>

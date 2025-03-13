@@ -9,7 +9,11 @@ import HowToOrderUs from "../../components/sections/howToOrderUs/HowToOrderUs";
 import CustomerReviews from "../../components/sections/customerReviews/CustomerReviews";
 import RecentWorks from "../../components/sections/recentWorks/RecentWorks";
 import FAQsection from "../../components/sections/faqSection/FAQsection";
-import { CityData, SectionContent, ServiceData } from "@/app/data/types";
+import {
+  CityData,
+  SectionContent,
+  ServiceData,
+} from "@/app/data/types/dataTypes";
 import PriceList from "@/app/components/sections/priceList/PriceList";
 import { websiteData } from "@/app/data/data";
 import HeroService from "@/app/components/sections/heroService/HeroService";

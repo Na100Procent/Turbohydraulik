@@ -2,7 +2,7 @@ import React from "react";
 import { Box } from "@mui/material";
 import ServiceCard from "./ServiceCard";
 import { websiteData } from "@/app/data/data";
-import { CityData } from "@/app/data/types";
+import { CityData } from "@/app/data/types/dataTypes";
 
 interface Props {
   city?: CityData;

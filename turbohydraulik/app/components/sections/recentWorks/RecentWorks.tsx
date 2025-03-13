@@ -7,16 +7,24 @@ import { Box } from "@mui/material";
 import { sectionIds } from "@/app/constants/appConstants";
 import MosaicWorkGrid from "./MosaicWorksGrid";
 import RectangularButton from "../../shared/RectangularButton";
+import { RecentWorksContent } from "@/app/data/types/sectionTypes";
+import { websiteData } from "@/app/data/data";
 
-const RecentWorks = () => {
+interface Props {
+  content?: RecentWorksContent;
+}
+const RecentWorks = ({ content }: Props) => {
+  const recentWorksContent = content ? content : websiteData.homepageContent;
+  const { portfolio_h2, portfolio_text } = recentWorksContent;
+
   return (
     <BackgroundWrapper bgColor={theme.palette.custom.yellowLight}>
       <Box id={sectionIds.projects}>
         <SectionPaddingWrapper>
           <SectionCenterHeader
-            topHeader="OUR LATEST PROJECTS"
-            header="Recently completed works"
-            bottomHeader="See our latest projects and see how professionally we perform every plumbing service."
+            topHeader="NASZE OSTATNIE PRACE"
+            header={portfolio_h2}
+            bottomHeader={portfolio_text}
           />
         </SectionPaddingWrapper>
         <MosaicWorkGrid />

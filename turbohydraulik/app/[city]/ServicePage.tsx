@@ -9,7 +9,7 @@ import HowToOrderUs from "../components/sections/howToOrderUs/HowToOrderUs";
 import CustomerReviews from "../components/sections/customerReviews/CustomerReviews";
 import RecentWorks from "../components/sections/recentWorks/RecentWorks";
 import FAQsection from "../components/sections/faqSection/FAQsection";
-import { SectionContent, ServiceData } from "../data/types";
+import { SectionContent, ServiceData } from "../data/types/dataTypes";
 import PriceList from "../components/sections/priceList/PriceList";
 import { websiteData } from "../data/data";
 import HeroService from "../components/sections/heroService/HeroService";

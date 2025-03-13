@@ -6,10 +6,16 @@ import theme from "@/app/theme/theme";
 import CompanyInNumbers from "./CompanyInNumbers";
 import CallUsButton from "../../shared/CallUsButton";
 import { Box } from "@mui/material";
+import { InNumbersContent } from "@/app/data/types/sectionTypes";
+import { websiteData } from "@/app/data/data";
+
 interface Props {
   bgColor?: string;
+  content?: InNumbersContent;
 }
-const InNumbers = ({ bgColor }: Props) => {
+const InNumbers = ({ bgColor, content }: Props) => {
+  const inNumbersContent = content ? content : websiteData.homepageContent;
+  const { aboutUsNumbers_h2, aboutUsNumbers_text } = inNumbersContent;
   return (
     <BackgroundWrapper
       bgColor={bgColor ? bgColor : theme.palette.custom.background}
@@ -17,8 +23,8 @@ const InNumbers = ({ bgColor }: Props) => {
       <SectionPaddingWrapper>
         <Box display="flex" flexDirection="column" justifyContent="center">
           <SectionCenterHeader
-            header="Turbo Plumber in numbers"
-            bottomHeader="Hundreds of satisfied customers, dozens of successful projects and thousands of hours of work – Turbo Hydraulik in numbers!"
+            header={aboutUsNumbers_h2}
+            bottomHeader={aboutUsNumbers_text}
           />
           <CompanyInNumbers />
           <Box display="flex" justifyContent="center" mt="10px">

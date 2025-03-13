@@ -3,7 +3,7 @@
 import React from "react";
 import { Box, Typography } from "@mui/material";
 import theme from "@/app/theme/theme";
-import { CityData, ServiceData } from "@/app/data/types";
+import { CityData, ServiceData } from "@/app/data/types/dataTypes";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { serviceCardUrl } from "@/app/constants/imagesUrls";

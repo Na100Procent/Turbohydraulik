@@ -10,7 +10,11 @@ import HowToOrderUs from "../../components/sections/howToOrderUs/HowToOrderUs";
 import CustomerReviews from "../../components/sections/customerReviews/CustomerReviews";
 import RecentWorks from "../../components/sections/recentWorks/RecentWorks";
 import FAQsection from "../../components/sections/faqSection/FAQsection";
-import { CityData, DistrictData, SectionContent } from "@/app/data/types";
+import {
+  CityData,
+  DistrictData,
+  SectionContent,
+} from "@/app/data/types/dataTypes";
 import theme from "@/app/theme/theme";
 import OurCities from "@/app/components/sections/ourCities/OurCities";
 

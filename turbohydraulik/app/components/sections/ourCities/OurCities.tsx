@@ -8,7 +8,7 @@ import ScrollCityList from "./ScrollCityList";
 import CallUsButton from "../../shared/CallUsButton";
 import LocationsList from "../footer/components/LocationsList";
 import { LinkElement } from "../../shared/TitledVerticalList";
-import { websiteData } from "@/app/data/data";
+import websiteData from "../../../data/toBeData.json";
 
 const LocationsListSx = {
   width: "100%",
@@ -24,6 +24,7 @@ const OurCities = () => {
       url: `/${city.slug}`,
     })
   );
+
   return (
     <BackgroundWrapper bgColor={theme.palette.custom.background}>
       <Box

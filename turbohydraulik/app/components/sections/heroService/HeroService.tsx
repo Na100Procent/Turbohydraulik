@@ -3,7 +3,11 @@ import BackgroundWrapper from "../../shared/BackgroundWrapper";
 import theme from "@/app/theme/theme";
 import { Box } from "@mui/material";
 import CallUsButton from "../../shared/CallUsButton";
-import { CityData, DistrictData, ServiceData } from "@/app/data/types";
+import {
+  CityData,
+  DistrictData,
+  ServiceData,
+} from "@/app/data/types/dataTypes";
 import { websiteData } from "@/app/data/data";
 import HeaderBox from "../intro/HeaderBox";
 import {

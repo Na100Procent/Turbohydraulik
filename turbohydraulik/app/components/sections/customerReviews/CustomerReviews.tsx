@@ -7,19 +7,25 @@ import { sectionXPadding } from "@/app/constants/styles";
 import SectionPaddingWrapper from "../../shared/SectionWrapper";
 import ReviewsHorizontalScrollList from "./ReviewsHorizontalScrollList";
 import { sectionIds } from "@/app/constants/appConstants";
-import { CityData } from "@/app/data/types";
-import { websiteData } from "@/app/data/data";
 import CommaIcon from "./components/CommaIcon";
 import CallUsButton from "../../shared/CallUsButton";
 import SubHeaders from "./components/SubHeaders";
 import RectangularButton from "../../shared/RectangularButton";
+import { ReviewsContent } from "@/app/data/types/sectionTypes";
+import { websiteData } from "@/app/data/data";
 
 interface Props {
-  city?: CityData;
-  content?: string;
+  content?: ReviewsContent;
 }
 
-const CustomerReviews = ({ city, content }: Props) => {
+const CustomerReviews = ({ content }: Props) => {
+  const reviewsContent = content ? content : websiteData.homepageContent;
+
+  const testimonials_h2 = reviewsContent.testimonials_h2;
+  const testimonials_text_1 = reviewsContent.testimonials_text_1;
+  const testimonials_h3 = reviewsContent.testimonials_h3;
+  const testimonials_text_2 = reviewsContent.testimonials_text_2;
+
   const mainColor = theme.palette.primary.main;
   return (
     <BackgroundWrapper bgColor={theme.palette.custom.blueLight}>
@@ -35,23 +41,24 @@ const CustomerReviews = ({ city, content }: Props) => {
             <SectionHeader
               subHeaderColor={mainColor}
               headerColor={mainColor}
-              subHeader="OUR TESTIMONIALS"
-              header={`Customer Reviews About Turbo Hydraulik ${
-                city ? city.name : ""
-              }`}
+              subHeader={"OPINIE O NAS"}
+              header={testimonials_h2}
             />
             <Typography
               mt="30px"
               color={mainColor}
               sx={{ fontFamily: "UniteaSans", fontWeight: "500" }}
             >
-              {content ? content : websiteData.home.reviews}
+              {testimonials_text_1}
             </Typography>
           </Box>
         </SectionPaddingWrapper>
         <CommaIcon />
         <ReviewsHorizontalScrollList />
-        <SubHeaders />
+        <SubHeaders
+          testimonials_h3={testimonials_h3}
+          testimonials_text_2={testimonials_text_2}
+        />
         <Box display={"flex"} justifyContent={"center"} mt="50px" gap="20px">
           <CallUsButton />
           <RectangularButton title="Dodaj opinię" />
