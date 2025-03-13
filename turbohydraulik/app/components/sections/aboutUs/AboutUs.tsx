@@ -54,6 +54,7 @@ const imgSx = {
 const AboutUs = ({ content, bgColor }: Props) => {
   const aboutUsContent = content ? content : websiteData.homepageContent;
   const aboutUs_h2 = aboutUsContent.aboutUs_h2;
+  const aboutUs_h3 = aboutUsContent.aboutUs_h3;
   const aboutUs_text = aboutUsContent.aboutUs_text;
   return (
     <BackgroundWrapper
@@ -87,6 +88,17 @@ const AboutUs = ({ content, bgColor }: Props) => {
               gap="30px"
               justifyContent="space-between"
             >
+              <Typography
+                variant="h3"
+                sx={{
+                  fontWeight: "600",
+                  fontSize: "30px",
+                  fontFamily: "UniteaSans",
+                  color: theme.palette.primary.main,
+                }}
+              >
+                {aboutUs_h3}
+              </Typography>
               <Typography
                 sx={{
                   color: theme.palette.custom.darkGray,

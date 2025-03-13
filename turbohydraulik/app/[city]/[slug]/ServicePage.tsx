@@ -9,11 +9,7 @@ import HowToOrderUs from "../../components/sections/howToOrderUs/HowToOrderUs";
 import CustomerReviews from "../../components/sections/customerReviews/CustomerReviews";
 import RecentWorks from "../../components/sections/recentWorks/RecentWorks";
 import FAQsection from "../../components/sections/faqSection/FAQsection";
-import {
-  CityData,
-  SectionContent,
-  ServiceData,
-} from "@/app/data/types/dataTypes";
+import { CityData, ServiceData } from "@/app/data/types/dataTypes";
 import PriceList from "@/app/components/sections/priceList/PriceList";
 import { websiteData } from "@/app/data/data";
 import HeroService from "@/app/components/sections/heroService/HeroService";
@@ -43,10 +39,10 @@ export default function ServicePage({ service, city }: Props) {
       flexDirection="column"
       id={sectionIds.home}
     >
-      <TopMenu />
-      <HeroService slug={city} content={getContent("home")} />
-      <CustomerReviews city={city} content={getContent("reviews")} />
-      <AboutUs city={city} content={getContent("about")} />
+      {/* <TopMenu />
+      <HeroService slug={city} content={} />
+      <CustomerReviews city={city} content={} />
+      <AboutUs city={city} content={} />
       <HowToOrderUs />
       <InNumbers bgColor={theme.palette.custom.yellowLight} />
       <PriceList items={servicesPrices} city={city} />
@@ -65,7 +61,7 @@ export default function ServicePage({ service, city }: Props) {
         />
       </Box>
 
-      <Footer />
+      <Footer />*/}
     </Box>
   );
 }

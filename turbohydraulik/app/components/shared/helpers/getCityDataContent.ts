@@ -22,12 +22,6 @@ export const getCityDataContent = (cityData: CityData) => {
     service_h1: cityData.content.service_h1,
     service_text: cityData.content.service_text,
     service_h2: cityData.content.service_h2,
-    // service_h4: cityData.content.service_h4,
-    // service_text_2: cityData.content.service_text_2,
-    // service_h5: cityData.content.service_h5,
-    // service_text_3: cityData.content.service_text_3,
-    // service_h6: cityData.content.service_h6,
-    // service_text_4: cityData.content.service_text_4,
   };
   const reviewsContent: ReviewsContent = {
     testimonials_h2: cityData.content.testimonials_h2,
@@ -42,6 +36,7 @@ export const getCityDataContent = (cityData: CityData) => {
 
   const aboutUsContent: AboutUsContent = {
     aboutUs_h2: cityData.content.aboutUs_h2,
+    aboutUs_h3: cityData.content.aboutUs_h3,
     aboutUs_text: cityData.content.aboutUs_text,
   };
 

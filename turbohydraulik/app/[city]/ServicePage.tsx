@@ -1,5 +1,5 @@
 import { Box } from "@mui/material";
-import { sectionIds } from "../constants/appConstants";
+import { errorPageLoad, sectionIds } from "../constants/appConstants";
 import TopMenu from "../components/sections/topMenu/TopMenu";
 import AboutUs from "../components/sections/aboutUs/AboutUs";
 import OurServices from "../components/sections/ourServices/OurServices";
@@ -9,25 +9,37 @@ import HowToOrderUs from "../components/sections/howToOrderUs/HowToOrderUs";
 import CustomerReviews from "../components/sections/customerReviews/CustomerReviews";
 import RecentWorks from "../components/sections/recentWorks/RecentWorks";
 import FAQsection from "../components/sections/faqSection/FAQsection";
-import { SectionContent, ServiceData } from "../data/types/dataTypes";
 import PriceList from "../components/sections/priceList/PriceList";
-import { websiteData } from "../data/data";
 import HeroService from "../components/sections/heroService/HeroService";
 import theme from "../theme/theme";
+import { ServiceData, SubService } from "../data/types/dataTypes";
+import { getServiceDataContent } from "../components/shared/helpers/getServiceDataContent";
+import ErrorMessage from "../components/shared/ErrorMessage";
 
 interface Props {
-  service: ServiceData;
+  serviceData: ServiceData;
 }
 
-export default function ServicePage({ service }: Props) {
-  const getContent = (section: keyof SectionContent) => {
-    return service.content[section];
-  };
-  const services = Object.values(websiteData.services);
-  const servicesPrices = services.map((service) => ({
-    title: service.name,
-    price: "100$",
+export default function ServicePage({ serviceData }: Props) {
+  if (!serviceData) return <ErrorMessage message={errorPageLoad} />;
+
+  const subServices = serviceData.subServices;
+  const subServicesPriceList = subServices.map((subService: SubService) => ({
+    title: subService.name,
+    price: subService.price,
   }));
+
+  const {
+    heroContent,
+    ourServicesContent,
+    reviewsContent,
+    howToContent,
+    aboutUsContent,
+    recentWorksContent,
+    inNumbersContent,
+    priceListContent,
+  } = getServiceDataContent(serviceData);
+
   return (
     <Box
       display="flex"
@@ -37,14 +49,14 @@ export default function ServicePage({ service }: Props) {
       id={sectionIds.home}
     >
       <TopMenu />
-      <HeroService slug={service} content={getContent("home")} />
-      <CustomerReviews content={getContent("reviews")} />
-      <AboutUs content={getContent("about")} />
-      <HowToOrderUs />
-      <InNumbers />
-      <PriceList items={servicesPrices} />
+      <HeroService content={heroContent} />
+      <CustomerReviews content={reviewsContent} />
+      <AboutUs content={aboutUsContent} />
+      <HowToOrderUs content={howToContent} />
+      <InNumbers content={inNumbersContent} />
+      <PriceList content={priceListContent} items={subServicesPriceList} />
       <FAQsection />
-      <RecentWorks />
+      <RecentWorks content={recentWorksContent} />
       <Box
         width={"100%"}
         bgcolor={theme.palette.custom.background}
@@ -53,9 +65,9 @@ export default function ServicePage({ service }: Props) {
         <OurServices
           bgColor={theme.palette.custom.background}
           headerColor={theme.palette.primary.main}
+          content={ourServicesContent}
         />
       </Box>
-
       <Footer />
     </Box>
   );

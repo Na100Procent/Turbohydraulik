@@ -36,7 +36,7 @@ const CityOrServicePage: FC<PageProps> = async ({ params }) => {
       {slugIsCity ? (
         <CityPage cityData={slug as CityData} />
       ) : (
-        <ServicePage service={slug as ServiceData} />
+        <ServicePage serviceData={slug as ServiceData} />
       )}
     </>
   );

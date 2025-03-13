@@ -49,7 +49,7 @@ const OurServices = ({ city, bgColor, headerColor, content }: Props) => {
               topHeader={service_h1}
               header={service_h2}
               bottomHeader={service_text}
-              bottomHeaderColor={theme.palette.custom.background}
+              bottomHeaderColor={theme.palette.secondary.main}
             />
           </Box>
         </SectionPaddingWrapper>

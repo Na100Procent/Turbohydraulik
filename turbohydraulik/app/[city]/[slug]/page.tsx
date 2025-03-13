@@ -3,6 +3,7 @@ import ServicePage from "./ServicePage";
 import DistrictPage from "./DistrictPage";
 import { FC } from "react";
 import { PageProps } from "@/.next/types/app/[city]/[slug]/page";
+import { CityData, ServiceData } from "@/app/data/types/dataTypes";
 
 export const generateStaticParams = async () => {
   const cities = Object.keys(websiteData.cities);
@@ -17,7 +18,8 @@ export const generateStaticParams = async () => {
   });
 
   cities.forEach((city) => {
-    const cityData = websiteData.cities[city];
+    const cityData =
+      websiteData.cities[city as keyof typeof websiteData.cities];
     Object.keys(cityData.districts).forEach((district) => {
       paths.push({ city, slug: district });
     });
@@ -28,16 +30,22 @@ export const generateStaticParams = async () => {
 
 const DynamicPage: FC<PageProps> = async ({ params }) => {
   const { city: cityParam, slug: slugParam } = await params;
-  const service = websiteData.services[slugParam];
-  const foundCity = websiteData.cities[cityParam];
-  const district = foundCity?.districts[slugParam];
+
+  const service: ServiceData =
+    websiteData.services[slugParam as keyof typeof websiteData.services];
+
+  const foundCity: CityData =
+    websiteData.cities[cityParam as keyof typeof websiteData.cities];
+
+  const district =
+    foundCity.districts[slugParam as keyof typeof foundCity.districts];
 
   return (
     <div>
       {service ? (
         <ServicePage service={service} city={foundCity} />
       ) : district ? (
-        <DistrictPage district={district} city={foundCity} />
+        <DistrictPage districtData={district} />
       ) : (
         <h1>Not Found</h1>
       )}

@@ -18,6 +18,7 @@ import { CityData } from "../data/types/dataTypes";
 import getCityServices from "../components/shared/helpers/getCityServices";
 import OurServices from "../components/sections/ourServices/OurServices";
 import { getCityDataContent } from "../components/shared/helpers/getCityDataContent";
+
 interface Props {
   cityData: CityData;
 }
