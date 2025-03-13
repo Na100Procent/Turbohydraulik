@@ -41,7 +41,10 @@ export default function DistrictPage({ districtData }: Props) {
     >
       <TopMenu />
       <IntroSection content={heroContent} />
-      <OurServices content={ourServicesContent} />
+      <OurServices
+        content={ourServicesContent}
+        bottomHeaderColor={theme.palette.custom.background}
+      />
       <CustomerReviews content={reviewsContent} />
       <HowToOrderUs />
       <AboutUs

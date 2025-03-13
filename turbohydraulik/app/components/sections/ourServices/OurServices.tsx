@@ -15,6 +15,7 @@ interface Props {
   city?: CityData;
   bgColor?: string;
   headerColor?: string;
+  bottomHeaderColor?: string;
   content?: OurServiceContent;
 }
 
@@ -34,7 +35,13 @@ const headerSx = {
   },
 };
 
-const OurServices = ({ city, bgColor, headerColor, content }: Props) => {
+const OurServices = ({
+  city,
+  bgColor,
+  headerColor,
+  content,
+  bottomHeaderColor,
+}: Props) => {
   const serviceContent = content ? content : websiteData.homepageContent;
   const { service_h1, service_h2, service_text } = serviceContent;
   return (
@@ -49,7 +56,7 @@ const OurServices = ({ city, bgColor, headerColor, content }: Props) => {
               topHeader={service_h1}
               header={service_h2}
               bottomHeader={service_text}
-              bottomHeaderColor={theme.palette.secondary.main}
+              bottomHeaderColor={bottomHeaderColor}
             />
           </Box>
         </SectionPaddingWrapper>

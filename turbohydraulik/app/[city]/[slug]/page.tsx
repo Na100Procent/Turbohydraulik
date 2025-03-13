@@ -31,7 +31,7 @@ export const generateStaticParams = async () => {
 const DynamicPage: FC<PageProps> = async ({ params }) => {
   const { city: cityParam, slug: slugParam } = await params;
 
-  const service: ServiceData =
+  const cityService: ServiceData =
     websiteData.services[slugParam as keyof typeof websiteData.services];
 
   const foundCity: CityData =
@@ -40,10 +40,16 @@ const DynamicPage: FC<PageProps> = async ({ params }) => {
   const district =
     foundCity.districts[slugParam as keyof typeof foundCity.districts];
 
+  const cityServiceContent =
+    cityService?.citiesContent[cityParam as keyof typeof websiteData.cities];
+
   return (
     <div>
-      {service ? (
-        <ServicePage service={service} city={foundCity} />
+      {cityService ? (
+        <ServicePage
+          serviceData={cityServiceContent}
+          cityService={cityService}
+        />
       ) : district ? (
         <DistrictPage districtData={district} />
       ) : (

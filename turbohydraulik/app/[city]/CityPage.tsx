@@ -51,7 +51,11 @@ export default function CityPage({ cityData }: Props) {
       <TopMenu />
       <IntroSection content={heroContent} />
 
-      <OurServices city={cityData} content={ourServicesContent} />
+      <OurServices
+        city={cityData}
+        content={ourServicesContent}
+        bottomHeaderColor={theme.palette.custom.background}
+      />
       <CustomerReviews content={reviewsContent} />
       <HowToOrderUs content={howToContent} />
       <AboutUs

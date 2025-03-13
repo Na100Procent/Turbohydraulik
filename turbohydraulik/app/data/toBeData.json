@@ -77,11 +77,11 @@
       },
       "citiesContent": {
         "warszawa": {
-          "name": "Usługi Hydrauliczne Warszawa",
+          "name": "Warszawa",
           "slug": "warszawa",
           "content": {
             "phone": "+48 123 456 789",
-            "hero_h1": "Hydraulik Warszawa",
+            "hero_h1": "Instalacja i wymiana zaworów w Warszawie",
             "hero_h2": "Hydraulik Warszawa - Szybka i Profesjonalna Obsługa",
             "hero_text": "Turbo Hydraulik - Twój niezawodny bohater w świecie hydrauliki! Jesteśmy zawsze gotowi do akcji, aby rozwiązać Twoje problemy hydrauliczne błyskawicznie i skutecznie!",
             "service_h1": "Nasze usługi hydrauliczne w Warszawie",
