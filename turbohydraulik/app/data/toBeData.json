@@ -1,104 +1,188 @@
 {
+  "homepageContent": {
+    "hero_h1": "Turbo Hydraulik",
+    "hero_h2": "Najlepszy Hydraulik w Polsce",
+    "hero_text": "Skorzystaj z naszej kompleksowej usługi instalacji i wymiany zaworów już dziś!",
+    "service_h1": "Nasze usługi hydrauliczne w Polsce",
+    "service_h2": "Najlepsi w Polsce",
+    "service_text": "Oferujemy kompleksowe usługi hydrauliczne, w tym naprawy wszystkiego. Nasz zespół ekspertów zapewni Ci szybką i skuteczną pomoc w każdej sytuacji!",
+    "testimonials_h2": "Opinie naszych klientów",
+    "testimonials_h3": "Zobacz, co mówią o nas klienci!",
+    "testimonials_text_1": "Bardzo szybka i profesjonalna usługa, serdecznie polecam!",
+    "testimonials_text_2": "Zespół wykonał swoją pracę sprawnie i dokładnie, jestem bardzo zadowolony.",
+    "aboutUs_h2": "Nasza firma - lider w branży hydraulicznej.",
+    "aboutUs_h3": "Dlaczego warto nam zaufać?",
+    "aboutUs_text": "Specjalizujemy się w usługach hydraulicznych, oferując najwyższą jakość i szybkość realizacji. Nasz zespół to wykwalifikowani profesjonaliści z wieloletnim doświadczeniem.",
+    "steps_h2": "Jak zamówić instalację i wymianę zaworów w 3 krokach?",
+    "aboutUsNumbers_h2": "Nasze liczby mówią same za siebie.",
+    "aboutUsNumbers_text": "Ponad 1000 zrealizowanych projektów, 500 zadowolonych klientów i 10 lat doświadczenia na rynku.",
+    "priceList_h2": "Cennik usługi",
+    "priceList_h3": "Potrzebujesz innej usługi Hydraulicznej?",
+    "priceList_text": "Oferujemy przejrzyste ceny bez ukrytych kosztów. Skontaktuj się z nami, aby otrzymać wycenę!",
+    "portfolio_h2": "Ostatnio zrealizowane prace",
+    "portfolio_text": "Zachęcamy do zapoznania się z naszymi najnowszymi realizacjami. Nasze usługi cieszą się dużym uznaniem klientów, a my nieustannie podnosimy nasze kwalifikacje. Dzięki temu jesteśmy w stanie sprostać każdemu wyzwaniu hydraulicznemu!",
+    "faq_h2": "Odpowiadamy na najczęstsze pytania.",
+    "faq_text": "Nasza ekipa odpowie na wszystkie pytania związane z instalacją i wymianą zaworów. Zadzwoń lub napisz, aby uzyskać więcej informacji!",
+    "submittedAt": "2025-03-08T20:51:23.238+01:00",
+    "formMode": "test"
+  },
   "services": {
     "instalacja-i-wymiana-zaworow": {
       "name": "Instalacja i wymiana zaworów",
       "slug": "instalacja-i-wymiana-zaworow",
-      "price": "100",
-      "cardImageUrl": "https://images.unsplash.com/photo-1612838320302-4b3b3b3b3b3b",
-      "heroServiceImages": [
-        "https://images.unsplash.com/photo-1612838320302-4b3b3b3b3b3b",
-        "https://images.unsplash.com/photo-1612838320302-4b3b3b3b3b3b",
-        "https://images.unsplash.com/photo-1612838320302-4b3b3b3b3b3b",
-        "https://images.unsplash.com/photo-1612838320302-4b3b3b3b3b3b"
-      ],
-      "subservices": [
+      "price": 100,
+      "cardImageUrl": "https://www.revele.pl/kacpertest/instalacja_i_wymiana_zaworow",
+      "subServices": [
         {
-          "name": "Wymiana Zaworów",
-          "price": "50",
-          "description": "Najlepsza wymiana zaworow "
+          "name": "Montaż Zaworów",
+          "price": 150,
+          "description": "Bezpieczny i profesjonalny montaż zaworów, który zagwarantuje sprawną kontrolę nad Twoją instalacją wodociągową. Skorzystaj z naszej fachowej pomocy!"
         },
         {
-          "name": "Wymiana toalet",
-          "price": "35",
-          "description": "Najlepsza wymiana toalet profesjonalna "
+          "name": "Wymiana Zaworów",
+          "price": 100,
+          "description": "Profesjonalna wymiana zaworów w instalacjach wodnych. Szybko i precyzyjnie wymieniamy stare, nieszczelne lub uszkodzone zawory, zapewniając bezpieczne i bezawaryjne działanie instalacji."
+        },
+        {
+          "name": "Wymiana Zaworu Od Pralki",
+          "price": 100,
+          "description": "Profesjonalna wymiana zaworu doprowadzającego wodę do pralki. Usuwamy stare, nieszczelne lub uszkodzone zawory i montujemy nowe, zapewniając bezpieczne i bezawaryjne działanie instalacji."
         }
       ],
-      "mainContent": {
-        "content": "<h2>Instalacja i wymiana zaworów</h2><p>Nasza usługa obejmuje profesjonalną instalację oraz wymianę zaworów wodnych, które są kluczowe dla prawidłowego funkcjonowania Twojej instalacji wodociągowej. Dzięki doświadczonym specjalistom możesz być pewny, że wszystko zostanie wykonane zgodnie z najwyższymi standardami.</p><p>Oferujemy pełen zakres usług związanych z zaworami, dzięki czemu nie musisz się martwić o dalsze problemy z instalacją. Skontaktuj się z nami, aby umówić wizytę!</p>",
-        "ser_hero_text": "<strong>Skorzystaj z naszej kompleksowej usługi instalacji i wymiany zaworów już dziś!</strong>",
-        "ser_service_h2": "Profesjonalna instalacja i wymiana zaworów.",
-        "ser_service_text_short": "Zajmujemy się montażem i wymianą zaworów w instalacjach wodnych, dbając o ich sprawne działanie.",
-        "ser_service_h3_1": "Montaż Zaworów",
-        "ser_service_text_1": "Bezpieczny i profesjonalny montaż zaworów, który zagwarantuje sprawną kontrolę nad Twoją instalacją wodociągową. Skorzystaj z naszej fachowej pomocy!",
-        "ser_service_h3_2": "Wymiana Zaworów",
-        "ser_service_text_2": "Profesjonalna wymiana zaworów w instalacjach wodnych. Szybko i precyzyjnie wymieniamy stare, nieszczelne lub uszkodzone zawory, zapewniając bezpieczne i bezawaryjne działanie instalacji.",
-        "ser_service_h3_3": "Wymiana Zaworu Od Pralki",
-        "ser_service_text_3": "Profesjonalna wymiana zaworu doprowadzającego wodę do pralki. Usuwamy stare, nieszczelne lub uszkodzone zawory i montujemy nowe, zapewniając bezpieczne i bezawaryjne działanie instalacji.",
-        "ser_service_h3_4": "",
-        "ser_service_text_4": "",
-        "ser_testimonials_h2": "Opinie naszych klientów",
-        "ser_testimonials_h3": "Zobacz, co mówią o nas klienci!",
-        "ser_testimonials_text_1": "Bardzo szybka i profesjonalna usługa, serdecznie polecam!",
-        "ser_testimonials_text_2": "Zespół wykonał swoją pracę sprawnie i dokładnie, jestem bardzo zadowolony.",
-        "ser_aboutus_h2": "Nasza firma - lider w branży hydraulicznej.",
-        "ser_aboutus_text": "Specjalizujemy się w usługach hydraulicznych, oferując najwyższą jakość i szybkość realizacji. Nasz zespół to wykwalifikowani profesjonaliści z wieloletnim doświadczeniem.",
-        "ser_steps_h2": "Jak zamówić instalację i wymianę zaworów w 3 krokach?",
-        "ser_aboutusnumbers_h2": "Nasze liczby mówią same za siebie.",
-        "ser_aboutusnumbers_text": "Ponad 1000 zrealizowanych projektów, 500 zadowolonych klientów i 10 lat doświadczenia na rynku.",
-        "ser_pricelist_h2": "Cennik usługi",
-        "ser_portfolio_h2": "Ostatnio zrealizowane prace",
-        "ser_faq_h2": "Odpowiadamy na najczęstsze pytania.",
-        "ser_faq_text": "Nasza ekipa odpowie na wszystkie pytania związane z instalacją i wymianą zaworów. Zadzwoń lub napisz, aby uzyskać więcej informacji!",
-        "submittedAt": "2025-03-08T20:51:23.238+01:00",
-        "formMode": "test"
+      "content": {
+        "content": "Instalacja i wymiana zaworów – profesjonalne usługi hydrauliczne. Nasza firma oferuje kompleksowe usługi związane z instalacją i wymianą zaworów w różnych systemach hydraulicznych. Dzięki naszemu doświadczeniu oraz profesjonalnemu podejściu, zapewniamy usługi o wysokiej jakości. Dbamy o to, aby wszystkie prace były wykonywane zgodnie z obowiązującymi normami oraz z zachowaniem pełnego bezpieczeństwa.</p><h2>Dlaczego warto wybrać nas?</h2><>Fachowcy z naszej ekipy wyróżniają się rzetelnością oraz umiejętnością szybkiego rozwiązywania problemów. Oferujemy atrakcyjne ceny oraz pełne wsparcie przed i po realizacji usługi. Naszym celem jest 100% satysfakcja klienta, dlatego każde zlecenie traktujemy z należytą starannością.",
+        "hero_h1": "Instalacja i wymiana zaworów",
+        "hero_h2": "Instalacja i wymiana zaworów - Szybka i Profesjonalna Obsługa",
+        "hero_text": "Skorzystaj z naszych usług hydraulicznych i ciesz się komfortem!",
+        "service_h1": "Najlepsi w Polsce",
+        "service_h2": "Nasze pozostałe usługi hydrauliczne w Polsce",
+        "service_text": "Oferujemy kompleksowe usługi hydrauliczne, w tym naprawy awarii, instalacje wodno-kanalizacyjne oraz konserwacje. Nasz zespół ekspertów zapewni Ci szybką i skuteczną pomoc w każdej sytuacji!",
+        "testimonials_h2": "Opinie klientów",
+        "testimonials_h3": "Sprawdź, co mówią o nas nasi klienci!",
+        "testimonials_text_1": "Sprawdź, co mówią nasi zadowoleni klienci o naszych usługach instalacji i wymiany zaworów!",
+        "testimonials_text_2": "Twoja opinia jest dla nas ważna! Podziel się swoimi doświadczeniami i pomóż innym wybrać sprawdzonego specjalistę do instalacji i wymiany zaworów.",
+        "aboutUs_h2": "Turbo Hydraulik – Profesjonalna instalacja i wymiana zaworów w mieście",
+        "aboutUs_h3": "Dlaczego warto nam zaufać?",
+        "aboutUs_text": "Turbo Hydraulik to firma z wieloletnim doświadczeniem w branży hydraulicznej. Nasi specjaliści są przeszkoleni i doskonale znają się na swojej pracy, co pozwala nam na skuteczne i szybkie podejmowanie działań. Możesz być pewien, że usługi, które oferujemy, wykonujemy na najwyższym poziomie.",
+        "steps_h2": "Jak zamówić instalację i wymianę zaworów w 3 krokach?",
+        "aboutUsNumbers_h2": "Nasze liczby mówią same za siebie",
+        "aboutUsNumbers_text": "Lata doświadczenia, setki zadowolonych klientów, tysiące wykonanych instalacji i wymian zaworów.",
+        "priceList_h2": "Cennik instalacji i wymiany zaworów",
+        "priceList_h3": "Potrzebujesz innej usługi Hydraulicznej?",
+        "priceList_text": "Oferujemy przejrzyste ceny bez ukrytych kosztów. Skontaktuj się z nami, aby otrzymać wycenę!",
+        "portfolio_h2": "Ostatnio zrealizowane prace - instalacja i wymiana zaworów",
+        "portfolio_text": "Zachęcamy do zapoznania się z naszymi najnowszymi realizacjami. Nasze usługi cieszą się dużym uznaniem klientów, a my nieustannie podnosimy nasze kwalifikacje. Dzięki temu jesteśmy w stanie sprostać każdemu wyzwaniu hydraulicznemu!",
+        "faq_h2": "Odpowiadamy na najczęstsze pytania dotyczące naszych usług instalacji i wymiany zaworów",
+        "faq_text": "Nasza firma zapewnia pełne wsparcie w zakresie instalacji i wymiany zaworów. Posiadamy odpowiednie certyfikaty oraz doświadczenie w branży, co pozwala nam na oferowanie usług na najwyższym poziomie."
+      },
+      "citiesContent": {
+        "warszawa": {
+          "name": "Warszawa",
+          "slug": "warszawa",
+          "content": {
+            "phone": "+48 123 456 789",
+            "hero_h1": "Instalacja i wymiana zaworów w Warszawie",
+            "hero_h2": "Hydraulik Warszawa - Szybka i Profesjonalna Obsługa",
+            "hero_text": "Turbo Hydraulik - Twój niezawodny bohater w świecie hydrauliki! Jesteśmy zawsze gotowi do akcji, aby rozwiązać Twoje problemy hydrauliczne błyskawicznie i skutecznie!",
+            "service_h1": "Nasze usługi hydrauliczne w Warszawie",
+            "service_h2": "Najlepsi w Warszawie",
+            "service_text": "Oferujemy kompleksowe usługi hydrauliczne, w tym naprawy awarii, instalacje wodno-kanalizacyjne oraz konserwacje. Nasz zespół ekspertów zapewni Ci szybką i skuteczną pomoc w każdej sytuacji!",
+            "testimonials_h2": "Opinie naszych klientów w Warszawie",
+            "testimonials_h3": "Sprawdź, co mówią nasi zadowoleni klienci o naszych usługach hydraulicznych",
+            "testimonials_text_1": "Nasi klienci cenią nas za szybkość i profesjonalizm - dołącz do nich!",
+            "testimonials_text_2": "Wszystkie opinie o Turbo Hydraulik Warszawa - zaufaj naszym klientom!",
+            "service_2_h2": "Kompleksowe usługi hydrauliczne w Warszawie",
+            "service_2_text": "Nasza oferta obejmuje wszystkie rodzaje prac hydraulicznych, od prostych napraw po skomplikowane systemy instalacyjne. Gwarantujemy terminowość i jakość!",
+            "steps_h2": "Jak Zamówić Usługę Hydrauliczną w Warszawie?",
+            "aboutUs_h2": "O nas – Turbo Hydraulik Warszawa",
+            "aboutUs_h3": "Dlaczego warto nam zaufać?",
+            "aboutUs_text": "Turbo Hydraulik Warszawa to firma z wieloletnim doświadczeniem w branży hydraulicznej. Nasz zespół składa się z wykwalifikowanych fachowców, którzy są zawsze gotowi do działania. Stawiamy na jakość i satysfakcję klienta w każdym projekcie. Zaufaj profesjonalistom – jesteśmy tu, by pomóc!",
+            "aboutCity_h2": "Usługi Hydrauliczne w Warszawie",
+            "aboutCity_text": "Warszawa to dynamicznie rozwijające się miasto, a Turbo Hydraulik zawsze idzie z duchem czasu. Dostosowujemy nasze usługi do potrzeb mieszkańców stolicy, by zapewnić im kompleksową obsługę hydrauliczną. Dzięki dogodnej lokalizacji, szybko reagujemy na zgłoszenia i realizujemy je na najwyższym poziomie. Wybierając nas, wybierasz jakość, rzetelność i satysfakcję!",
+            "portfolio_h2": "Ostatnie realizacje – Turbo Hydraulik Warszawa",
+            "portfolio_text": "Zachęcamy do zapoznania się z naszymi najnowszymi realizacjami. Nasze usługi cieszą się dużym uznaniem klientów, a my nieustannie podnosimy nasze kwalifikacje. Dzięki temu jesteśmy w stanie sprostać każdemu wyzwaniu hydraulicznemu!",
+            "aboutUsNumbers_h2": "Nasze liczby mówią same za siebie",
+            "aboutUsNumbers_text": "20 lat doświadczenia, setki zadowolonych klientów oraz tysiące zrealizowanych usług hydraulicznych w Warszawie.",
+            "priceList_h2": "Cennik Usług Hydraulicznych",
+            "priceList_h3": "Potrzebujesz innej usługi Hydraulicznej?",
+            "priceList_text": "Oferujemy przejrzyste ceny bez ukrytych kosztów. Skontaktuj się z nami, aby otrzymać wycenę!",
+            "faq_h2": "FAQ – Najczęściej Zadawane Pytania - Turbo Hydraulik Warszawa",
+            "contact_h2": "Turbo Hydraulik Warszawa – szybki kontakt, błyskawiczna pomoc!",
+            "contact_text": "Zadzwoń do nas i przekonaj się, że szybkość oraz skuteczność to nasza specjalność!"
+          }
+        }
       }
     }
   },
   "cities": {
     "warszawa": {
-      "name": "Turbo Hydraulik + Warszawa",
+      "name": "Warszawa",
       "slug": "warszawa",
-      "cityCardUrl": "https://images.unsplash.com/photo-1612838320302-4b3b3b3b3b3b",
-
+      "cityCardUrl": "https://www.revele.pl/kacpertest/warszawa",
       "availableServices": ["instalacja-i-wymiana-zaworow"],
-
-      "districts": [
-        {
-          "name": "Bemowo",
-          "slug": "bemowo"
-        },
-        {
-          "name": "Źoliborz",
-          "slug": "zoliborz"
-        }
-      ],
-
       "content": {
-        "hero_h2": "Najlepszy Hydraulik w Warszawie",
-        "hero_text": "Turbo Hydraulik – Twój niezawodny bohater w świecie hydrauliki. Szybkość, skuteczność i gotowość do akcji sprawiają, że jesteśmy numerem jeden w Warszawie.",
-        "service_1_h2": "Nasze usługi hydrauliczne w Warszawie",
-        "service_1_text": "Oferujemy kompleksowe usługi hydrauliczne w Warszawie. Nasi specjaliści zajmują się naprawą, instalacją i konserwacją systemów wodno-kanalizacyjnych oraz ogrzewania.",
-        "testimonials_h2": "Opinie klientów o Turbo Hydrauliku w Warszawie",
+        "phone": "505455655",
+        "hero_h1": "Hydraulik Warszawa",
+        "hero_h2": "Hydraulik Warszawa - Twój niezawodny partner w każdej awarii!",
+        "hero_text": "Turbo Hydraulik to superbohater, który nigdy nie zawodzi! Wzywaj nas, gdy potrzebujesz szybkiej, skutecznej pomocy hydraulicznej, niezależnie od sytuacji!",
+        "service_h1": "Nasze usługi hydrauliczne w Warszawie",
+        "service_h2": "Najlepsi w Warszawie",
+        "service_text": "Oferujemy kompleksowe usługi hydrauliczne, w tym naprawy awarii, instalacje wodno-kanalizacyjne oraz konserwacje. Nasz zespół ekspertów zapewni Ci szybką i skuteczną pomoc w każdej sytuacji!",
+        "testimonials_h2": "Opinie naszych klientów",
         "testimonials_h3": "Sprawdź, co mówią nasi zadowoleni klienci o naszych usługach.",
-        "testimonials_text_1": "Klienci chwalą nas za szybkie i skuteczne rozwiązania. Turbo Hydraulik zawsze w gotowości!",
-        "testimonials_h3_2": "Co sądzą o nas klienci?",
-        "service_2_h2": "Kompleksowe usługi hydrauliczne w Warszawie",
-        "service_2_text": "Świadczymy szeroki zakres usług hydraulicznych, w tym awarie, przeglądy oraz instalacje. Niezależnie od skali problemu – pomożemy!",
+        "testimonials_text_1": "Nie tylko naprawiamy, ale również inspirujemy naszych klientów do śmiało korzystać z dostępnych rozwiązań.",
+        "testimonials_text_2": "Zaufaj profesjonalistom, którzy dbają o Twój komfort!",
         "steps_h2": "Jak Zamówić Usługę Hydrauliczną w Warszawie?",
-        "aboutus_h2": "O nas – Turbo Hydraulik Warszawa",
-        "aboutus_text": "Turbo Hydraulik to zespół doświadczonych hydraulików, którzy zajmują się profesjonalnymi usługami w Warszawie. Nasza misja to zadowolenie klientów i najwyższa jakość usług.",
-        "aboutcity_h2": "Usługi Hydrauliczne w Warszawie",
-        "aboutcity_text": "W Warszawie oferujemy szeroki wachlarz usług hydraulicznych, które dostosowujemy do indywidualnych potrzeb naszych klientów.",
+        "aboutUs_h2": "O nas – Turbo Hydraulik Warszawa",
+        "aboutUs_h3": "Dlaczego warto nam zaufać?",
+        "aboutUs_text": "Jesteśmy grupą pasjonatów hydrauliki, którzy z pasją podchodzą do każdej awarii. Naszym celem jest zapewnienie mieszkańcom Warszawy błyskawicznej i skutecznej pomocy.",
+        "aboutCity_h2": "Usługi Hydrauliczne w Warszawie",
+        "aboutCity_text": "Warszawa, jako tętniąca życiem stolica, wymaga najwyższej jakości usług hydraulicznych. Turbo Hydraulik jest zawsze do dyspozycji, aby sprostać oczekiwaniom mieszkańców tej dynamicznej metropolii.",
         "portfolio_h2": "Ostatnie realizacje – Turbo Hydraulik Warszawa",
-        "portfolio_text": "Zachęcamy do zapoznania się z naszymi realizacjami, które pokazują naszą skuteczność i profesjonalizm w działaniu.",
-        "aboutusnumbers_h2": "Nasze liczby mówią same za siebie",
-        "aboutusnumbers_text": "10 lat doświadczenia, setki zadowolonych klientów.",
-        "pricelist_h2": "Cennik Usług Hydraulicznych",
-        "pricelist_h3": "Potrzebujesz innej usługi Hydraulicznej?",
-        "pricelist_text": "Oferujemy przejrzyste ceny bez ukrytych kosztów. Skontaktuj się z nami!",
+        "portfolio_text": "Zapraszamy do zapoznania się z naszymi ostatnimi realizacjami. Zobacz, jak skutecznie działamy na terenie Warszawy!",
+        "aboutUsNumbers_h2": "Nasze liczby mówią same za siebie",
+        "aboutUsNumbers_text": "Z ponad 10-letnim doświadczeniem, setki zadowolonych klientów i niekończąca się pasja do hydrauliki!",
+        "priceList_h2": "Cennik Usług Hydraulicznych",
+        "priceList_h3": "Potrzebujesz innej usługi Hydraulicznej?",
+        "priceList_text": "Oferujemy przejrzyste ceny bez ukrytych kosztów, dostosowane do Twoich potrzeb!",
         "faq_h2": "FAQ – Najczęściej Zadawane Pytania - Turbo Hydraulik Warszawa",
         "contact_h2": "Turbo Hydraulik Warszawa – szybki kontakt, błyskawiczna pomoc!",
-        "contact_text": "Turbo Hydraulik na wezwanie – szybki kontakt, błyskawiczna pomoc!"
+        "contact_text": "Jesteśmy zawsze gotowi, aby Ci pomóc. Skontaktuj się z nami już teraz!"
+      },
+      "districts": {
+        "praga-polnoc": {
+          "name": "Praga-Północ",
+          "slug": "praga-polnoc",
+          "content": {
+            "phone": "123-456-789",
+            "hero_h1": "Hydraulik na Pradze Północ",
+            "hero_h2": "Szybki Hydraulik w Praga-Północ",
+            "hero_text": "Twoje awarie pod kontrolą – nie pozwól, aby problem przerósł Twoje możliwości!",
+            "service_h1": "Nasze usługi hydrauliczne w dzielnicy Pragi Północ",
+            "service_h2": "Najlepsi na Pradze",
+            "service_text": "Praga północ serdecznie zaprasza do skorzystania z naszych usług hydraulicznych. Jesteśmy zawsze gotowi do działania!",
+            "testimonials_h2": "Opinie naszych klientów",
+            "testimonials_h3": "Co mówią o nas klienci?",
+            "testimonials_text_1": "Nasi klienci doceniają naszą szybką reakcję i wysoką jakość usług – sprawdź, co mówią!",
+            "testimonials_text_2": "Niezadowolenie nie wchodzi w grę!",
+            "steps_h2": "Jak zamówić usługę hydrauliczną w Praga-Północ?",
+            "aboutUs_h2": "O nas – Turbo Hydraulik w Praga-Północ",
+            "aboutUs_h3": "Dlaczego warto nam zaufać?",
+            "aboutUs_text": "Turbo  to zespół doświadczonych fachowców przywracających sprawność hydrauliczną w sercu Praga-Północ. Naszą misją jest szybkość działania i najwyższa jakość usług. Proponujemy kompleksową pomoc – od awaryjnych napraw po systemy hydrauliczne.",
+            "aboutCity_h2": "Usługi hydrauliczne Praga-Północ",
+            "aboutCity_text": "Praga-Północ to dynamiczna część Warszawy, gdzie nasi hydraulicy znają każdy zakamarek. Dlatego z przyjemnością podejmujemy się wszelkich wyzwań związanych z hydrauliką w tej okolicy.",
+            "portfolio_h2": "Ostatnie realizacje – Turbo Hydraulik Praga-Północ",
+            "portfolio_text": "Nasze sukcesy są widoczne w licznych zrealizowanych projektach, które świadczą o naszej profesjonalizmie.",
+            "aboutUsNumbers_h2": "Nasze liczby mówią same za siebie",
+            "aboutUsNumbers_text": "Z ponad 10-letnim doświadczeniem i setkami zadowolonych klientów, jesteśmy liderami w branży hydraulicznej w Praga-Północ!",
+            "priceList_h2": "Cennik usług hydraulicznych",
+            "priceList_h3": "Potrzebujesz innej usługi hydraulicznej?",
+            "priceList_text": "Oferujemy przejrzyste ceny bez ukrytych kosztów - tylko to, co najważniejsze!",
+            "faq_h2": "FAQ – Najczęściej zadawane pytania - Turbo Hydraulik Praga-Północ",
+            "contact_h2": "Turbo Hydraulik Praga-Północ – szybki kontakt, błyskawiczna pomoc!",
+            "contact_text": "Nie czekaj – zadzwoń do nas teraz i przekonaj się, jak szybko możemy pomóc!"
+          }
+        }
       }
     }
   }

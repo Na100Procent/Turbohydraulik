@@ -8,6 +8,7 @@ interface Props {
   header: string;
   headerColor?: string;
   bottomHeader?: string;
+  bottomHeaderColor?: string;
 }
 
 const containerSx = {
@@ -26,21 +27,13 @@ const fontSize = {
   xxs: "30px",
 };
 
-const bottomHeaderSx = {
-  fontWeight: "500",
-  fontSize: "15px",
-  color: "#565656",
-  marginTop: "20px",
-  fontFamily: "UniteaSans",
-  textAlign: "center",
-};
-
 const SectionCenterHeader = ({
   topHeader,
   bottomHeader,
   topHeaderColor,
   header,
   headerColor,
+  bottomHeaderColor,
 }: Props) => {
   const headerSx = {
     fontWeight: "700",
@@ -59,6 +52,15 @@ const SectionCenterHeader = ({
     textTransform: "uppercase",
     letterSpacing: "1px",
     fontSize: "15px",
+  };
+
+  const bottomHeaderSx = {
+    fontWeight: "500",
+    fontSize: "15px",
+    color: bottomHeaderColor ? bottomHeaderColor : "#565656",
+    marginTop: "20px",
+    fontFamily: "UniteaSans",
+    textAlign: "center",
   };
 
   return (

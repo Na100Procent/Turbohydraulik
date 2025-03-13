@@ -15,17 +15,17 @@ const OurMission = () => {
       <Typography
         sx={{ fontWeight: "600", fontSize: "30px", fontFamily: "UniteaSans" }}
       >
-        Our Mission
+        Nasza misja
       </Typography>
       <Typography
         mt="15px"
         sx={{ fontFamily: "UniteaSans", fontWeight: "500" }}
       >
-        Our mission is to provide the highest level of plumbing services that
-        meet the expectations of our customers. We focus on timeliness,
-        precision and safety, taking care of every detail of the orders we carry
-        out. Customer satisfaction is our highest value, which is why we
-        undertake even the most demanding tasks.
+        Naszą misją jest świadczenie usług hydraulicznych na najwyższym
+        poziomie, które spełniają oczekiwania naszych klientów. Skupiamy się na
+        terminowości, precyzji i bezpieczeństwie, dbając o każdy szczegół
+        realizowanych zleceń. Satysfakcja klienta jest dla nas najwyższą
+        wartością, dlatego podejmujemy się nawet najbardziej wymagających zadań.
       </Typography>
     </Box>
   );

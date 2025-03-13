@@ -3,7 +3,6 @@ import BackgroundWrapper from "../../shared/BackgroundWrapper";
 import theme from "@/app/theme/theme";
 import { Box } from "@mui/material";
 import CallUsButton from "../../shared/CallUsButton";
-import { CityData, DistrictData, ServiceData } from "@/app/data/types";
 import { websiteData } from "@/app/data/data";
 import HeaderBox from "../intro/HeaderBox";
 import {
@@ -13,10 +12,10 @@ import {
 } from "@/app/constants/imagesUrls";
 import MosaicGrid from "../../shared/mosaic/MosaicGrid";
 import MosaicElement from "../../shared/mosaic/MosaicElement";
+import { HeroContent } from "@/app/data/types/sectionTypes";
 
 interface Props {
-  slug?: CityData | ServiceData | DistrictData;
-  content?: string;
+  content?: HeroContent;
 }
 
 const containerSx = {
@@ -48,7 +47,12 @@ const contentSx = {
     xxs: "10px 10px",
   },
 };
-const HeroService = ({ slug, content }: Props) => {
+const HeroService = ({ content }: Props) => {
+  const heroSectionData = content ? content : websiteData.homepageContent;
+  const heroHeader = heroSectionData.hero_h1;
+  const heroSubHeader = heroSectionData.hero_h2;
+  const heroText = heroSectionData.hero_text;
+
   const serviceImages = [
     <MosaicElement key={0} bgImage={serviceHeroBg} />,
     <MosaicElement key={1} bgImage={aboutUsUrl} />,
@@ -64,8 +68,9 @@ const HeroService = ({ slug, content }: Props) => {
         <Box sx={contentSx}>
           <Box sx={heroSx}>
             <HeaderBox
-              slug={slug?.name}
-              subHeaderContent={content ? content : websiteData.home.home}
+              header={heroHeader}
+              subHeader={heroSubHeader}
+              text={heroText}
             />
             <Box mt="30px">
               <CallUsButton />

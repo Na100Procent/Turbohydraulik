@@ -4,7 +4,7 @@ import { Box, Typography, IconButton, Collapse, Button } from "@mui/material";
 import AddIcon from "@mui/icons-material/Add";
 import ClearOutlinedIcon from "@mui/icons-material/ClearOutlined";
 import theme from "@/app/theme/theme";
-import faqData from "../../../data/faqData.json";
+import { faqData } from "@/app/data/data";
 
 interface FAQItem {
   question: string;
@@ -100,6 +100,8 @@ const FAQElements = () => {
         sx={{
           mt: 2,
           color: theme.palette.primary.main,
+          textTransform: "none",
+          fontWeight: "bold",
           background: theme.palette.secondary.main,
         }}
       >

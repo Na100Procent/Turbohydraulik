@@ -11,12 +11,11 @@ import { aboutUsUrl } from "@/app/constants/imagesUrls";
 import OurMission from "./components/OurMission";
 import CallUsButton from "../../shared/CallUsButton";
 import { sectionIds } from "@/app/constants/appConstants";
-import { CityData } from "@/app/data/types";
+import { AboutUsContent } from "@/app/data/types/sectionTypes";
 import { websiteData } from "@/app/data/data";
 
 interface Props {
-  city?: CityData;
-  content?: string;
+  content?: AboutUsContent;
   bgColor?: string;
 }
 
@@ -52,7 +51,11 @@ const imgSx = {
   overflow: "hidden",
 };
 
-const AboutUs = ({ city, content, bgColor }: Props) => {
+const AboutUs = ({ content, bgColor }: Props) => {
+  const aboutUsContent = content ? content : websiteData.homepageContent;
+  const aboutUs_h2 = aboutUsContent.aboutUs_h2;
+  const aboutUs_h3 = aboutUsContent.aboutUs_h3;
+  const aboutUs_text = aboutUsContent.aboutUs_text;
   return (
     <BackgroundWrapper
       bgColor={bgColor ? bgColor : theme.palette.custom.yellowLight}
@@ -63,10 +66,8 @@ const AboutUs = ({ city, content, bgColor }: Props) => {
             <SectionHeader
               subHeaderColor={theme.palette.secondary.main}
               headerColor={theme.palette.primary.main}
-              subHeader="ABOUT US"
-              header={`Provide the highest level Of Plumbing services ${
-                city ? city.name : ""
-              }`}
+              subHeader="O NAS"
+              header={aboutUs_h2}
             />
 
             <ServiceCircularLink />
@@ -88,13 +89,24 @@ const AboutUs = ({ city, content, bgColor }: Props) => {
               justifyContent="space-between"
             >
               <Typography
+                variant="h3"
+                sx={{
+                  fontWeight: "600",
+                  fontSize: "30px",
+                  fontFamily: "UniteaSans",
+                  color: theme.palette.primary.main,
+                }}
+              >
+                {aboutUs_h3}
+              </Typography>
+              <Typography
                 sx={{
                   color: theme.palette.custom.darkGray,
                   fontFamily: "UniteaSans",
                   fontWeight: "500",
                 }}
               >
-                {content ? content : websiteData.home.about}
+                {aboutUs_text}
               </Typography>
               <OurMission />
               <div>

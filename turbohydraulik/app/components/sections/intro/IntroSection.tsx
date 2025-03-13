@@ -6,12 +6,11 @@ import { Box } from "@mui/material";
 import { introBgUrl } from "@/app/constants/imagesUrls";
 import HorizontalBanner from "./HorizontalBanner";
 import CallUsButton from "../../shared/CallUsButton";
-import { CityData, DistrictData, ServiceData } from "@/app/data/types";
+import { HeroContent } from "@/app/data/types/sectionTypes";
 import { websiteData } from "@/app/data/data";
 
 interface Props {
-  slug?: CityData | ServiceData | DistrictData;
-  content?: string;
+  content?: HeroContent;
 }
 
 const containerSx = {
@@ -42,15 +41,20 @@ const contentSx = {
     xxs: "10px 10px",
   },
 };
-const IntroSection = ({ slug, content }: Props) => {
+const IntroSection = ({ content }: Props) => {
+  const heroSectionData = content ? content : websiteData.homepageContent;
+  const heroHeader = heroSectionData.hero_h1;
+  const heroSubHeader = heroSectionData.hero_h2;
+  const heroText = heroSectionData.hero_text;
   return (
     <BackgroundWrapper bgImage={introBgUrl} sx={containerSx}>
       <Box padding="50px 0 0 0">
         <Box sx={contentSx}>
           <Box sx={heroSx}>
             <HeaderBox
-              slug={slug?.name}
-              subHeaderContent={content ? content : websiteData.home.home}
+              header={heroHeader}
+              subHeader={heroSubHeader}
+              text={heroText}
             />
             <Box mt="30px">
               <CallUsButton />

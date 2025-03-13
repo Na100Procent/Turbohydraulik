@@ -3,8 +3,9 @@ import { Box, Typography } from "@mui/material";
 import React from "react";
 
 interface Props {
-  slug?: string;
-  subHeaderContent?: string;
+  header: string;
+  subHeader: string;
+  text: string;
 }
 
 const fontSize = {
@@ -22,20 +23,24 @@ const headerSx = {
   lineHeight: fontSize,
   fontSize: fontSize,
 };
-const subHeader = {
+const subHeaderSX = {
   color: theme.palette.custom.background,
   fontWeight: 500,
   letterSpacing: "1px",
   mt: "-10px",
 };
 
-const HeaderBox = ({ slug, subHeaderContent }: Props) => {
+const HeaderBox = ({ header, subHeader, text }: Props) => {
+  const headerWords = header.split(" ");
+  const headerPart1 = headerWords.slice(0, -1).join(" ");
+  const headerPart2 = headerWords.slice(-1).join(" ");
+
   return (
     <>
       <Box>
         <Box color={theme.palette.custom.background}>
           <Typography variant="h1" sx={headerSx}>
-            Turbo
+            {headerPart1}
           </Typography>
         </Box>
         <Typography
@@ -43,13 +48,13 @@ const HeaderBox = ({ slug, subHeaderContent }: Props) => {
           mb="20px"
           sx={{ color: theme.palette.secondary.main, ...headerSx }}
         >
-          Hydraulik {slug}
+          {headerPart2}
         </Typography>
       </Box>
-      <Typography sx={subHeader} variant="h4">
-        Profesjonalna hydraulika
+      <Typography sx={subHeaderSX} variant="h4">
+        {subHeader}
       </Typography>
-      <p style={subHeader}>{subHeaderContent}</p>
+      <p style={subHeaderSX}>{text}</p>
     </>
   );
 };

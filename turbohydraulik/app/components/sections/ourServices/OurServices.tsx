@@ -6,13 +6,17 @@ import ServiceContainer from "./ServiceContainer";
 import { sectionXPadding } from "@/app/constants/styles";
 import SectionPaddingWrapper from "../../shared/SectionWrapper";
 import CallUsButton from "../../shared/CallUsButton";
-import { CityData } from "@/app/data/types";
+import { CityData } from "@/app/data/types/dataTypes";
 import SectionCenterHeader from "../../shared/SectionCenterHeader";
+import { OurServiceContent } from "@/app/data/types/sectionTypes";
+import { websiteData } from "@/app/data/data";
 
 interface Props {
   city?: CityData;
   bgColor?: string;
   headerColor?: string;
+  bottomHeaderColor?: string;
+  content?: OurServiceContent;
 }
 
 const headerSx = {
@@ -31,7 +35,15 @@ const headerSx = {
   },
 };
 
-const OurServices = ({ city, bgColor, headerColor }: Props) => {
+const OurServices = ({
+  city,
+  bgColor,
+  headerColor,
+  content,
+  bottomHeaderColor,
+}: Props) => {
+  const serviceContent = content ? content : websiteData.homepageContent;
+  const { service_h1, service_h2, service_text } = serviceContent;
   return (
     <BackgroundWrapper bgColor={bgColor ? bgColor : theme.palette.primary.main}>
       <Box display={"flex"} flexDirection={"column"} gap="0px">
@@ -41,14 +53,14 @@ const OurServices = ({ city, bgColor, headerColor }: Props) => {
               headerColor={
                 headerColor ? headerColor : theme.palette.custom.background
               }
-              topHeader="services we offer"
-              header={`Our Plumbing Services ${city ? city.name : ""}`}
+              topHeader={service_h1}
+              header={service_h2}
+              bottomHeader={service_text}
+              bottomHeaderColor={bottomHeaderColor}
             />
           </Box>
         </SectionPaddingWrapper>
-        {/* <Box position={"absolute"} top={"-130px"} right={"-10px"}>
-          <AboutMeOrnament />
-        </Box> */}
+
         <ServiceContainer city={city} />
         <Box display={"flex"} justifyContent={"center"} mt="20px">
           <CallUsButton />

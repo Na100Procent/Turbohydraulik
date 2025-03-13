@@ -12,21 +12,21 @@ export const verticalInfoCardsData = [
     icon: <AppointmentIcon />,
     title: "Skontaktuj się",
     subtitle:
-      "Contact us by phone or via the form to discuss the details of the service.",
+      "Skontaktuj się z nami telefonicznie lub za pomocą formularza, aby omówić szczegóły usługi.",
     badgeNumber: 1,
   },
   {
     icon: <InfosIcon />,
     title: "Serwis i naprawa",
     subtitle:
-      "We will schedule a convenient appointment time that suits your needs and schedule.",
+      "Umówimy dogodny termin wizyty, który będzie odpowiadał Twoim potrzebom i harmonogramowi.",
     badgeNumber: 2,
   },
   {
     icon: <MessageIcon />,
     title: "Instalacje domowe",
     subtitle:
-      "Take advantage of our professional service & enjoy the trouble-free operation of your hydraulic installations.",
+      "Skorzystaj z naszej profesjonalnej obsługi i ciesz się bezproblemowym działaniem swoich instalacji hydraulicznych.",
     badgeNumber: 3,
   },
 ];

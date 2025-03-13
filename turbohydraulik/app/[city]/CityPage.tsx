@@ -1,37 +1,45 @@
 import { Box } from "@mui/material";
-import { sectionIds } from "../constants/appConstants";
+import { errorPageLoad, sectionIds } from "../constants/appConstants";
 import TopMenu from "../components/sections/topMenu/TopMenu";
 import IntroSection from "../components/sections/intro/IntroSection";
 import AboutUs from "../components/sections/aboutUs/AboutUs";
-import OurServices from "../components/sections/ourServices/OurServices";
 import Footer from "../components/sections/footer/Footer";
 import InNumbers from "../components/sections/inNumbers/InNumbers";
 import HowToOrderUs from "../components/sections/howToOrderUs/HowToOrderUs";
 import CustomerReviews from "../components/sections/customerReviews/CustomerReviews";
 import RecentWorks from "../components/sections/recentWorks/RecentWorks";
 import FAQsection from "../components/sections/faqSection/FAQsection";
-import { CityData, SectionContent } from "../data/types";
 import theme from "../theme/theme";
 import AboutCity from "../components/sections/aboutCity/AboutCity";
-import { websiteData } from "../data/data";
 import PriceList from "../components/sections/priceList/PriceList";
 import DistrictsList from "../components/shared/DistrictsList";
+import ErrorMessage from "../components/shared/ErrorMessage";
+import { CityData } from "../data/types/dataTypes";
+import getCityServices from "../components/shared/helpers/getCityServices";
+import OurServices from "../components/sections/ourServices/OurServices";
+import { getCityDataContent } from "../components/shared/helpers/getCityDataContent";
 
 interface Props {
-  city: CityData;
+  cityData: CityData;
 }
 
-export default function CityPage({ city }: Props) {
-  const getContent = (section: keyof SectionContent) => {
-    return city.content[section];
-  };
+export default function CityPage({ cityData }: Props) {
+  if (!cityData) return <ErrorMessage message={errorPageLoad} />;
 
-  const services = Object.values(websiteData.services);
-  const servicesPrices = services.map((service) => ({
-    title: service.name,
-    price: "100$",
-  }));
+  const cityServices = cityData.availableServices;
+  const servicesPriceList = getCityServices(cityServices);
 
+  const {
+    heroContent,
+    ourServicesContent,
+    reviewsContent,
+    howToContent,
+    aboutUsContent,
+    aboutCityContent,
+    recentWorksContent,
+    inNumbersContent,
+    priceListContent,
+  } = getCityDataContent(cityData);
   return (
     <Box
       display="flex"
@@ -41,21 +49,23 @@ export default function CityPage({ city }: Props) {
       id={sectionIds.home}
     >
       <TopMenu />
-      <IntroSection slug={city} content={getContent("home")} />
+      <IntroSection content={heroContent} />
 
-      <OurServices city={city} />
-      <CustomerReviews city={city} content={getContent("reviews")} />
-      <HowToOrderUs />
+      <OurServices
+        city={cityData}
+        content={ourServicesContent}
+        bottomHeaderColor={theme.palette.custom.background}
+      />
+      <CustomerReviews content={reviewsContent} />
+      <HowToOrderUs content={howToContent} />
       <AboutUs
-        city={city}
-        content={getContent("about")}
+        content={aboutUsContent}
         bgColor={theme.palette.custom.blueLight}
       />
-      <AboutCity city={city} />
-
-      <RecentWorks />
-      <InNumbers />
-      <PriceList items={servicesPrices} city={city} />
+      <AboutCity content={aboutCityContent} />
+      <RecentWorks content={recentWorksContent} />
+      <InNumbers content={inNumbersContent} />
+      <PriceList items={servicesPriceList} content={priceListContent} />
       <FAQsection />
 
       <Box
@@ -63,7 +73,7 @@ export default function CityPage({ city }: Props) {
         bgcolor={theme.palette.custom.background}
         padding="0px 0px 400px 0 "
       >
-        <DistrictsList city={city} />
+        <DistrictsList city={cityData} />
       </Box>
       <Footer />
     </Box>
