@@ -44,20 +44,20 @@ const FailureForm = () => {
   return (
     <Box sx={container}>
       <Typography variant="h6" sx={headerSx}>
-        SUBSCRIBE OUR NEWSLETTER
+        ZGŁOŚ USTERKĘ
       </Typography>
       <Input
         disableUnderline
         sx={{ ...phoneInput, ...input }}
-        placeholder="Phone"
+        placeholder="Numer telefonu"
       />
       <Input
         disableUnderline
         sx={{ ...problemInput, ...input }}
-        placeholder="Describe Your problem"
+        placeholder="Opisz swój problem"
       />
       <RectangularButton
-        title="I am reporting a failure"
+        title="Zgłaszam usterkę"
         bgColor={theme.palette.secondary.main}
       />
       <Typography
@@ -66,14 +66,14 @@ const FailureForm = () => {
         fontSize={"14px"}
         color={theme.palette.custom.blueLight}
       >
-        Submitting the form involves&nbsp;
+        Przesłanie formularza oznacza&nbsp;
         <Typography
           fontSize={"13px"}
           component="span"
           fontWeight="bold"
           color={theme.palette.custom.background}
         >
-          Acceptance of the Regulations and Privacy Policy
+          Akceptację Regulaminu i Polityki Prywatności
         </Typography>
         &nbsp;.
       </Typography>

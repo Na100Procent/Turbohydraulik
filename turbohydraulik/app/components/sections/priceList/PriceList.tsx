@@ -6,6 +6,7 @@ import theme from "@/app/theme/theme";
 import CallUsButton from "../../shared/CallUsButton";
 import { PriceListContent } from "@/app/data/types/sectionTypes";
 import { websiteData } from "@/app/data/data";
+import { sectionXPadding } from "@/app/constants/styles";
 
 interface Props {
   items: { title: string; price: number }[];
@@ -14,8 +15,6 @@ interface Props {
 
 const contentSx = {
   width: "100%",
-  maxWidth: 900,
-  mx: "auto",
   my: 2,
   color: theme.palette.primary.main,
 };
@@ -41,6 +40,7 @@ const PriceList = ({ items, content }: Props) => {
         justifyContent="center"
         alignItems="center"
         flexDirection="column"
+        padding={sectionXPadding}
       >
         <SectionCenterHeader
           topHeader="CENNIK"

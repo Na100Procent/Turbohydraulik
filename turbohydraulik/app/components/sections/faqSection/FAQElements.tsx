@@ -17,7 +17,7 @@ const container = {
   paddingBottom: 1,
   padding: "20px 20px",
   background: theme.palette.custom.lightGray,
-  maxWidth: "900px",
+
   minWidth: {
     xl: "400px",
     lg: "400px",
@@ -26,6 +26,7 @@ const container = {
     xs: "250px",
     xxs: "250px",
   },
+  width: "100%",
 };
 
 const questionSx = {
@@ -57,7 +58,12 @@ const FAQElements = () => {
   const displayedFaqs = showAll ? faqData : faqData.slice(0, 6);
 
   return (
-    <Box>
+    <Box
+      display={"flex"}
+      flexDirection={"column"}
+      alignItems={"center"}
+      mb="50px"
+    >
       {displayedFaqs.map((faq: FAQItem, index) => (
         <Box key={index} sx={container}>
           <Box

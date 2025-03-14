@@ -72,7 +72,7 @@ const Policy: React.FC = () => {
   return (
     <Box sx={container}>
       <Typography sx={{ ...textSx, opacity: 0.5 }}>
-        Copyright ©2025. Turbo Hydraulik.pl, All right reserved
+        Copyright ©2025. Turbo Hydraulik.pl, Wszystkie prawa zastrzeżone
       </Typography>
       <Box sx={policyButtonsSx}>
         <Link href={policyPath}>
@@ -86,7 +86,7 @@ const Policy: React.FC = () => {
         </Link>
         <Box sx={verticalDivider} />
         <Box onClick={handlePhoneClick}>
-          <Typography sx={{ ...textSx, ...linkSx }}>Contact Us</Typography>
+          <Typography sx={{ ...textSx, ...linkSx }}>Kontakt</Typography>
         </Box>
       </Box>
     </Box>

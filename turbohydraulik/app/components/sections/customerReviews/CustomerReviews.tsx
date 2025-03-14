@@ -10,7 +10,6 @@ import { sectionIds } from "@/app/constants/appConstants";
 import CommaIcon from "./components/CommaIcon";
 import CallUsButton from "../../shared/CallUsButton";
 import SubHeaders from "./components/SubHeaders";
-import RectangularButton from "../../shared/RectangularButton";
 import { ReviewsContent } from "@/app/data/types/sectionTypes";
 import { websiteData } from "@/app/data/data";
 
@@ -29,7 +28,7 @@ const CustomerReviews = ({ content }: Props) => {
   const mainColor = theme.palette.primary.main;
   return (
     <BackgroundWrapper bgColor={theme.palette.custom.blueLight}>
-      <>
+      <Box sx={{ overflowX: "hidden" }}>
         <SectionPaddingWrapper>
           <Box
             id={sectionIds.reviews}
@@ -61,9 +60,8 @@ const CustomerReviews = ({ content }: Props) => {
         />
         <Box display={"flex"} justifyContent={"center"} mt="50px" gap="20px">
           <CallUsButton />
-          <RectangularButton title="Dodaj opinię" />
         </Box>
-      </>
+      </Box>
     </BackgroundWrapper>
   );
 };

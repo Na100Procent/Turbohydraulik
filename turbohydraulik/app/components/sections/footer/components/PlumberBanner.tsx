@@ -44,7 +44,7 @@ const PlumberBanner = () => {
         zIndex={1}
       >
         <Typography sx={headerSx}>
-          Share your opinion about Turbo Hydraulik
+          Podziel się opinią o Turbo Hydraulik
         </Typography>
         <CallUsButton bgColor={theme.palette.custom.background} />
       </Box>

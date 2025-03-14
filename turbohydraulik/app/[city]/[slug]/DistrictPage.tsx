@@ -15,6 +15,7 @@ import theme from "@/app/theme/theme";
 import OurCities from "@/app/components/sections/ourCities/OurCities";
 import { getDistrictDataContent } from "@/app/components/shared/helpers/getDistrictDataContent";
 import ErrorMessage from "@/app/components/shared/ErrorMessage";
+import AboutCity from "@/app/components/sections/aboutCity/AboutCity";
 
 interface Props {
   districtData: DistrictData;
@@ -25,7 +26,7 @@ export default function DistrictPage({ districtData }: Props) {
     heroContent,
     ourServicesContent,
     reviewsContent,
-
+    aboutCityContent,
     aboutUsContent,
     recentWorksContent,
     inNumbersContent,
@@ -51,6 +52,7 @@ export default function DistrictPage({ districtData }: Props) {
         content={aboutUsContent}
         bgColor={theme.palette.custom.blueLight}
       />
+      <AboutCity content={aboutCityContent} />
       <RecentWorks content={recentWorksContent} />
       <InNumbers content={inNumbersContent} />
       <FAQsection />

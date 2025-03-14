@@ -6,9 +6,10 @@ import SectionCenterHeader from "../../shared/SectionCenterHeader";
 import { Box } from "@mui/material";
 import { sectionIds } from "@/app/constants/appConstants";
 import MosaicWorkGrid from "./MosaicWorksGrid";
-import RectangularButton from "../../shared/RectangularButton";
 import { RecentWorksContent } from "@/app/data/types/sectionTypes";
 import { websiteData } from "@/app/data/data";
+import CallUsButton from "../../shared/CallUsButton";
+import { sectionXPadding } from "@/app/constants/styles";
 
 interface Props {
   content?: RecentWorksContent;
@@ -27,12 +28,11 @@ const RecentWorks = ({ content }: Props) => {
             bottomHeader={portfolio_text}
           />
         </SectionPaddingWrapper>
-        <MosaicWorkGrid />
+        <Box sx={{ padding: sectionXPadding }}>
+          <MosaicWorkGrid />
+        </Box>
         <Box mt="50px" width="100%" display="flex" justifyContent="center">
-          <RectangularButton
-            title="VIEW ALL PROJECTS"
-            bgColor={theme.palette.secondary.main}
-          />
+          <CallUsButton />
         </Box>
       </Box>
     </BackgroundWrapper>

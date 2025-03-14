@@ -26,8 +26,10 @@ const headerSx = {
 const subHeaderSX = {
   color: theme.palette.custom.background,
   fontWeight: 500,
+  fontFamily: "UniteaSans",
   letterSpacing: "1px",
   mt: "-10px",
+  mb: "20px",
 };
 
 const HeaderBox = ({ header, subHeader, text }: Props) => {
@@ -51,7 +53,7 @@ const HeaderBox = ({ header, subHeader, text }: Props) => {
           {headerPart2}
         </Typography>
       </Box>
-      <Typography sx={subHeaderSX} variant="h4">
+      <Typography sx={subHeaderSX} variant="h5">
         {subHeader}
       </Typography>
       <p style={subHeaderSX}>{text}</p>

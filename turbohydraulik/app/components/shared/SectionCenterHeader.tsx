@@ -1,3 +1,4 @@
+import { sectionXPadding } from "@/app/constants/styles";
 import theme from "@/app/theme/theme";
 import { Box, Typography } from "@mui/material";
 import React from "react";
@@ -17,6 +18,7 @@ const containerSx = {
   flexDirection: "column",
   alignItems: "center",
   gap: "10px",
+  padding: sectionXPadding,
 };
 const fontSize = {
   xl: "50px",
@@ -51,7 +53,15 @@ const SectionCenterHeader = ({
     fontWeight: "600",
     textTransform: "uppercase",
     letterSpacing: "1px",
-    fontSize: "15px",
+    fontSize: {
+      xl: "15px",
+      lg: "15px",
+      md: "13px",
+      sm: "12px",
+      xs: "12px",
+      xxs: "12px",
+    },
+    textAlign: "center",
   };
 
   const bottomHeaderSx = {

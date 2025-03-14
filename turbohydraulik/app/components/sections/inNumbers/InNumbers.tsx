@@ -25,6 +25,7 @@ const InNumbers = ({ bgColor, content }: Props) => {
           <SectionCenterHeader
             header={aboutUsNumbers_h2}
             bottomHeader={aboutUsNumbers_text}
+            topHeader="W LICZBACH"
           />
           <CompanyInNumbers />
           <Box display="flex" justifyContent="center" mt="10px">
