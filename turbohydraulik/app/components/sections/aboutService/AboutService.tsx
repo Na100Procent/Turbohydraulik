@@ -5,8 +5,6 @@ import SectionHeader from "../../shared/SectionHeader";
 import { Box, Typography } from "@mui/material";
 import { sectionXPadding } from "@/app/constants/styles";
 import SectionPaddingWrapper from "../../shared/SectionWrapper";
-import Image from "next/image";
-import { aboutUsUrl } from "@/app/constants/imagesUrls";
 import CallUsButton from "../../shared/CallUsButton";
 import { sectionIds } from "@/app/constants/appConstants";
 import { AboutServiceContent } from "@/app/data/types/sectionTypes";
@@ -36,19 +34,18 @@ const contentSx = {
   gap: "100px",
 };
 
-const headerSx = {
+const textSx = {
   display: "flex",
-  alignItems: "center",
-  justifyContent: "space-between",
-  gap: "10px",
-};
-
-const imgSx = {
-  width: "100%",
-  height: "100%",
-  maxHeight: "490px",
-  borderRadius: "15px",
-  overflow: "hidden",
+  flexDirection: {
+    xl: "row",
+    lg: "row",
+    md: "column",
+    sm: "column",
+    xs: "column",
+    xxs: "column",
+  },
+  gap: "100px",
+  padding: sectionXPadding,
 };
 
 const descriptionSx = {
@@ -71,49 +68,45 @@ const AboutService = ({
       bgColor={bgColor ? bgColor : theme.palette.custom.yellowLight}
     >
       <SectionPaddingWrapper>
-        <Box padding={sectionXPadding} id={sectionIds.about}>
-          <Box sx={headerSx}>
+        <Box sx={textSx} id={sectionIds.about}>
+          <Box maxWidth="700px">
             <SectionHeader
               subHeaderColor={theme.palette.secondary.main}
               headerColor={theme.palette.primary.main}
               subHeader="O USŁUDZE"
               header={aboutService_h2}
             />
-          </Box>
-          <Box sx={contentSx}>
-            <Box sx={imgSx}>
-              <Image
-                layout="responsive"
-                src={aboutUsUrl}
-                alt="About img"
-                width={400}
-                height={490}
-              />
-            </Box>
-            <Box
-              display="flex"
-              flexDirection="column"
-              gap="30px"
-              justifyContent="space-between"
-            >
-              <Typography
-                variant="h3"
-                sx={{
-                  fontWeight: "600",
-                  fontSize: "30px",
-                  fontFamily: "UniteaSans",
-                  color: theme.palette.primary.main,
-                }}
+            <Typography sx={descriptionSx} mt="20px">
+              {aboutService_text}
+            </Typography>
+
+            <Box sx={contentSx}>
+              <Box
+                display="flex"
+                flexDirection="column"
+                gap="30px"
+                justifyContent="space-between"
               >
-                {aboutService_h2} Turbohydraulik
-              </Typography>
-              <Typography sx={descriptionSx}>{aboutService_text}</Typography>
-              <SubServicesList subServices={subServices} />
-              <Box display="flex" justifyContent="center" mt="20px">
-                <CallUsButton phoneNumber={phoneNumber} />
+                <Typography
+                  variant="h3"
+                  sx={{
+                    fontWeight: "600",
+                    fontSize: "30px",
+                    fontFamily: "UniteaSans",
+                    color: theme.palette.primary.main,
+                  }}
+                >
+                  {aboutService_h2} Turbohydraulik
+                </Typography>
+                <Typography sx={descriptionSx}>{aboutService_text}</Typography>
+
+                <Box display="flex" justifyContent="left" mt="20px">
+                  <CallUsButton phoneNumber={phoneNumber} />
+                </Box>
               </Box>
             </Box>
           </Box>
+          <SubServicesList subServices={subServices} />
         </Box>
       </SectionPaddingWrapper>
     </BackgroundWrapper>

@@ -17,12 +17,12 @@ interface Props {
 
 const container = {
   width: {
-    xl: "480px",
-    lg: "430px",
+    xl: "400px",
+    lg: "400px",
     md: "400px",
     sm: "350px",
-    xs: "350px",
-    xxs: "350px",
+    xs: "300px",
+    xxs: "300px",
   },
   borderRadius: "12px",
   overflow: "hidden",
