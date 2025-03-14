@@ -5,9 +5,12 @@ import theme from "@/app/theme/theme";
 import LocalPhoneOutlinedIcon from "@mui/icons-material/LocalPhoneOutlined";
 import VerticalSeparator from "../../../shared/VerticalSeparator";
 import { TopMenuOrnament } from "@/public/assets/icons/icons";
-import { email, phoneNUmber } from "@/app/constants/appConstants";
+import { defaultPhoneNUmber, email } from "@/app/constants/appConstants";
 import SocialMedias from "./SocialMedias";
 
+interface Props {
+  phoneNumber?: string;
+}
 const containerSx = {
   position: {
     md: "relative",
@@ -119,9 +122,10 @@ const contactIconSx = {
   color: theme.palette.secondary.main,
 };
 
-const ContactElements = () => {
+const ContactElements = ({ phoneNumber }: Props) => {
+  const phone = phoneNumber ? phoneNumber : defaultPhoneNUmber;
   const handlePhoneClick = () => {
-    window.open(`tel:${phoneNUmber}`);
+    window.open(`tel:${phone}`);
   };
 
   const handleEmailClick = () => {
@@ -135,7 +139,7 @@ const ContactElements = () => {
       <Box sx={elementsContainer}>
         <Box sx={{ ...contactElement, ...phoneSx }} onClick={handlePhoneClick}>
           <LocalPhoneOutlinedIcon sx={contactIconSx} />
-          <Typography sx={contactTitleSx}>+48 {phoneNUmber}</Typography>
+          <Typography sx={contactTitleSx}>+48 {phone}</Typography>
         </Box>
         <Box sx={emailSx}>
           <VerticalSeparator />

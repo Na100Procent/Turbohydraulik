@@ -5,8 +5,11 @@ import ContactForm from "./components/ContactForm";
 import LocalPhoneOutlinedIcon from "@mui/icons-material/LocalPhoneOutlined";
 import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
 import { sectionXPadding } from "@/app/constants/styles";
-import { email, phoneNUmber } from "@/app/constants/appConstants";
+import { email, defaultPhoneNUmber } from "@/app/constants/appConstants";
 
+interface Props {
+  phoneNumber?: string;
+}
 const container = {
   display: "flex",
   gap: "20px",
@@ -22,7 +25,9 @@ const container = {
     xxs: "column",
   },
 };
-const LogoContact = () => {
+const LogoContact = ({ phoneNumber }: Props) => {
+  const phone = phoneNumber ? phoneNumber : defaultPhoneNUmber;
+
   return (
     <Box sx={container}>
       <Box ml="-20px">
@@ -31,7 +36,7 @@ const LogoContact = () => {
       <Box display={"flex"} gap={"50px"} flexWrap="wrap">
         <ContactForm
           subHeader="NUMER TELEFONU"
-          header={phoneNUmber}
+          header={phone}
           icon={<LocalPhoneOutlinedIcon />}
         />
         <ContactForm

@@ -15,9 +15,10 @@ import { websiteData } from "@/app/data/data";
 
 interface Props {
   content?: ReviewsContent;
+  phoneNumber?: string;
 }
 
-const CustomerReviews = ({ content }: Props) => {
+const CustomerReviews = ({ content, phoneNumber }: Props) => {
   const reviewsContent = content ? content : websiteData.homepageContent;
 
   const testimonials_h2 = reviewsContent.testimonials_h2;
@@ -59,7 +60,7 @@ const CustomerReviews = ({ content }: Props) => {
           testimonials_text_2={testimonials_text_2}
         />
         <Box display={"flex"} justifyContent={"center"} mt="50px" gap="20px">
-          <CallUsButton />
+          <CallUsButton phoneNumber={phoneNumber} />
         </Box>
       </Box>
     </BackgroundWrapper>

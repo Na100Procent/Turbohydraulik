@@ -11,6 +11,7 @@ import { websiteData } from "@/app/data/data";
 
 interface Props {
   content?: HeroContent;
+  phoneNumber?: string;
 }
 
 const containerSx = {
@@ -41,7 +42,7 @@ const contentSx = {
     xxs: "10px 10px",
   },
 };
-const IntroSection = ({ content }: Props) => {
+const IntroSection = ({ content, phoneNumber }: Props) => {
   const heroSectionData = content ? content : websiteData.homepageContent;
   const heroHeader = heroSectionData.hero_h1;
   const heroSubHeader = heroSectionData.hero_h2;
@@ -57,7 +58,7 @@ const IntroSection = ({ content }: Props) => {
               text={heroText}
             />
             <Box mt="30px">
-              <CallUsButton />
+              <CallUsButton phoneNumber={phoneNumber} />
             </Box>
           </Box>
         </Box>

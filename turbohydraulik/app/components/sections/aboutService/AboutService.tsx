@@ -16,6 +16,7 @@ import SubServicesList from "./SubServicesList";
 interface Props {
   content: AboutServiceContent;
   bgColor?: string;
+  phoneNumber?: string;
   subServices: SubService[];
 }
 
@@ -58,7 +59,12 @@ const descriptionSx = {
   textAlign: "left",
 };
 
-const AboutService = ({ content, bgColor, subServices }: Props) => {
+const AboutService = ({
+  content,
+  bgColor,
+  subServices,
+  phoneNumber,
+}: Props) => {
   const { aboutService_text, aboutService_h2 } = content;
   return (
     <BackgroundWrapper
@@ -104,7 +110,7 @@ const AboutService = ({ content, bgColor, subServices }: Props) => {
               <Typography sx={descriptionSx}>{aboutService_text}</Typography>
               <SubServicesList subServices={subServices} />
               <Box display="flex" justifyContent="center" mt="20px">
-                <CallUsButton />
+                <CallUsButton phoneNumber={phoneNumber} />
               </Box>
             </Box>
           </Box>

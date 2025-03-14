@@ -20,12 +20,18 @@ import theme from "@/app/theme/theme";
 import ErrorMessage from "@/app/components/shared/ErrorMessage";
 import { getCityServiceDataContent } from "@/app/components/shared/helpers/getCityServiceDataContent";
 import AboutService from "@/app/components/sections/aboutService/AboutService";
+import { websiteData } from "@/app/data/data";
 
 interface Props {
   serviceData: DistrictData;
   cityService: ServiceData;
+  citySlug: string;
 }
-export default function ServicePage({ serviceData, cityService }: Props) {
+export default function ServicePage({
+  serviceData,
+  cityService,
+  citySlug,
+}: Props) {
   if (!serviceData) return <ErrorMessage message={errorPageLoad} />;
 
   const subServices = cityService.subServices;
@@ -46,6 +52,10 @@ export default function ServicePage({ serviceData, cityService }: Props) {
     aboutServiceContent,
   } = getCityServiceDataContent(serviceData, cityService);
 
+  const phoneNumber =
+    websiteData.cities[citySlug as keyof typeof websiteData.cities]?.content
+      .phone;
+
   return (
     <Box
       display="flex"
@@ -54,16 +64,24 @@ export default function ServicePage({ serviceData, cityService }: Props) {
       flexDirection="column"
       id={sectionIds.home}
     >
-      <TopMenu />
-      <HeroService content={heroContent} />
-      <AboutService content={aboutServiceContent} subServices={subServices} />
-      <CustomerReviews content={reviewsContent} />
-      <AboutUs content={aboutUsContent} />
-      <HowToOrderUs content={howToContent} />
-      <InNumbers content={inNumbersContent} />
-      <PriceList content={priceListContent} items={subServicesPriceList} />
-      <FAQsection />
-      <RecentWorks content={recentWorksContent} />
+      <TopMenu phoneNumber={phoneNumber} />
+      <HeroService content={heroContent} phoneNumber={phoneNumber} />
+      <AboutService
+        content={aboutServiceContent}
+        subServices={subServices}
+        phoneNumber={phoneNumber}
+      />
+      <CustomerReviews content={reviewsContent} phoneNumber={phoneNumber} />
+      <AboutUs content={aboutUsContent} phoneNumber={phoneNumber} />
+      <HowToOrderUs content={howToContent} phoneNumber={phoneNumber} />
+      <InNumbers content={inNumbersContent} phoneNumber={phoneNumber} />
+      <PriceList
+        content={priceListContent}
+        items={subServicesPriceList}
+        phoneNumber={phoneNumber}
+      />
+      <FAQsection phoneNumber={phoneNumber} />
+      <RecentWorks content={recentWorksContent} phoneNumber={phoneNumber} />
       <Box
         width={"100%"}
         bgcolor={theme.palette.custom.background}
@@ -73,9 +91,10 @@ export default function ServicePage({ serviceData, cityService }: Props) {
           bgColor={theme.palette.custom.background}
           headerColor={theme.palette.primary.main}
           content={ourServicesContent}
+          phoneNumber={phoneNumber}
         />
       </Box>
-      <Footer />
+      <Footer phoneNumber={phoneNumber} />
     </Box>
   );
 }

@@ -11,6 +11,7 @@ import { sectionXPadding } from "@/app/constants/styles";
 interface Props {
   items: { title: string; price: number }[];
   content?: PriceListContent;
+  phoneNumber?: string;
 }
 
 const contentSx = {
@@ -29,7 +30,7 @@ const bottomHeaderSx = {
   textAlign: "center",
 };
 
-const PriceList = ({ items, content }: Props) => {
+const PriceList = ({ items, content, phoneNumber }: Props) => {
   const priceListContent = content ? content : websiteData.homepageContent;
   const { priceList_h2, priceList_h3, priceList_text } = priceListContent;
 
@@ -76,7 +77,7 @@ const PriceList = ({ items, content }: Props) => {
         <Typography sx={bottomHeaderSx} variant="h3">
           {priceList_h3}
         </Typography>
-        <CallUsButton />
+        <CallUsButton phoneNumber={phoneNumber} />
       </Box>
     </BackgroundWrapper>
   );

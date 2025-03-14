@@ -11,9 +11,10 @@ import { websiteData } from "@/app/data/data";
 
 interface Props {
   bgColor?: string;
+  phoneNumber?: string;
   content?: InNumbersContent;
 }
-const InNumbers = ({ bgColor, content }: Props) => {
+const InNumbers = ({ bgColor, content, phoneNumber }: Props) => {
   const inNumbersContent = content ? content : websiteData.homepageContent;
   const { aboutUsNumbers_h2, aboutUsNumbers_text } = inNumbersContent;
   return (
@@ -29,7 +30,7 @@ const InNumbers = ({ bgColor, content }: Props) => {
           />
           <CompanyInNumbers />
           <Box display="flex" justifyContent="center" mt="10px">
-            <CallUsButton />
+            <CallUsButton phoneNumber={phoneNumber} />
           </Box>
         </Box>
       </SectionPaddingWrapper>

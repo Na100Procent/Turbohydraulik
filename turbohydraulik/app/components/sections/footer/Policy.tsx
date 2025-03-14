@@ -5,7 +5,7 @@ import theme from "@/app/theme/theme";
 import { sectionXPadding } from "@/app/constants/styles";
 import Link from "next/link";
 import {
-  phoneNUmber,
+  defaultPhoneNUmber,
   policyPath,
   termsPath,
 } from "@/app/constants/appConstants";
@@ -67,7 +67,7 @@ const policyButtonsSx = {
 
 const Policy: React.FC = () => {
   const handlePhoneClick = () => {
-    window.open(`tel:${phoneNUmber}`);
+    window.open(`tel:${defaultPhoneNUmber}`);
   };
   return (
     <Box sx={container}>

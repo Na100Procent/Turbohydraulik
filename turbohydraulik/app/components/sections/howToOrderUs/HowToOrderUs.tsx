@@ -12,8 +12,9 @@ import { websiteData } from "@/app/data/data";
 
 interface Props {
   content?: HowToContent;
+  phoneNumber?: string;
 }
-const HowToOrderUs = ({ content }: Props) => {
+const HowToOrderUs = ({ content, phoneNumber }: Props) => {
   const howToContent = content ? content : websiteData.homepageContent;
   const steps_h2 = howToContent.steps_h2;
   return (
@@ -34,7 +35,7 @@ const HowToOrderUs = ({ content }: Props) => {
           />
           <HowToList />
           <Box display={"flex"} justifyContent={"center"} marginTop={"50px"}>
-            <CallUsButton />
+            <CallUsButton phoneNumber={phoneNumber} />
           </Box>
         </Box>
       </SectionPaddingWrapper>

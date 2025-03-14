@@ -10,6 +10,10 @@ import { sectionIds } from "@/app/constants/appConstants";
 import { sectionXPadding } from "@/app/constants/styles";
 import FAQElements from "./FAQElements";
 
+interface Props {
+  phoneNumber?: string;
+}
+
 const contentSx = {
   mt: "50px",
   display: "flex",
@@ -46,7 +50,7 @@ const imageSx = {
   marginBottom: "20px",
   borderRadius: "15px",
 };
-const FAQsection = () => {
+const FAQsection = ({ phoneNumber }: Props) => {
   return (
     <BackgroundWrapper bgColor={theme.palette.custom.background}>
       <SectionPaddingWrapper>
@@ -73,7 +77,7 @@ const FAQsection = () => {
                 style={imageSx}
               />
 
-              <CallUsButton />
+              <CallUsButton phoneNumber={phoneNumber} />
             </Box>
           </Box>
         </Box>

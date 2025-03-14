@@ -16,6 +16,7 @@ import MosaicGrid from "../../shared/mosaic/MosaicGrid";
 
 interface Props {
   content?: HeroContent;
+  phoneNumber?: string;
 }
 
 const containerSx = {
@@ -59,7 +60,7 @@ const contentSx = {
     xxs: "10px 10px",
   },
 };
-const HeroService = ({ content }: Props) => {
+const HeroService = ({ content, phoneNumber }: Props) => {
   const heroSectionData = content ? content : websiteData.homepageContent;
   const heroHeader = heroSectionData.hero_h1;
   const heroSubHeader = heroSectionData.hero_h2;
@@ -91,7 +92,7 @@ const HeroService = ({ content }: Props) => {
               display="flex"
               justifyContent="center"
             >
-              <CallUsButton />
+              <CallUsButton phoneNumber={phoneNumber} />
             </Box>
           </Box>
           <Box width="100%">

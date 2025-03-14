@@ -13,8 +13,9 @@ import { sectionXPadding } from "@/app/constants/styles";
 
 interface Props {
   content?: RecentWorksContent;
+  phoneNumber?: string;
 }
-const RecentWorks = ({ content }: Props) => {
+const RecentWorks = ({ content, phoneNumber }: Props) => {
   const recentWorksContent = content ? content : websiteData.homepageContent;
   const { portfolio_h2, portfolio_text } = recentWorksContent;
 
@@ -32,7 +33,7 @@ const RecentWorks = ({ content }: Props) => {
           <MosaicWorkGrid />
         </Box>
         <Box mt="50px" width="100%" display="flex" justifyContent="center">
-          <CallUsButton />
+          <CallUsButton phoneNumber={phoneNumber} />
         </Box>
       </Box>
     </BackgroundWrapper>

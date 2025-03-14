@@ -10,7 +10,10 @@ import SocialMediasSeparator from "./components/SocialMediasSeparator";
 import { YellowRightOrnament } from "@/public/assets/icons/icons";
 import { sectionIds } from "@/app/constants/appConstants";
 
-const Footer = () => {
+interface Props {
+  phoneNumber?: string;
+}
+const Footer = ({ phoneNumber }: Props) => {
   return (
     <BackgroundWrapper
       bgColor={theme.palette.primary.main}
@@ -25,7 +28,7 @@ const Footer = () => {
           gap="50px"
           position={"relative"}
         >
-          <LogoContact />
+          <LogoContact phoneNumber={phoneNumber} />
           <HorizontalSeparator />
           <LinksAndServices />
           <SocialMediasSeparator />

@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import BackgroundWrapper from "../../shared/BackgroundWrapper";
-
 import { Box } from "@mui/material";
 import ContactElements from "./components/ContactElements";
 import TopMenuBrowser from "./components/TopMenuBrowser";
@@ -10,6 +9,9 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 import theme from "@/app/theme/theme";
 import TopMenuMobile from "./components/TopMenuMobile";
 
+interface Props {
+  phoneNumber?: string;
+}
 const contentSx = {
   position: "fixed",
   width: "100%",
@@ -18,14 +20,14 @@ const contentSx = {
   backgroundColor: theme.palette.custom.background,
 };
 
-const TopMenu = () => {
+const TopMenu = ({ phoneNumber }: Props) => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
   return (
     <BackgroundWrapper sx={{ padding: 0 }}>
       <Box sx={contentSx}>
-        <ContactElements />
+        <ContactElements phoneNumber={phoneNumber} />
         {isMobile ? <TopMenuMobile /> : <TopMenuBrowser />}
       </Box>
     </BackgroundWrapper>

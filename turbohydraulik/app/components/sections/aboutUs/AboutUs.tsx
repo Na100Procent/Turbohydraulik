@@ -17,6 +17,7 @@ import { websiteData } from "@/app/data/data";
 interface Props {
   content?: AboutUsContent;
   bgColor?: string;
+  phoneNumber?: string;
 }
 
 const contentSx = {
@@ -51,7 +52,7 @@ const imgSx = {
   overflow: "hidden",
 };
 
-const AboutUs = ({ content, bgColor }: Props) => {
+const AboutUs = ({ content, bgColor, phoneNumber }: Props) => {
   const aboutUsContent = content ? content : websiteData.homepageContent;
   const aboutUs_h2 = aboutUsContent.aboutUs_h2;
   const aboutUs_h3 = aboutUsContent.aboutUs_h3;
@@ -110,7 +111,7 @@ const AboutUs = ({ content, bgColor }: Props) => {
               </Typography>
               <OurMission />
               <div>
-                <CallUsButton />
+                <CallUsButton phoneNumber={phoneNumber} />
               </div>
             </Box>
           </Box>

@@ -49,6 +49,7 @@ const DynamicPage: FC<PageProps> = async ({ params }) => {
         <ServicePage
           serviceData={cityServiceContent}
           cityService={cityService}
+          citySlug={foundCity.slug}
         />
       ) : district ? (
         <DistrictPage districtData={district} city={foundCity} />

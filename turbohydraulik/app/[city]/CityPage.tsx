@@ -18,6 +18,7 @@ import { CityData } from "../data/types/dataTypes";
 import getCityServices from "../components/shared/helpers/getCityServices";
 import OurServices from "../components/sections/ourServices/OurServices";
 import { getCityDataContent } from "../components/shared/helpers/getCityDataContent";
+import { websiteData } from "../data/data";
 
 interface Props {
   cityData: CityData;
@@ -40,6 +41,11 @@ export default function CityPage({ cityData }: Props) {
     inNumbersContent,
     priceListContent,
   } = getCityDataContent(cityData);
+
+  const phoneNumber =
+    websiteData.cities[cityData.slug as keyof typeof websiteData.cities]
+      ?.content.phone;
+
   return (
     <Box
       display="flex"
@@ -48,25 +54,31 @@ export default function CityPage({ cityData }: Props) {
       flexDirection="column"
       id={sectionIds.home}
     >
-      <TopMenu />
-      <IntroSection content={heroContent} />
+      <TopMenu phoneNumber={phoneNumber} />
+      <IntroSection content={heroContent} phoneNumber={phoneNumber} />
 
       <OurServices
         city={cityData}
         content={ourServicesContent}
         bottomHeaderColor={theme.palette.custom.background}
+        phoneNumber={phoneNumber}
       />
-      <CustomerReviews content={reviewsContent} />
-      <HowToOrderUs content={howToContent} />
+      <CustomerReviews content={reviewsContent} phoneNumber={phoneNumber} />
+      <HowToOrderUs content={howToContent} phoneNumber={phoneNumber} />
       <AboutUs
         content={aboutUsContent}
         bgColor={theme.palette.custom.blueLight}
+        phoneNumber={phoneNumber}
       />
-      <AboutCity content={aboutCityContent} />
-      <RecentWorks content={recentWorksContent} />
-      <InNumbers content={inNumbersContent} />
-      <PriceList items={servicesPriceList} content={priceListContent} />
-      <FAQsection />
+      <AboutCity content={aboutCityContent} phoneNumber={phoneNumber} />
+      <RecentWorks content={recentWorksContent} phoneNumber={phoneNumber} />
+      <InNumbers content={inNumbersContent} phoneNumber={phoneNumber} />
+      <PriceList
+        items={servicesPriceList}
+        content={priceListContent}
+        phoneNumber={phoneNumber}
+      />
+      <FAQsection phoneNumber={phoneNumber} />
 
       <Box
         width={"100%"}
@@ -75,7 +87,7 @@ export default function CityPage({ cityData }: Props) {
       >
         <DistrictsList city={cityData} />
       </Box>
-      <Footer />
+      <Footer phoneNumber={phoneNumber} />
     </Box>
   );
 }

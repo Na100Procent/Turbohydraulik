@@ -33,6 +33,8 @@ export default function DistrictPage({ districtData, city }: Props) {
     inNumbersContent,
   } = getDistrictDataContent(districtData);
 
+  const phoneNumber = districtData.content.phone;
+
   return (
     <Box
       display="flex"
@@ -41,22 +43,24 @@ export default function DistrictPage({ districtData, city }: Props) {
       flexDirection="column"
       id={sectionIds.home}
     >
-      <TopMenu />
-      <IntroSection content={heroContent} />
+      <TopMenu phoneNumber={phoneNumber} />
+      <IntroSection content={heroContent} phoneNumber={phoneNumber} />
       <OurServices
         content={ourServicesContent}
         bottomHeaderColor={theme.palette.custom.background}
+        phoneNumber={phoneNumber}
       />
-      <CustomerReviews content={reviewsContent} />
-      <HowToOrderUs />
+      <CustomerReviews content={reviewsContent} phoneNumber={phoneNumber} />
+      <HowToOrderUs phoneNumber={phoneNumber} />
       <AboutUs
         content={aboutUsContent}
         bgColor={theme.palette.custom.blueLight}
+        phoneNumber={phoneNumber}
       />
-      <AboutCity content={aboutCityContent} />
-      <RecentWorks content={recentWorksContent} />
-      <InNumbers content={inNumbersContent} />
-      <FAQsection />
+      <AboutCity content={aboutCityContent} phoneNumber={phoneNumber} />
+      <RecentWorks content={recentWorksContent} phoneNumber={phoneNumber} />
+      <InNumbers content={inNumbersContent} phoneNumber={phoneNumber} />
+      <FAQsection phoneNumber={phoneNumber} />
 
       <Box
         width={"100%"}
@@ -65,7 +69,7 @@ export default function DistrictPage({ districtData, city }: Props) {
       >
         <DistrictsList city={city} />
       </Box>
-      <Footer />
+      <Footer phoneNumber={phoneNumber} />
     </Box>
   );
 }

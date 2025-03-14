@@ -11,6 +11,10 @@ import { LinkElement } from "../../shared/TitledVerticalList";
 import websiteData from "../../../data/toBeData.json";
 import { sectionXPadding } from "@/app/constants/styles";
 
+interface Props {
+  citySlug: string;
+}
+
 const LocationsListSx = {
   width: "100%",
   display: "flex",
@@ -18,7 +22,7 @@ const LocationsListSx = {
   mt: "50px",
 };
 
-const OurCities = () => {
+const OurCities = ({ citySlug }: Props) => {
   const cityNamesUrls: LinkElement[] = Object.values(websiteData.cities).map(
     (city) => ({
       title: city.name,
@@ -42,7 +46,7 @@ const OurCities = () => {
         </SectionPaddingWrapper>
         <ScrollCityList />
         <div>
-          <CallUsButton />
+          <CallUsButton citySlug={citySlug} />
         </div>
         <Box sx={LocationsListSx}>
           <LocationsList

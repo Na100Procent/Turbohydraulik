@@ -123,7 +123,7 @@
       "cityCardUrl": "https://www.revele.pl/kacpertest/warszawa",
       "availableServices": ["instalacja-i-wymiana-zaworow"],
       "content": {
-        "phone": "505455655",
+        "phone": "505 455 655",
         "hero_h1": "Hydraulik Warszawa",
         "hero_h2": "Hydraulik Warszawa - Twój niezawodny partner w każdej awarii!",
         "hero_text": "Turbo Hydraulik to superbohater, który nigdy nie zawodzi! Wzywaj nas, gdy potrzebujesz szybkiej, skutecznej pomocy hydraulicznej, niezależnie od sytuacji!",
@@ -156,7 +156,7 @@
           "name": "Praga-Północ",
           "slug": "praga-polnoc",
           "content": {
-            "phone": "123-456-789",
+            "phone": "123 456 789",
             "hero_h1": "Hydraulik na Pradze Północ",
             "hero_h2": "Szybki Hydraulik w Praga-Północ",
             "hero_text": "Twoje awarie pod kontrolą – nie pozwól, aby problem przerósł Twoje możliwości!",

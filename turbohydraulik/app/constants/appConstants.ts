@@ -13,7 +13,7 @@ export const homePagePath = "/";
 export const policyPath = "/policy";
 export const termsPath = "/regulamin";
 
-export const phoneNUmber = "923 423 123";
+export const defaultPhoneNUmber = "923 423 123";
 export const email = "info@turbohydraulik.pl";
 
 // error messages

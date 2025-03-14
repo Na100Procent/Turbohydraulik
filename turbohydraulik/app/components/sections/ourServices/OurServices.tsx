@@ -17,6 +17,7 @@ interface Props {
   headerColor?: string;
   bottomHeaderColor?: string;
   content?: OurServiceContent;
+  phoneNumber?: string;
 }
 
 const headerSx = {
@@ -41,6 +42,7 @@ const OurServices = ({
   headerColor,
   content,
   bottomHeaderColor,
+  phoneNumber,
 }: Props) => {
   const serviceContent = content ? content : websiteData.homepageContent;
   const { service_h1, service_h2, service_text } = serviceContent;
@@ -62,7 +64,7 @@ const OurServices = ({
         </SectionPaddingWrapper>
         <ServiceContainer city={city} />
         <Box display={"flex"} justifyContent={"center"} mt="20px">
-          <CallUsButton />
+          <CallUsButton phoneNumber={phoneNumber} />
         </Box>
       </Box>
     </BackgroundWrapper>

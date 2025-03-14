@@ -14,6 +14,7 @@ import { AboutCityContent } from "@/app/data/types/sectionTypes";
 interface Props {
   content: AboutCityContent;
   bgColor?: string;
+  phoneNumber?: string;
 }
 
 const contentSx = {
@@ -43,7 +44,7 @@ const imgSx = {
   overflow: "hidden",
 };
 
-const AboutCity = ({ content, bgColor }: Props) => {
+const AboutCity = ({ content, bgColor, phoneNumber }: Props) => {
   const { aboutCity_h2, aboutCity_text } = content;
 
   return (
@@ -78,7 +79,7 @@ const AboutCity = ({ content, bgColor }: Props) => {
               </Typography>
 
               <div>
-                <CallUsButton />
+                <CallUsButton phoneNumber={phoneNumber} />
               </div>
             </Box>
             <Box sx={imgSx}>

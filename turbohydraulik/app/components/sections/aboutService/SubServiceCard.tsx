@@ -17,7 +17,7 @@ interface Props {
 
 const container = {
   width: {
-    xl: "530px",
+    xl: "480px",
     lg: "430px",
     md: "400px",
     sm: "350px",
@@ -35,8 +35,8 @@ const container = {
   transition: "background-color 0.3s ease, scale 0.3s ease",
   "&:hover": {
     cursor: "pointer",
-    backgroundColor: "rgba(243, 239, 239, 0.9)",
-    scale: 1.05,
+    backgroundColor: "rgba(239, 242, 243, 0.9)",
+    scale: 1.02,
   },
 };
 
