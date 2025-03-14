@@ -8,7 +8,6 @@ import HorizontalSeparator from "./components/HorizontalSeparator";
 import LinksAndServices from "./components/LinksAndServices";
 import SocialMediasSeparator from "./components/SocialMediasSeparator";
 import { YellowRightOrnament } from "@/public/assets/icons/icons";
-import PlumberBanner from "./components/PlumberBanner";
 import { sectionIds } from "@/app/constants/appConstants";
 
 const Footer = () => {
@@ -18,7 +17,7 @@ const Footer = () => {
       sx={{ padding: "0" }}
     >
       <Box id={sectionIds.contact}>
-        <PlumberBanner />
+        {/* <PlumberBanner /> */}
         <Box
           padding={"150px 0 0 0"}
           display={"flex"}

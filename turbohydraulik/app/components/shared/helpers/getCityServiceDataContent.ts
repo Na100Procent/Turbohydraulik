@@ -1,4 +1,4 @@
-import { DistrictData } from "@/app/data/types/dataTypes";
+import { DistrictData, ServiceData } from "@/app/data/types/dataTypes";
 import {
   HeroContent,
   ReviewsContent,
@@ -8,13 +8,22 @@ import {
   InNumbersContent,
   PriceListContent,
   OurServiceContent,
+  AboutServiceContent,
 } from "../../../data/types/sectionTypes";
 
-export const getCityServiceDataContent = (cityServiceData: DistrictData) => {
+export const getCityServiceDataContent = (
+  cityServiceData: DistrictData,
+  cityService: ServiceData
+) => {
   const heroContent: HeroContent = {
     hero_h1: cityServiceData.content.hero_h1,
     hero_h2: cityServiceData.content.hero_h2,
     hero_text: cityServiceData.content.hero_text,
+  };
+
+  const aboutServiceContent: AboutServiceContent = {
+    aboutService_h2: cityService.content.aboutService_h2,
+    aboutService_text: cityService.content.aboutService_text,
   };
 
   const ourServicesContent: OurServiceContent = {
@@ -63,5 +72,6 @@ export const getCityServiceDataContent = (cityServiceData: DistrictData) => {
     recentWorksContent,
     inNumbersContent,
     priceListContent,
+    aboutServiceContent,
   };
 };

@@ -30,7 +30,7 @@ const LogoContact = () => {
       </Box>
       <Box display={"flex"} gap={"50px"} flexWrap="wrap">
         <ContactForm
-          subHeader="TELEFON"
+          subHeader="NUMER TELEFONU"
           header={phoneNUmber}
           icon={<LocalPhoneOutlinedIcon />}
         />

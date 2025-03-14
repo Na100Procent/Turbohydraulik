@@ -44,12 +44,12 @@ const FailureForm = () => {
   return (
     <Box sx={container}>
       <Typography variant="h6" sx={headerSx}>
-        ZGŁOŚ USTERKĘ
+        ZAMÓW USŁUGĘ HYDRAULICZNĄ
       </Typography>
       <Input
         disableUnderline
         sx={{ ...phoneInput, ...input }}
-        placeholder="Numer telefonu"
+        placeholder="Twój numer telefonu"
       />
       <Input
         disableUnderline
@@ -57,7 +57,7 @@ const FailureForm = () => {
         placeholder="Opisz swój problem"
       />
       <RectangularButton
-        title="Zgłaszam usterkę"
+        title="Zamawiam usługę"
         bgColor={theme.palette.secondary.main}
       />
       <Typography

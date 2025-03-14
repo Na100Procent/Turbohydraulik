@@ -44,14 +44,13 @@ const contentSx = {
 
 const imageSx = {
   marginBottom: "20px",
-
   borderRadius: "15px",
 };
 const FAQsection = () => {
   return (
     <BackgroundWrapper bgColor={theme.palette.custom.background}>
       <SectionPaddingWrapper>
-        <Box paddingBottom={"200px"} id={sectionIds.faq}>
+        <Box id={sectionIds.faq}>
           <SectionCenterHeader
             topHeader="FAQ’S"
             header="Najczęściej zadawane pytania"
@@ -68,6 +67,7 @@ const FAQsection = () => {
               <Image
                 src="https://github.com/user-attachments/assets/ca378ab7-a9b2-4736-ac5f-fe20ad776b11"
                 alt="image"
+                layout="responsive"
                 width={500}
                 height={560}
                 style={imageSx}

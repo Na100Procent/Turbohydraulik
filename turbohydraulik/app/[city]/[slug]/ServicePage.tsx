@@ -19,6 +19,7 @@ import HeroService from "@/app/components/sections/heroService/HeroService";
 import theme from "@/app/theme/theme";
 import ErrorMessage from "@/app/components/shared/ErrorMessage";
 import { getCityServiceDataContent } from "@/app/components/shared/helpers/getCityServiceDataContent";
+import AboutService from "@/app/components/sections/aboutService/AboutService";
 
 interface Props {
   serviceData: DistrictData;
@@ -42,7 +43,8 @@ export default function ServicePage({ serviceData, cityService }: Props) {
     recentWorksContent,
     inNumbersContent,
     priceListContent,
-  } = getCityServiceDataContent(serviceData);
+    aboutServiceContent,
+  } = getCityServiceDataContent(serviceData, cityService);
 
   return (
     <Box
@@ -54,6 +56,7 @@ export default function ServicePage({ serviceData, cityService }: Props) {
     >
       <TopMenu />
       <HeroService content={heroContent} />
+      <AboutService content={aboutServiceContent} subServices={subServices} />
       <CustomerReviews content={reviewsContent} />
       <AboutUs content={aboutUsContent} />
       <HowToOrderUs content={howToContent} />
@@ -64,7 +67,7 @@ export default function ServicePage({ serviceData, cityService }: Props) {
       <Box
         width={"100%"}
         bgcolor={theme.palette.custom.background}
-        padding="0px 0px 400px 0 "
+        padding="0px 0px 200px 0 "
       >
         <OurServices
           bgColor={theme.palette.custom.background}

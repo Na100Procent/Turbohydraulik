@@ -10,17 +10,18 @@ import HowToOrderUs from "../../components/sections/howToOrderUs/HowToOrderUs";
 import CustomerReviews from "../../components/sections/customerReviews/CustomerReviews";
 import RecentWorks from "../../components/sections/recentWorks/RecentWorks";
 import FAQsection from "../../components/sections/faqSection/FAQsection";
-import { DistrictData } from "@/app/data/types/dataTypes";
+import { CityData, DistrictData } from "@/app/data/types/dataTypes";
 import theme from "@/app/theme/theme";
-import OurCities from "@/app/components/sections/ourCities/OurCities";
 import { getDistrictDataContent } from "@/app/components/shared/helpers/getDistrictDataContent";
 import ErrorMessage from "@/app/components/shared/ErrorMessage";
 import AboutCity from "@/app/components/sections/aboutCity/AboutCity";
+import DistrictsList from "@/app/components/shared/DistrictsList";
 
 interface Props {
   districtData: DistrictData;
+  city: CityData;
 }
-export default function DistrictPage({ districtData }: Props) {
+export default function DistrictPage({ districtData, city }: Props) {
   if (!districtData) return <ErrorMessage message={errorPageLoad} />;
   const {
     heroContent,
@@ -62,7 +63,7 @@ export default function DistrictPage({ districtData }: Props) {
         bgcolor={theme.palette.custom.background}
         padding="0px 0px 300px 0 "
       >
-        <OurCities />
+        <DistrictsList city={city} />
       </Box>
       <Footer />
     </Box>
