@@ -6,6 +6,13 @@ import CallUsButton from "../../shared/CallUsButton";
 import { websiteData } from "@/app/data/data";
 import { HeroContent } from "@/app/data/types/sectionTypes";
 import ServiceHeaderBox from "./ServiceHeaderBox";
+import {
+  aboutUsUrl,
+  serviceCardUrl,
+  serviceHeroBg,
+} from "@/app/constants/imagesUrls";
+import MosaicElement from "../../shared/mosaic/MosaicElement";
+import MosaicGrid from "../../shared/mosaic/MosaicGrid";
 
 interface Props {
   content?: HeroContent;
@@ -26,15 +33,27 @@ const heroSx = {
   borderRadius: "15px",
   maxWidth: "500px",
   padding: "40px",
-  minWidth: "100%",
 
   background: theme.palette.primary.main,
 };
 const contentSx = {
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  gap: "50px",
+  flexDirection: {
+    xl: "row",
+    lg: "row",
+    md: "column",
+    sm: "column",
+    xs: "column",
+    xxs: "column",
+  },
+
   padding: {
     xl: "50px 50px",
     lg: "50px 50px",
-    md: "20px 20px",
+    md: "50px 20px",
     sm: "20px 20px",
     xs: "20px 10px",
     xxs: "10px 10px",
@@ -46,6 +65,12 @@ const HeroService = ({ content }: Props) => {
   const heroSubHeader = heroSectionData.hero_h2;
   const heroText = heroSectionData.hero_text;
 
+  const serviceImages = [
+    <MosaicElement key={0} bgImage={serviceHeroBg} />,
+    <MosaicElement key={1} bgImage={aboutUsUrl} />,
+    <MosaicElement key={2} bgImage={serviceCardUrl} />,
+    <MosaicElement key={3} bgImage={serviceHeroBg} />,
+  ];
   return (
     <BackgroundWrapper
       sx={containerSx}
@@ -68,6 +93,9 @@ const HeroService = ({ content }: Props) => {
             >
               <CallUsButton />
             </Box>
+          </Box>
+          <Box width="100%">
+            <MosaicGrid elements={serviceImages} />
           </Box>
         </Box>
       </Box>

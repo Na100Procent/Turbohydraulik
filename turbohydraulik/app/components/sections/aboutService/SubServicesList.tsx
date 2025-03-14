@@ -1,28 +1,49 @@
 import { SubService } from "@/app/data/types/dataTypes";
 import React from "react";
-import TitledVerticalList, {
-  LinkElement,
-} from "../../shared/TitledVerticalList";
-import theme from "@/app/theme/theme";
+import { Box } from "@mui/material";
+import SubServiceCard from "./SubServiceCard";
 
 interface Props {
   subServices: SubService[];
 }
+const containerSx = {
+  display: "flex",
+  flexWrap: "wrap",
+  flexDirection: {
+    xl: "row",
+    lg: "row",
+    md: "column",
+    sm: "column",
+    xs: "column",
+    xxs: "column",
+  },
+
+  gap: "10px",
+  justifyContent: {
+    xl: "left",
+    lg: "left",
+    md: "center",
+    sm: "center",
+    xs: "center",
+    xxs: "center",
+  },
+
+  width: "100%",
+  alignItems: "center",
+};
 const SubServicesList = ({ subServices }: Props) => {
-  console.log(subServices);
-  const subServicesList: LinkElement[] = subServices.map((subService) => {
-    return {
-      title: subService.name,
-      url: "",
-    };
+  const subServicesList = subServices.map((subService) => {
+    return (
+      <SubServiceCard
+        key={subService.name}
+        service={{
+          name: subService.name,
+          slug: "",
+        }}
+      />
+    );
   });
-  return (
-    <TitledVerticalList
-      title={"USŁUGI POWIĄZANE"}
-      list={subServicesList}
-      addSx={{ color: theme.palette.primary.main }}
-    />
-  );
+  return <Box sx={containerSx}>{subServicesList}</Box>;
 };
 
 export default SubServicesList;

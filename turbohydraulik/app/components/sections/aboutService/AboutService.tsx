@@ -32,7 +32,6 @@ const contentSx = {
   justifyContent: "space-between",
   alignItems: "top",
   mt: "80px",
-
   gap: "100px",
 };
 
@@ -55,7 +54,7 @@ const descriptionSx = {
   color: theme.palette.custom.darkGray,
   fontFamily: "UniteaSans",
   fontWeight: "500",
-  width: "100%",
+  maxWidth: "3000px",
   textAlign: "left",
 };
 
@@ -91,7 +90,7 @@ const AboutService = ({ content, bgColor, subServices }: Props) => {
               gap="30px"
               justifyContent="space-between"
             >
-              {/* <Typography
+              <Typography
                 variant="h3"
                 sx={{
                   fontWeight: "600",
@@ -100,8 +99,8 @@ const AboutService = ({ content, bgColor, subServices }: Props) => {
                   color: theme.palette.primary.main,
                 }}
               >
-                {aboutUs_h3}
-              </Typography> */}
+                {aboutService_h2} Turbohydraulik
+              </Typography>
               <Typography sx={descriptionSx}>{aboutService_text}</Typography>
               <SubServicesList subServices={subServices} />
               <Box display="flex" justifyContent="center" mt="20px">

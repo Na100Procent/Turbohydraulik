@@ -12,7 +12,13 @@ const ServiceContainer = ({ city }: Props) => {
   const mappedServiceElements = Object.values(websiteData.services).map(
     (service, index) => (
       <Box key={index} sx={{ margin: "0 10px" }}>
-        <ServiceCard service={service} city={city} />
+        <ServiceCard
+          service={{
+            name: service.name,
+            slug: service.slug,
+          }}
+          city={city}
+        />
       </Box>
     )
   );

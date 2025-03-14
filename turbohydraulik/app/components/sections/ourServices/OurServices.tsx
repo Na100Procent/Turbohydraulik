@@ -60,7 +60,6 @@ const OurServices = ({
             />
           </Box>
         </SectionPaddingWrapper>
-
         <ServiceContainer city={city} />
         <Box display={"flex"} justifyContent={"center"} mt="20px">
           <CallUsButton />

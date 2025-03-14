@@ -15,7 +15,6 @@ const imgContainer = {
     xxs: "column",
   },
   gridTemplateColumns: "1fr 1.5fr",
-
   gap: 2,
   width: "100%",
   maxWidth: "1200px",

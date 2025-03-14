@@ -6,7 +6,6 @@ import theme from "@/app/theme/theme";
 import { CityData } from "@/app/data/types/dataTypes";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { serviceCardUrl } from "@/app/constants/imagesUrls";
 
 interface Props {
   city?: CityData;
@@ -18,15 +17,13 @@ interface Props {
 
 const container = {
   width: {
-    xl: "400px",
-    lg: "400px",
+    xl: "530px",
+    lg: "430px",
     md: "400px",
     sm: "350px",
     xs: "350px",
     xxs: "350px",
   },
-
-  height: "470px",
   borderRadius: "12px",
   overflow: "hidden",
   backgroundColor: theme.palette.custom.background,
@@ -42,12 +39,6 @@ const container = {
     scale: 1.05,
   },
 };
-const imgSx = {
-  marginTop: "10px",
-  height: "65%",
-  maxHeight: "300px",
-  objectFit: "cover",
-};
 
 const titleSx = {
   fontWeight: "bold",
@@ -56,6 +47,7 @@ const titleSx = {
   mt: "20px",
   textAlign: "left",
   fontSize: "20px",
+  mb: "10px",
 };
 
 const descriptionSx = {
@@ -67,7 +59,7 @@ const descriptionSx = {
   mt: "5px",
 };
 
-const ServiceCard = ({ city, service }: Props) => {
+const SubServiceCard = ({ city, service }: Props) => {
   const pathname = usePathname();
   const pathSegments = pathname.split("/").filter(Boolean);
 
@@ -82,7 +74,6 @@ const ServiceCard = ({ city, service }: Props) => {
   return (
     <Link href={newPath}>
       <Box sx={container}>
-        <Box component="img" src={serviceCardUrl} sx={imgSx} />
         <Typography variant="h5" sx={titleSx}>
           {service.name + " " + cityTitle}
         </Typography>
@@ -96,4 +87,4 @@ const ServiceCard = ({ city, service }: Props) => {
   );
 };
 
-export default ServiceCard;
+export default SubServiceCard;

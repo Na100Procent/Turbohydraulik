@@ -22,9 +22,6 @@ const contentSx = {
     xl: "row",
     lg: "row",
     md: "column",
-    sm: "column",
-    xs: "column",
-    xxs: "column",
   },
   justifyContent: "center",
 
@@ -33,9 +30,6 @@ const contentSx = {
     xl: "-50px",
     lg: "-50px",
     md: "20px",
-    sm: "20px",
-    xs: "20px",
-    xxs: "20px",
   },
   gap: "100px",
 };
