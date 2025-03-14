@@ -20,7 +20,7 @@ const DistrictsList = ({ city }: Props) => {
       width="100%"
       bgcolor={theme.palette.custom.blueLight}
     >
-      <Box padding="30px 0">
+      <Box padding="30px 35px">
         <SectionCenterHeader
           header="Dzielnice w których działamy"
           topHeader="Dzielnice"
@@ -29,7 +29,7 @@ const DistrictsList = ({ city }: Props) => {
           locsTitle={`JESTEŚMY W TYCH DZIELNICACH MIASTA ${city.name}`}
           locationsList={districtsLinks}
           addSx={{ color: theme.palette.primary.main, padding: "20px" }}
-        />{" "}
+        />
       </Box>
     </Box>
   );

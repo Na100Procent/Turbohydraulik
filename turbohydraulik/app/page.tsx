@@ -11,6 +11,7 @@ import Footer from "./components/sections/footer/Footer";
 import TopMenu from "./components/sections/topMenu/TopMenu";
 import { sectionIds } from "./constants/appConstants";
 import OurCities from "./components/sections/ourCities/OurCities";
+import theme from "./theme/theme";
 
 export default function Home() {
   const containerSx = {
@@ -28,7 +29,7 @@ export default function Home() {
       <IntroSection />
       <OurCities />
       <AboutUs />
-      <OurServices />
+      <OurServices bottomHeaderColor={theme.palette.custom.background} />
       <HowToOrderUs />
       <CustomerReviews />
       <InNumbers />

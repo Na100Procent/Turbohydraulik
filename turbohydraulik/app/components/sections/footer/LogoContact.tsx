@@ -30,12 +30,12 @@ const LogoContact = () => {
       </Box>
       <Box display={"flex"} gap={"50px"} flexWrap="wrap">
         <ContactForm
-          subHeader="PHONE NO"
+          subHeader="NUMER TELEFONU"
           header={phoneNUmber}
           icon={<LocalPhoneOutlinedIcon />}
         />
         <ContactForm
-          subHeader="EMAIL ADDRESS"
+          subHeader="ADRES E-MAIL"
           header={email}
           icon={<EmailOutlinedIcon />}
         />

@@ -9,6 +9,7 @@ import CallUsButton from "../../shared/CallUsButton";
 import LocationsList from "../footer/components/LocationsList";
 import { LinkElement } from "../../shared/TitledVerticalList";
 import websiteData from "../../../data/toBeData.json";
+import { sectionXPadding } from "@/app/constants/styles";
 
 const LocationsListSx = {
   width: "100%",
@@ -31,7 +32,7 @@ const OurCities = () => {
         display={"flex"}
         flexDirection={"column"}
         alignItems={"center"}
-        padding={"50px 0px 50px 0"}
+        padding={sectionXPadding}
       >
         <SectionPaddingWrapper>
           <SectionCenterHeader

@@ -8,8 +8,8 @@ interface StatItem {
 
 const stats: StatItem[] = [
   { number: "10 lat", title: "Doświadczenia" },
-  { number: "138+", title: "Zrealizowanych Projektów" },
-  { number: "500+", title: "Zadowolonych Klientów" },
+  { number: "138+", title: "Zrealizowanych Projektów w ostatnich 30 dniach" },
+  { number: "500+", title: "Zadowolonych Klientów w ostatnich 30 dniach" },
 ];
 
 const container = {
@@ -64,7 +64,8 @@ const numberSx = {
 
 const titleSx = {
   fontWeight: "600",
-  fontSize: "15px",
+  maxWidth: "200px",
+  fontSize: "14px",
   color: theme.palette.primary.main,
 };
 

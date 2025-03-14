@@ -18,7 +18,7 @@ const ReviewCard: React.FC<ReviewCardProps> = ({
   const blue = theme.palette.primary.main;
 
   const container = {
-    padding: "50px 30px",
+    padding: "30px 30px",
     background: theme.palette.custom.background,
     borderRadius: "8px",
     boxShadow: "2px 2px 10px rgba(0,0,0,0.1)",
@@ -39,7 +39,7 @@ const ReviewCard: React.FC<ReviewCardProps> = ({
         variant="h5"
         fontWeight="700"
         color={blue}
-        sx={{ fontFamily: "UniteaSans" }}
+        sx={{ fontFamily: "UniteaSans", height: "50px" }}
       >
         {reviewerName}
       </Typography>
@@ -63,8 +63,11 @@ const ReviewCard: React.FC<ReviewCardProps> = ({
         }}
       />
       <Typography
-        minHeight="150px"
-        sx={{ fontFamily: "UniteaSans", fontWeight: "500" }}
+        minHeight="160px"
+        sx={{
+          fontFamily: "UniteaSans",
+          fontWeight: "500",
+        }}
       >
         {review}
       </Typography>

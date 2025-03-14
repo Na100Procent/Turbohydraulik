@@ -1,6 +1,13 @@
 import theme from "@/app/theme/theme";
 import { Box, Typography } from "@mui/material";
 import React from "react";
+import {
+  aboutUsUrl,
+  serviceCardUrl,
+  serviceHeroBg,
+} from "@/app/constants/imagesUrls";
+import MosaicElement from "../../shared/mosaic/MosaicElement";
+import MosaicGrid from "../../shared/mosaic/MosaicGrid";
 
 interface Props {
   header: string;
@@ -32,11 +39,17 @@ const subHeaderSX = {
   mb: "20px",
 };
 
-const HeaderBox = ({ header, subHeader, text }: Props) => {
+const ServiceHeaderBox = ({ header, subHeader, text }: Props) => {
   const headerWords = header.split(" ");
   const headerPart1 = headerWords.slice(0, -1).join(" ");
   const headerPart2 = headerWords.slice(-1).join(" ");
 
+  const serviceImages = [
+    <MosaicElement key={0} bgImage={serviceHeroBg} />,
+    <MosaicElement key={1} bgImage={aboutUsUrl} />,
+    <MosaicElement key={2} bgImage={serviceCardUrl} />,
+    <MosaicElement key={3} bgImage={serviceHeroBg} />,
+  ];
   return (
     <>
       <Box>
@@ -57,8 +70,9 @@ const HeaderBox = ({ header, subHeader, text }: Props) => {
         {subHeader}
       </Typography>
       <p style={subHeaderSX}>{text}</p>
+      <MosaicGrid elements={serviceImages} />
     </>
   );
 };
 
-export default HeaderBox;
+export default ServiceHeaderBox;

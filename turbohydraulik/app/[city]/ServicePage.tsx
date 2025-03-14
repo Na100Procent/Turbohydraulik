@@ -15,6 +15,7 @@ import theme from "../theme/theme";
 import { ServiceData, SubService } from "../data/types/dataTypes";
 import { getServiceDataContent } from "../components/shared/helpers/getServiceDataContent";
 import ErrorMessage from "../components/shared/ErrorMessage";
+import AboutService from "../components/sections/aboutService/AboutService";
 
 interface Props {
   serviceData: ServiceData;
@@ -31,6 +32,7 @@ export default function ServicePage({ serviceData }: Props) {
 
   const {
     heroContent,
+    aboutServiceContent,
     ourServicesContent,
     reviewsContent,
     howToContent,
@@ -50,6 +52,7 @@ export default function ServicePage({ serviceData }: Props) {
     >
       <TopMenu />
       <HeroService content={heroContent} />
+      <AboutService content={aboutServiceContent} subServices={subServices} />
       <CustomerReviews content={reviewsContent} />
       <AboutUs content={aboutUsContent} />
       <HowToOrderUs content={howToContent} />
@@ -60,7 +63,7 @@ export default function ServicePage({ serviceData }: Props) {
       <Box
         width={"100%"}
         bgcolor={theme.palette.custom.background}
-        padding="0px 0px 400px 0 "
+        padding="0px 0px 200px 0 "
       >
         <OurServices
           bgColor={theme.palette.custom.background}

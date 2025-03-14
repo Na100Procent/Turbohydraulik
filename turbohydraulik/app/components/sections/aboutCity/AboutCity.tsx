@@ -27,8 +27,16 @@ const contentSx = {
     xxs: "column",
   },
   justifyContent: "center",
-  alignItems: "top",
-  mt: "80px",
+
+  alignItems: "center",
+  mt: {
+    xl: "-50px",
+    lg: "-50px",
+    md: "20px",
+    sm: "20px",
+    xs: "20px",
+    xxs: "20px",
+  },
   gap: "100px",
 };
 
@@ -69,6 +77,7 @@ const AboutCity = ({ content, bgColor }: Props) => {
                   color: theme.palette.custom.darkGray,
                   fontFamily: "UniteaSans",
                   fontWeight: "500",
+                  selfAlign: "top",
                 }}
               >
                 {aboutCity_text}

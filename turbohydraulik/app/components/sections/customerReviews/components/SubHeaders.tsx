@@ -1,3 +1,4 @@
+import { sectionXPadding } from "@/app/constants/styles";
 import theme from "@/app/theme/theme";
 import { Box, Typography } from "@mui/material";
 import React from "react";
@@ -8,7 +9,13 @@ interface Props {
 }
 const SubHeaders = ({ testimonials_h3, testimonials_text_2 }: Props) => {
   return (
-    <Box display={"flex"} flexDirection={"column"} alignItems={"center"}>
+    <Box
+      display={"flex"}
+      flexDirection={"column"}
+      alignItems={"center"}
+      textAlign={"center"}
+      padding={sectionXPadding}
+    >
       <Typography
         variant="h4"
         color={theme.palette.primary.main}

@@ -3,8 +3,6 @@ import theme from "@/app/theme/theme";
 import { Box, IconButton } from "@mui/material";
 import React from "react";
 import FacebookIcon from "@mui/icons-material/Facebook";
-import TwitterIcon from "@mui/icons-material/Twitter";
-import EmailIcon from "@mui/icons-material/Email";
 
 const socialMediasSx = {
   justifyContent: "center",
@@ -50,24 +48,6 @@ const SocialMedias = () => {
         }}
       >
         <FacebookIcon sx={socialIconSx} />
-      </IconButton>
-      <IconButton
-        sx={{
-          backgroundColor: theme.palette.secondary.main,
-          color: theme.palette.primary.main,
-          ...iconBtn,
-        }}
-      >
-        <TwitterIcon sx={socialIconSx} />
-      </IconButton>
-      <IconButton
-        sx={{
-          backgroundColor: theme.palette.custom.darkBlue,
-          color: "white",
-          ...iconBtn,
-        }}
-      >
-        <EmailIcon sx={socialIconSx} />
       </IconButton>
     </Box>
   );

@@ -14,20 +14,28 @@ const contentSx = {
   mt: "50px",
   display: "flex",
   padding: sectionXPadding,
-  gap: "30px",
+  gap: {
+    xl: "100px",
+    lg: "20px",
+    md: "20px",
+    sm: "20px",
+    xs: "20px",
+    xxs: "20px",
+  },
   alignItems: {
     xl: "start",
     lg: "start",
-    md: "start",
+    md: "center",
     sm: "center",
     xs: "center",
     xxs: "center",
   },
-  justifyContent: "center",
+  justifyContent: "space-between",
+
   flexDirection: {
     xl: "row",
     lg: "row",
-    md: "row",
+    md: "column",
     sm: "column",
     xs: "column",
     xxs: "column",
@@ -42,21 +50,26 @@ const FAQsection = () => {
   return (
     <BackgroundWrapper bgColor={theme.palette.custom.background}>
       <SectionPaddingWrapper>
-        <Box paddingBottom={"200px"} id={sectionIds.faq}>
+        <Box id={sectionIds.faq}>
           <SectionCenterHeader
-            topHeader="FAQ’S QUESTIONS"
-            header="Frequently Asked Questions"
-            bottomHeader="Find answers to the most frequently asked questions about our plumbing services. If you can't find the answer, please contact us!"
+            topHeader="FAQ’S"
+            header="Najczęściej zadawane pytania"
+            bottomHeader="Znajdź odpowiedzi na najczęściej zadawane pytania dotyczące naszych usług hydraulicznych. Jeśli nie możesz znaleźć odpowiedzi, skontaktuj się z nami!"
             headerColor={theme.palette.primary.main}
           />
           <Box sx={contentSx}>
             <FAQElements />
-            <Box>
+            <Box
+              display={"flex"}
+              flexDirection={"column"}
+              alignItems={"center"}
+            >
               <Image
                 src="https://github.com/user-attachments/assets/ca378ab7-a9b2-4736-ac5f-fe20ad776b11"
                 alt="image"
-                width={320}
-                height={350}
+                layout="responsive"
+                width={500}
+                height={560}
                 style={imageSx}
               />
 

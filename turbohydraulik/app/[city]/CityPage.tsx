@@ -71,7 +71,7 @@ export default function CityPage({ cityData }: Props) {
       <Box
         width={"100%"}
         bgcolor={theme.palette.custom.background}
-        padding="0px 0px 400px 0 "
+        padding="0px 0px 200px 0 "
       >
         <DistrictsList city={cityData} />
       </Box>

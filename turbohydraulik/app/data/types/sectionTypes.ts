@@ -24,6 +24,10 @@ export interface OurServiceContent {
   // service_text_4: string;
 }
 
+export interface AboutServiceContent {
+  aboutService_h2: string;
+  aboutService_text: string;
+}
 export interface HowToContent {
   steps_h2: string;
 }

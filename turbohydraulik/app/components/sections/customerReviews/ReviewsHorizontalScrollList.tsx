@@ -11,7 +11,7 @@ const ReviewsHorizontalScrollList = () => {
   const [start, setStart] = useState(false);
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
-  const animationDest = isMobile ? "-1000%" : "-100%";
+  const animationDest = isMobile ? "-600%" : "-100%";
   const scrollAnimation = useSpring({
     from: { transform: "translateX(-3%)" },
     to: {
@@ -36,7 +36,11 @@ const ReviewsHorizontalScrollList = () => {
 
   return (
     <AnimatedBox
-      style={{ ...scrollAnimation, display: "flex", marginBottom: "50px" }}
+      style={{
+        ...scrollAnimation,
+        display: "flex",
+        marginBottom: "50px",
+      }}
     >
       {mappedServiceElements}
     </AnimatedBox>

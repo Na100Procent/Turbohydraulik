@@ -1,7 +1,6 @@
 import React from "react";
 import { Box, IconButton } from "@mui/material";
 import FacebookIcon from "@mui/icons-material/Facebook";
-import TwitterIcon from "@mui/icons-material/Twitter";
 import EmailIcon from "@mui/icons-material/Email";
 import theme from "@/app/theme/theme";
 
@@ -49,15 +48,7 @@ const SocialMediasSeparator = ({ separatorColor }: Props) => {
         >
           <FacebookIcon />
         </IconButton>
-        <IconButton
-          sx={{
-            backgroundColor: theme.palette.secondary.main,
-            color: theme.palette.primary.main,
-            ...iconBtn,
-          }}
-        >
-          <TwitterIcon />
-        </IconButton>
+
         <IconButton
           sx={{
             backgroundColor: theme.palette.custom.darkBlue,

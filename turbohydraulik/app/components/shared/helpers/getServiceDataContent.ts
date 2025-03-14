@@ -8,6 +8,7 @@ import {
   InNumbersContent,
   PriceListContent,
   OurServiceContent,
+  AboutServiceContent,
 } from "../../../data/types/sectionTypes";
 
 export const getServiceDataContent = (serviceData: ServiceData) => {
@@ -15,6 +16,11 @@ export const getServiceDataContent = (serviceData: ServiceData) => {
     hero_h1: serviceData.content.hero_h1,
     hero_h2: serviceData.content.hero_h2,
     hero_text: serviceData.content.hero_text,
+  };
+
+  const aboutServiceContent: AboutServiceContent = {
+    aboutService_h2: serviceData.content.aboutService_h2,
+    aboutService_text: serviceData.content.aboutService_text,
   };
 
   const ourServicesContent: OurServiceContent = {
@@ -56,6 +62,7 @@ export const getServiceDataContent = (serviceData: ServiceData) => {
 
   return {
     heroContent,
+    aboutServiceContent,
     ourServicesContent,
     reviewsContent,
     howToContent,

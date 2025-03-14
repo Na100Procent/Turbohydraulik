@@ -48,7 +48,7 @@ const IntroSection = ({ content }: Props) => {
   const heroText = heroSectionData.hero_text;
   return (
     <BackgroundWrapper bgImage={introBgUrl} sx={containerSx}>
-      <Box padding="50px 0 0 0">
+      <Box padding="20px 0 0 0">
         <Box sx={contentSx}>
           <Box sx={heroSx}>
             <HeaderBox

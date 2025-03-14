@@ -29,6 +29,7 @@ const HowToOrderUs = ({ content }: Props) => {
         >
           <SectionCenterHeader
             header={steps_h2}
+            topHeader="JAK ZAMÓWIĆ USŁUGĘ?"
             bottomHeader="Aby zamówić usługę hydrauliczną, skontaktuj się z nami telefonicznie lub za pomocą formularza kontaktowego na naszej stronie internetowej."
           />
           <HowToList />
