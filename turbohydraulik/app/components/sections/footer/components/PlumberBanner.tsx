@@ -1,12 +1,7 @@
 import { Box, Typography } from "@mui/material";
 import React from "react";
-import CallUsButton from "@/app/components/shared/CallUsButton";
 import theme from "@/app/theme/theme";
 import Plumber from "@/public/assets/images/Images";
-
-interface Props {
-  citySlug: string;
-}
 
 const container = {
   display: "flex",
@@ -37,7 +32,7 @@ const headerSx = {
     lineHeight: "40px",
   },
 };
-const PlumberBanner = ({ citySlug }: Props) => {
+const PlumberBanner = () => {
   return (
     <Box sx={container}>
       <Box
@@ -50,10 +45,6 @@ const PlumberBanner = ({ citySlug }: Props) => {
         <Typography sx={headerSx}>
           Podziel się opinią o Turbo Hydraulik
         </Typography>
-        <CallUsButton
-          bgColor={theme.palette.custom.background}
-          citySlug={citySlug}
-        />
       </Box>
       <Box position={"absolute"} bottom={"-12px"} right={"-10px"} zIndex={0}>
         <Plumber />
