@@ -74,7 +74,11 @@ export default function ServicePage({
       <CustomerReviews content={reviewsContent} phoneNumber={phoneNumber} />
       <AboutUs content={aboutUsContent} phoneNumber={phoneNumber} />
       <HowToOrderUs content={howToContent} phoneNumber={phoneNumber} />
-      <InNumbers content={inNumbersContent} phoneNumber={phoneNumber} />
+      <InNumbers
+        content={inNumbersContent}
+        phoneNumber={phoneNumber}
+        bgColor={theme.palette.custom.yellowLight}
+      />
       <PriceList
         content={priceListContent}
         items={subServicesPriceList}

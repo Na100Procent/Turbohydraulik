@@ -56,7 +56,10 @@ export default function ServicePage({ serviceData }: Props) {
       <CustomerReviews content={reviewsContent} />
       <AboutUs content={aboutUsContent} />
       <HowToOrderUs content={howToContent} />
-      <InNumbers content={inNumbersContent} />
+      <InNumbers
+        content={inNumbersContent}
+        bgColor={theme.palette.custom.yellowLight}
+      />
       <PriceList content={priceListContent} items={subServicesPriceList} />
       <FAQsection />
       <RecentWorks content={recentWorksContent} />

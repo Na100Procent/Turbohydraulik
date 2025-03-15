@@ -65,7 +65,7 @@ const AboutService = ({
   const { aboutService_text, aboutService_h2 } = content;
   return (
     <BackgroundWrapper
-      bgColor={bgColor ? bgColor : theme.palette.custom.yellowLight}
+      bgColor={bgColor ? bgColor : theme.palette.custom.background}
     >
       <SectionPaddingWrapper>
         <Box sx={textSx} id={sectionIds.about}>
