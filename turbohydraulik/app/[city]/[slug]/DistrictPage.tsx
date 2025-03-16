@@ -16,6 +16,8 @@ import { getDistrictDataContent } from "@/app/components/shared/helpers/getDistr
 import ErrorMessage from "@/app/components/shared/ErrorMessage";
 import AboutCity from "@/app/components/sections/aboutCity/AboutCity";
 import DistrictsList from "@/app/components/shared/DistrictsList";
+import PriceList from "@/app/components/sections/priceList/PriceList";
+import getCityServices from "@/app/components/shared/helpers/getCityServices";
 
 interface Props {
   districtData: DistrictData;
@@ -31,10 +33,12 @@ export default function DistrictPage({ districtData, city }: Props) {
     aboutUsContent,
     recentWorksContent,
     inNumbersContent,
+    priceListContent,
   } = getDistrictDataContent(districtData);
 
   const phoneNumber = districtData.content.phone;
 
+  const availableServices = getCityServices(city.availableServices);
   return (
     <Box
       display="flex"
@@ -60,12 +64,13 @@ export default function DistrictPage({ districtData, city }: Props) {
       <AboutCity content={aboutCityContent} phoneNumber={phoneNumber} />
       <RecentWorks content={recentWorksContent} phoneNumber={phoneNumber} />
       <InNumbers content={inNumbersContent} phoneNumber={phoneNumber} />
+      <PriceList content={priceListContent} items={availableServices} />
       <FAQsection phoneNumber={phoneNumber} />
 
       <Box
         width={"100%"}
         bgcolor={theme.palette.custom.background}
-        padding="0px 0px 300px 0 "
+        padding="0px 0px 200px 0 "
       >
         <DistrictsList city={city} />
       </Box>

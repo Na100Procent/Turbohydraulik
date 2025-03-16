@@ -7,29 +7,19 @@ interface Props {
   subServices: SubService[];
 }
 const containerSx = {
-  display: "flex",
-  flexWrap: "wrap",
-  flexDirection: {
-    xl: "row",
-    lg: "row",
-    md: "column",
+  display: {
+    xl: "grid",
+    lg: "grid",
+    md: "grid",
     sm: "column",
     xs: "column",
     xxs: "column",
   },
-
-  gap: "10px",
-  justifyContent: {
-    xl: "left",
-    lg: "left",
-    md: "center",
-    sm: "center",
-    xs: "center",
-    xxs: "center",
-  },
-
-  width: "100%",
-  alignItems: "center",
+  gridTemplateColumns: "repeat(2, 320px)",
+  gridTemplateRows: "repeat(2, 300px)",
+  gap: "20px",
+  justifyContent: "center",
+  mt: "10px",
 };
 const SubServicesList = ({ subServices }: Props) => {
   const subServicesList = subServices.map((subService) => {

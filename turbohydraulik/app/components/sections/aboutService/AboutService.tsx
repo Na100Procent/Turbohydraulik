@@ -22,7 +22,7 @@ const contentSx = {
   display: "flex",
   flexDirection: {
     xl: "row",
-    lg: "row",
+    lg: "column",
     md: "column",
     sm: "column",
     xs: "column",
@@ -38,13 +38,13 @@ const textSx = {
   display: "flex",
   flexDirection: {
     xl: "row",
-    lg: "row",
+    lg: "column",
     md: "column",
     sm: "column",
     xs: "column",
     xxs: "column",
   },
-  gap: "100px",
+  gap: "80px",
   padding: sectionXPadding,
 };
 
@@ -55,7 +55,16 @@ const descriptionSx = {
   maxWidth: "3000px",
   textAlign: "left",
 };
-
+const headersSx = {
+  maxWidth: {
+    xl: "800px",
+    lg: "1000px",
+    md: "1000px",
+    sm: "1000px",
+    xs: "1000px",
+    xxs: "1000px",
+  },
+};
 const AboutService = ({
   content,
   bgColor,
@@ -69,13 +78,17 @@ const AboutService = ({
     >
       <SectionPaddingWrapper>
         <Box sx={textSx} id={sectionIds.about}>
-          <Box maxWidth="700px">
+          <Box sx={headersSx}>
             <SectionHeader
               subHeaderColor={theme.palette.secondary.main}
               headerColor={theme.palette.primary.main}
               subHeader="O USŁUDZE"
               header={aboutService_h2}
             />
+            <Typography sx={descriptionSx} mt="20px">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Assumenda, nulla!
+            </Typography>
             <Typography sx={descriptionSx} mt="20px">
               {aboutService_text}
             </Typography>

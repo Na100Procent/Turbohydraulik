@@ -47,13 +47,18 @@
           "name": "Wymiana Zaworu Od Pralki",
           "price": 100,
           "description": "Profesjonalna wymiana zaworu doprowadzającego wodę do pralki. Usuwamy stare, nieszczelne lub uszkodzone zawory i montujemy nowe, zapewniając bezpieczne i bezawaryjne działanie instalacji."
+        },
+        {
+          "name": "Wymiana Zaworu Od Spłuczki",
+          "price": 100,
+          "description": "Profesjonalna wymiana zaworu doprowadzającego wodę do pralki. Usuwamy stare, nieszczelne lub uszkodzone zawory i montujemy nowe, zapewniając bezpieczne i bezawaryjne działanie instalacji."
         }
       ],
       "content": {
         "content": "Instalacja i wymiana zaworów – profesjonalne usługi hydrauliczne. Nasza firma oferuje kompleksowe usługi związane z instalacją i wymianą zaworów w różnych systemach hydraulicznych. Dzięki naszemu doświadczeniu oraz profesjonalnemu podejściu, zapewniamy usługi o wysokiej jakości. Dbamy o to, aby wszystkie prace były wykonywane zgodnie z obowiązującymi normami oraz z zachowaniem pełnego bezpieczeństwa.</p><h2>Dlaczego warto wybrać nas?</h2><>Fachowcy z naszej ekipy wyróżniają się rzetelnością oraz umiejętnością szybkiego rozwiązywania problemów. Oferujemy atrakcyjne ceny oraz pełne wsparcie przed i po realizacji usługi. Naszym celem jest 100% satysfakcja klienta, dlatego każde zlecenie traktujemy z należytą starannością.",
         "hero_h1": "Instalacja i wymiana zaworów",
         "aboutService_h2": "O instalacji i wymianie zaworow",
-        "aboutService_text": "Opis dotOpis dotycząOpis dotyczący instalacji i wymianOpis dotyczący instalacji i wymianie zaworow TurbohOpis dotOpis dotycząOpis dotyczący instalacji i wymianOpis dotyczący instalacji i wymianiOpis dotOpis dotycząOpis dotyczący instalacji i wymianOpis dotyczący instalacji i wymianie zaworow TurbohOpis dotOpis dotycząOpis dotyczący instalacji i wymianOpis dotyczący instalacji i wymianie zaworow Turbohe zaworow Turbohydraulik Polskaie zaworow Turbohydraulik Polskacy instalacji i wymianie zaworow Turbohydraulik Polskayczący instalacji i wymianie zaworow Turbohydraulik Polska",
+        "aboutService_text": "Nasza oferta obejmuje kompleksowy serwis, montaż oraz wymianę baterii kuchennych i łazienkowych. Nasi fachowcy zapewniają szybkie i profesjonalne działania, które spełnią oczekiwania nawet najbardziej wymagających klientów.",
         "hero_h2": "Instalacja i wymiana zaworów - Szybka i Profesjonalna Obsługa",
         "hero_text": "Skorzystaj z naszych usług hydraulicznych i ciesz się komfortem!",
         "service_h1": "Najlepsi w Polsce",

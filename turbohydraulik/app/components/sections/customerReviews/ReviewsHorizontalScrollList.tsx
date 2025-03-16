@@ -32,7 +32,7 @@ const ReviewsHorizontalScrollList = () => {
 
   useEffect(() => {
     setStart(true);
-  }, []);
+  });
 
   return (
     <AnimatedBox

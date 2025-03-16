@@ -17,13 +17,22 @@ interface Props {
 
 const container = {
   width: {
-    xl: "400px",
-    lg: "400px",
-    md: "400px",
-    sm: "350px",
+    xl: "300px",
+    lg: "320px",
+    md: "320px",
+    sm: "100%",
+    xs: "100%",
+    xxs: "100%",
+  },
+  height: {
+    xl: "280px",
+    lg: "280px",
+    md: "280px",
+    sm: "200px",
     xs: "300px",
     xxs: "300px",
   },
+
   borderRadius: "12px",
   overflow: "hidden",
   backgroundColor: theme.palette.custom.background,
@@ -38,6 +47,7 @@ const container = {
     backgroundColor: "rgba(239, 242, 243, 0.9)",
     scale: 1.02,
   },
+  mt: "10px",
 };
 
 const titleSx = {
@@ -48,8 +58,8 @@ const titleSx = {
   textAlign: "left",
   fontSize: "20px",
   mb: "10px",
+  minHeight: "60px",
 };
-
 const descriptionSx = {
   color: theme.palette.custom.darkGray,
   maxWidth: "400px",
