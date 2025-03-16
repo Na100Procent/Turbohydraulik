@@ -42,7 +42,14 @@ const SectionCenterHeader = ({
     fontSize: fontSize,
     color: headerColor ? headerColor : theme.palette.primary.main,
     maxWidth: "750px",
-    textAlign: "center",
+    textAlign: {
+      xl: "center",
+      lg: "center",
+      md: "center",
+      sm: "left",
+      xs: "left",
+      xxs: "left",
+    },
     lineHeight: fontSize,
     fontFamily: "UniteaSans",
   };
@@ -61,7 +68,15 @@ const SectionCenterHeader = ({
       xs: "12px",
       xxs: "12px",
     },
-    textAlign: "center",
+    textAlign: {
+      xl: "center",
+      lg: "center",
+      md: "center",
+      sm: "center",
+      xs: "left",
+      xxs: "left",
+    },
+    width: "100%",
   };
 
   const bottomHeaderSx = {
@@ -70,7 +85,14 @@ const SectionCenterHeader = ({
     color: bottomHeaderColor ? bottomHeaderColor : "#565656",
     marginTop: "20px",
     fontFamily: "UniteaSans",
-    textAlign: "center",
+    textAlign: {
+      xl: "center",
+      lg: "center",
+      md: "center",
+      sm: "left",
+      xs: "left",
+      xxs: "left",
+    },
   };
 
   return (

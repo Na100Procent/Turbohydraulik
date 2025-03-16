@@ -24,7 +24,6 @@ const HowToOrderUs = ({ content, phoneNumber }: Props) => {
           display="flex"
           flexDirection="column"
           gap="60px"
-          padding="0 0 100px 0"
           sx={{ fontFamily: "UniteaSans" }}
           id={sectionIds.orderUs}
         >

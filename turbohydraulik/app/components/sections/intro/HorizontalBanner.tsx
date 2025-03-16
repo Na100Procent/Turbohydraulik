@@ -17,7 +17,10 @@ const styles = {
   gap: "10px",
   whiteSpace: "nowrap",
   overflow: "hidden",
+  WebkitTransform: "translateZ(0)",
+  willChange: "transform",
 };
+
 const separatorSx = {
   marginLeft: "20px",
   marginRight: "20px",
@@ -63,7 +66,11 @@ const HorizontalBanner = () => {
   }, []);
   return (
     <Box sx={styles}>
-      <AnimatedBox style={scrollAnimation} sx={contentSx}>
+      <AnimatedBox
+        key={start.toString()}
+        style={scrollAnimation}
+        sx={contentSx}
+      >
         {multiplePositions.map((position, index) => (
           <Box key={index} sx={contentSx}>
             <span>{position}</span>

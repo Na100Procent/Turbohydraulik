@@ -3,6 +3,7 @@ export const sectionIds = {
   about: "aboutSection",
   projects: "projectsSection",
   contact: "contactSection",
+  services: "servicesSection",
   orderUs: "orderUsSection",
   reviews: "reviewsSection",
   faq: "faqSection",

@@ -10,6 +10,7 @@ import { CityData } from "@/app/data/types/dataTypes";
 import SectionCenterHeader from "../../shared/SectionCenterHeader";
 import { OurServiceContent } from "@/app/data/types/sectionTypes";
 import { websiteData } from "@/app/data/data";
+import { sectionIds } from "@/app/constants/appConstants";
 
 interface Props {
   city?: CityData;
@@ -48,15 +49,20 @@ const OurServices = ({
   const { service_h1, service_h2, service_text } = serviceContent;
   return (
     <BackgroundWrapper bgColor={bgColor ? bgColor : theme.palette.primary.main}>
-      <Box display={"flex"} flexDirection={"column"} gap="0px">
+      <Box
+        display={"flex"}
+        flexDirection={"column"}
+        gap="0px"
+        id={sectionIds.services}
+      >
         <SectionPaddingWrapper>
           <Box sx={headerSx}>
             <SectionCenterHeader
               headerColor={
                 headerColor ? headerColor : theme.palette.custom.background
               }
-              topHeader={service_h1}
-              header={service_h2}
+              topHeader={service_h2}
+              header={service_h1}
               bottomHeader={service_text}
               bottomHeaderColor={bottomHeaderColor}
             />

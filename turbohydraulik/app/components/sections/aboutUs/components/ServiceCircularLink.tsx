@@ -1,10 +1,25 @@
+"use client";
 import { Box } from "@mui/material";
 import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
 import theme from "@/app/theme/theme";
+import { scrollToSection } from "@/app/components/shared/helpers/scrollToSection";
+import { sectionIds } from "@/app/constants/appConstants";
 
 export default function ServiceCircularLink() {
+  const handleClick = () => {
+    scrollToSection(sectionIds.services);
+  };
+
   return (
-    <Box sx={{ position: "relative", width: "120px", height: "120px" }}>
+    <Box
+      sx={{
+        position: "relative",
+        width: "120px",
+        height: "120px",
+        cursor: "pointer",
+      }}
+      onClick={handleClick}
+    >
       <svg width="120" height="120" viewBox="0 0 120 120">
         <defs>
           <path
@@ -12,7 +27,7 @@ export default function ServiceCircularLink() {
             d="M 60,60 m -50,0 a 50,50 0 1,1 100,0 a 50,50 0 1,1 -100,0"
           />
         </defs>
-        <text fontSize="12px" letterSpacing="0.8px">
+        <text fontSize="12px" letterSpacing="2.2px">
           <textPath
             href="#circlePath"
             startOffset="0%"
@@ -22,7 +37,7 @@ export default function ServiceCircularLink() {
               fill: theme.palette.primary.main,
             }}
           >
-            VIEW SERVICE • VIEW SERVICE • VIEW SERVICE •
+            SPRAWDŹ USŁUGI KTÓRE WYKONUJEMY
           </textPath>
         </text>
       </svg>

@@ -32,7 +32,7 @@ const containerSx = {
 
 const heroSx = {
   borderRadius: "15px",
-  maxWidth: "500px",
+  maxWidth: "800px",
   padding: "40px",
 
   background: theme.palette.primary.main,
@@ -45,7 +45,7 @@ const contentSx = {
   flexDirection: {
     xl: "row",
     lg: "row",
-    md: "column",
+    md: "row",
     sm: "column",
     xs: "column",
     xxs: "column",
@@ -58,6 +58,28 @@ const contentSx = {
     sm: "20px 20px",
     xs: "20px 10px",
     xxs: "10px 10px",
+  },
+};
+
+const addGridSx = {
+  display: {
+    xl: "grid",
+    lg: "grid",
+    md: "grid",
+    sm: "grid",
+    xs: "grid",
+    xxs: "grid",
+  },
+};
+
+const mosaicSx = {
+  width: {
+    xl: "60%",
+    lg: "60%",
+    md: "60%",
+    sm: "100%",
+    xs: "100%",
+    xxs: "100%",
   },
 };
 const HeroService = ({ content, phoneNumber }: Props) => {
@@ -86,17 +108,12 @@ const HeroService = ({ content, phoneNumber }: Props) => {
               text={heroText}
             />
 
-            <Box
-              mt="50px"
-              width={"100%"}
-              display="flex"
-              justifyContent="center"
-            >
+            <Box mt="50px" width={"100%"} display="flex" justifyContent="left">
               <CallUsButton phoneNumber={phoneNumber} />
             </Box>
           </Box>
-          <Box width="100%">
-            <MosaicGrid elements={serviceImages} />
+          <Box sx={mosaicSx}>
+            <MosaicGrid elements={serviceImages} addSx={addGridSx} />
           </Box>
         </Box>
       </Box>

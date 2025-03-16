@@ -31,6 +31,7 @@ const SectionHeader = ({
     fontSize: fontSize,
     maxWidth: "700px",
     color: headerColor,
+    textAlign: "left",
   };
   const subHeaderSx = {
     color: subHeaderColor,
@@ -41,6 +42,7 @@ const SectionHeader = ({
     letterSpacing: "1px",
     fontSize: "15px",
     marginBottom: "10px",
+    textAlign: "left",
   };
 
   return (

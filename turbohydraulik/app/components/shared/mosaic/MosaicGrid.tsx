@@ -1,26 +1,28 @@
 import React, { JSX } from "react";
-import { Box } from "@mui/material";
+import { Box, SxProps, Theme } from "@mui/material";
 
 interface Props {
   elements: JSX.Element[];
+  addSx?: SxProps<Theme>;
 }
 
-const imgContainer = {
-  display: {
-    xl: "grid",
-    lg: "grid",
-    md: "grid",
-    sm: "column",
-    xs: "column",
-    xxs: "column",
-  },
-  gridTemplateColumns: "1fr 1.5fr",
-  gap: 2,
-  width: "100%",
-  maxWidth: "1200px",
-};
+const MosaicGrid = ({ elements, addSx }: Props) => {
+  const imgContainer = {
+    display: {
+      xl: "grid",
+      lg: "grid",
+      md: "grid",
+      sm: "column",
+      xs: "column",
+      xxs: "column",
+    },
+    gridTemplateColumns: "1fr 1.5fr",
+    gap: 2,
+    width: "100%",
+    maxWidth: "1200px",
+    ...addSx,
+  };
 
-const MosaicGrid = ({ elements }: Props) => {
   return (
     <Box
       sx={{
