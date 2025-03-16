@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import BackgroundWrapper from "../../shared/BackgroundWrapper";
 import theme from "@/app/theme/theme";

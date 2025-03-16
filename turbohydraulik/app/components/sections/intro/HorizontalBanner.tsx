@@ -44,13 +44,6 @@ const separator = " * ";
 const HorizontalBanner = () => {
   const [start, setStart] = useState(false);
 
-  const [path, setPath] = useState("");
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      const path = window.location.pathname;
-      setPath(path);
-    }
-  }, []);
   const scrollAnimation = useSpring({
     from: { transform: "translateX(25%)" },
     to: { transform: start ? "translateX(-35%)" : "translateX(25%)" },
@@ -70,7 +63,7 @@ const HorizontalBanner = () => {
 
   useEffect(() => {
     setStart(true);
-  }, [path]);
+  }, []);
   return (
     <Box sx={styles}>
       <AnimatedBox
