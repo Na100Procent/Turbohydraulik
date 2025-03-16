@@ -46,7 +46,7 @@ const HorizontalBanner = () => {
 
   const scrollAnimation = useSpring({
     from: { transform: "translateX(25%)" },
-    to: { transform: start ? "translateX(-35%)" : "translateX(25%)" },
+    to: { transform: "translateX(-35%)" },
     loop: true,
     config: { duration: 35000 },
   });
@@ -63,7 +63,7 @@ const HorizontalBanner = () => {
 
   useEffect(() => {
     setStart(true);
-  }, []);
+  });
   return (
     <Box sx={styles}>
       <AnimatedBox
