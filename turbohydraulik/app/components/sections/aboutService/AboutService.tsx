@@ -38,13 +38,20 @@ const textSx = {
   display: "flex",
   flexDirection: {
     xl: "row",
-    lg: "column",
+    lg: "row",
     md: "column",
     sm: "column",
     xs: "column",
     xxs: "column",
   },
-  gap: "80px",
+  gap: {
+    xl: "80px",
+    lg: "20px",
+    md: "50px",
+    sm: "50px",
+    xs: "50px",
+    xxs: "50px",
+  },
   padding: sectionXPadding,
 };
 
@@ -59,11 +66,8 @@ const headersSx = {
   maxWidth: {
     xl: "800px",
     lg: "1000px",
-    md: "1000px",
-    sm: "1000px",
-    xs: "1000px",
-    xxs: "1000px",
   },
+  minWidth: "420px",
 };
 const AboutService = ({
   content,
