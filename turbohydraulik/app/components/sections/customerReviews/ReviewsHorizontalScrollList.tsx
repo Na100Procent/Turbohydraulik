@@ -15,7 +15,7 @@ const ReviewsHorizontalScrollList = () => {
   const scrollAnimation = useSpring({
     from: { transform: "translateX(-3%)" },
     to: {
-      transform: start ? `translateX(${animationDest})` : "translateX(-3%)",
+      transform: `translateX(${animationDest})`,
     },
     loop: true,
     config: { duration: 20000 },
@@ -36,6 +36,7 @@ const ReviewsHorizontalScrollList = () => {
 
   return (
     <AnimatedBox
+      key={start.toString()}
       style={{
         ...scrollAnimation,
         display: "flex",
