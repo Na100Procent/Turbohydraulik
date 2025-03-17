@@ -67,7 +67,14 @@ const headersSx = {
     xl: "800px",
     lg: "1000px",
   },
-  minWidth: "420px",
+  minWidth: {
+    xl: "420px",
+    lg: "420px",
+    md: "420px",
+    sm: "200px",
+    xs: "100px",
+    xxs: "100px",
+  },
 };
 const AboutService = ({
   content,
