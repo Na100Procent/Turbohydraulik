@@ -88,9 +88,8 @@ const SubServiceCard = ({ city, service }: Props) => {
           {service.name + " " + cityTitle}
         </Typography>
         <Typography sx={descriptionSx}>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui dolores
-          enim officiis suscipit aperiam tenetur recusandae illo accusantium.
-          Fugit, nam.
+          Działamy w najpopularniejszych miastach aby dostarczyć ci
+          profesjonalna usługę hydrauliczną.
         </Typography>
       </Box>
     </Link>

@@ -97,8 +97,7 @@ const AboutService = ({
               header={aboutService_h2}
             />
             <Typography sx={descriptionSx} mt="20px">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Assumenda, nulla!
+              Profesjonalna usługa hydrauliczna na terenie całej Polski.
             </Typography>
             <Typography sx={descriptionSx} mt="20px">
               {aboutService_text}

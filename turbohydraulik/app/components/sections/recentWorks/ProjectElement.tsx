@@ -6,6 +6,8 @@ import MosaicElement from "../../shared/mosaic/MosaicElement";
 
 interface Props {
   bgImage: string;
+  title: string;
+  description: string;
 }
 
 const descriptionSx = {
@@ -41,20 +43,24 @@ const overlaySx = {
   zIndex: 0,
 };
 
-const ProjectElement = ({ bgImage }: Props) => {
+const ProjectElement = ({ bgImage, title, description }: Props) => {
   return (
     <MosaicElement bgImage={bgImage}>
       <Box sx={overlaySx} />
       <Box sx={contentSx}>
         <Typography
           variant="h3"
-          sx={{ fontWeight: "600", fontSize: "30px", fontFamily: "UniteaSans" }}
+          sx={{
+            fontWeight: "600",
+            fontSize: "30px",
+            fontFamily: "UniteaSans",
+            textAlign: "left",
+          }}
         >
-          Lorem ipsum
+          {title}
         </Typography>
         <Typography textAlign="left" sx={descriptionSx}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-          tincidunt, libero eget.
+          {description}
         </Typography>
 
         <Box display="flex" mt="5px">

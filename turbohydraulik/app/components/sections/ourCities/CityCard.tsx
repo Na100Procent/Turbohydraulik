@@ -98,7 +98,8 @@ const CityCard = ({ cityName, cityUrl }: Props) => {
           />
         </Box>
         <Typography sx={description}>
-          Lorem ipsum dolor sit amet consectetuectetur adipir adipisicing elit.
+          Działamy w najpopularniejszych dzielnicach aby dostarczyć ci
+          profesjonalna usługę.
         </Typography>
       </Box>
     </Link>
