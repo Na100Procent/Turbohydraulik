@@ -19,9 +19,9 @@ export const getCityDataContent = (cityData: CityData) => {
   };
 
   const ourServicesContent: OurServiceContent = {
-    service_h1: cityData.content.service_h1,
-    service_text: cityData.content.service_text,
     service_h2: cityData.content.service_h2,
+    service_text: cityData.content.service_text,
+    service_h3: cityData.content.service_h3,
   };
   const reviewsContent: ReviewsContent = {
     testimonials_h2: cityData.content.testimonials_h2,

@@ -33,7 +33,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" style={{ overflow: "hidden", width: "100%" }}>
+    <html lang="pl" style={{ overflow: "hidden", width: "100%" }}>
       <body style={{ overflowX: "hidden", width: "100%" }}>
         <AppRouterCacheProvider>{children}</AppRouterCacheProvider>
       </body>

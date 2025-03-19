@@ -36,7 +36,6 @@ const ReviewCard: React.FC<ReviewCardProps> = ({
   return (
     <Box sx={container}>
       <Typography
-        variant="h5"
         fontWeight="700"
         color={blue}
         sx={{ fontFamily: "UniteaSans", height: "50px" }}

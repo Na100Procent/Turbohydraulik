@@ -102,11 +102,11 @@ const SectionCenterHeader = ({
           {topHeader}
         </Typography>
       )}
-      <Typography variant="h1" sx={headerSx}>
+      <Typography variant="h2" sx={headerSx}>
         {header}
       </Typography>
       {bottomHeader && (
-        <Typography variant="h2" sx={bottomHeaderSx}>
+        <Typography variant="h3" sx={bottomHeaderSx}>
           {bottomHeader}
         </Typography>
       )}

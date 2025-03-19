@@ -46,7 +46,7 @@ const OurServices = ({
   phoneNumber,
 }: Props) => {
   const serviceContent = content ? content : websiteData.homepageContent;
-  const { service_h1, service_h2, service_text } = serviceContent;
+  const { service_h2, service_h3, service_text } = serviceContent;
   return (
     <BackgroundWrapper bgColor={bgColor ? bgColor : theme.palette.primary.main}>
       <Box
@@ -61,8 +61,8 @@ const OurServices = ({
               headerColor={
                 headerColor ? headerColor : theme.palette.custom.background
               }
-              topHeader={service_h2}
-              header={service_h1}
+              topHeader={service_h3}
+              header={service_h2}
               bottomHeader={service_text}
               bottomHeaderColor={bottomHeaderColor}
             />
