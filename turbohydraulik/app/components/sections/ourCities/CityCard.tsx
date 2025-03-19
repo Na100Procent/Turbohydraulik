@@ -93,7 +93,7 @@ const CityCard = ({ cityName, cityUrl }: Props) => {
           </Typography>
 
           <RectangularButton
-            title="VIEW SERVICES"
+            title="Sprawdź usługi"
             bgColor={theme.palette.secondary.main}
           />
         </Box>
