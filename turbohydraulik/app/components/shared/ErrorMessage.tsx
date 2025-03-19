@@ -8,7 +8,6 @@ interface ErrorMessageProps {
 const ErrorMessage: React.FC<ErrorMessageProps> = ({ message }) => {
   return (
     <Typography
-      variant="h6"
       style={{
         color: "red",
         width: "100%",

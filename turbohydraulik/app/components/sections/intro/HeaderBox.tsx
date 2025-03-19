@@ -46,14 +46,14 @@ const HeaderBox = ({ header, subHeader, text }: Props) => {
           </Typography>
         </Box>
         <Typography
-          variant="h1"
+          variant="h2"
           mb="20px"
           sx={{ color: theme.palette.secondary.main, ...headerSx }}
         >
           {headerPart2}
         </Typography>
       </Box>
-      <Typography sx={subHeaderSX} variant="h5">
+      <Typography sx={subHeaderSX} variant="h3">
         {subHeader}
       </Typography>
       <p style={subHeaderSX}>{text}</p>

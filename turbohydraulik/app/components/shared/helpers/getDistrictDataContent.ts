@@ -23,9 +23,9 @@ export const getDistrictDataContent = (districtData: DistrictData) => {
     aboutCity_text: districtData.content.aboutUs_text,
   };
   const ourServicesContent: OurServiceContent = {
-    service_h1: districtData.content.service_h1,
-    service_text: districtData.content.service_text,
     service_h2: districtData.content.service_h2,
+    service_text: districtData.content.service_text,
+    service_h3: districtData.content.service_h3,
   };
   const reviewsContent: ReviewsContent = {
     testimonials_h2: districtData.content.testimonials_h2,

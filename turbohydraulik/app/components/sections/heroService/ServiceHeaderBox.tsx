@@ -46,7 +46,7 @@ const ServiceHeaderBox = ({ header, subHeader, text }: Props) => {
           </Typography>
         </Box>
         <Typography
-          variant="h1"
+          variant="h2"
           mb="20px"
           sx={{ color: theme.palette.secondary.main, ...headerSx }}
         >

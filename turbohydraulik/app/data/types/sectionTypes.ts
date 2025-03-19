@@ -12,16 +12,9 @@ export interface ReviewsContent {
 }
 
 export interface OurServiceContent {
-  service_h1: string;
-  service_text: string;
   service_h2: string;
-  // service_text_1: string;
-  // service_h4: string;
-  // service_text_2: string;
-  // service_h5: string;
-  // service_text_3: string;
-  // service_h6: string;
-  // service_text_4: string;
+  service_text: string;
+  service_h3: string;
 }
 
 export interface AboutServiceContent {

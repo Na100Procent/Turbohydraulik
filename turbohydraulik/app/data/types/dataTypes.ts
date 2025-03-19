@@ -18,9 +18,9 @@ export interface CityContent {
   hero_h1: string;
   hero_h2: string;
   hero_text: string;
-  service_h1: string;
-  service_text: string;
   service_h2: string;
+  service_text: string;
+  service_h3: string;
   testimonials_h2: string;
   testimonials_h3: string;
   testimonials_text_1: string;
@@ -60,9 +60,9 @@ export interface ServiceContent {
   aboutService_text: string;
   hero_h2: string;
   hero_text: string;
-  service_h1: string;
-  service_text: string;
   service_h2: string;
+  service_text: string;
+  service_h3: string;
   testimonials_h2: string;
   testimonials_h3: string;
   testimonials_text_1: string;

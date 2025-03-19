@@ -27,9 +27,9 @@ export const getCityServiceDataContent = (
   };
 
   const ourServicesContent: OurServiceContent = {
-    service_h1: cityServiceData.content.service_h1,
-    service_text: cityServiceData.content.service_text,
     service_h2: cityServiceData.content.service_h2,
+    service_text: cityServiceData.content.service_text,
+    service_h3: cityServiceData.content.service_h3,
   };
   const reviewsContent: ReviewsContent = {
     testimonials_h2: cityServiceData.content.testimonials_h2,

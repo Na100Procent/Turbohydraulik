@@ -54,7 +54,7 @@ const DynamicPage: FC<PageProps> = async ({ params }) => {
       ) : district ? (
         <DistrictPage districtData={district} city={foundCity} />
       ) : (
-        <h1>Not Found</h1>
+        <h2>Not Found</h2>
       )}
     </div>
   );

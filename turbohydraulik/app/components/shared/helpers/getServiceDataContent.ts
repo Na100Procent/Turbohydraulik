@@ -24,9 +24,9 @@ export const getServiceDataContent = (serviceData: ServiceData) => {
   };
 
   const ourServicesContent: OurServiceContent = {
-    service_h1: serviceData.content.service_h1,
-    service_text: serviceData.content.service_text,
     service_h2: serviceData.content.service_h2,
+    service_text: serviceData.content.service_text,
+    service_h3: serviceData.content.service_h3,
   };
   const reviewsContent: ReviewsContent = {
     testimonials_h2: serviceData.content.testimonials_h2,
