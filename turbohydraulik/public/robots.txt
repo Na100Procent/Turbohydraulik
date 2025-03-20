@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: http://turbohydraulik.pl/sitemap.xml
+
+Sitemap: https://turbohydraulik.pl/sitemap.xml
