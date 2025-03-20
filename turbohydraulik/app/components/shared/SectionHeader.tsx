@@ -47,9 +47,7 @@ const SectionHeader = ({
 
   return (
     <Box sx={{ maxWidth: "800px" }}>
-      <Typography variant="h3" sx={subHeaderSx}>
-        {subHeader}
-      </Typography>
+      <Typography sx={subHeaderSx}>{subHeader}</Typography>
       <Typography variant="h2" sx={headerSx}>
         {header}
       </Typography>

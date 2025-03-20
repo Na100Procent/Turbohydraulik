@@ -19,8 +19,10 @@ export const getDistrictDataContent = (districtData: DistrictData) => {
   };
 
   const aboutCityContent: AboutCityContent = {
-    aboutCity_h2: districtData.content.aboutUs_h2,
-    aboutCity_text: districtData.content.aboutUs_text,
+    aboutCity_h2: districtData.content.aboutCity_h2,
+    aboutCity_text1: districtData.content.aboutCity_text1,
+    aboutCity_h3: districtData.content.aboutCity_h3,
+    aboutCity_text2: districtData.content.aboutCity_text2,
   };
   const ourServicesContent: OurServiceContent = {
     service_h2: districtData.content.service_h2,

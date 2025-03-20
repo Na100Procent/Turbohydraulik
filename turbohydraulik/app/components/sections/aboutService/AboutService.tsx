@@ -82,7 +82,12 @@ const AboutService = ({
   subServices,
   phoneNumber,
 }: Props) => {
-  const { aboutService_text, aboutService_h2 } = content;
+  const {
+    aboutService_text1,
+    aboutService_h2,
+    aboutService_text2,
+    aboutService_h3,
+  } = content;
   return (
     <BackgroundWrapper
       bgColor={bgColor ? bgColor : theme.palette.custom.background}
@@ -96,11 +101,9 @@ const AboutService = ({
               subHeader="O USŁUDZE"
               header={aboutService_h2}
             />
+
             <Typography sx={descriptionSx} mt="20px">
-              Profesjonalna usługa hydrauliczna na terenie całej Polski.
-            </Typography>
-            <Typography sx={descriptionSx} mt="20px">
-              {aboutService_text}
+              {aboutService_text1}
             </Typography>
 
             <Box sx={contentSx}>
@@ -119,9 +122,9 @@ const AboutService = ({
                     color: theme.palette.primary.main,
                   }}
                 >
-                  {aboutService_h2} Turbohydraulik
+                  {aboutService_h3}
                 </Typography>
-                <Typography sx={descriptionSx}>{aboutService_text}</Typography>
+                <Typography sx={descriptionSx}>{aboutService_text2}</Typography>
 
                 <Box display="flex" justifyContent="left" mt="20px">
                   <CallUsButton phoneNumber={phoneNumber} />

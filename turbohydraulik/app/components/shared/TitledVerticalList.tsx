@@ -39,7 +39,6 @@ const TitledVerticalList = ({ title, list, separator, addSx }: Props) => {
     <Box sx={{ ...containerSx, ...addSx }}>
       <Typography
         fontWeight="600"
-        variant="h6"
         mb="30px"
         fontSize={"20px"}
         sx={{ fontFamily: "UniteaSans" }}
@@ -50,8 +49,15 @@ const TitledVerticalList = ({ title, list, separator, addSx }: Props) => {
       {list?.map((item, index) => (
         <Link href={item.url} key={item.title + index}>
           <Box sx={elementSx}>
-            <Typography mt="-2px"> {separator ? separator : "> "}</Typography>
-            <Typography sx={{ fontFamily: "UniteaSans", fontWeight: 500 }}>
+            <Typography mt="-4px"> {separator ? separator : "> "}</Typography>
+            <Typography
+              variant="h3"
+              sx={{
+                fontFamily: "UniteaSans",
+                fontWeight: 500,
+                fontSize: "18px",
+              }}
+            >
               {item.title}
             </Typography>
           </Box>

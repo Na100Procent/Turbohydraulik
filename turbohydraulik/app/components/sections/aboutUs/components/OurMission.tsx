@@ -13,6 +13,7 @@ const OurMission = () => {
   return (
     <Box sx={container}>
       <Typography
+        variant="h3"
         sx={{ fontWeight: "600", fontSize: "30px", fontFamily: "UniteaSans" }}
       >
         Nasza misja

@@ -22,8 +22,10 @@ export const getCityServiceDataContent = (
   };
 
   const aboutServiceContent: AboutServiceContent = {
-    aboutService_h2: cityService.content.aboutService_h2,
-    aboutService_text: cityService.content.aboutService_text,
+    aboutService_h2: cityService.mainContent.aboutService_h2,
+    aboutService_text1: cityService.mainContent.aboutService_text1,
+    aboutService_h3: cityService.mainContent.aboutService_h3,
+    aboutService_text2: cityService.mainContent.aboutService_text2,
   };
 
   const ourServicesContent: OurServiceContent = {

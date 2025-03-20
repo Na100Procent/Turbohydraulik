@@ -37,7 +37,7 @@ const OurCities = () => {
         <SectionPaddingWrapper>
           <SectionCenterHeader
             topHeader="LOKALIZACJE"
-            header="Hydraulika w Twoim mieście"
+            header={websiteData.homepageContent.locations_h2}
           />
         </SectionPaddingWrapper>
         <ScrollCityList />

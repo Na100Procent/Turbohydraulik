@@ -20,7 +20,6 @@ const Footer = ({ phoneNumber }: Props) => {
       sx={{ padding: "0" }}
     >
       <Box id={sectionIds.contact}>
-        {/* <PlumberBanner /> */}
         <Box
           padding={"150px 0 0 0"}
           display={"flex"}

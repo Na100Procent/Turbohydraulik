@@ -38,7 +38,7 @@ const ReviewCard: React.FC<ReviewCardProps> = ({
       <Typography
         fontWeight="700"
         color={blue}
-        sx={{ fontFamily: "UniteaSans", height: "50px" }}
+        sx={{ fontFamily: "UniteaSans", height: "50px", fontSize: "25px" }}
       >
         {reviewerName}
       </Typography>

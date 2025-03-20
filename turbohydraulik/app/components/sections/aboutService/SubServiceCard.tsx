@@ -84,12 +84,12 @@ const SubServiceCard = ({ city, service }: Props) => {
   return (
     <Link href={newPath}>
       <Box sx={container}>
-        <Typography variant="h5" sx={titleSx}>
+        <Typography variant="h3" sx={titleSx}>
           {service.name + " " + cityTitle}
         </Typography>
         <Typography sx={descriptionSx}>
-          Działamy w najpopularniejszych miastach aby dostarczyć ci
-          profesjonalna usługę hydrauliczną.
+          Nasza praca to gwarancja najbardziej profesjonalnych usług
+          hydraulicznych.
         </Typography>
       </Box>
     </Link>

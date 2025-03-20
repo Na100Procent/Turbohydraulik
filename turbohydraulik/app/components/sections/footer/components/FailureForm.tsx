@@ -43,7 +43,7 @@ const problemInput = {
 const FailureForm = () => {
   return (
     <Box sx={container}>
-      <Typography variant="h6" sx={headerSx}>
+      <Typography variant="h3" sx={headerSx}>
         ZAMÓW USŁUGĘ HYDRAULICZNĄ
       </Typography>
       <Input

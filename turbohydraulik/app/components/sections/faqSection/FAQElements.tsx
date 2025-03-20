@@ -73,7 +73,9 @@ const FAQElements = () => {
               alignItems: "center",
             }}
           >
-            <Typography sx={questionSx}>{faq.question}</Typography>
+            <Typography variant="h3" sx={questionSx}>
+              {faq.question}
+            </Typography>
             <IconButton
               onClick={() => handleToggle(index)}
               sx={{

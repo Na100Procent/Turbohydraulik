@@ -83,12 +83,12 @@ const ServiceCard = ({ city, service }: Props) => {
     <Link href={newPath}>
       <Box sx={container}>
         <Box component="img" src={serviceCardUrl} sx={imgSx} />
-        <Typography variant="h5" sx={titleSx}>
+        <Typography variant="h3" sx={titleSx}>
           {service.name + " " + cityTitle}
         </Typography>
         <Typography sx={descriptionSx}>
-          Działamy w najpopularniejszych miastach aby dostarczyć ci
-          profesjonalna usługę hydrauliczną.
+          Pracujemy dla Ciebie z pasją i zaangażowaniem dostarczając
+          profesjonalizm.
         </Typography>
       </Box>
     </Link>

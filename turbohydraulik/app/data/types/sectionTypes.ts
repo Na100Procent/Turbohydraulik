@@ -19,7 +19,9 @@ export interface OurServiceContent {
 
 export interface AboutServiceContent {
   aboutService_h2: string;
-  aboutService_text: string;
+  aboutService_text1: string;
+  aboutService_h3: string;
+  aboutService_text2: string;
 }
 export interface HowToContent {
   steps_h2: string;
@@ -33,7 +35,9 @@ export interface AboutUsContent {
 
 export interface AboutCityContent {
   aboutCity_h2: string;
-  aboutCity_text: string;
+  aboutCity_text1: string;
+  aboutCity_h3: string;
+  aboutCity_text2: string;
 }
 
 export interface RecentWorksContent {
