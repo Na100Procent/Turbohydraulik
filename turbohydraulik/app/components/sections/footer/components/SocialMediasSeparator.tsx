@@ -1,8 +1,10 @@
+"use client";
 import React from "react";
 import { Box, IconButton } from "@mui/material";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import EmailIcon from "@mui/icons-material/Email";
 import theme from "@/app/theme/theme";
+import { email } from "@/app/constants/appConstants";
 
 interface Props {
   separatorColor?: string;
@@ -17,6 +19,9 @@ const iconBtn = {
   transition: "background 0.3s ease-in-out, color 0.3s ease-in-out",
 };
 const SocialMediasSeparator = ({ separatorColor }: Props) => {
+  const handleEmailClick = () => {
+    window.open(`mailto:${email}`);
+  };
   return (
     <Box
       width="100%"
@@ -50,6 +55,7 @@ const SocialMediasSeparator = ({ separatorColor }: Props) => {
         </IconButton>
 
         <IconButton
+          onClick={handleEmailClick}
           sx={{
             backgroundColor: theme.palette.custom.darkBlue,
             color: "white",

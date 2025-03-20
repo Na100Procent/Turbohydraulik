@@ -59,7 +59,14 @@ const PriceList = ({ items, content, phoneNumber }: Props) => {
                 my: 1,
               }}
             >
-              <Typography sx={{ whiteSpace: "nowrap", minWidth: "250px" }}>
+              <Typography
+                variant="h3"
+                sx={{
+                  whiteSpace: "nowrap",
+                  minWidth: "250px",
+                  fontSize: "18px",
+                }}
+              >
                 {item.title}
               </Typography>
               <Box

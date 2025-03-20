@@ -41,8 +41,10 @@ export const getCityDataContent = (cityData: CityData) => {
   };
 
   const aboutCityContent: AboutCityContent = {
-    aboutCity_h2: cityData.content.aboutUs_h2,
-    aboutCity_text: cityData.content.aboutUs_text,
+    aboutCity_h2: cityData.content.aboutCity_h2,
+    aboutCity_text1: cityData.content.aboutCity_text1,
+    aboutCity_h3: cityData.content.aboutCity_h3,
+    aboutCity_text2: cityData.content.aboutCity_text2,
   };
 
   const recentWorksContent: RecentWorksContent = {

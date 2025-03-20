@@ -39,13 +39,17 @@ const HowToCard: React.FC<HowToCardProps> = ({
       <Box sx={{ mt: 2 }}>{icon}</Box>
       <Box sx={{ textAlign: "center" }}>
         <Typography
-          variant="h6"
-          sx={{ fontFamily: "UniteaSans", fontWeight: "bold", mb: "10px" }}
+          variant="h3"
+          sx={{
+            fontFamily: "UniteaSans",
+            fontWeight: "bold",
+            mb: "10px",
+            fontSize: "20px",
+          }}
         >
           {title}
         </Typography>
         <Typography
-          variant="body2"
           sx={{
             fontFamily: "UniteaSans",
             maxWidth: "300px",

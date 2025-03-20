@@ -30,7 +30,9 @@ export interface CityContent {
   aboutUs_h3: string;
   aboutUs_text: string;
   aboutCity_h2: string;
-  aboutCity_text: string;
+  aboutCity_text1: string;
+  aboutCity_h3: string;
+  aboutCity_text2: string;
   portfolio_h2: string;
   portfolio_text: string;
   aboutUsNumbers_h2: string;
@@ -49,7 +51,7 @@ export interface ServiceData {
   price: number;
   cardImageUrl: string;
   subServices: SubService[];
-  content: ServiceContent;
+  mainContent: ServiceContent;
   citiesContent: Record<string, DistrictData>;
 }
 
@@ -57,7 +59,9 @@ export interface ServiceContent {
   content: string;
   hero_h1: string;
   aboutService_h2: string;
-  aboutService_text: string;
+  aboutService_text1: string;
+  aboutService_h3: string;
+  aboutService_text2: string;
   hero_h2: string;
   hero_text: string;
   service_h2: string;

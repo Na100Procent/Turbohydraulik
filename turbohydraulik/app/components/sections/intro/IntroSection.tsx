@@ -44,18 +44,16 @@ const contentSx = {
 };
 const IntroSection = ({ content, phoneNumber }: Props) => {
   const heroSectionData = content ? content : websiteData.homepageContent;
-  const heroHeader = heroSectionData.hero_h1;
-  const heroSubHeader = heroSectionData.hero_h2;
-  const heroText = heroSectionData.hero_text;
+  const { hero_h1, hero_h2, hero_text } = heroSectionData;
   return (
     <BackgroundWrapper bgImage={introBgUrl} sx={containerSx}>
       <Box padding="20px 0 0 0">
         <Box sx={contentSx}>
           <Box sx={heroSx}>
             <HeaderBox
-              header={heroHeader}
-              subHeader={heroSubHeader}
-              text={heroText}
+              hero_h1={hero_h1}
+              hero_h2={hero_h2}
+              hero_text={hero_text}
             />
             <Box mt="30px">
               <CallUsButton phoneNumber={phoneNumber} />

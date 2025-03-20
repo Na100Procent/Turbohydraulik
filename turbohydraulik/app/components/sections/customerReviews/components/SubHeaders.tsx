@@ -17,10 +17,11 @@ const SubHeaders = ({ testimonials_h3, testimonials_text_2 }: Props) => {
       padding={sectionXPadding}
     >
       <Typography
-        variant="h4"
+        variant="h3"
         color={theme.palette.primary.main}
         fontWeight="700"
         fontFamily="UniteaSans"
+        fontSize="35px"
       >
         {testimonials_h3}
       </Typography>

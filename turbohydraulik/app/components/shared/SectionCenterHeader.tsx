@@ -97,18 +97,12 @@ const SectionCenterHeader = ({
 
   return (
     <Box sx={containerSx}>
-      {topHeader && (
-        <Typography variant="h4" sx={topHeaderSx}>
-          {topHeader}
-        </Typography>
-      )}
+      {topHeader && <Typography sx={topHeaderSx}>{topHeader}</Typography>}
       <Typography variant="h2" sx={headerSx}>
         {header}
       </Typography>
       {bottomHeader && (
-        <Typography variant="h3" sx={bottomHeaderSx}>
-          {bottomHeader}
-        </Typography>
+        <Typography sx={bottomHeaderSx}>{bottomHeader}</Typography>
       )}
     </Box>
   );

@@ -27,7 +27,7 @@ const contentSx = {
     xs: "column",
     xxs: "column",
   },
-  justifyContent: "center",
+  justifyContent: "left",
 
   alignItems: "center",
   mt: {
@@ -50,8 +50,19 @@ const imgSx = {
   overflow: "hidden",
 };
 
+const header3Sx = {
+  fontWeight: "700",
+  zIndex: 10,
+  lineHeight: "30px",
+  fontFamily: "UniteaSans",
+  fontSize: "30px",
+  maxWidth: "700px",
+  color: theme.palette.primary.main,
+  textAlign: "left",
+};
 const AboutCity = ({ content, bgColor, phoneNumber }: Props) => {
-  const { aboutCity_h2, aboutCity_text } = content;
+  const { aboutCity_h2, aboutCity_text1, aboutCity_h3, aboutCity_text2 } =
+    content;
 
   return (
     <BackgroundWrapper
@@ -81,9 +92,21 @@ const AboutCity = ({ content, bgColor, phoneNumber }: Props) => {
                   selfAlign: "top",
                 }}
               >
-                {aboutCity_text}
+                {aboutCity_text1}
               </Typography>
-
+              <Typography sx={header3Sx} variant="h3">
+                {aboutCity_h3}
+              </Typography>
+              <Typography
+                sx={{
+                  color: theme.palette.custom.darkGray,
+                  fontFamily: "UniteaSans",
+                  fontWeight: "500",
+                  selfAlign: "top",
+                }}
+              >
+                {aboutCity_text2}
+              </Typography>
               <div>
                 <CallUsButton phoneNumber={phoneNumber} />
               </div>
