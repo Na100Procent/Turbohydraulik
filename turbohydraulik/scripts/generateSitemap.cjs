@@ -6,14 +6,14 @@ const fs = require("fs");
 const websiteData = require("../app/data/toBeData.json");
 
 const hostname = "https://turbohydraulik.pl";
-console.log(websiteData);
+
 const cities = Object.keys(websiteData.cities);
 const services = Object.keys(websiteData.services);
 
-const cityPriority = 0.8;
-const districtPriority = 0.6;
-const servicePriority = 0.7;
-const cityServicePriority = 0.7;
+const cityPriority = 0.9;
+const districtPriority = 0.7;
+const servicePriority = 0.6;
+const cityServicePriority = 0.8;
 
 const urls = [{ url: "/", changefreq: "daily", priority: 1.0 }];
 
