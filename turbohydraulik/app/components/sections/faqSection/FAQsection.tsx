@@ -70,7 +70,7 @@ const FAQsection = ({ phoneNumber }: Props) => {
             >
               <Image
                 src="https://github.com/user-attachments/assets/ca378ab7-a9b2-4736-ac5f-fe20ad776b11"
-                alt="image"
+                alt="Turbo hydraulik FAQ"
                 layout="responsive"
                 width={500}
                 height={560}

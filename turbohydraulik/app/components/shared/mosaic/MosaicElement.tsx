@@ -1,12 +1,14 @@
 import { Box } from "@mui/material";
+import Image from "next/image";
 import React, { JSX } from "react";
 
 interface Props {
   bgImage: string;
+  alt?: string;
   children?: JSX.Element[];
 }
 
-const MosaicElement = ({ bgImage, children }: Props) => {
+const MosaicElement = ({ bgImage, alt, children }: Props) => {
   return (
     <Box
       sx={{
@@ -17,7 +19,17 @@ const MosaicElement = ({ bgImage, children }: Props) => {
         mt: "20px",
       }}
     >
-      {children ? children : <Box sx={{ minHeight: "300px" }}></Box>}
+      <Image
+        src={bgImage}
+        alt={alt || ""}
+        width="0"
+        height="0"
+        style={{
+          position: "absolute",
+          visibility: "hidden",
+        }}
+      />
+      {children ? children : <Box sx={{ minHeight: "300px" }} />}
     </Box>
   );
 };

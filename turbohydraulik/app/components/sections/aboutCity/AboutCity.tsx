@@ -115,7 +115,7 @@ const AboutCity = ({ content, bgColor, phoneNumber }: Props) => {
               <Image
                 layout="responsive"
                 src={aboutUsUrl}
-                alt="About img"
+                alt={`Turbo Hydraulik ${aboutCity_h2}`}
                 width={400}
                 height={490}
               />
