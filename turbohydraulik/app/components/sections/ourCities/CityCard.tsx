@@ -85,7 +85,12 @@ const CityCard = ({ cityName, cityUrl }: Props) => {
   return (
     <Link href={`${cityUrl}`}>
       <Box sx={container}>
-        <Box component="img" src={mockedCityCardUrl} sx={imgSx} />
+        <Box
+          component="img"
+          src={mockedCityCardUrl}
+          sx={imgSx}
+          alt={`Turbo Hydraulik ${cityName}`}
+        />
 
         <Box sx={titleButtonSx}>
           <Typography variant="h3" sx={cityNameSx}>

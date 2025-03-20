@@ -89,10 +89,22 @@ const HeroService = ({ content, phoneNumber }: Props) => {
   const heroText = heroSectionData.hero_text;
 
   const serviceImages = [
-    <MosaicElement key={0} bgImage={serviceHeroBg} />,
-    <MosaicElement key={1} bgImage={aboutUsUrl} />,
-    <MosaicElement key={2} bgImage={serviceCardUrl} />,
-    <MosaicElement key={3} bgImage={serviceHeroBg} />,
+    <MosaicElement
+      key={0}
+      bgImage={serviceHeroBg}
+      alt="servis1 Turbohydraulik"
+    />,
+    <MosaicElement key={1} bgImage={aboutUsUrl} alt="servis2 Turbohydraulik" />,
+    <MosaicElement
+      key={2}
+      bgImage={serviceCardUrl}
+      alt="servis3 Turbohydraulik"
+    />,
+    <MosaicElement
+      key={3}
+      bgImage={serviceHeroBg}
+      alt="servis4 Turbohydraulik"
+    />,
   ];
   return (
     <BackgroundWrapper

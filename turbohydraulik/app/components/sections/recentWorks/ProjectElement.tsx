@@ -45,7 +45,7 @@ const overlaySx = {
 
 const ProjectElement = ({ bgImage, title, description }: Props) => {
   return (
-    <MosaicElement bgImage={bgImage}>
+    <MosaicElement bgImage={bgImage} alt={`Turbohydraulik projekt: ${title}`}>
       <Box sx={overlaySx} />
       <Box sx={contentSx}>
         <Typography

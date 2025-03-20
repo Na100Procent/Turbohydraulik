@@ -78,7 +78,7 @@ const AboutUs = ({ content, bgColor, phoneNumber }: Props) => {
               <Image
                 layout="responsive"
                 src={aboutUsUrl}
-                alt="About img"
+                alt={`Turbo Hydraulik ${aboutUs_h2}`}
                 width={400}
                 height={490}
               />

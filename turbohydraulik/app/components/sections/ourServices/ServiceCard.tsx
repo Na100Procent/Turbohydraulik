@@ -82,7 +82,12 @@ const ServiceCard = ({ city, service }: Props) => {
   return (
     <Link href={newPath}>
       <Box sx={container}>
-        <Box component="img" src={serviceCardUrl} sx={imgSx} />
+        <Box
+          component="img"
+          src={serviceCardUrl}
+          sx={imgSx}
+          alt={`Turbo hydraulik ${cityTitle} ${service.name}`}
+        />
         <Typography variant="h3" sx={titleSx}>
           {service.name + " " + cityTitle}
         </Typography>

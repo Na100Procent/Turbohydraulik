@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "build": "next build",
-    "deploy": "gh-pages -d out"
+    "deploy": "gh-pages -d out",
+    "generate-sitemap": "node scripts/generateSitemap.cjs"
   },
   "dependencies": {
     "@emotion/cache": "^11.14.0",
@@ -22,7 +23,8 @@
     "@react-spring/web": "^9.7.5",
     "next": "15.2.0",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "sitemap": "^8.0.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
