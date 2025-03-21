@@ -1,5 +1,7 @@
 {
   "homepageContent": {
+    "meta_title": "Turbo Hydraulik - Najlepszy Hydraulik w Polsce home",
+    "meta_description": " home Profesjonalne usługi hydrauliczne w Polsce. Instalacja i wymiana zaworów, naprawa rur, awaryjne usługi hydrauliczne.",
     "hero_h1": "Turbo Hydraulik",
     "hero_h2": "Najlepszy Hydraulik w Polsce",
     "hero_text": "Skorzystaj z naszej kompleksowej usługi instalacji i wymiany zaworów już dziś!",
@@ -52,9 +54,11 @@
       ],
       "citiesContent": {
         "warszawa": {
-          "name": "Usługi Hydrauliczne w Warszawie",
+          "name": " Usługi Hydrauliczne w Warszawie",
           "slug": "uslugi-hydrauliczne-w-warszawie",
           "content": {
+            "meta_title": "Turbo Hydraulik - Najlepszy Hydraulik w Polsce",
+            "meta_description": "Profesjonalne usługi hydrauliczne w Polsce. Instalacja i wymiana zaworów, naprawa rur, awaryjne usługi hydrauliczne.",
             "phone": "+48 123 456 789",
             "hero_h1": "Turbo Hydraulik w Warszawie",
             "hero_h2": "Profesjonalny hydraulik w Warszawie",
@@ -102,6 +106,8 @@
         "http://www.turbohydraulik.pl/jsonTest/img/instalacja_i_wymiana_zaworow/3.jpg"
       ],
       "mainContent": {
+        "meta_title": "instalacje Turbo Hydraulik - Najlepszy Hydraulik w Polsce",
+        "meta_description": "instalacje Profesjonalne usługi hydrauliczne w Polsce. Instalacja i wymiana zaworów, naprawa rur, awaryjne usługi hydrauliczne.",
         "content": "Instalacja i wymiana zaworów to kluczowe usługi w każdej hydraulice. Zawory odgrywają istotną rolę w regulacji przepływu wody, a ich sprawność bezpośrednio wpływa na bezpieczeństwo oraz wydajność całej instalacji. Nasza firma oferuje kompleksowe usługi, które zapewnią Ci pewność, że Twoje instalacje wodociągowe działają zgodnie z oczekiwaniami.",
         "hero_h1": "Instalacja i wymiana zaworów",
         "hero_h2": "Bezawaryjne funkcjonowanie Twojej hydrauliki.",
@@ -140,6 +146,8 @@
       "cityCardUrl": "https://www.turbohydraulik.pl/jsonTest/warszawa.jpeg",
       "availableServices": ["instalacja_i_wymiana_zaworow"],
       "content": {
+        "meta_title": "Turbo Hydraulik - Najlepszy Hydraulik w Polsce",
+        "meta_description": "Profesjonalne usługi hydrauliczne w Polsce. Instalacja i wymiana zaworów, naprawa rur, awaryjne usługi hydrauliczne.",
         "phone": "541256685",
         "hero_h1": "Turbo Hydraulik Warszawa",
         "hero_h2": "Twój najlepszy hydraulik w Warszawie",
@@ -177,6 +185,8 @@
           "name": "Śródmieście",
           "slug": "srodmiescie",
           "content": {
+            "meta_title": "Turbo Hydraulik - Najlepszy Hydraulik w Polsce",
+            "meta_description": "Profesjonalne usługi hydrauliczne w Polsce. Instalacja i wymiana zaworów, naprawa rur, awaryjne usługi hydrauliczne.",
             "phone": "123-456-789",
             "hero_h1": "Turbo Hydraulik w Śródmieściu Warszawy",
             "hero_h2": "Hydraulik w Śródmieściu - Twoje potrzeby w najlepszych rękach!",
@@ -213,6 +223,8 @@
           "name": "Mokotów",
           "slug": "mokotow",
           "content": {
+            "meta_title": "Turbo Hydraulik - Najlepszy Hydraulik w Polsce",
+            "meta_description": "Profesjonalne usługi hydrauliczne w Polsce. Instalacja i wymiana zaworów, naprawa rur, awaryjne usługi hydrauliczne.",
             "phone": "123-456-789",
             "hero_h1": "Turbo Hydraulik Mokotów",
             "hero_h2": "Szybka pomoc hydrauliczna na Mokotowie!",
@@ -249,6 +261,8 @@
           "name": "Praga Południe",
           "slug": "praga-poludnie",
           "content": {
+            "meta_title": "Turbo Hydraulik - Najlepszy Hydraulik w Polsce",
+            "meta_description": "Profesjonalne usługi hydrauliczne w Polsce. Instalacja i wymiana zaworów, naprawa rur, awaryjne usługi hydrauliczne.",
             "phone": "123-456-789",
             "hero_h1": "Turbo Hydraulik Praga Południe",
             "hero_h2": "Twój lokalny Hydraulik w Pradze Południe",
@@ -285,6 +299,8 @@
           "name": "Praga Północ",
           "slug": "praga-polnoc",
           "content": {
+            "meta_title": "Turbo Hydraulik - Najlepszy Hydraulik w Polsce",
+            "meta_description": "Profesjonalne usługi hydrauliczne w Polsce. Instalacja i wymiana zaworów, naprawa rur, awaryjne usługi hydrauliczne.",
             "phone": "123-456-789",
             "hero_h1": "Turbo Hydraulik Praga Północ",
             "hero_h2": "Twoje Zaufane Usługi Hydrauliczne na Pradze Północ",
@@ -321,6 +337,8 @@
           "name": "Bielany",
           "slug": "bielany",
           "content": {
+            "meta_title": "Turbo Hydraulik - Najlepszy Hydraulik w Polsce",
+            "meta_description": "Profesjonalne usługi hydrauliczne w Polsce. Instalacja i wymiana zaworów, naprawa rur, awaryjne usługi hydrauliczne.",
             "phone": "123 456 789",
             "hero_h1": "Turbo Hydraulik Bielany",
             "hero_h2": "Twój hydraulik na Bielanach - szybka i skuteczna pomoc!",
@@ -357,6 +375,8 @@
           "name": "Ursynów",
           "slug": "ursynow",
           "content": {
+            "meta_title": "Turbo Hydraulik - Najlepszy Hydraulik w Polsce",
+            "meta_description": "Profesjonalne usługi hydrauliczne w Polsce. Instalacja i wymiana zaworów, naprawa rur, awaryjne usługi hydrauliczne.",
             "phone": "+48 123 456 789",
             "hero_h1": "Turbo Hydraulik na Ursynowie",
             "hero_h2": "Hydraulik Ursynów - Profesjonalne Usługi Hydrauliczne",

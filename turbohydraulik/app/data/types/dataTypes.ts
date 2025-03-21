@@ -14,6 +14,8 @@ export interface CityData {
 }
 
 export interface CityContent {
+  meta_title: string;
+  meta_description: string;
   phone: string;
   hero_h1: string;
   hero_h2: string;
@@ -56,6 +58,8 @@ export interface ServiceData {
 }
 
 export interface ServiceContent {
+  meta_title: string;
+  meta_description: string;
   content: string;
   hero_h1: string;
   aboutService_h2: string;

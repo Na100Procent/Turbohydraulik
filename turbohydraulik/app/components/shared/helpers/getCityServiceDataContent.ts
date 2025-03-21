@@ -9,12 +9,17 @@ import {
   PriceListContent,
   OurServiceContent,
   AboutServiceContent,
+  MetaContent,
 } from "../../../data/types/sectionTypes";
 
 export const getCityServiceDataContent = (
   cityServiceData: DistrictData,
   cityService: ServiceData
 ) => {
+  const metaContent: MetaContent = {
+    title: cityServiceData.content.meta_title,
+    description: cityServiceData.content.meta_description,
+  };
   const heroContent: HeroContent = {
     hero_h1: cityServiceData.content.hero_h1,
     hero_h2: cityServiceData.content.hero_h2,
@@ -66,6 +71,7 @@ export const getCityServiceDataContent = (
   };
 
   return {
+    metaContent,
     heroContent,
     ourServicesContent,
     reviewsContent,

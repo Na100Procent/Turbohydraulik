@@ -10,6 +10,7 @@ import CustomerReviews from "../../components/sections/customerReviews/CustomerR
 import RecentWorks from "../../components/sections/recentWorks/RecentWorks";
 import FAQsection from "../../components/sections/faqSection/FAQsection";
 import {
+  CityData,
   DistrictData,
   ServiceData,
   SubService,
@@ -21,17 +22,14 @@ import ErrorMessage from "@/app/components/shared/ErrorMessage";
 import { getCityServiceDataContent } from "@/app/components/shared/helpers/getCityServiceDataContent";
 import AboutService from "@/app/components/sections/aboutService/AboutService";
 import { websiteData } from "@/app/data/data";
+import Head from "next/head";
 
 interface Props {
   serviceData: DistrictData;
   cityService: ServiceData;
-  citySlug: string;
+  city: CityData;
 }
-export default function ServicePage({
-  serviceData,
-  cityService,
-  citySlug,
-}: Props) {
+export default function ServicePage({ serviceData, cityService, city }: Props) {
   if (!serviceData) return <ErrorMessage message={errorPageLoad} />;
 
   const subServices = cityService.subServices;
@@ -50,55 +48,63 @@ export default function ServicePage({
     inNumbersContent,
     priceListContent,
     aboutServiceContent,
+    metaContent,
   } = getCityServiceDataContent(serviceData, cityService);
 
   const phoneNumber =
-    websiteData.cities[citySlug as keyof typeof websiteData.cities]?.content
+    websiteData.cities[city.slug as keyof typeof websiteData.cities]?.content
       .phone;
 
+  const { title, description } = metaContent;
   return (
-    <Box
-      display="flex"
-      justifyContent="center"
-      alignItems="center"
-      flexDirection="column"
-      id={sectionIds.home}
-    >
-      <TopMenu phoneNumber={phoneNumber} />
-      <HeroService content={heroContent} phoneNumber={phoneNumber} />
-      <AboutService
-        content={aboutServiceContent}
-        subServices={subServices}
-        phoneNumber={phoneNumber}
-      />
-      <CustomerReviews content={reviewsContent} phoneNumber={phoneNumber} />
-      <AboutUs content={aboutUsContent} phoneNumber={phoneNumber} />
-      <HowToOrderUs content={howToContent} phoneNumber={phoneNumber} />
-      <InNumbers
-        content={inNumbersContent}
-        phoneNumber={phoneNumber}
-        bgColor={theme.palette.custom.yellowLight}
-      />
-      <PriceList
-        content={priceListContent}
-        items={subServicesPriceList}
-        phoneNumber={phoneNumber}
-      />
-      <FAQsection phoneNumber={phoneNumber} />
-      <RecentWorks content={recentWorksContent} phoneNumber={phoneNumber} />
+    <>
+      <Head>
+        <title>{title}</title>
+        <meta name="description" content={description} />
+      </Head>
       <Box
-        width={"100%"}
-        bgcolor={theme.palette.custom.background}
-        padding="0px 0px 200px 0 "
+        display="flex"
+        justifyContent="center"
+        alignItems="center"
+        flexDirection="column"
+        id={sectionIds.home}
       >
-        <OurServices
-          bgColor={theme.palette.custom.background}
-          headerColor={theme.palette.primary.main}
-          content={ourServicesContent}
+        <TopMenu phoneNumber={phoneNumber} />
+        <HeroService content={heroContent} phoneNumber={phoneNumber} />
+        <AboutService
+          content={aboutServiceContent}
+          subServices={subServices}
           phoneNumber={phoneNumber}
         />
+        <CustomerReviews content={reviewsContent} phoneNumber={phoneNumber} />
+        <AboutUs content={aboutUsContent} phoneNumber={phoneNumber} />
+        <HowToOrderUs content={howToContent} phoneNumber={phoneNumber} />
+        <InNumbers
+          content={inNumbersContent}
+          phoneNumber={phoneNumber}
+          bgColor={theme.palette.custom.yellowLight}
+        />
+        <PriceList
+          content={priceListContent}
+          items={subServicesPriceList}
+          phoneNumber={phoneNumber}
+        />
+        <FAQsection phoneNumber={phoneNumber} />
+        <RecentWorks content={recentWorksContent} phoneNumber={phoneNumber} />
+        <Box
+          width={"100%"}
+          bgcolor={theme.palette.custom.background}
+          padding="0px 0px 200px 0 "
+        >
+          <OurServices
+            bgColor={theme.palette.custom.background}
+            headerColor={theme.palette.primary.main}
+            content={ourServicesContent}
+            phoneNumber={phoneNumber}
+          />
+        </Box>
+        <Footer phoneNumber={phoneNumber} />
       </Box>
-      <Footer phoneNumber={phoneNumber} />
-    </Box>
+    </>
   );
 }

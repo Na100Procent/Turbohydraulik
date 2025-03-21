@@ -1,3 +1,8 @@
+export interface MetaContent {
+  title: string;
+  description: string;
+}
+
 export interface HeroContent {
   hero_h1: string;
   hero_h2: string;

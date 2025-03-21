@@ -18,6 +18,7 @@ import AboutCity from "@/app/components/sections/aboutCity/AboutCity";
 import DistrictsList from "@/app/components/shared/DistrictsList";
 import PriceList from "@/app/components/sections/priceList/PriceList";
 import getCityServices from "@/app/components/shared/helpers/getCityServices";
+import Head from "next/head";
 
 interface Props {
   districtData: DistrictData;
@@ -34,47 +35,56 @@ export default function DistrictPage({ districtData, city }: Props) {
     recentWorksContent,
     inNumbersContent,
     priceListContent,
+    metaContent,
   } = getDistrictDataContent(districtData);
 
   const phoneNumber = districtData.content.phone;
 
   const availableServices = getCityServices(city.availableServices);
-  return (
-    <Box
-      display="flex"
-      justifyContent="center"
-      alignItems="center"
-      flexDirection="column"
-      id={sectionIds.home}
-    >
-      <TopMenu phoneNumber={phoneNumber} />
-      <IntroSection content={heroContent} phoneNumber={phoneNumber} />
-      <OurServices
-        content={ourServicesContent}
-        bottomHeaderColor={theme.palette.custom.background}
-        phoneNumber={phoneNumber}
-      />
-      <CustomerReviews content={reviewsContent} phoneNumber={phoneNumber} />
-      <HowToOrderUs phoneNumber={phoneNumber} />
-      <AboutUs
-        content={aboutUsContent}
-        bgColor={theme.palette.custom.blueLight}
-        phoneNumber={phoneNumber}
-      />
-      <AboutCity content={aboutCityContent} phoneNumber={phoneNumber} />
-      <RecentWorks content={recentWorksContent} phoneNumber={phoneNumber} />
-      <InNumbers content={inNumbersContent} phoneNumber={phoneNumber} />
-      <PriceList content={priceListContent} items={availableServices} />
-      <FAQsection phoneNumber={phoneNumber} />
 
+  const { title, description } = metaContent;
+  return (
+    <>
+      <Head>
+        <title>{title}</title>
+        <meta name="description" content={description} />
+      </Head>
       <Box
-        width={"100%"}
-        bgcolor={theme.palette.custom.background}
-        padding="0px 0px 200px 0 "
+        display="flex"
+        justifyContent="center"
+        alignItems="center"
+        flexDirection="column"
+        id={sectionIds.home}
       >
-        <DistrictsList city={city} />
+        <TopMenu phoneNumber={phoneNumber} />
+        <IntroSection content={heroContent} phoneNumber={phoneNumber} />
+        <OurServices
+          content={ourServicesContent}
+          bottomHeaderColor={theme.palette.custom.background}
+          phoneNumber={phoneNumber}
+        />
+        <CustomerReviews content={reviewsContent} phoneNumber={phoneNumber} />
+        <HowToOrderUs phoneNumber={phoneNumber} />
+        <AboutUs
+          content={aboutUsContent}
+          bgColor={theme.palette.custom.blueLight}
+          phoneNumber={phoneNumber}
+        />
+        <AboutCity content={aboutCityContent} phoneNumber={phoneNumber} />
+        <RecentWorks content={recentWorksContent} phoneNumber={phoneNumber} />
+        <InNumbers content={inNumbersContent} phoneNumber={phoneNumber} />
+        <PriceList content={priceListContent} items={availableServices} />
+        <FAQsection phoneNumber={phoneNumber} />
+
+        <Box
+          width={"100%"}
+          bgcolor={theme.palette.custom.background}
+          padding="0px 0px 200px 0 "
+        >
+          <DistrictsList city={city} />
+        </Box>
+        <Footer phoneNumber={phoneNumber} />
       </Box>
-      <Footer phoneNumber={phoneNumber} />
-    </Box>
+    </>
   );
 }

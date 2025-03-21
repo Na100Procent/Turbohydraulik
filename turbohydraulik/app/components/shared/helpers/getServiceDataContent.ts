@@ -9,9 +9,14 @@ import {
   PriceListContent,
   OurServiceContent,
   AboutServiceContent,
+  MetaContent,
 } from "../../../data/types/sectionTypes";
 
 export const getServiceDataContent = (serviceData: ServiceData) => {
+  const metaContent: MetaContent = {
+    title: serviceData.mainContent.meta_title,
+    description: serviceData.mainContent.meta_description,
+  };
   const heroContent: HeroContent = {
     hero_h1: serviceData.mainContent.hero_h1,
     hero_h2: serviceData.mainContent.hero_h2,
@@ -63,6 +68,7 @@ export const getServiceDataContent = (serviceData: ServiceData) => {
   };
 
   return {
+    metaContent,
     heroContent,
     aboutServiceContent,
     ourServicesContent,
