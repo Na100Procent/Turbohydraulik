@@ -3,7 +3,13 @@ import ServicePage from "./ServicePage";
 import DistrictPage from "./DistrictPage";
 import { FC } from "react";
 import { PageProps } from "@/.next/types/app/[city]/[slug]/page";
-import { CityData, ServiceData } from "@/app/data/types/dataTypes";
+import {
+  CityData,
+  DistrictData,
+  ServiceData,
+} from "@/app/data/types/dataTypes";
+import { getCityServiceDataContent } from "@/app/components/shared/helpers/getCityServiceDataContent";
+import { getDistrictDataContent } from "@/app/components/shared/helpers/getDistrictDataContent";
 
 export const generateStaticParams = async () => {
   const cities = Object.keys(websiteData.cities);
@@ -26,6 +32,40 @@ export const generateStaticParams = async () => {
   });
 
   return paths;
+};
+
+export const generateMetadata = async ({
+  params,
+}: PageProps): Promise<{ title: string; description: string }> => {
+  const { city: cityParam, slug: slugParam } = await params;
+
+  const cityService: ServiceData =
+    websiteData.services[slugParam as keyof typeof websiteData.services];
+
+  const foundCity: CityData =
+    websiteData.cities[cityParam as keyof typeof websiteData.cities];
+
+  const district: DistrictData =
+    foundCity.districts[slugParam as keyof typeof foundCity.districts];
+
+  const cityServiceContent: DistrictData =
+    cityService?.citiesContent[cityParam as keyof typeof websiteData.cities];
+
+  if (cityService) {
+    const { metaContent } = getCityServiceDataContent(
+      cityServiceContent,
+      cityService
+    );
+    return {
+      title: metaContent.title,
+      description: metaContent.description,
+    };
+  }
+  const { metaContent } = getDistrictDataContent(district);
+  return {
+    title: metaContent.title,
+    description: metaContent.description,
+  };
 };
 
 const DynamicPage: FC<PageProps> = async ({ params }) => {

@@ -16,7 +16,6 @@ import { ServiceData, SubService } from "../data/types/dataTypes";
 import { getServiceDataContent } from "../components/shared/helpers/getServiceDataContent";
 import ErrorMessage from "../components/shared/ErrorMessage";
 import AboutService from "../components/sections/aboutService/AboutService";
-import Head from "next/head";
 
 interface Props {
   serviceData: ServiceData;
@@ -41,49 +40,41 @@ export default function ServicePage({ serviceData }: Props) {
     recentWorksContent,
     inNumbersContent,
     priceListContent,
-    metaContent,
   } = getServiceDataContent(serviceData);
 
-  const { title, description } = metaContent;
   return (
-    <>
-      <Head>
-        <title>{title}</title>
-        <meta name="description" content={description} />
-      </Head>
+    <Box
+      display="flex"
+      justifyContent="center"
+      alignItems="center"
+      flexDirection="column"
+      id={sectionIds.home}
+    >
+      <TopMenu />
+      <HeroService content={heroContent} />
+      <AboutService content={aboutServiceContent} subServices={subServices} />
+      <CustomerReviews content={reviewsContent} />
+      <AboutUs content={aboutUsContent} />
+      <HowToOrderUs content={howToContent} />
+      <InNumbers
+        content={inNumbersContent}
+        bgColor={theme.palette.custom.yellowLight}
+      />
+      <PriceList content={priceListContent} items={subServicesPriceList} />
+      <FAQsection />
+      <RecentWorks content={recentWorksContent} />
       <Box
-        display="flex"
-        justifyContent="center"
-        alignItems="center"
-        flexDirection="column"
-        id={sectionIds.home}
+        width={"100%"}
+        bgcolor={theme.palette.custom.background}
+        padding="0px 0px 200px 0 "
       >
-        <TopMenu />
-        <HeroService content={heroContent} />
-        <AboutService content={aboutServiceContent} subServices={subServices} />
-        <CustomerReviews content={reviewsContent} />
-        <AboutUs content={aboutUsContent} />
-        <HowToOrderUs content={howToContent} />
-        <InNumbers
-          content={inNumbersContent}
-          bgColor={theme.palette.custom.yellowLight}
+        <OurServices
+          bgColor={theme.palette.custom.background}
+          headerColor={theme.palette.primary.main}
+          content={ourServicesContent}
         />
-        <PriceList content={priceListContent} items={subServicesPriceList} />
-        <FAQsection />
-        <RecentWorks content={recentWorksContent} />
-        <Box
-          width={"100%"}
-          bgcolor={theme.palette.custom.background}
-          padding="0px 0px 200px 0 "
-        >
-          <OurServices
-            bgColor={theme.palette.custom.background}
-            headerColor={theme.palette.primary.main}
-            content={ourServicesContent}
-          />
-        </Box>
-        <Footer />
       </Box>
-    </>
+      <Footer />
+    </Box>
   );
 }

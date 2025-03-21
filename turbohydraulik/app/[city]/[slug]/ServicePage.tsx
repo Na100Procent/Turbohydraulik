@@ -22,7 +22,6 @@ import ErrorMessage from "@/app/components/shared/ErrorMessage";
 import { getCityServiceDataContent } from "@/app/components/shared/helpers/getCityServiceDataContent";
 import AboutService from "@/app/components/sections/aboutService/AboutService";
 import { websiteData } from "@/app/data/data";
-import Head from "next/head";
 
 interface Props {
   serviceData: DistrictData;
@@ -48,63 +47,55 @@ export default function ServicePage({ serviceData, cityService, city }: Props) {
     inNumbersContent,
     priceListContent,
     aboutServiceContent,
-    metaContent,
   } = getCityServiceDataContent(serviceData, cityService);
 
   const phoneNumber =
     websiteData.cities[city.slug as keyof typeof websiteData.cities]?.content
       .phone;
 
-  const { title, description } = metaContent;
   return (
-    <>
-      <Head>
-        <title>{title}</title>
-        <meta name="description" content={description} />
-      </Head>
+    <Box
+      display="flex"
+      justifyContent="center"
+      alignItems="center"
+      flexDirection="column"
+      id={sectionIds.home}
+    >
+      <TopMenu phoneNumber={phoneNumber} />
+      <HeroService content={heroContent} phoneNumber={phoneNumber} />
+      <AboutService
+        content={aboutServiceContent}
+        subServices={subServices}
+        phoneNumber={phoneNumber}
+      />
+      <CustomerReviews content={reviewsContent} phoneNumber={phoneNumber} />
+      <AboutUs content={aboutUsContent} phoneNumber={phoneNumber} />
+      <HowToOrderUs content={howToContent} phoneNumber={phoneNumber} />
+      <InNumbers
+        content={inNumbersContent}
+        phoneNumber={phoneNumber}
+        bgColor={theme.palette.custom.yellowLight}
+      />
+      <PriceList
+        content={priceListContent}
+        items={subServicesPriceList}
+        phoneNumber={phoneNumber}
+      />
+      <FAQsection phoneNumber={phoneNumber} />
+      <RecentWorks content={recentWorksContent} phoneNumber={phoneNumber} />
       <Box
-        display="flex"
-        justifyContent="center"
-        alignItems="center"
-        flexDirection="column"
-        id={sectionIds.home}
+        width={"100%"}
+        bgcolor={theme.palette.custom.background}
+        padding="0px 0px 200px 0 "
       >
-        <TopMenu phoneNumber={phoneNumber} />
-        <HeroService content={heroContent} phoneNumber={phoneNumber} />
-        <AboutService
-          content={aboutServiceContent}
-          subServices={subServices}
+        <OurServices
+          bgColor={theme.palette.custom.background}
+          headerColor={theme.palette.primary.main}
+          content={ourServicesContent}
           phoneNumber={phoneNumber}
         />
-        <CustomerReviews content={reviewsContent} phoneNumber={phoneNumber} />
-        <AboutUs content={aboutUsContent} phoneNumber={phoneNumber} />
-        <HowToOrderUs content={howToContent} phoneNumber={phoneNumber} />
-        <InNumbers
-          content={inNumbersContent}
-          phoneNumber={phoneNumber}
-          bgColor={theme.palette.custom.yellowLight}
-        />
-        <PriceList
-          content={priceListContent}
-          items={subServicesPriceList}
-          phoneNumber={phoneNumber}
-        />
-        <FAQsection phoneNumber={phoneNumber} />
-        <RecentWorks content={recentWorksContent} phoneNumber={phoneNumber} />
-        <Box
-          width={"100%"}
-          bgcolor={theme.palette.custom.background}
-          padding="0px 0px 200px 0 "
-        >
-          <OurServices
-            bgColor={theme.palette.custom.background}
-            headerColor={theme.palette.primary.main}
-            content={ourServicesContent}
-            phoneNumber={phoneNumber}
-          />
-        </Box>
-        <Footer phoneNumber={phoneNumber} />
       </Box>
-    </>
+      <Footer phoneNumber={phoneNumber} />
+    </Box>
   );
 }

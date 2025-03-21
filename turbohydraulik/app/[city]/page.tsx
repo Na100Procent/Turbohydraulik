@@ -4,6 +4,8 @@ import CityPage from "./CityPage";
 import ServicePage from "./ServicePage";
 import { PageProps } from "@/.next/types/app/[city]/page";
 import { CityData, ServiceData } from "../data/types/dataTypes";
+import { getServiceDataContent } from "../components/shared/helpers/getServiceDataContent";
+import { getCityDataContent } from "../components/shared/helpers/getCityDataContent";
 
 export const generateStaticParams = async () => {
   const cities = Object.keys(websiteData.cities);
@@ -20,6 +22,31 @@ export const generateStaticParams = async () => {
   });
 
   return paths;
+};
+
+export const generateMetadata = async ({
+  params,
+}: PageProps): Promise<{ title: string; description: string }> => {
+  const { city: currentSlug } = await params;
+
+  const slugIsCity = Object.keys(websiteData.cities).includes(currentSlug);
+
+  const slug: CityData | ServiceData = slugIsCity
+    ? websiteData.cities[currentSlug as keyof typeof websiteData.cities]
+    : websiteData.services[currentSlug as keyof typeof websiteData.services];
+
+  if (slugIsCity) {
+    const { metaContent } = getCityDataContent(slug as CityData);
+    return {
+      title: metaContent.title,
+      description: metaContent.description,
+    };
+  }
+  const { metaContent } = getServiceDataContent(slug as ServiceData);
+  return {
+    title: metaContent.title,
+    description: metaContent.description,
+  };
 };
 
 const CityOrServicePage: FC<PageProps> = async ({ params }) => {

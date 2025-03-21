@@ -12,8 +12,12 @@ import TopMenu from "./components/sections/topMenu/TopMenu";
 import { sectionIds } from "./constants/appConstants";
 import OurCities from "./components/sections/ourCities/OurCities";
 import theme from "./theme/theme";
-import Head from "next/head";
 import { websiteData } from "./data/data";
+
+export const metadata = {
+  title: websiteData.homepageContent.meta_title,
+  description: websiteData.homepageContent.meta_description,
+};
 
 export default function Home() {
   const containerSx = {
@@ -28,14 +32,6 @@ export default function Home() {
 
   return (
     <>
-      <Head>
-        <meta name="title" content={websiteData.homepageContent.meta_title} />
-        <meta
-          name="description"
-          content={websiteData.homepageContent.meta_description}
-        />
-      </Head>
-
       <Box sx={containerSx} id={sectionIds.home}>
         <TopMenu />
         <IntroSection />
