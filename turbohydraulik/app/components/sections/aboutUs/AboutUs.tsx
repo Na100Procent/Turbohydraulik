@@ -44,7 +44,8 @@ const headerSx = {
 };
 
 const imgSx = {
-  maxWidth: "400px",
+  maxWidth: "500px",
+  minWidth: "300px",
   width: "100%",
   height: "100%",
   maxHeight: "490px",
