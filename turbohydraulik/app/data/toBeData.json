@@ -53,7 +53,7 @@
           "description": "Profesjonalna wymiana zaworu doprowadzającego wodę do pralki. Usuwamy stare, nieszczelne lub uszkodzone zawory i montujemy nowe, zapewniając bezpieczne i bezawaryjne działanie instalacji."
         }
       ],
-      "citiesContent": {
+       "citiesContent": {
         "warszawa": {
           "name": " Usługi Hydrauliczne w Warszawie",
           "slug": "uslugi-hydrauliczne-w-warszawie",
@@ -140,7 +140,7 @@
       }
     }
   },
-  "cities": {
+  "cities": {  
     "warszawa": {
       "name": "Warszawa",
       "slug": "warszawa",
