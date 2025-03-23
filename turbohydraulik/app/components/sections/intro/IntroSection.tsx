@@ -3,11 +3,11 @@ import BackgroundWrapper from "../../shared/BackgroundWrapper";
 import theme from "@/app/theme/theme";
 import HeaderBox from "./HeaderBox";
 import { Box } from "@mui/material";
-import { introBgUrl } from "@/app/constants/imagesUrls";
 import HorizontalBanner from "./HorizontalBanner";
 import CallUsButton from "../../shared/CallUsButton";
 import { HeroContent } from "@/app/data/types/sectionTypes";
 import { websiteData } from "@/app/data/data";
+import { introBgUrl } from "@/app/constants/imagesUrls";
 
 interface Props {
   content?: HeroContent;
@@ -44,9 +44,12 @@ const contentSx = {
 };
 const IntroSection = ({ content, phoneNumber }: Props) => {
   const heroSectionData = content ? content : websiteData.homepageContent;
-  const { hero_h1, hero_h2, hero_text } = heroSectionData;
+  const { hero_h1, hero_h2, hero_text, hero_bg_url } = heroSectionData;
   return (
-    <BackgroundWrapper bgImage={introBgUrl} sx={containerSx}>
+    <BackgroundWrapper
+      bgImage={hero_bg_url ? hero_bg_url : introBgUrl}
+      sx={containerSx}
+    >
       <Box padding="20px 0 0 0">
         <Box sx={contentSx}>
           <Box sx={heroSx}>

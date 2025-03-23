@@ -1,0 +1,142 @@
+{
+  "warszawa": {
+    "@context": "https://schema.org",
+    "@type": "Plumber",
+    "name": "Twój Hydraulik Zielona Góra 24",
+    "image": "https://twojadomena.pl/logo.png",
+    "logo": "https://twojadomena.pl/logo.png",
+    "@id": "https://twojadomena.pl",
+    "url": "https://twojadomena.pl",
+    "telephone": "+48 123 456 789",
+    "email": "kontakt@twojadomena.pl",
+    "foundingDate": "2021-05-15",
+    "currenciesAccepted": "PLN",
+    "isAccessibleForFree": true,
+    "serviceOutput": "Sprawna instalacja wodno-kanalizacyjna i grzewcza",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "ul. Hydrauliczna 7",
+      "addressLocality": "Zielona Góra",
+      "postalCode": "65-001",
+      "addressCountry": "PL"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 51.9356,
+      "longitude": 15.5064
+    },
+    "hasMap": "https://goo.gl/maps/example",
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "08:00",
+        "closes": "20:00"
+      }
+    ],
+    "areaServed": {
+      "@type": "Place",
+      "name": "Zielona Góra i okolice"
+    },
+    "description": "Profesjonalne usługi hydrauliczne w Zielonej Górze. Naprawy, montaż, serwis instalacji wodno-kanalizacyjnych i grzewczych.",
+    "paymentAccepted": "Gotówka, Karta, Przelew",
+    "makesOffer": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Usługi Hydrauliczne",
+          "description": "Kompleksowe usługi hydrauliczne – montaż, naprawa i konserwacja instalacji wodno-kanalizacyjnych."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Udrażnianie i czyszczenie rur",
+          "description": "Szybkie i skuteczne usuwanie zatorów w rurach oraz czyszczenie instalacji odpływowych."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Silikonowanie i uszczelnienia",
+          "description": "Profesjonalne silikonowanie wanien, brodzików, umywalek oraz uszczelnianie instalacji wodnych."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Montaż i serwis podgrzewaczy wody",
+          "description": "Instalacja i naprawa elektrycznych oraz gazowych podgrzewaczy wody."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Podłączanie sprzętów AGD",
+          "description": "Bezpieczny montaż i podłączenie pralek, zmywarek, suszarek."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Serwis i montaż syfonów",
+          "description": "Wymiana, czyszczenie i montaż syfonów umywalkowych, wannowych i zlewozmywakowych."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Serwis Kabin Prysznicowych",
+          "description": "Uszczelnianie, regulacja i naprawa kabin prysznicowych wszystkich typów."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Montaż i naprawa centralnego ogrzewania",
+          "description": "Podłączanie grzejników, odpowietrzanie, modernizacja i serwis instalacji CO."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Kompleksowy serwis toalet",
+          "description": "Wymiana spłuczek, uszczelnień, naprawa przecieków i montaż nowych toalet."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Montaż zlewów i umywalek",
+          "description": "Instalacja zlewów kuchennych, umywalek łazienkowych wraz z podłączeniem armatury."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Instalacja i wymiana zaworów",
+          "description": "Montaż zaworów kulowych, grzejnikowych, odcinających oraz ich wymiana."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Serwis, montaż i wymiana baterii",
+          "description": "Obsługa baterii łazienkowych, kuchennych, wannowych i prysznicowych – montaż i naprawa."
+        }
+      }
+    ]
+  }
+}

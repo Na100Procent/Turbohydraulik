@@ -21,7 +21,7 @@ import theme from "@/app/theme/theme";
 import ErrorMessage from "@/app/components/shared/ErrorMessage";
 import { getCityServiceDataContent } from "@/app/components/shared/helpers/getCityServiceDataContent";
 import AboutService from "@/app/components/sections/aboutService/AboutService";
-import { websiteData } from "@/app/data/data";
+import { schemaData, websiteData } from "@/app/data/data";
 
 interface Props {
   serviceData: DistrictData;
@@ -53,49 +53,57 @@ export default function ServicePage({ serviceData, cityService, city }: Props) {
     websiteData.cities[city.slug as keyof typeof websiteData.cities]?.content
       .phone;
 
+  const schema = schemaData[city.slug as keyof typeof schemaData];
+
   return (
-    <Box
-      display="flex"
-      justifyContent="center"
-      alignItems="center"
-      flexDirection="column"
-      id={sectionIds.home}
-    >
-      <TopMenu phoneNumber={phoneNumber} />
-      <HeroService content={heroContent} phoneNumber={phoneNumber} />
-      <AboutService
-        content={aboutServiceContent}
-        subServices={subServices}
-        phoneNumber={phoneNumber}
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
-      <CustomerReviews content={reviewsContent} phoneNumber={phoneNumber} />
-      <AboutUs content={aboutUsContent} phoneNumber={phoneNumber} />
-      <HowToOrderUs content={howToContent} phoneNumber={phoneNumber} />
-      <InNumbers
-        content={inNumbersContent}
-        phoneNumber={phoneNumber}
-        bgColor={theme.palette.custom.yellowLight}
-      />
-      <PriceList
-        content={priceListContent}
-        items={subServicesPriceList}
-        phoneNumber={phoneNumber}
-      />
-      <FAQsection phoneNumber={phoneNumber} />
-      <RecentWorks content={recentWorksContent} phoneNumber={phoneNumber} />
       <Box
-        width={"100%"}
-        bgcolor={theme.palette.custom.background}
-        padding="0px 0px 200px 0 "
+        display="flex"
+        justifyContent="center"
+        alignItems="center"
+        flexDirection="column"
+        id={sectionIds.home}
       >
-        <OurServices
-          bgColor={theme.palette.custom.background}
-          headerColor={theme.palette.primary.main}
-          content={ourServicesContent}
+        <TopMenu phoneNumber={phoneNumber} />
+        <HeroService content={heroContent} phoneNumber={phoneNumber} />
+        <AboutService
+          content={aboutServiceContent}
+          subServices={subServices}
           phoneNumber={phoneNumber}
         />
+        <CustomerReviews content={reviewsContent} phoneNumber={phoneNumber} />
+        <AboutUs content={aboutUsContent} phoneNumber={phoneNumber} />
+        <HowToOrderUs content={howToContent} phoneNumber={phoneNumber} />
+        <InNumbers
+          content={inNumbersContent}
+          phoneNumber={phoneNumber}
+          bgColor={theme.palette.custom.yellowLight}
+        />
+        <PriceList
+          content={priceListContent}
+          items={subServicesPriceList}
+          phoneNumber={phoneNumber}
+        />
+        <FAQsection phoneNumber={phoneNumber} />
+        <RecentWorks content={recentWorksContent} phoneNumber={phoneNumber} />
+        <Box
+          width={"100%"}
+          bgcolor={theme.palette.custom.background}
+          padding="0px 0px 200px 0 "
+        >
+          <OurServices
+            bgColor={theme.palette.custom.background}
+            headerColor={theme.palette.primary.main}
+            content={ourServicesContent}
+            phoneNumber={phoneNumber}
+          />
+        </Box>
+        <Footer phoneNumber={phoneNumber} />
       </Box>
-      <Footer phoneNumber={phoneNumber} />
-    </Box>
+    </>
   );
 }
