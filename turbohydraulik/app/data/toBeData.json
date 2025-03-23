@@ -78,6 +78,7 @@
             "aboutUs_h3": "Turbo Hydraulik Warszawa - Twój ekspert w dziedzinie hydrauliki",
             "aboutUs_text": "Jesteśmy zespołem doświadczonych hydraulików z Warszawy, gotowych do pomocy w każdej sytuacji hydraulicznej. Naszą misją jest zapewnienie najwyższej jakości usług dla naszych klientów.",
             "aboutUs_h3_2": "Nasza misja",
+            "aboutCity_text1": "aboutCity_text1",
             "aboutUs_text_2": "Dążymy do zapewnienia kompleksowej obsługi hydraulicznej, abyś zawsze mógł czuć się komfortowo w swoim domu.",
             "portfolio_h2": "Ostatnie realizacje – Turbo Hydraulik Warszawa",
             "portfolio_text": "Zobacz nasze najnowsze realizacje hydrauliczne w Warszawie, które świadczą o naszej pasji i zaangażowaniu w to, co robimy.",
@@ -99,7 +100,6 @@
         "http://www.turbohydraulik.pl/assets/images/instalacja_i_wymiana_zaworow/4.webp",
         "http://www.turbohydraulik.pl/assets/images/instalacja_i_wymiana_zaworow/5.webp",
         "http://www.turbohydraulik.pl/assets/images/instalacja_i_wymiana_zaworow/6.webp"
-       
       ],
       "mainContent": {
         "meta_title": "Instalacja i wymiana zaworów | Turbo Hydraulik W Twojej Okolicy",
@@ -166,7 +166,7 @@
         "aboutCity_h2": "Hydraulik w Warszawie",
         "aboutCity_text1": "Turbo Hydraulik zapewnia usługi hydrauliczne dostosowane do potrzeb mieszkańców stolicy.",
         "aboutCity_h3": "Twoi lokalni eksperci.",
-        "aboutCity_text_2": "Dbamy o to, by mieszkańcy Warszawy mieli dostęp do profesjonalnych usług hydraulicznych w każdym momencie.",
+        "aboutCity_text2": "Dbamy o to, by mieszkańcy Warszawy mieli dostęp do profesjonalnych usług hydraulicznych w każdym momencie.",
         "portfolio_h2": "Nasze realizacje",
         "portfolio_text": "Zrealizowaliśmy wiele projektów hydrauliczych, od małych instalacji po duże remonty.",
         "aboutUsNumbers_h2": "Liczby mówią same za siebie.",
