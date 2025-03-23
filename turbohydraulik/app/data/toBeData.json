@@ -36,6 +36,23 @@
       "slug": "instalacja_i_wymiana_zaworow",
       "price": 150,
       "cardImageUrl": "https://www.turbohydraulik.pl/jsonTest/img/instalacja_i_wymiana_zaworow/featuredImg.webp",
+      "subServices": [
+        {
+          "name": "Montaż Zaworów",
+          "price": 100,
+          "description": "Bezpieczny i profesjonalny montaż zaworów, który zagwarantuje sprawną kontrolę nad Twoją instalacją wodociągową. Skorzystaj z naszej fachowej pomocy!"
+        },
+        {
+          "name": "Wymiana Zaworów",
+          "price": 120,
+          "description": "Profesjonalna wymiana zaworów w instalacjach wodnych. Szybko i precyzyjnie wymieniamy stare, nieszczelne lub uszkodzone zawory, zapewniając bezpieczne i bezawaryjne działanie instalacji."
+        },
+        {
+          "name": "Wymiana Zaworu Od Pralki",
+          "price": 100,
+          "description": "Profesjonalna wymiana zaworu doprowadzającego wodę do pralki. Usuwamy stare, nieszczelne lub uszkodzone zawory i montujemy nowe, zapewniając bezpieczne i bezawaryjne działanie instalacji."
+        }
+      ],
       "citiesContent": {
         "warszawa": {
           "name": "Turbo Hydraulik",
