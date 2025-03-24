@@ -8,11 +8,16 @@ const ScrollCityList = () => {
   const cityNamesUrls = Object.values(websiteData.cities).map((city) => ({
     title: city.name,
     url: `/${city.slug}`,
+    cityCardUrl: city.cityCardUrl,
   }));
 
   const citiesElements = cityNamesUrls.map((city) => (
     <Box key={city.title} padding="5px">
-      <CityCard cityName={city.title} cityUrl={city.url} />
+      <CityCard
+        cityName={city.title}
+        cityUrl={city.url}
+        cityCardUrl={city.cityCardUrl}
+      />
     </Box>
   ));
   return <HorizontalScrollList mappedItems={citiesElements} />;

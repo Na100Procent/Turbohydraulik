@@ -8,6 +8,7 @@ export interface HeroContent {
   hero_h2: string;
   hero_text: string;
   hero_bg_url?: string;
+  hero_images?: string[];
 }
 
 export interface ReviewsContent {

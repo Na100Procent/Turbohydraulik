@@ -7,6 +7,7 @@ import { mockedCityCardUrl } from "@/app/constants/imagesUrls";
 
 interface Props {
   cityName: string;
+  cityCardUrl?: string;
   cityUrl: string;
 }
 
@@ -81,13 +82,13 @@ const description = {
   opacity: 0.8,
   mt: "5px",
 };
-const CityCard = ({ cityName, cityUrl }: Props) => {
+const CityCard = ({ cityName, cityUrl, cityCardUrl }: Props) => {
   return (
     <Link href={`${cityUrl}`}>
       <Box sx={container}>
         <Box
           component="img"
-          src={mockedCityCardUrl}
+          src={cityCardUrl ? cityCardUrl : mockedCityCardUrl}
           sx={imgSx}
           alt={`Turbo Hydraulik ${cityName}`}
         />

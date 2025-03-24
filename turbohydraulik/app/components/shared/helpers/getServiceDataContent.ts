@@ -21,6 +21,7 @@ export const getServiceDataContent = (serviceData: ServiceData) => {
     hero_h1: serviceData.mainContent.hero_h1,
     hero_h2: serviceData.mainContent.hero_h2,
     hero_text: serviceData.mainContent.hero_text,
+    hero_images: serviceData.heroServiceImages,
   };
 
   const aboutServiceContent: AboutServiceContent = {

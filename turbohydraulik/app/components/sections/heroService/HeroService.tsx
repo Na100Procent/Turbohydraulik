@@ -83,26 +83,34 @@ const mosaicSx = {
   },
 };
 const HeroService = ({ content, phoneNumber }: Props) => {
-  const heroSectionData = content ? content : websiteData.homepageContent;
-  const heroHeader = heroSectionData.hero_h1;
-  const heroSubHeader = heroSectionData.hero_h2;
-  const heroText = heroSectionData.hero_text;
+  const heroSectionData = content
+    ? content
+    : (websiteData.homepageContent as HeroContent);
+  const { hero_h1, hero_h2, hero_text, hero_images } = heroSectionData;
+
+  const heroSectionImgs = hero_images
+    ? hero_images
+    : [aboutUsUrl, serviceCardUrl, serviceHeroBg, serviceHeroBg];
 
   const serviceImages = [
     <MosaicElement
       key={0}
-      bgImage={serviceHeroBg}
+      bgImage={heroSectionImgs[0]}
       alt="servis1 Turbohydraulik"
     />,
-    <MosaicElement key={1} bgImage={aboutUsUrl} alt="servis2 Turbohydraulik" />,
+    <MosaicElement
+      key={1}
+      bgImage={heroSectionImgs[1]}
+      alt="servis2 Turbohydraulik"
+    />,
     <MosaicElement
       key={2}
-      bgImage={serviceCardUrl}
+      bgImage={heroSectionImgs[2]}
       alt="servis3 Turbohydraulik"
     />,
     <MosaicElement
       key={3}
-      bgImage={serviceHeroBg}
+      bgImage={heroSectionImgs[3]}
       alt="servis4 Turbohydraulik"
     />,
   ];
@@ -115,9 +123,9 @@ const HeroService = ({ content, phoneNumber }: Props) => {
         <Box sx={contentSx}>
           <Box sx={heroSx}>
             <ServiceHeaderBox
-              header={heroHeader}
-              subHeader={heroSubHeader}
-              text={heroText}
+              header={hero_h1}
+              subHeader={hero_h2}
+              text={hero_text}
             />
 
             <Box mt="50px" width={"100%"} display="flex" justifyContent="left">

@@ -52,6 +52,7 @@ export interface ServiceData {
   slug: string;
   price: number;
   cardImageUrl: string;
+  heroServiceImages: string[];
   subServices: SubService[];
   mainContent: ServiceContent;
   citiesContent: Record<string, DistrictData>;

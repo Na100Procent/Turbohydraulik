@@ -24,6 +24,7 @@ export const getCityServiceDataContent = (
     hero_h1: cityServiceData.content.hero_h1,
     hero_h2: cityServiceData.content.hero_h2,
     hero_text: cityServiceData.content.hero_text,
+    hero_images: cityService.heroServiceImages,
   };
 
   const aboutServiceContent: AboutServiceContent = {
