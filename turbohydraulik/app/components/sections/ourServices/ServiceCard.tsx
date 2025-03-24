@@ -13,6 +13,7 @@ interface Props {
   service: {
     name: string;
     slug: string;
+    serviceImgUrl?: string;
   };
 }
 
@@ -79,12 +80,15 @@ const ServiceCard = ({ city, service }: Props) => {
     }
   }
   const cityTitle = city ? city?.name : "";
+  const serviceImg = service.serviceImgUrl
+    ? service.serviceImgUrl
+    : serviceCardUrl;
   return (
     <Link href={newPath}>
       <Box sx={container}>
         <Box
           component="img"
-          src={serviceCardUrl}
+          src={serviceImg}
           sx={imgSx}
           alt={`Turbo hydraulik ${cityTitle} ${service.name}`}
         />
