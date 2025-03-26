@@ -25,6 +25,7 @@ interface Props {
   city: CityData;
 }
 export default function DistrictPage({ districtData, city }: Props) {
+  console.log(districtData);
   if (!districtData) return <ErrorMessage message={errorPageLoad} />;
   const {
     heroContent,
@@ -45,10 +46,12 @@ export default function DistrictPage({ districtData, city }: Props) {
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-      />
+      {schema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        />
+      )}
 
       <Box
         display="flex"

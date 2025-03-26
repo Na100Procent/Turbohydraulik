@@ -108,7 +108,6 @@
         "http://www.turbohydraulik.pl/assets/images/udraznianie_i_czyszczenie_rur/3.webp",
         "http://www.turbohydraulik.pl/assets/images/udraznianie_i_czyszczenie_rur/4.webp",
         "http://www.turbohydraulik.pl/assets/images/udraznianie_i_czyszczenie_rur/5.webp"
-        
       ],
       "mainContent": {
         "meta_title": "Udrażnianie i czyszczenie rur | Turbo Hydraulik W Twojej Okolicy",
@@ -509,9 +508,9 @@
             "contact_text": "Nie czekaj – skontaktuj się z nami już dziś!"
           }
         },
-        "górczyński": {
+        "gorczynski": {
           "name": "Górczyński",
-          "slug": "górczyński",
+          "slug": "gorczynski",
           "content": {
             "meta_title": "Turbo Hydraulik Górczyński | Usługi Hydrauliczne",
             "meta_description": "Szukasz szybkich i niezawodnych usług hydraulicznych w Górczyńskim? Skontaktuj się z nami i skorzystaj z naszej oferty!",

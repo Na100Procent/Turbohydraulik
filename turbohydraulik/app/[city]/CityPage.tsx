@@ -49,10 +49,12 @@ export default function CityPage({ cityData }: Props) {
   const schema = schemaData[cityData.slug as keyof typeof schemaData];
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-      />
+      {schema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        />
+      )}
 
       <Box
         display="flex"
