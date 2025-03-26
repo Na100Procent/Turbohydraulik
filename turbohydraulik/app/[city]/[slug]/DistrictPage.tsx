@@ -25,7 +25,6 @@ interface Props {
   city: CityData;
 }
 export default function DistrictPage({ districtData, city }: Props) {
-  console.log(districtData);
   if (!districtData) return <ErrorMessage message={errorPageLoad} />;
   const {
     heroContent,

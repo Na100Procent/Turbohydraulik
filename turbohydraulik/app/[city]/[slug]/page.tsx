@@ -39,33 +39,43 @@ export const generateMetadata = async ({
 }: PageProps): Promise<{ title: string; description: string }> => {
   const { city: cityParam, slug: slugParam } = await params;
 
+  const errorMetaData = {
+    title: "Turbohydraulik ",
+    description: "Turbohydraulik ",
+  };
+
   const cityService: ServiceData =
     websiteData.services[slugParam as keyof typeof websiteData.services];
 
   const foundCity: CityData =
     websiteData.cities[cityParam as keyof typeof websiteData.cities];
 
-  const district: DistrictData =
-    foundCity.districts[slugParam as keyof typeof foundCity.districts];
-
-  const cityServiceContent: DistrictData =
-    cityService?.citiesContent[cityParam as keyof typeof websiteData.cities];
-
   if (cityService) {
+    const cityServiceContent: DistrictData =
+      cityService.citiesContent[cityParam as keyof typeof websiteData.cities];
+
+    if (!cityServiceContent) return errorMetaData;
     const { metaContent } = getCityServiceDataContent(
       cityServiceContent,
       cityService
     );
+
     return {
-      title: metaContent.title,
-      description: metaContent.description,
+      title: metaContent?.title,
+      description: metaContent?.description,
     };
   }
-  const { metaContent } = getDistrictDataContent(district);
-  return {
-    title: metaContent.title,
-    description: metaContent.description,
-  };
+  if (foundCity) {
+    const district: DistrictData =
+      foundCity.districts[slugParam as keyof typeof foundCity.districts];
+
+    const { metaContent } = getDistrictDataContent(district);
+    return {
+      title: metaContent?.title,
+      description: metaContent?.description,
+    };
+  }
+  return errorMetaData;
 };
 
 const DynamicPage: FC<PageProps> = async ({ params }) => {
