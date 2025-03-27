@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v15-appRouter";
+import Head from "next/head";
 
 export const metadata: Metadata = {
   keywords:
@@ -31,6 +32,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pl" style={{ overflow: "hidden", width: "100%" }}>
+      <Head>
+        <meta charSet="UTF-8" />
+      </Head>
       <body style={{ overflowX: "hidden", width: "100%" }}>
         <AppRouterCacheProvider>{children}</AppRouterCacheProvider>
       </body>

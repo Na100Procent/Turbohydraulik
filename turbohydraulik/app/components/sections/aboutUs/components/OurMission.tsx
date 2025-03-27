@@ -2,6 +2,10 @@ import theme from "@/app/theme/theme";
 import { Box, Typography } from "@mui/material";
 import React from "react";
 
+interface Props {
+  aboutUs_h3_2: string;
+  aboutUs_text_2: string;
+}
 const container = {
   padding: "40px 50px",
   color: theme.palette.primary.main,
@@ -9,24 +13,20 @@ const container = {
   borderRadius: "10px",
 };
 
-const OurMission = () => {
+const OurMission = ({ aboutUs_h3_2, aboutUs_text_2 }: Props) => {
   return (
     <Box sx={container}>
       <Typography
         variant="h3"
         sx={{ fontWeight: "600", fontSize: "30px", fontFamily: "UniteaSans" }}
       >
-        Nasza misja
+        {aboutUs_h3_2}
       </Typography>
       <Typography
         mt="15px"
         sx={{ fontFamily: "UniteaSans", fontWeight: "500" }}
       >
-        Naszą misją jest świadczenie usług hydraulicznych na najwyższym
-        poziomie, które spełniają oczekiwania naszych klientów. Skupiamy się na
-        terminowości, precyzji i bezpieczeństwie, dbając o każdy szczegół
-        realizowanych zleceń. Satysfakcja klienta jest dla nas najwyższą
-        wartością, dlatego podejmujemy się nawet najbardziej wymagających zadań.
+        {aboutUs_text_2}
       </Typography>
     </Box>
   );

@@ -31,6 +31,8 @@ export interface CityContent {
   aboutUs_h2: string;
   aboutUs_h3: string;
   aboutUs_text: string;
+  aboutUs_text_2: string;
+  aboutUs_h3_2: string;
   aboutCity_h2: string;
   aboutCity_text1: string;
   aboutCity_h3: string;
@@ -45,6 +47,8 @@ export interface CityContent {
   faq_h2: string;
   contact_h2: string;
   contact_text: string;
+  postalCode: string;
+  street: string;
 }
 
 export interface ServiceData {
@@ -52,6 +56,7 @@ export interface ServiceData {
   slug: string;
   price: number;
   cardImageUrl: string;
+  cardDescription: string;
   heroServiceImages: string[];
   subServices: SubService[];
   mainContent: ServiceContent;
@@ -79,6 +84,8 @@ export interface ServiceContent {
   aboutUs_h2: string;
   aboutUs_h3: string;
   aboutUs_text: string;
+  aboutUs_text_2: string;
+  aboutUs_h3_2: string;
   steps_h2: string;
   aboutUsNumbers_h2: string;
   aboutUsNumbers_text: string;

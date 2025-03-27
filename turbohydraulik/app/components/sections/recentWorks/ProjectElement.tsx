@@ -73,7 +73,7 @@ const ProjectElement = ({ bgImage, title, description }: Props) => {
               fontFamily: "UniteaSans",
             }}
           >
-            View project
+            Sprawdź projekt
           </Typography>
           <Box mt="-2px">
             <ArrowOutwardIcon

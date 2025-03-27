@@ -9,30 +9,14 @@ import { usePathname } from "next/navigation";
 
 interface Props {
   city?: CityData;
-  service: {
+  subService: {
     name: string;
     slug: string;
+    description: string;
   };
 }
 
 const container = {
-  width: {
-    xl: "300px",
-    lg: "320px",
-    md: "320px",
-    sm: "100%",
-    xs: "100%",
-    xxs: "100%",
-  },
-  height: {
-    xl: "280px",
-    lg: "280px",
-    md: "280px",
-    sm: "200px",
-    xs: "300px",
-    xxs: "300px",
-  },
-
   borderRadius: "12px",
   overflow: "hidden",
   backgroundColor: theme.palette.custom.background,
@@ -48,6 +32,14 @@ const container = {
     scale: 1.02,
   },
   mt: "10px",
+  maxHeight: {
+    xl: "430px",
+    lg: "550px",
+    md: "500px",
+    sm: "500px",
+    xs: "1000px",
+    xxs: "1000px",
+  },
 };
 
 const titleSx = {
@@ -62,22 +54,22 @@ const titleSx = {
 };
 const descriptionSx = {
   color: theme.palette.custom.darkGray,
-  maxWidth: "400px",
   fontFamily: "UniteaSans",
   fontWeight: 500,
   opacity: 0.8,
   mt: "5px",
 };
 
-const SubServiceCard = ({ city, service }: Props) => {
+const SubServiceCard = ({ city, subService }: Props) => {
+  const { name, slug, description } = subService;
   const pathname = usePathname();
   const pathSegments = pathname.split("/").filter(Boolean);
 
-  let newPath = `/${service.slug}`;
+  let newPath = `/${slug}`;
 
   if (pathSegments.length > 0) {
     if (city?.slug) {
-      newPath = `/${city?.slug}/${service.slug}`;
+      newPath = `/${city?.slug}/${slug}`;
     }
   }
   const cityTitle = city ? city?.name : "";
@@ -85,12 +77,9 @@ const SubServiceCard = ({ city, service }: Props) => {
     <Link href={newPath}>
       <Box sx={container}>
         <Typography variant="h3" sx={titleSx}>
-          {service.name + " " + cityTitle}
+          {name + " " + cityTitle}
         </Typography>
-        <Typography sx={descriptionSx}>
-          Nasza praca to gwarancja najbardziej profesjonalnych usług
-          hydraulicznych.
-        </Typography>
+        <Typography sx={descriptionSx}>{description}</Typography>
       </Box>
     </Link>
   );

@@ -60,7 +60,6 @@ const PriceList = ({ items, content, phoneNumber }: Props) => {
               }}
             >
               <Typography
-                variant="h3"
                 sx={{
                   whiteSpace: "nowrap",
                   minWidth: "250px",

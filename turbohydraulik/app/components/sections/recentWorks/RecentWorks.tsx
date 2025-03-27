@@ -10,6 +10,7 @@ import { RecentWorksContent } from "@/app/data/types/sectionTypes";
 import { websiteData } from "@/app/data/data";
 import CallUsButton from "../../shared/CallUsButton";
 import { sectionXPadding } from "@/app/constants/styles";
+import SectionIdentifier from "../../shared/SectionIdentifier";
 
 interface Props {
   content?: RecentWorksContent;
@@ -21,7 +22,8 @@ const RecentWorks = ({ content, phoneNumber }: Props) => {
 
   return (
     <BackgroundWrapper bgColor={theme.palette.custom.yellowLight}>
-      <Box id={sectionIds.projects}>
+      <SectionIdentifier sectionId={sectionIds.projects} />
+      <Box>
         <SectionPaddingWrapper>
           <SectionCenterHeader
             topHeader="NASZE OSTATNIE PRACE"

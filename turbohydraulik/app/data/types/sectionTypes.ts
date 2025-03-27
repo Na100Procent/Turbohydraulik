@@ -1,3 +1,6 @@
+import { sectionIds } from "@/app/constants/appConstants";
+
+export type SectionType = keyof typeof sectionIds;
 export interface MetaContent {
   title: string;
   description: string;
@@ -38,6 +41,8 @@ export interface AboutUsContent {
   aboutUs_h2: string;
   aboutUs_h3: string;
   aboutUs_text: string;
+  aboutUs_text_2: string;
+  aboutUs_h3_2: string;
 }
 
 export interface AboutCityContent {
@@ -61,4 +66,10 @@ export interface PriceListContent {
   priceList_h2: string;
   priceList_h3: string;
   priceList_text: string;
+}
+
+export interface FooterContent {
+  postalCode: string;
+  street: string;
+  cityName?: string;
 }

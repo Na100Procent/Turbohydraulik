@@ -10,6 +10,7 @@ import {
   OurServiceContent,
   AboutServiceContent,
   MetaContent,
+  FooterContent,
 } from "../../../data/types/sectionTypes";
 
 export const getCityServiceDataContent = (
@@ -54,6 +55,8 @@ export const getCityServiceDataContent = (
     aboutUs_h2: cityServiceData.content.aboutUs_h2,
     aboutUs_h3: cityServiceData.content.aboutUs_h3,
     aboutUs_text: cityServiceData.content.aboutUs_text,
+    aboutUs_text_2: cityServiceData.content.aboutUs_text_2,
+    aboutUs_h3_2: cityServiceData.content.aboutUs_h3_2,
   };
 
   const recentWorksContent: RecentWorksContent = {
@@ -71,6 +74,11 @@ export const getCityServiceDataContent = (
     priceList_text: cityServiceData.content.priceList_text,
   };
 
+  const footerContent: FooterContent = {
+    postalCode: cityServiceData.content.postalCode,
+    street: cityServiceData.content.street,
+  };
+
   return {
     metaContent,
     heroContent,
@@ -82,5 +90,6 @@ export const getCityServiceDataContent = (
     inNumbersContent,
     priceListContent,
     aboutServiceContent,
+    footerContent,
   };
 };

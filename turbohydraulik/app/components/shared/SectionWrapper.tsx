@@ -2,7 +2,7 @@ import { Box } from "@mui/material";
 import React, { JSX } from "react";
 
 interface Props {
-  children: JSX.Element;
+  children: JSX.Element | JSX.Element[];
 }
 
 const SectionPaddingWrapper = ({ children }: Props) => {

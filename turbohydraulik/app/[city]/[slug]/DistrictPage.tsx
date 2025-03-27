@@ -35,6 +35,7 @@ export default function DistrictPage({ districtData, city }: Props) {
     recentWorksContent,
     inNumbersContent,
     priceListContent,
+    footerContent,
   } = getDistrictDataContent(districtData);
 
   const phoneNumber = districtData.content.phone;
@@ -42,6 +43,11 @@ export default function DistrictPage({ districtData, city }: Props) {
   const availableServices = getCityServices(city.availableServices);
 
   const schema = schemaData[city.slug as keyof typeof schemaData];
+
+  const fullFooterContent = {
+    ...footerContent,
+    cityName: city.name,
+  };
 
   return (
     <>
@@ -62,6 +68,7 @@ export default function DistrictPage({ districtData, city }: Props) {
         <TopMenu phoneNumber={phoneNumber} />
         <IntroSection content={heroContent} phoneNumber={phoneNumber} />
         <OurServices
+          city={city}
           content={ourServicesContent}
           bottomHeaderColor={theme.palette.custom.background}
           phoneNumber={phoneNumber}
@@ -86,7 +93,7 @@ export default function DistrictPage({ districtData, city }: Props) {
         >
           <DistrictsList city={city} />
         </Box>
-        <Footer phoneNumber={phoneNumber} />
+        <Footer phoneNumber={phoneNumber} {...fullFooterContent} />
       </Box>
     </>
   );

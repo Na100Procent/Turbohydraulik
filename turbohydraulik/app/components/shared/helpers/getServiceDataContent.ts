@@ -51,6 +51,8 @@ export const getServiceDataContent = (serviceData: ServiceData) => {
     aboutUs_h2: serviceData.mainContent.aboutUs_h2,
     aboutUs_h3: serviceData.mainContent.aboutUs_h3,
     aboutUs_text: serviceData.mainContent.aboutUs_text,
+    aboutUs_text_2: serviceData.mainContent.aboutUs_text_2,
+    aboutUs_h3_2: serviceData.mainContent.aboutUs_h3_2,
   };
 
   const recentWorksContent: RecentWorksContent = {

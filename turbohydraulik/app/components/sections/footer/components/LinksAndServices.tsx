@@ -7,6 +7,10 @@ import FailureForm from "./FailureForm";
 import { websiteData } from "@/app/data/data";
 import { sectionXPadding } from "@/app/constants/styles";
 import CitiesList from "./LocationsList";
+import OpenHours from "./OpenHours";
+interface Props {
+  cityName?: string;
+}
 
 const containerSx = {
   display: "flex",
@@ -15,12 +19,13 @@ const containerSx = {
   flexDirection: {
     xl: "row",
     lg: "row",
-    md: "row",
+    md: "column",
     sm: "column",
     xs: "column",
     xxs: "column",
   },
   alignItems: "top",
+  gap: "20px",
 };
 
 const linkListsSx = {
@@ -28,8 +33,8 @@ const linkListsSx = {
   flexDirection: {
     xl: "row",
     lg: "row",
-    md: "row",
-    sm: "row",
+    md: "column",
+    sm: "column",
     xs: "column",
     xxs: "column",
   },
@@ -43,17 +48,17 @@ const linkListsSx = {
   },
   width: "100%",
   gap: {
-    xl: "200px",
-    lg: "200px",
-    md: "80px",
-    sm: "50px",
-    xs: "50px",
-    xxs: "50px",
+    xl: "80px",
+    lg: "20px",
+    md: "50px",
+    sm: "20px",
+    xs: "20px",
+    xxs: "10px",
   },
   mb: "40px",
 };
 
-const LinksAndServices = () => {
+const LinksAndServices = ({ cityName }: Props) => {
   const servicesNamesUrls: LinkElement[] = Object.values(
     websiteData.services
   ).map((service) => ({
@@ -71,7 +76,9 @@ const LinksAndServices = () => {
       <Box sx={linkListsSx}>
         <CitiesList locationsList={cityNamesUrls} />
         <TitledVerticalList title="USŁUGI" list={servicesNamesUrls} />
+        <OpenHours cityName={cityName} />
       </Box>
+
       <FailureForm />
     </Box>
   );
