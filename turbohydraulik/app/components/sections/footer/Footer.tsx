@@ -12,8 +12,16 @@ import { sectionIds } from "@/app/constants/appConstants";
 
 interface Props {
   phoneNumber?: string;
+  postalCode?: string;
+  street?: string;
+  cityName?: string;
 }
-const Footer = ({ phoneNumber }: Props) => {
+const Footer = ({ phoneNumber, postalCode, street, cityName }: Props) => {
+  console.log(postalCode, street, cityName);
+  const address =
+    postalCode && cityName && street
+      ? `${postalCode} ${cityName}, ${street}`
+      : "";
   return (
     <BackgroundWrapper
       bgColor={theme.palette.primary.main}
@@ -27,7 +35,7 @@ const Footer = ({ phoneNumber }: Props) => {
           gap="50px"
           position={"relative"}
         >
-          <LogoContact phoneNumber={phoneNumber} />
+          <LogoContact phoneNumber={phoneNumber} address={address} />
           <HorizontalSeparator />
           <LinksAndServices />
           <SocialMediasSeparator />

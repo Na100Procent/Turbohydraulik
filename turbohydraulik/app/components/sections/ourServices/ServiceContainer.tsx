@@ -17,6 +17,7 @@ const ServiceContainer = ({ city }: Props) => {
             name: service.name,
             slug: service.slug,
             serviceImgUrl: service.cardImageUrl,
+            cardDescription: service.cardDescription,
           }}
           city={city}
         />

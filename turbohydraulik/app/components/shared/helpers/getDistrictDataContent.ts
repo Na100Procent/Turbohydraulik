@@ -10,6 +10,7 @@ import {
   OurServiceContent,
   AboutCityContent,
   MetaContent,
+  FooterContent,
 } from "../../../data/types/sectionTypes";
 
 export const getDistrictDataContent = (districtData: DistrictData) => {
@@ -50,6 +51,8 @@ export const getDistrictDataContent = (districtData: DistrictData) => {
     aboutUs_h2: districtData.content.aboutUs_h2,
     aboutUs_h3: districtData.content.aboutUs_h3,
     aboutUs_text: districtData.content.aboutUs_text,
+    aboutUs_text_2: districtData.content.aboutUs_text_2,
+    aboutUs_h3_2: districtData.content.aboutUs_h3_2,
   };
 
   const recentWorksContent: RecentWorksContent = {
@@ -67,6 +70,11 @@ export const getDistrictDataContent = (districtData: DistrictData) => {
     priceList_text: districtData.content.priceList_text,
   };
 
+  const footerContent: FooterContent = {
+    postalCode: districtData.content.postalCode,
+    street: districtData.content.street,
+  };
+
   return {
     metaContent,
     heroContent,
@@ -78,5 +86,6 @@ export const getDistrictDataContent = (districtData: DistrictData) => {
     recentWorksContent,
     inNumbersContent,
     priceListContent,
+    footerContent,
   };
 };

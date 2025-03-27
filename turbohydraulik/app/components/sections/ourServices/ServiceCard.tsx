@@ -14,6 +14,7 @@ interface Props {
     name: string;
     slug: string;
     serviceImgUrl?: string;
+    cardDescription: string;
   };
 }
 
@@ -93,12 +94,9 @@ const ServiceCard = ({ city, service }: Props) => {
           alt={`Turbo hydraulik ${cityTitle} ${service.name}`}
         />
         <Typography variant="h3" sx={titleSx}>
-          {service.name + " " + cityTitle}
+          {service.name}
         </Typography>
-        <Typography sx={descriptionSx}>
-          Pracujemy dla Ciebie z pasją i zaangażowaniem dostarczając
-          profesjonalizm.
-        </Typography>
+        <Typography sx={descriptionSx}>{service.cardDescription}</Typography>
       </Box>
     </Link>
   );

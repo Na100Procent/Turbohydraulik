@@ -139,7 +139,7 @@ const ContactElements = ({ phoneNumber }: Props) => {
       <Box sx={elementsContainer}>
         <Box sx={{ ...contactElement, ...phoneSx }} onClick={handlePhoneClick}>
           <LocalPhoneOutlinedIcon sx={contactIconSx} />
-          <Typography sx={contactTitleSx}>+48 {phone}</Typography>
+          <Typography sx={contactTitleSx}>{phone}</Typography>
         </Box>
         <Box sx={emailSx}>
           <VerticalSeparator />

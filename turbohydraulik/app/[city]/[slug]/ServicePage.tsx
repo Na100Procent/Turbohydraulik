@@ -47,6 +47,7 @@ export default function ServicePage({ serviceData, cityService, city }: Props) {
     inNumbersContent,
     priceListContent,
     aboutServiceContent,
+    footerContent,
   } = getCityServiceDataContent(serviceData, cityService);
 
   const phoneNumber =
@@ -55,6 +56,10 @@ export default function ServicePage({ serviceData, cityService, city }: Props) {
 
   const schema = schemaData[city.slug as keyof typeof schemaData];
 
+  const fullFooterContent = {
+    ...footerContent,
+    cityName: city.name,
+  };
   return (
     <>
       {schema && (
@@ -104,7 +109,7 @@ export default function ServicePage({ serviceData, cityService, city }: Props) {
             phoneNumber={phoneNumber}
           />
         </Box>
-        <Footer phoneNumber={phoneNumber} />
+        <Footer phoneNumber={phoneNumber} {...fullFooterContent} />
       </Box>
     </>
   );

@@ -1,16 +1,19 @@
 import { LogoIcon } from "@/public/assets/icons/icons";
-import { Box } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import React from "react";
 import ContactForm from "./components/ContactForm";
 import LocalPhoneOutlinedIcon from "@mui/icons-material/LocalPhoneOutlined";
 import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
 import { sectionXPadding } from "@/app/constants/styles";
 import { email, defaultPhoneNUmber } from "@/app/constants/appConstants";
-
+import theme from "@/app/theme/theme";
+import ApartmentOutlinedIcon from "@mui/icons-material/ApartmentOutlined";
 interface Props {
   phoneNumber?: string;
+  address?: string;
 }
 const container = {
+  position: "relative",
   display: "flex",
   gap: "20px",
   padding: sectionXPadding,
@@ -25,13 +28,28 @@ const container = {
     xxs: "column",
   },
 };
-const LogoContact = ({ phoneNumber }: Props) => {
+
+const titleSx = {
+  fontSize: "50px",
+  position: "relative",
+  top: "-80px",
+  fontWeight: "600",
+  width: "100%",
+  textAlign: "left",
+  color: theme.palette.custom.background,
+};
+const LogoContact = ({ phoneNumber, address }: Props) => {
   const phone = phoneNumber ? phoneNumber : defaultPhoneNUmber;
 
   return (
     <Box sx={container}>
-      <Box ml="-20px">
-        <LogoIcon />
+      <Box>
+        <Typography sx={titleSx} variant="h2">
+          Kontakt
+        </Typography>
+        <Box ml="-20px">
+          <LogoIcon />
+        </Box>
       </Box>
       <Box display={"flex"} gap={"50px"} flexWrap="wrap">
         <ContactForm
@@ -44,6 +62,13 @@ const LogoContact = ({ phoneNumber }: Props) => {
           header={email}
           icon={<EmailOutlinedIcon />}
         />
+        {address && (
+          <ContactForm
+            subHeader="ADRES"
+            header={address}
+            icon={<ApartmentOutlinedIcon />}
+          />
+        )}
       </Box>
     </Box>
   );

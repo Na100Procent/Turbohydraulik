@@ -40,6 +40,7 @@ export default function CityPage({ cityData }: Props) {
     recentWorksContent,
     inNumbersContent,
     priceListContent,
+    footerContent,
   } = getCityDataContent(cityData);
 
   const phoneNumber =
@@ -96,7 +97,7 @@ export default function CityPage({ cityData }: Props) {
         >
           <DistrictsList city={cityData} />
         </Box>
-        <Footer phoneNumber={phoneNumber} />
+        <Footer phoneNumber={phoneNumber} {...footerContent} />
       </Box>
     </>
   );

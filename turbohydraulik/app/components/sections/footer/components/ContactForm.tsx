@@ -24,7 +24,7 @@ const headerSx = {
 
 const ContactForm = ({ subHeader, header, icon }: ContactFormProps) => {
   return (
-    <Box display={"flex"} alignItems={"center"} gap={"10px"}>
+    <Box display={"flex"} alignItems={"top"} gap={"10px"}>
       <Box
         sx={{
           width: "40px",
@@ -36,11 +36,17 @@ const ContactForm = ({ subHeader, header, icon }: ContactFormProps) => {
           background: theme.palette.secondary.main,
           padding: "5px",
           borderRadius: "5px",
+          mt: "10px",
         }}
       >
         {icon}
       </Box>
-      <Box padding={"10px 0"}>
+      <Box
+        padding={"10px 0"}
+        display={"flex"}
+        flexDirection={"column"}
+        justifyContent={"top"}
+      >
         <Typography sx={subHeaderSx}>{subHeader}</Typography>
         <Typography sx={headerSx}>{header}</Typography>
       </Box>

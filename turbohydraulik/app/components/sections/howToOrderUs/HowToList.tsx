@@ -17,7 +17,7 @@ export const verticalInfoCardsData = [
   },
   {
     icon: <InfosIcon />,
-    title: "Serwis i naprawa",
+    title: "Umówienie wizyty",
     subtitle:
       "Umówimy dogodny termin wizyty, który będzie odpowiadał Twoim potrzebom i harmonogramowi.",
     badgeNumber: 2,

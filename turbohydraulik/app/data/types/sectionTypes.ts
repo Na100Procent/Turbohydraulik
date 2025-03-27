@@ -64,3 +64,9 @@ export interface PriceListContent {
   priceList_h3: string;
   priceList_text: string;
 }
+
+export interface FooterContent {
+  postalCode: string;
+  street: string;
+  cityName?: string;
+}
