@@ -38,6 +38,8 @@ export interface AboutUsContent {
   aboutUs_h2: string;
   aboutUs_h3: string;
   aboutUs_text: string;
+  aboutUs_text_2: string;
+  aboutUs_h3_2: string;
 }
 
 export interface AboutCityContent {

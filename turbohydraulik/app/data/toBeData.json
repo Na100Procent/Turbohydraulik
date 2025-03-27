@@ -144,9 +144,7 @@
       "name": "Warszawa",
       "slug": "warszawa",
       "cityCardUrl": "https://www.turbohydraulik.pl/assets/images/warszawa.webp",
-      "availableServices": [
-        "instalacja_i_wymiana_zaworow"
-      ],
+      "availableServices": ["instalacja_i_wymiana_zaworow"],
       "content": {
         "meta_title": "Instalacja i wymiana zaworów | Turbo Hydraulik Warszawa",
         "meta_description": "Skorzystaj z profesjonalnych usług hydraulicznych - instalacja i wymiana zaworów w Warszawie. Zadzwoń i umów się na wizytę!",

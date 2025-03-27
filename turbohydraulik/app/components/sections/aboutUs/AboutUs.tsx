@@ -31,7 +31,7 @@ const contentSx = {
     xxs: "column",
   },
   justifyContent: "center",
-  alignItems: "center",
+  alignItems: "start",
   mt: "80px",
   gap: "100px",
 };
@@ -44,7 +44,7 @@ const headerSx = {
 };
 
 const imgSx = {
-  maxWidth: "500px",
+  maxWidth: "600px",
   minWidth: "300px",
   width: "100%",
   height: "100%",
@@ -55,9 +55,9 @@ const imgSx = {
 
 const AboutUs = ({ content, bgColor, phoneNumber }: Props) => {
   const aboutUsContent = content ? content : websiteData.homepageContent;
-  const aboutUs_h2 = aboutUsContent.aboutUs_h2;
-  const aboutUs_h3 = aboutUsContent.aboutUs_h3;
-  const aboutUs_text = aboutUsContent.aboutUs_text;
+  const { aboutUs_h2, aboutUs_h3, aboutUs_text, aboutUs_h3_2, aboutUs_text_2 } =
+    aboutUsContent as AboutUsContent;
+
   return (
     <BackgroundWrapper
       bgColor={bgColor ? bgColor : theme.palette.custom.yellowLight}
@@ -80,8 +80,8 @@ const AboutUs = ({ content, bgColor, phoneNumber }: Props) => {
                 layout="responsive"
                 src={aboutUsUrl}
                 alt={`Turbo Hydraulik ${aboutUs_h2}`}
-                width={400}
-                height={490}
+                width={420}
+                height={510}
               />
             </Box>
             <Box
@@ -110,7 +110,10 @@ const AboutUs = ({ content, bgColor, phoneNumber }: Props) => {
               >
                 {aboutUs_text}
               </Typography>
-              <OurMission />
+              <OurMission
+                aboutUs_text_2={aboutUs_text_2}
+                aboutUs_h3_2={aboutUs_h3_2}
+              />
               <div>
                 <CallUsButton phoneNumber={phoneNumber} />
               </div>
