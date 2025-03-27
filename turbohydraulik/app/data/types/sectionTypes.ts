@@ -1,3 +1,6 @@
+import { sectionIds } from "@/app/constants/appConstants";
+
+export type SectionType = keyof typeof sectionIds;
 export interface MetaContent {
   title: string;
   description: string;

@@ -56,6 +56,7 @@ const TitledVerticalList = ({ title, list, separator, addSx }: Props) => {
                 fontFamily: "UniteaSans",
                 fontWeight: 500,
                 fontSize: "18px",
+                maxWidth: "200px",
               }}
             >
               {item.title}

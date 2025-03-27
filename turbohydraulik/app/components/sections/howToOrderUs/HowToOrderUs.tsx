@@ -9,6 +9,7 @@ import CallUsButton from "../../shared/CallUsButton";
 import { sectionIds } from "@/app/constants/appConstants";
 import { HowToContent } from "@/app/data/types/sectionTypes";
 import { websiteData } from "@/app/data/data";
+import SectionIdentifier from "../../shared/SectionIdentifier";
 
 interface Props {
   content?: HowToContent;
@@ -19,13 +20,13 @@ const HowToOrderUs = ({ content, phoneNumber }: Props) => {
   const steps_h2 = howToContent.steps_h2;
   return (
     <BackgroundWrapper bgColor={theme.palette.custom.background}>
+      <SectionIdentifier sectionId={sectionIds.orderUs} />
       <SectionPaddingWrapper>
         <Box
           display="flex"
           flexDirection="column"
           gap="60px"
           sx={{ fontFamily: "UniteaSans" }}
-          id={sectionIds.orderUs}
         >
           <SectionCenterHeader
             header={steps_h2}

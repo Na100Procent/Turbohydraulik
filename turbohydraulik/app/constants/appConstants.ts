@@ -1,12 +1,12 @@
 export const sectionIds = {
-  home: "homeSection",
-  about: "aboutSection",
-  projects: "projectsSection",
-  contact: "contactSection",
-  services: "servicesSection",
-  orderUs: "orderUsSection",
-  reviews: "reviewsSection",
-  faq: "faqSection",
+  home: "home" as const,
+  about: "about" as const,
+  projects: "projects" as const,
+  contact: "contact" as const,
+  services: "services" as const,
+  orderUs: "orderUs" as const,
+  reviews: "reviews" as const,
+  faq: "faq" as const,
 };
 
 // paths

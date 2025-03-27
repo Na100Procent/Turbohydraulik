@@ -11,6 +11,7 @@ import ApartmentOutlinedIcon from "@mui/icons-material/ApartmentOutlined";
 interface Props {
   phoneNumber?: string;
   address?: string;
+  cityName?: string;
 }
 const container = {
   position: "relative",
@@ -30,7 +31,7 @@ const container = {
 };
 
 const titleSx = {
-  fontSize: "50px",
+  fontSize: "40px",
   position: "relative",
   top: "-80px",
   fontWeight: "600",
@@ -38,16 +39,16 @@ const titleSx = {
   textAlign: "left",
   color: theme.palette.custom.background,
 };
-const LogoContact = ({ phoneNumber, address }: Props) => {
+const LogoContact = ({ phoneNumber, address, cityName }: Props) => {
   const phone = phoneNumber ? phoneNumber : defaultPhoneNUmber;
 
   return (
     <Box sx={container}>
       <Box>
         <Typography sx={titleSx} variant="h2">
-          Kontakt
+          Kontakt Turbo hydraulik {cityName}
         </Typography>
-        <Box ml="-20px">
+        <Box ml="-12px">
           <LogoIcon />
         </Box>
       </Box>

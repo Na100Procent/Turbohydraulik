@@ -10,6 +10,7 @@ import { sectionIds } from "@/app/constants/appConstants";
 import { AboutServiceContent } from "@/app/data/types/sectionTypes";
 import { SubService } from "@/app/data/types/dataTypes";
 import SubServicesList from "./SubServicesList";
+import SectionIdentifier from "../../shared/SectionIdentifier";
 
 interface Props {
   content: AboutServiceContent;
@@ -93,7 +94,8 @@ const AboutService = ({
       bgColor={bgColor ? bgColor : theme.palette.custom.background}
     >
       <SectionPaddingWrapper>
-        <Box sx={textSx} id={sectionIds.about}>
+        <SectionIdentifier sectionId={sectionIds.about} />
+        <Box sx={textSx}>
           <Box sx={headersSx}>
             <SectionHeader
               subHeaderColor={theme.palette.secondary.main}

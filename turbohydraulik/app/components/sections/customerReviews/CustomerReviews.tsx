@@ -12,6 +12,7 @@ import CallUsButton from "../../shared/CallUsButton";
 import SubHeaders from "./components/SubHeaders";
 import { ReviewsContent } from "@/app/data/types/sectionTypes";
 import { websiteData } from "@/app/data/data";
+import SectionIdentifier from "../../shared/SectionIdentifier";
 
 interface Props {
   content?: ReviewsContent;
@@ -31,8 +32,8 @@ const CustomerReviews = ({ content, phoneNumber }: Props) => {
     <BackgroundWrapper bgColor={theme.palette.custom.blueLight}>
       <Box sx={{ overflowX: "hidden" }}>
         <SectionPaddingWrapper>
+          <SectionIdentifier sectionId={sectionIds.reviews} />
           <Box
-            id={sectionIds.reviews}
             padding={sectionXPadding}
             maxWidth="900px"
             zIndex="10"

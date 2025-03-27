@@ -9,6 +9,7 @@ import CallUsButton from "../../shared/CallUsButton";
 import { sectionIds } from "@/app/constants/appConstants";
 import { sectionXPadding } from "@/app/constants/styles";
 import FAQElements from "./FAQElements";
+import SectionIdentifier from "../../shared/SectionIdentifier";
 
 interface Props {
   phoneNumber?: string;
@@ -54,7 +55,8 @@ const FAQsection = ({ phoneNumber }: Props) => {
   return (
     <BackgroundWrapper bgColor={theme.palette.custom.background}>
       <SectionPaddingWrapper>
-        <Box id={sectionIds.faq}>
+        <SectionIdentifier sectionId={sectionIds.faq} />
+        <Box>
           <SectionCenterHeader
             topHeader="FAQ’S"
             header="Najczęściej zadawane pytania"

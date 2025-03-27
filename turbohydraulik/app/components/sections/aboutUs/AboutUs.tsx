@@ -13,6 +13,7 @@ import CallUsButton from "../../shared/CallUsButton";
 import { sectionIds } from "@/app/constants/appConstants";
 import { AboutUsContent } from "@/app/data/types/sectionTypes";
 import { websiteData } from "@/app/data/data";
+import SectionIdentifier from "../../shared/SectionIdentifier";
 
 interface Props {
   content?: AboutUsContent;
@@ -63,7 +64,8 @@ const AboutUs = ({ content, bgColor, phoneNumber }: Props) => {
       bgColor={bgColor ? bgColor : theme.palette.custom.yellowLight}
     >
       <SectionPaddingWrapper>
-        <Box padding={sectionXPadding} id={sectionIds.about}>
+        <SectionIdentifier sectionId={sectionIds.about} />
+        <Box padding={sectionXPadding}>
           <Box sx={headerSx}>
             <SectionHeader
               subHeaderColor={theme.palette.secondary.main}

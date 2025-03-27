@@ -11,6 +11,7 @@ import SectionCenterHeader from "../../shared/SectionCenterHeader";
 import { OurServiceContent } from "@/app/data/types/sectionTypes";
 import { websiteData } from "@/app/data/data";
 import { sectionIds } from "@/app/constants/appConstants";
+import SectionIdentifier from "../../shared/SectionIdentifier";
 
 interface Props {
   city?: CityData;
@@ -49,12 +50,8 @@ const OurServices = ({
   const { service_h2, service_h3, service_text } = serviceContent;
   return (
     <BackgroundWrapper bgColor={bgColor ? bgColor : theme.palette.primary.main}>
-      <Box
-        display={"flex"}
-        flexDirection={"column"}
-        gap="0px"
-        id={sectionIds.services}
-      >
+      <SectionIdentifier sectionId={sectionIds.services} />
+      <Box display={"flex"} flexDirection={"column"} gap="0px">
         <SectionPaddingWrapper>
           <Box sx={headerSx}>
             <SectionCenterHeader

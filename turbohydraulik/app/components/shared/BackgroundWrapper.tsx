@@ -2,7 +2,7 @@ import { Box, SxProps, Theme } from "@mui/material";
 import React, { JSX } from "react";
 
 interface Props {
-  children: JSX.Element;
+  children: JSX.Element | JSX.Element[];
   sx?: SxProps<Theme>;
   bgImage?: string;
   bgColor?: string;
