@@ -4,7 +4,8 @@ import { Box, IconButton } from "@mui/material";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import EmailIcon from "@mui/icons-material/Email";
 import theme from "@/app/theme/theme";
-import { email } from "@/app/constants/appConstants";
+import { email, facebookUrl } from "@/app/constants/appConstants";
+import Link from "next/link";
 
 interface Props {
   separatorColor?: string;
@@ -44,16 +45,17 @@ const SocialMediasSeparator = ({ separatorColor }: Props) => {
         mx={2}
         mt="-20px"
       >
-        <IconButton
-          sx={{
-            backgroundColor: theme.palette.custom.darkBlue,
-            color: "white",
-            ...iconBtn,
-          }}
-        >
-          <FacebookIcon />
-        </IconButton>
-
+        <Link href={facebookUrl} target="_blank">
+          <IconButton
+            sx={{
+              backgroundColor: theme.palette.custom.darkBlue,
+              color: "white",
+              ...iconBtn,
+            }}
+          >
+            <FacebookIcon />
+          </IconButton>
+        </Link>
         <IconButton
           onClick={handleEmailClick}
           sx={{

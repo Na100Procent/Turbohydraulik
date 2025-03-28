@@ -35,7 +35,7 @@ const SideMenuContent = ({ handleDrawerToggle }: Props) => {
         onButtonClick={handleDrawerToggle}
       />
       <SocialMediasSeparator separatorColor={theme.palette.primary.main} />
-      <ContactUsButton />
+      <ContactUsButton onClick={handleDrawerToggle} />
     </Box>
   );
 };

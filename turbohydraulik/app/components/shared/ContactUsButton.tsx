@@ -5,9 +5,13 @@ import RectangularButton from "./RectangularButton";
 import theme from "@/app/theme/theme";
 import { scrollToSection } from "./helpers/scrollToSection";
 
-const ContactUsButton = () => {
+interface Props {
+  onClick?: () => void;
+}
+const ContactUsButton = ({ onClick }: Props) => {
   const handleContactBtnClick = () => {
     scrollToSection(sectionIds.contact);
+    if (onClick) onClick();
   };
   return (
     <RectangularButton

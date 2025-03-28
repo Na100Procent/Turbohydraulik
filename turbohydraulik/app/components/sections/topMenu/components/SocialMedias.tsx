@@ -3,6 +3,8 @@ import theme from "@/app/theme/theme";
 import { Box, IconButton } from "@mui/material";
 import React from "react";
 import FacebookIcon from "@mui/icons-material/Facebook";
+import Link from "next/link";
+import { facebookUrl } from "@/app/constants/appConstants";
 
 const socialMediasSx = {
   justifyContent: "center",
@@ -40,15 +42,17 @@ const SocialMedias = () => {
   return (
     <Box sx={socialMediasSx}>
       <VerticalSeparator />
-      <IconButton
-        sx={{
-          backgroundColor: theme.palette.custom.darkBlue,
-          color: "white",
-          ...iconBtn,
-        }}
-      >
-        <FacebookIcon sx={socialIconSx} />
-      </IconButton>
+      <Link href={facebookUrl} target="_blank">
+        <IconButton
+          sx={{
+            backgroundColor: theme.palette.custom.darkBlue,
+            color: "white",
+            ...iconBtn,
+          }}
+        >
+          <FacebookIcon sx={socialIconSx} />
+        </IconButton>
+      </Link>
     </Box>
   );
 };
