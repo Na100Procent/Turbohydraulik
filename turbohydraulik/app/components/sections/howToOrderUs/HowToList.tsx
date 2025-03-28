@@ -24,7 +24,7 @@ export const verticalInfoCardsData = [
   },
   {
     icon: <MessageIcon />,
-    title: "Instalacje domowe",
+    title: "Realizacja usługi",
     subtitle:
       "Skorzystaj z naszej profesjonalnej obsługi i ciesz się bezproblemowym działaniem swoich instalacji hydraulicznych.",
     badgeNumber: 3,

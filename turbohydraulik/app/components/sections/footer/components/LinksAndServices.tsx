@@ -8,8 +8,9 @@ import { websiteData } from "@/app/data/data";
 import { sectionXPadding } from "@/app/constants/styles";
 import CitiesList from "./LocationsList";
 import OpenHours from "./OpenHours";
+import { CityData } from "@/app/data/types/dataTypes";
 interface Props {
-  cityName?: string;
+  cityData?: CityData;
 }
 
 const containerSx = {
@@ -58,25 +59,29 @@ const linkListsSx = {
   mb: "40px",
 };
 
-const LinksAndServices = ({ cityName }: Props) => {
+const LinksAndServices = ({ cityData }: Props) => {
   const servicesNamesUrls: LinkElement[] = Object.values(
     websiteData.services
   ).map((service) => ({
     title: service.name,
-    url: `/${service.slug}`,
+    url: cityData ? `/${cityData.slug}/${service.slug}` : `/${service.slug}`,
   }));
-  const cityNamesUrls: LinkElement[] = Object.values(websiteData.cities).map(
+
+  const locations = cityData ? cityData.districts : websiteData.cities;
+
+  const locationsNamesUrls: LinkElement[] = Object.values(locations).map(
     (city) => ({
       title: city.name,
-      url: `/${city.slug}`,
+      url: cityData ? `/${cityData.slug}/${city.slug}` : `/${city.slug}`,
     })
   );
+
   return (
     <Box sx={containerSx}>
       <Box sx={linkListsSx}>
-        <CitiesList locationsList={cityNamesUrls} />
+        <CitiesList locationsList={locationsNamesUrls} />
         <TitledVerticalList title="USŁUGI" list={servicesNamesUrls} />
-        <OpenHours cityName={cityName} />
+        <OpenHours cityName={cityData?.name} />
       </Box>
 
       <FailureForm />

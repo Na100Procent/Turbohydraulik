@@ -93,7 +93,11 @@ export default function DistrictPage({ districtData, city }: Props) {
         >
           <DistrictsList city={city} />
         </Box>
-        <Footer phoneNumber={phoneNumber} {...fullFooterContent} />
+        <Footer
+          phoneNumber={phoneNumber}
+          {...fullFooterContent}
+          cityData={city}
+        />
       </Box>
     </>
   );

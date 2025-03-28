@@ -25,7 +25,7 @@ const TopMenu = ({ phoneNumber }: Props) => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
-  const convertedPhoneNum = convertPhoneNum(isMobile, phoneNumber);
+  const convertedPhoneNum = convertPhoneNum(phoneNumber);
   return (
     <BackgroundWrapper sx={{ padding: 0 }}>
       <Box sx={contentSx}>
