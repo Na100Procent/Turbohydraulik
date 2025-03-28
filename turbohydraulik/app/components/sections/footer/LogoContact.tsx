@@ -5,9 +5,14 @@ import ContactForm from "./components/ContactForm";
 import LocalPhoneOutlinedIcon from "@mui/icons-material/LocalPhoneOutlined";
 import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
 import { sectionXPadding } from "@/app/constants/styles";
-import { email, defaultPhoneNUmber } from "@/app/constants/appConstants";
+import {
+  email,
+  defaultPhoneNUmber,
+  homePagePath,
+} from "@/app/constants/appConstants";
 import theme from "@/app/theme/theme";
 import ApartmentOutlinedIcon from "@mui/icons-material/ApartmentOutlined";
+import Link from "next/link";
 interface Props {
   phoneNumber?: string;
   address?: string;
@@ -46,11 +51,13 @@ const LogoContact = ({ phoneNumber, address, cityName }: Props) => {
     <Box sx={container}>
       <Box>
         <Typography sx={titleSx} variant="h2">
-          Kontakt Turbo hydraulik {cityName}
+          Kontakt Turbo Hydraulik {cityName}
         </Typography>
-        <Box ml="-12px">
-          <LogoIcon />
-        </Box>
+        <Link href={homePagePath}>
+          <Box ml="-12px">
+            <LogoIcon />
+          </Box>
+        </Link>
       </Box>
       <Box display={"flex"} gap={"50px"} flexWrap="wrap">
         <ContactForm

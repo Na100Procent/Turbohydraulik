@@ -10,17 +10,18 @@ import SocialMediasSeparator from "./components/SocialMediasSeparator";
 import { YellowRightOrnament } from "@/public/assets/icons/icons";
 import { sectionIds } from "@/app/constants/appConstants";
 import SectionIdentifier from "../../shared/SectionIdentifier";
+import { CityData } from "@/app/data/types/dataTypes";
 
 interface Props {
   phoneNumber?: string;
   postalCode?: string;
   street?: string;
-  cityName?: string;
+  cityData?: CityData;
 }
-const Footer = ({ phoneNumber, postalCode, street, cityName }: Props) => {
+const Footer = ({ phoneNumber, postalCode, street, cityData }: Props) => {
   const address =
-    postalCode && cityName && street
-      ? `${postalCode} ${cityName}, ${street}`
+    postalCode && cityData?.name && street
+      ? `${postalCode} ${cityData.name}, ${street}`
       : "";
 
   return (
@@ -40,10 +41,10 @@ const Footer = ({ phoneNumber, postalCode, street, cityName }: Props) => {
           <LogoContact
             phoneNumber={phoneNumber}
             address={address}
-            cityName={cityName}
+            cityName={cityData?.name}
           />
           <HorizontalSeparator />
-          <LinksAndServices cityName={cityName} />
+          <LinksAndServices cityData={cityData} />
           <SocialMediasSeparator />
           <Policy />
           <Box position={"absolute"} top={"-130px"} left={"-10px"}>

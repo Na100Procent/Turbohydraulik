@@ -1,11 +1,12 @@
+"use client";
 import React from "react";
+import dynamic from "next/dynamic";
 import BackgroundWrapper from "../../shared/BackgroundWrapper";
 import theme from "@/app/theme/theme";
 import SectionHeader from "../../shared/SectionHeader";
 import { Box, Typography } from "@mui/material";
 import { sectionXPadding } from "@/app/constants/styles";
 import SectionPaddingWrapper from "../../shared/SectionWrapper";
-import ReviewsHorizontalScrollList from "./ReviewsHorizontalScrollList";
 import { sectionIds } from "@/app/constants/appConstants";
 import CommaIcon from "./components/CommaIcon";
 import CallUsButton from "../../shared/CallUsButton";
@@ -14,20 +15,28 @@ import { ReviewsContent } from "@/app/data/types/sectionTypes";
 import { websiteData } from "@/app/data/data";
 import SectionIdentifier from "../../shared/SectionIdentifier";
 
+const ReviewsHorizontalScrollList = dynamic(
+  () => import("./ReviewsHorizontalScrollList"),
+  { ssr: false }
+);
+
 interface Props {
   content?: ReviewsContent;
   phoneNumber?: string;
 }
 
 const CustomerReviews = ({ content, phoneNumber }: Props) => {
-  const reviewsContent = content ? content : websiteData.homepageContent;
+  const reviewsContent = content || websiteData.homepageContent;
 
-  const testimonials_h2 = reviewsContent.testimonials_h2;
-  const testimonials_text_1 = reviewsContent.testimonials_text_1;
-  const testimonials_h3 = reviewsContent.testimonials_h3;
-  const testimonials_text_2 = reviewsContent.testimonials_text_2;
+  const {
+    testimonials_h2,
+    testimonials_text_1,
+    testimonials_h3,
+    testimonials_text_2,
+  } = reviewsContent;
 
   const mainColor = theme.palette.primary.main;
+
   return (
     <BackgroundWrapper bgColor={theme.palette.custom.blueLight}>
       <Box sx={{ overflowX: "hidden" }}>

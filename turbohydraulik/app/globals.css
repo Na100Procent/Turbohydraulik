@@ -1,14 +1,7 @@
 @font-face {
   font-family: "UniteaSans";
-  src: url("/fonts/UniteaSans-SemiRegular.otf") format("opentype");
+  src: url("/fonts/UniteaSans-Regular.otf") format("opentype");
   font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "UniteaSans";
-  src: url("/fonts/UniteaSans-ExtraBold.otf") format("opentype");
-  font-weight: 800;
   font-style: normal;
 }
 
@@ -21,11 +14,24 @@
 
 @font-face {
   font-family: "UniteaSans";
+  src: url("/fonts/UniteaSans-SemiBold.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "UniteaSans";
   src: url("/fonts/UniteaSans-Bold.otf") format("opentype");
   font-weight: 700;
   font-style: normal;
 }
 
+@font-face {
+  font-family: "UniteaSans";
+  src: url("/fonts/UniteaSans-ExtraBold.otf") format("opentype");
+  font-weight: 800;
+  font-style: normal;
+}
 @font-face {
   font-family: "UniteaSans";
   src: url("/fonts/UniteaSans-Black.otf") format("opentype");
