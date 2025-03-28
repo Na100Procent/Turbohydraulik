@@ -890,7 +890,9 @@
             "priceList_text": "Oferujemy przejrzyste ceny bez ukrytych kosztów. Zadzwoń i dowiedz się więcej!",
             "faq_h2": "FAQ – Najczęściej Zadawane Pytania - Turbo Hydraulik Śródmieście",
             "contact_h2": "Turbo Hydraulik – szybki kontakt, błyskawiczna pomoc!",
-            "contact_text": "Skontaktuj się z nami już dziś! Jesteśmy gotowi do działania."
+            "contact_text": "Skontaktuj się z nami już dziś! Jesteśmy gotowi do działania.",
+             "postalCode": "12-401",
+    "street": "Wiejska 14A"
           }
         },
         "fabryczna": {
@@ -972,7 +974,9 @@
             "priceList_text": "Gwarantujemy przejrzyste ceny bez ukrytych kosztów – skontaktuj się z nami!",
             "faq_h2": "FAQ – Najczęściej Zadawane Pytania - Turbo Hydraulik Krzyki",
             "contact_h2": "Turbo Hydraulik Krzyki – szybki kontakt, błyskawiczna pomoc!",
-            "contact_text": "Nie czekaj! Zadzwoń teraz: 697697697. Jesteśmy tu dla Ciebie!"
+            "contact_text": "Nie czekaj! Zadzwoń teraz: 697697697. Jesteśmy tu dla Ciebie!",
+             "postalCode": "12-401",
+    "street": "Wiejska 14A"
           }
         },
         "psie-pole": {
@@ -1138,7 +1142,9 @@
             "priceList_text": "Oferujemy przejrzyste ceny bez ukrytych kosztów, abyś wiedział, za co płacisz.",
             "faq_h2": "FAQ – Najczęściej Zadawane Pytania - Turbo Hydraulik Oporów",
             "contact_h2": "Turbo Hydraulik Oporów – szybki kontakt, błyskawiczna pomoc!",
-            "contact_text": "Skontaktuj się z nami już dziś, aby uzyskać szybkie i fachowe usługi hydrauliczne!"
+            "contact_text": "Skontaktuj się z nami już dziś, aby uzyskać szybkie i fachowe usługi hydrauliczne!",
+             "postalCode": "12-401",
+    "street": "Wiejska 14A"
           }
         },
         "widawa": {
