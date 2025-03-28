@@ -4,8 +4,6 @@ import { AppRouterCacheProvider } from "@mui/material-nextjs/v15-appRouter";
 import Head from "next/head";
 
 export const metadata: Metadata = {
-  keywords:
-    "hydraulik, usługi hydrauliczne, awarie, instalacje wodne, TurboHydraulik, pomoc 24/7, naprawa rur, cieknący kran, udrażnianie rur, montaż sanitariatów, pogotowie hydrauliczne, hydraulik Warszawa, pomoc hydrauliczna Warszawa, usługi hydrauliczne Warszawa, hydraulik Kraków, pomoc hydrauliczna Kraków, usługi hydrauliczne Kraków, hydraulik Wrocław, pomoc hydrauliczna Wrocław, usługi hydrauliczne Wrocław, hydraulik Poznań, pomoc hydrauliczna Poznań, usługi hydrauliczne Poznań, hydraulik Gdańsk, pomoc hydrauliczna Gdańsk, usługi hydrauliczne Gdańsk",
   openGraph: {
     type: "website",
     url: "https://turbohydraulik.pl",

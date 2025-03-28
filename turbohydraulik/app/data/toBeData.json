@@ -3,7 +3,7 @@
     "meta_title": "Turbo Hydraulik - Najlepszy Hydraulik w Polsce home",
     "meta_description": " home Profesjonalne usługi hydrauliczne w Polsce. Instalacja i wymiana zaworów, naprawa rur, awaryjne usługi hydrauliczne.",
     "hero_h1": "Turbo Hydraulik",
-    "hero_bg_url": "https://www.turbohydraulik.pl/assets/images/heroBg.webp",
+
     "hero_h2": "Turbo jakość. Turbo podejście. Turbo Hydraulik.",
     "hero_text": "Skorzystaj z naszej kompleksowej usługi instalacji i wymiany zaworów już dziś!",
     "locations_h2": "Hydraulika w Twoim mieście",
@@ -62,7 +62,7 @@
           "slug": "instalacja-i-wymiana-zaworow",
           "content": {
             "meta_title": "Instalacja i Wymiana Zaworów | Turbo Hydraulik Warszawa",
-            "hero_bg_url": "https://www.turbohydraulik.pl/assets/images/heroBg.webp",
+
             "meta_description": "Skorzystaj z profesjonalnej usługi instalacji i wymiany zaworów w Warszawie. Zadzwoń do nas!",
             "phone": "514845632",
             "hero_h1": "Instalacja i Wymiana Zaworów Warszawa",
@@ -107,7 +107,7 @@
           "slug": "instalacja-i-wymiana-zaworow",
           "content": {
             "meta_title": "Instalacja i Wymiana Zaworów | Turbo Hydraulik Wrocław",
-            "hero_bg_url": "https://www.turbohydraulik.pl/assets/images/heroBg.webp",
+
             "meta_description": "Skorzystaj z usług Instalacji i Wymiany Zaworów w Wrocławiu. Zadzwoń: 697697697!",
             "phone": "697697697",
             "hero_h1": "Instalacja i Wymiana Zaworów Wrocław",
@@ -152,7 +152,7 @@
           "slug": "instalacja-i-wymiana-zaworow",
           "content": {
             "meta_title": "Instalacja i Wymiana Zaworów | Turbo Hydraulik Częstochowa",
-            "hero_bg_url": "https://www.turbohydraulik.pl/assets/images/heroBg.webp",
+
             "meta_description": "Zachęcamy do skorzystania z profesjonalnej usługi instalacji i wymiany zaworów w Częstochowie. Zadzwoń do nas!",
             "phone": "654654654",
             "hero_h1": "Instalacja i Wymiana Zaworów w Częstochowie",
@@ -307,7 +307,6 @@
           "name": "Kompleksowy Serwis Toalet",
           "slug": "kompleksowy-serwis-toalet",
           "content": {
-            "hero_bg_url": "https://www.turbohydraulik.pl/assets/images/heroBg.webp",
             "meta_title": "Kompleksowy Serwis Toalet | Turbo Hydraulik Wrocław",
             "meta_description": "Skorzystaj z kompleksowego serwisu toalet w Wrocławiu. Zadzwoń 697697697 i zapewnij sobie komfort użytkowania.",
             "phone": "697697697",
@@ -352,7 +351,6 @@
           "name": "kompleksowy_serwis_toalet",
           "slug": "kompleksowy-serwis-toalet",
           "content": {
-            "hero_bg_url": "https://www.turbohydraulik.pl/assets/images/heroBg.webp",
             "meta_title": "Kompleksowy Serwis Toalet w Częstochowie | Turbo Hydraulik",
             "meta_description": "Skorzystaj z kompleksowego serwisu toalet w Częstochowie z Turbo Hydraulik! Szybka i profesjonalna obsługa.",
             "phone": "654654654",
@@ -469,7 +467,6 @@
           "name": "Podłączanie sprzętów AGD",
           "slug": "podlaczanie-sprzetow-agd",
           "content": {
-            "hero_bg_url": "https://www.turbohydraulik.pl/assets/images/heroBg.webp",
             "meta_title": "Podłączanie sprzętów AGD | Turbo Hydraulik Częstochowa",
             "meta_description": "Zachęcamy do skorzystania z usługi podłączania sprzętów AGD w Częstochowie. Profesjonalne usługi hydrauliczne w Twoim mieście.",
             "phone": "654654654",
@@ -520,7 +517,6 @@
       "cityCardUrl": "https://www.turbohydraulik.pl/assets/images/warszawa.webp",
       "availableServices": ["instalacja_i_wymiana_zaworow"],
       "content": {
-        "hero_bg_url": "https://www.turbohydraulik.pl/assets/images/heroBg.webp",
         "meta_title": "Instalacja i wymiana zaworów | Turbo Hydraulik Warszawa",
         "meta_description": "Skorzystaj z profesjonalnych usług hydraulicznych - instalacja i wymiana zaworów w Warszawie. Zadzwoń i umów się na wizytę!",
         "phone": "514845632",
@@ -990,7 +986,6 @@
         "kompleksowy_serwis_toalet"
       ],
       "content": {
-        "hero_bg_url": "https://www.turbohydraulik.pl/assets/images/heroBg.webp",
         "meta_title": "Instalacja i Wymiana Zaworów | Turbo Hydraulik Wrocław",
         "meta_description": "Skorzystaj z usług instalacji i wymiany zaworów w Wrocławiu. Turbo Hydraulik zapewnia profesjonalną obsługę.",
         "phone": "697697697",
@@ -1461,7 +1456,6 @@
         "podlaczanie_sprzetow_agd"
       ],
       "content": {
-        "hero_bg_url": "https://www.turbohydraulik.pl/assets/images/heroBg.webp",
         "meta_title": "Turbo Hydraulik Częstochowa",
         "meta_description": "Skorzystaj z naszych usług hydraulicznych w Częstochowie. Szybka i profesjonalna pomoc hydrauliczna na każdą sytuację!",
         "phone": "654654654",

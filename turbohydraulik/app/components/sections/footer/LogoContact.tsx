@@ -1,18 +1,12 @@
-import { LogoIcon } from "@/public/assets/icons/icons";
 import { Box, Typography } from "@mui/material";
 import React from "react";
 import ContactForm from "./components/ContactForm";
 import LocalPhoneOutlinedIcon from "@mui/icons-material/LocalPhoneOutlined";
 import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
 import { sectionXPadding } from "@/app/constants/styles";
-import {
-  email,
-  defaultPhoneNUmber,
-  homePagePath,
-} from "@/app/constants/appConstants";
+import { email, defaultPhoneNUmber } from "@/app/constants/appConstants";
 import theme from "@/app/theme/theme";
 import ApartmentOutlinedIcon from "@mui/icons-material/ApartmentOutlined";
-import Link from "next/link";
 import { convertPhoneNum } from "../../shared/helpers/convertPhoneNum";
 interface Props {
   phoneNumber?: string;
@@ -24,16 +18,7 @@ const container = {
   display: "flex",
   gap: "20px",
   padding: sectionXPadding,
-  alignItems: "left",
-  justifyContent: "space-between",
-  flexDirection: {
-    xl: "row",
-    lg: "row",
-    md: "row",
-    sm: "column",
-    xs: "column",
-    xxs: "column",
-  },
+  flexDirection: "column",
 };
 
 const titleSx = {
@@ -50,17 +35,17 @@ const LogoContact = ({ phoneNumber, address, cityName }: Props) => {
   const convertedPhoneNumber = convertPhoneNum(phone);
   return (
     <Box sx={container}>
-      <Box>
-        <Typography sx={titleSx} variant="h2">
-          Kontakt Turbo Hydraulik {cityName}
-        </Typography>
-        <Link href={homePagePath}>
-          <Box ml="-12px">
-            <LogoIcon />
-          </Box>
-        </Link>
-      </Box>
-      <Box display={"flex"} gap={"50px"} flexWrap="wrap">
+      <Typography sx={titleSx} variant="h2">
+        Kontakt Turbo Hydraulik {cityName}
+      </Typography>
+
+      <Box
+        display={"flex"}
+        gap={"50px"}
+        flexWrap="wrap"
+        width={"100%"}
+        justifyContent={"left"}
+      >
         <ContactForm
           subHeader="NUMER TELEFONU"
           header={convertedPhoneNumber}

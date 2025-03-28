@@ -47,7 +47,6 @@ const OpenHours = ({ cityName }: Props) => {
             }}
           >
             <Typography
-              variant="h3"
               sx={{
                 whiteSpace: "nowrap",
                 minWidth: "150px",
@@ -68,7 +67,9 @@ const OpenHours = ({ cityName }: Props) => {
                 whiteSpace: "nowrap",
               }}
             ></Box>
-            <Typography sx={{ fontWeight: "bold" }}>{hour}</Typography>
+            <Typography sx={{ fontWeight: "bold", minWidth: "100px" }}>
+              {hour}
+            </Typography>
           </Box>
         ))}
       </Box>

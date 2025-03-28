@@ -16,6 +16,7 @@ export interface CityData {
 export interface CityContent {
   meta_title: string;
   meta_description: string;
+  hero_bg_url: string;
   phone: string;
   hero_h1: string;
   hero_h2: string;

@@ -46,6 +46,7 @@ const OurCities = () => {
         </div>
         <Box sx={LocationsListSx}>
           <LocationsList
+            locsTitle="JESTEŚMY W MIASTACH"
             addSx={{ color: theme.palette.primary.main }}
             locationsList={cityNamesUrls}
           />

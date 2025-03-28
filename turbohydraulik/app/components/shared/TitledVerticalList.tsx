@@ -12,6 +12,7 @@ interface Props {
   list: LinkElement[];
   separator?: string;
   addSx?: SxProps<Theme>;
+  wrappedStyle?: boolean;
 }
 
 const elementSx = {
@@ -34,6 +35,13 @@ const containerSx = {
   color: theme.palette.custom.background,
 };
 
+const itemTitle = {
+  fontFamily: "UniteaSans",
+  fontWeight: 500,
+  fontSize: "18px",
+  maxWidth: "300px",
+};
+
 const TitledVerticalList = ({ title, list, separator, addSx }: Props) => {
   return (
     <Box sx={{ ...containerSx, ...addSx }}>
@@ -49,18 +57,8 @@ const TitledVerticalList = ({ title, list, separator, addSx }: Props) => {
       {list?.map((item, index) => (
         <Link href={item.url} key={item.title + index}>
           <Box sx={elementSx}>
-            <Typography mt="-4px"> {separator ? separator : "> "}</Typography>
-            <Typography
-              variant="h3"
-              sx={{
-                fontFamily: "UniteaSans",
-                fontWeight: 500,
-                fontSize: "18px",
-                maxWidth: "200px",
-              }}
-            >
-              {item.title}
-            </Typography>
+            <Typography> {separator ? separator : "> "}</Typography>
+            <Typography sx={itemTitle}>{item.title}</Typography>
           </Box>
         </Link>
       ))}

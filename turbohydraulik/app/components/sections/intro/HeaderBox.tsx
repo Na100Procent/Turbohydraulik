@@ -13,8 +13,8 @@ const fontSize = {
   lg: "60px",
   md: "50px",
   sm: "50px",
-  xs: "50px",
-  xxs: "40px",
+  xs: "40px",
+  xxs: "35px",
 };
 
 const headerSx = {
@@ -22,6 +22,10 @@ const headerSx = {
   fontFamily: "UniteaSans",
   lineHeight: fontSize,
   fontSize: fontSize,
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "start",
+  flexDirection: "column",
 };
 const subHeaderSX = {
   color: theme.palette.custom.background,
