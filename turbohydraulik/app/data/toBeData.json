@@ -189,6 +189,7 @@
       "name": "Kompleksowy serwis toalet",
       "slug": "kompleksowy_serwis_toalet",
       "price": 150,
+      "cardDescription": "xyz from cardDescription",
       "cardImageUrl": "https://www.turbohydraulik.pl/assets/images/kompleksowy_serwis_toalet/kompleksowy_serwis_toalet.webp",
       "subServices": [
         {
