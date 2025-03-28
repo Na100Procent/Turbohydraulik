@@ -126,8 +126,9 @@ const contactIconSx = {
 const ContactElements = ({ phoneNumber }: Props) => {
   const phone = phoneNumber ? phoneNumber : defaultPhoneNUmber;
 
+  const phoneToDisplay = convertPhoneNum(phone);
   const handlePhoneClick = () => {
-    const convertedPhoneNum = convertPhoneNum(phone);
+    const convertedPhoneNum = convertPhoneNum(phone, true);
     window.open(`tel:${convertedPhoneNum}`);
   };
 
@@ -142,7 +143,7 @@ const ContactElements = ({ phoneNumber }: Props) => {
       <Box sx={elementsContainer}>
         <Box sx={{ ...contactElement, ...phoneSx }} onClick={handlePhoneClick}>
           <LocalPhoneOutlinedIcon sx={contactIconSx} />
-          <Typography sx={contactTitleSx}>{phone}</Typography>
+          <Typography sx={contactTitleSx}>{phoneToDisplay}</Typography>
         </Box>
         <Box sx={emailSx}>
           <VerticalSeparator />
