@@ -193,6 +193,12 @@
       "price": 150,
       "cardDescription": "xyz from cardDescription",
       "cardImageUrl": "https://www.turbohydraulik.pl/assets/images/kompleksowy_serwis_toalet/kompleksowy_serwis_toalet.webp",
+      "heroServiceImages": [
+        "http://www.turbohydraulik.pl/assets/images/instalacja_i_wymiana_zaworow/1.webp",
+        "http://www.turbohydraulik.pl/assets/images/instalacja_i_wymiana_zaworow/2.webp",
+        "http://www.turbohydraulik.pl/assets/images/instalacja_i_wymiana_zaworow/3.webp",
+        "http://www.turbohydraulik.pl/assets/images/instalacja_i_wymiana_zaworow/4.webp"
+      ],
       "subServices": [
         {
           "name": "Montaż Toalety",
@@ -807,7 +813,7 @@
         "faq_h2": "Najczęściej zadawane pytania",
         "contact_h2": "Kontakt",
         "contact_text": "Dzięki naszemu zespołowi jesteśmy dostępni pod telefonem 697697697 dla mieszkańców Wrocławia. Jesteśmy tutaj, aby odpowiedzieć na Twoje pytania.",
-        "postalCode": "",
+        "postalCode": "51-120",
         "street": "czekoladowa 7"
       },
       "districts": {
