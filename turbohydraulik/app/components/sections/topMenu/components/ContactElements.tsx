@@ -7,6 +7,7 @@ import VerticalSeparator from "../../../shared/VerticalSeparator";
 import { TopMenuOrnament } from "@/public/assets/icons/icons";
 import { defaultPhoneNUmber, email } from "@/app/constants/appConstants";
 import SocialMedias from "./SocialMedias";
+import { convertPhoneNum } from "@/app/components/shared/helpers/convertPhoneNum";
 
 interface Props {
   phoneNumber?: string;
@@ -124,8 +125,10 @@ const contactIconSx = {
 
 const ContactElements = ({ phoneNumber }: Props) => {
   const phone = phoneNumber ? phoneNumber : defaultPhoneNUmber;
+
   const handlePhoneClick = () => {
-    window.open(`tel:${phone}`);
+    const convertedPhoneNum = convertPhoneNum(phone);
+    window.open(`tel:${convertedPhoneNum}`);
   };
 
   const handleEmailClick = () => {

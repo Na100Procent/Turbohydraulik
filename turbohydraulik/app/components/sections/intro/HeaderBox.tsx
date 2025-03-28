@@ -42,7 +42,7 @@ const HeaderBox = ({ hero_h1, hero_h2, hero_text }: Props) => {
       <Typography variant="h1" sx={headerSx}>
         <Box component="span" sx={{ color: theme.palette.custom.background }}>
           {headerPart1}
-        </Box>{" "}
+        </Box>
         <Box component="span" sx={{ color: theme.palette.secondary.main }}>
           {headerPart2}
         </Box>

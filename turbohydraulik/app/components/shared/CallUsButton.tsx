@@ -12,11 +12,11 @@ interface Props {
 }
 const CallUsButton = ({ bgColor, phoneNumber }: Props) => {
   const phone = phoneNumber ? phoneNumber : defaultPhoneNUmber;
-  const handlePhoneClick = () => {
-    window.open(`tel:${phone}`);
-  };
+  const convertedPhoneNum = convertPhoneNum(phone);
 
-  const convertedPhoneNum = convertPhoneNum(phoneNumber);
+  const handlePhoneClick = () => {
+    window.open(`tel:${convertedPhoneNum}`);
+  };
 
   return (
     <RectangularButton

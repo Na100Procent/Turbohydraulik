@@ -31,7 +31,7 @@ const theme = createTheme({
       background: "#F9FAFB",
       yellowLight: "#fff8e2",
       blueLight: "#e5edf1",
-      darkGray: "#5A5A5A",
+      darkGray: "rgb(60, 60, 60)",
       lightGray: "#f4f4f4",
       errorRed: "#ff3333",
       lightBorder: "#F3F4F6",

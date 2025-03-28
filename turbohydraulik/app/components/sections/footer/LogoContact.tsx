@@ -13,6 +13,7 @@ import {
 import theme from "@/app/theme/theme";
 import ApartmentOutlinedIcon from "@mui/icons-material/ApartmentOutlined";
 import Link from "next/link";
+import { convertPhoneNum } from "../../shared/helpers/convertPhoneNum";
 interface Props {
   phoneNumber?: string;
   address?: string;
@@ -46,7 +47,7 @@ const titleSx = {
 };
 const LogoContact = ({ phoneNumber, address, cityName }: Props) => {
   const phone = phoneNumber ? phoneNumber : defaultPhoneNUmber;
-
+  const convertedPhoneNumber = convertPhoneNum(phone);
   return (
     <Box sx={container}>
       <Box>
@@ -62,7 +63,7 @@ const LogoContact = ({ phoneNumber, address, cityName }: Props) => {
       <Box display={"flex"} gap={"50px"} flexWrap="wrap">
         <ContactForm
           subHeader="NUMER TELEFONU"
-          header={phone}
+          header={convertedPhoneNumber}
           icon={<LocalPhoneOutlinedIcon />}
         />
         <ContactForm
