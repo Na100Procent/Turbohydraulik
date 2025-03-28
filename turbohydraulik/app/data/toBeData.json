@@ -171,6 +171,12 @@
           "description": "Wymiana Toalety to profesjonalna usługa, która zapewnia skuteczną modernizację toalety w Twoim domu lub biurze. Rozwiązuje problemy z niewłaściwym działaniem starszych urządzeń, zapewniając komfort oraz oszczędność wody. Zainwestuj w nowoczesne rozwiązania dla lepszej jakości życia."
         }
       ],
+      "heroServiceImages": [
+        "http://www.turbohydraulik.pl/assets/images/instalacja_i_wymiana_zaworow/1.webp",
+        "http://www.turbohydraulik.pl/assets/images/instalacja_i_wymiana_zaworow/2.webp",
+        "http://www.turbohydraulik.pl/assets/images/instalacja_i_wymiana_zaworow/3.webp",
+        "http://www.turbohydraulik.pl/assets/images/instalacja_i_wymiana_zaworow/4.webp"
+      ],
       "mainContent": {
         "meta_title": "Kompleksowy serwis toalet | Turbo Hydraulik W Twojej Okolicy",
         "meta_description": "Skorzystaj z kompleksowego serwisu toalet i zapewnij sobie komfort oraz bezpieczeństwo użytkowania.",
