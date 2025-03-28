@@ -142,6 +142,68 @@
         "service_text": "Wykonujemy wiele innych usług hydraulicznych, aby sprostać wszelkim potrzebom naszych klientów.",
         "content": ""
       }
+    },
+    "kompleksowy_serwis_toalet": {
+      "name": "Kompleksowy serwis toalet",
+      "slug": "kompleksowy_serwis_toalet",
+      "price": 150,
+      "cardImageUrl": "https://www.turbohydraulik.pl/assets/images/kompleksowy_serwis_toalet/kompleksowy_serwis_toalet.webp",
+      "subServices": [
+        {
+          "name": "Montaż Toalety",
+          "price": 250,
+          "description": "Montaż Toalety to profesjonalna usługa, która zapewnia szybkie i bezpieczne zainstalowanie urządzenia sanitarnego. Nasi specjaliści dbają o precyzję i jakość wykonania, co eliminuje problemy z przeciekami i nieprawidłowym działaniem toalety, gwarantując komfort oraz satysfakcję użytkowników."
+        },
+        {
+          "name": "Naprawa Spłuczki",
+          "price": 120,
+          "description": "Nasza usługa naprawy spłuczki zapewnia szybkie i skuteczne rozwiązanie problemów związanych z nieszczelnością, hałasem czy zacinaniem się mechanizmu. Dzięki doświadczeniu naszych fachowców, przywracamy sprawność Twojej instalacji, co przekłada się na komfort i oszczędności w zużyciu wody."
+        },
+        {
+          "name": "Naprawa Toalety Podtynkowej",
+          "price": 200,
+          "description": "Nasza usługa Naprawa Toalety Podtynkowej zapewnia kompleksowe rozwiązania w zakresie problemów z nieszczelnościami, hałasami czy niedziałającymi mechanizmami. Dzięki doświadczeniu naszych specjalistów zyskujesz pewność profesjonalnej naprawy, co przekłada się na oszczędności i komfort użytkowania."
+        },
+        {
+          "name": "Wymiana Toalety",
+          "price": 300,
+          "description": "Wymiana Toalety to profesjonalna usługa, która zapewnia skuteczną modernizację toalety w Twoim domu lub biurze. Rozwiązuje problemy z niewłaściwym działaniem starszych urządzeń, zapewniając komfort oraz oszczędność wody. Zainwestuj w nowoczesne rozwiązania dla lepszej jakości życia."
+        }
+      ],
+      "mainContent": {
+        "meta_title": "Kompleksowy serwis toalet | Turbo Hydraulik W Twojej Okolicy",
+        "meta_description": "Skorzystaj z kompleksowego serwisu toalet i zapewnij sobie komfort oraz bezpieczeństwo użytkowania.",
+        "hero_h1": "Profesjonalny kompleksowy serwis toalet",
+        "hero_h2": "Zaufaj ekspertom w serwisie toalet dla pełnej satysfakcji",
+        "hero_text": "Nasza usługa kompleksowego serwisu toalet zapewnia szybkie i rzetelne rozwiązania, które poprawią komfort Twojego użytkowania. Działamy sprawnie i z najwyższą jakością.",
+        "aboutService_h2": "Kompleksowy serwis toalet z gwarancją jakości",
+        "aboutService_text1": "Nasze usługi hydrauliczne obejmują pełen zakres serwisu toalet, aby zapewnić Ci komfort i bezpieczeństwo. Zaufaj naszym fachowcom, którzy mają doświadczenie i wiedzę, aby rozwiązać wszelkie problemy hydrauliczne związane z toaletami. Oferujemy szybkie rozwiązania, które są dostosowane do Twoich potrzeb.",
+        "aboutService_h3": "Turbo Hydraulik – Eksperci w serwisie toalet",
+        "aboutService_text2": "Zespół Turbo Hydraulik to specjaliści w dziedzinie hydrauliki, oferujący profesjonalny serwis toalet. Nasze wieloletnie doświadczenie oraz zaawansowana wiedza pozwalają nam gwarantować skuteczność i jakość świadczonych usług. Działamy sprawnie, a zadowolenie klienta jest naszym największym priorytetem.",
+        "testimonials_h2": "Opinie naszych zadowolonych klientów",
+        "testimonials_text_1": "Sprawdź, co mówią klienci o naszym kompleksowym serwisie toalet!",
+        "testimonials_h3": "Zostaw swoją opinię!",
+        "testimonials_text_2": "Twoja opinia jest dla nas ważna! Podziel się swoim doświadczeniem z naszym serwisem toalet, aby pomóc innym klientom w podjęciu decyzji.",
+        "aboutUs_h2": "Dlaczego warto nam zaufać?",
+        "aboutUs_h3": "Doświadczenie i profesjonalizm w hydraulice",
+        "aboutUs_text": "Turbo Hydraulik to firma z wieloletnim doświadczeniem w branży hydraulicznej. Posiadamy zespół wykwalifikowanych specjalistów, który ciągle podnosi swoje kwalifikacje, aby świadczyć usługi na najwyższym poziomie. Naszym priorytetem jest zadowolenie klienta i najwyższa jakość usług.",
+        "aboutUs_h3_2": "Nasza misja - jakość i bezpieczeństwo",
+        "aboutUs_text_2": "Naszym celem jest dostarczanie najwyższej jakości usług hydraulicznych, które zapewniają bezpieczeństwo i komfort naszym klientom. Dążymy do tego, aby każdy klient był w pełni usatysfakcjonowany z wykonanej pracy.",
+        "steps_h2": "Jak zamówić kompleksowy serwis toalet w 3 krokach?",
+        "aboutUsNumbers_h2": "Nasze liczby mówią same za siebie",
+        "aboutUsNumbers_text": "10 lat doświadczenia, setki zadowolonych klientów, tysiące wykonanych serwisów toalet",
+        "priceList_h2": "Cennik kompleksowego serwisu toalet",
+        "priceList_h3": "Potrzebujesz innej usługi hydraulicznej?",
+        "priceList_text": "Oferujemy przejrzyste ceny bez ukrytych kosztów. Skontaktuj się z nami, aby otrzymać wycenę!",
+        "faq_h2": "Odpowiadamy na najczęstsze pytania dotyczące naszych usług kompleksowego serwisu toalet",
+        "faq_text": "W naszej ofercie znajdziesz odpowiedzi na najczęściej zadawane pytania dotyczące kompleksowego serwisu toalet. Dowiedz się, jakie usługi oferujemy, jak długo trwa realizacja oraz jakie są nasze ceny.",
+        "portfolio_h2": "Ostatnio zrealizowane prace - kompleksowy serwis toalet",
+        "portfolio_text": "Zachęcamy do zapoznania się z naszymi najnowszymi realizacjami. Nasze usługi cieszą się dużym uznaniem klientów, a my nieustannie podnosimy nasze kwalifikacje. Dzięki temu jesteśmy w stanie sprostać każdemu wyzwaniu hydraulicznemu!",
+        "service_h2": "Inne nasze usługi",
+        "service_h3": "Oferujemy wiele innych usług hydraulicznych",
+        "service_text": "Jeśli potrzebujesz pomocy w zakresie hydrauliki, skontaktuj się z nami! Oferujemy różnorodne usługi, które spełnią wszystkie Twoje potrzeby hydrauliczne.",
+        "content": ""
+      }
     }
   },
   "cities": {
@@ -149,7 +211,9 @@
       "name": "Warszawa",
       "slug": "warszawa",
       "cityCardUrl": "https://www.turbohydraulik.pl/assets/images/warszawa.webp",
-      "availableServices": ["instalacja_i_wymiana_zaworow"],
+      "availableServices": [
+        "instalacja_i_wymiana_zaworow"
+      ],
       "content": {
         "meta_title": "Instalacja i wymiana zaworów | Turbo Hydraulik Warszawa",
         "meta_description": "Skorzystaj z profesjonalnych usług hydraulicznych - instalacja i wymiana zaworów w Warszawie. Zadzwoń i umów się na wizytę!",
