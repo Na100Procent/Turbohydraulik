@@ -73,9 +73,7 @@ const AboutCity = ({ content, bgColor, phoneNumber }: Props) => {
         <SectionIdentifier sectionId={sectionIds.about} />
         <Box padding={sectionXPadding}>
           <SectionHeader
-            subHeaderColor={theme.palette.secondary.main}
             headerColor={theme.palette.primary.main}
-            subHeader="O MIEŚCIE"
             header={aboutCity_h2}
           />
 

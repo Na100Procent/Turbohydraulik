@@ -44,7 +44,6 @@ const PriceList = ({ items, content, phoneNumber }: Props) => {
         padding={sectionXPadding}
       >
         <SectionCenterHeader
-          topHeader="CENNIK"
           bottomHeader={priceList_text}
           header={priceList_h2}
         />

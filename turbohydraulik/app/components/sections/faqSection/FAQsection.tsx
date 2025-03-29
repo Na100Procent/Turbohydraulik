@@ -59,7 +59,6 @@ const FAQsection = ({ phoneNumber }: Props) => {
         <SectionIdentifier sectionId={sectionIds.faq} />
         <Box>
           <SectionCenterHeader
-            topHeader="FAQ’S"
             header="Najczęściej zadawane pytania"
             bottomHeader="Znajdź odpowiedzi na najczęściej zadawane pytania dotyczące naszych usług hydraulicznych. Jeśli nie możesz znaleźć odpowiedzi, skontaktuj się z nami!"
             headerColor={theme.palette.primary.main}

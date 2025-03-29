@@ -36,7 +36,6 @@ const OurCities = () => {
       >
         <SectionPaddingWrapper>
           <SectionCenterHeader
-            topHeader="LOKALIZACJE"
             header={websiteData.homepageContent.locations_h2}
           />
         </SectionPaddingWrapper>

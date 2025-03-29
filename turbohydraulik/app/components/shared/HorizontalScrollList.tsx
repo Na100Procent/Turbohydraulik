@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useRef, useEffect, JSX } from "react";
+import React, { useRef, JSX } from "react";
 import { Box, IconButton } from "@mui/material";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
@@ -34,67 +34,65 @@ const arrowSx = {
 const HorizontalScrollList: React.FC<HorizontalScrollListProps> = ({
   mappedItems,
 }) => {
-  const [scrollPosition, setScrollPosition] = useState(0);
   const scrollContainerRef = useRef<HTMLDivElement>(null);
-  const [isAtEnd, setIsAtEnd] = useState(false);
 
   const scrollLeft = () => {
-    if (scrollPosition < 0) {
-      setScrollPosition(scrollPosition + 250);
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.scrollBy({
+        left: -250,
+        behavior: "smooth",
+      });
     }
   };
 
   const scrollRight = () => {
     if (scrollContainerRef.current) {
-      const scrollContainer = scrollContainerRef.current;
-      const maxScrollPosition =
-        scrollContainer.scrollWidth - scrollContainer.clientWidth;
-
-      if (scrollPosition > -maxScrollPosition) {
-        setScrollPosition(scrollPosition - 250);
-      }
+      scrollContainerRef.current.scrollBy({
+        left: 250,
+        behavior: "smooth",
+      });
     }
   };
 
-  useEffect(() => {
-    if (scrollContainerRef.current) {
-      const scrollContainer = scrollContainerRef.current;
-      const maxScrollPosition =
-        scrollContainer.scrollWidth - scrollContainer.clientWidth;
-      setIsAtEnd(scrollPosition <= -maxScrollPosition);
-    }
-  }, [scrollPosition]);
-
   return (
-    <Box sx={container} ref={scrollContainerRef}>
+    <Box sx={container}>
       <Box
         sx={{
           display: "flex",
           gap: "20px",
-          transition: "transform 0.3s ease",
-          transform: `translateX(${scrollPosition}px)`,
+          overflowX: "auto",
+          padding: "0 0 100px 0",
+          scrollBehavior: "smooth",
+          scrollbarWidth: "none",
+          msOverflowStyle: "none",
+          WebkitOverflowScrolling: "touch",
         }}
+        ref={scrollContainerRef}
       >
         {mappedItems}
       </Box>
 
       <IconButton
-        disabled={scrollPosition >= 0}
         onClick={scrollLeft}
         sx={{
           ...arrowSx,
           left: "10px",
+          position: "absolute",
+          top: "70%",
+          transform: "translateY(-50%)",
         }}
       >
         <ArrowBackIosIcon />
       </IconButton>
 
       <IconButton
-        disabled={isAtEnd}
         onClick={scrollRight}
         sx={{
           ...arrowSx,
           right: "10px",
+          position: "absolute",
+          top: "70%",
+          transform: "translateY(-50%)",
         }}
       >
         <ArrowForwardIosIcon />

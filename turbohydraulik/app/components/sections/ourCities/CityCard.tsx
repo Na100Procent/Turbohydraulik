@@ -23,8 +23,8 @@ const container = {
     lg: "400px",
     md: "400px",
     sm: "350px",
-    xs: "350px",
-    xxs: "350px",
+    xs: "300px",
+    xxs: "250px",
   },
 
   padding: "0px 10px 10px 10px ",

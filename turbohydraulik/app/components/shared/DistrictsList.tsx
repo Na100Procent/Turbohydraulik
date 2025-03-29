@@ -21,10 +21,7 @@ const DistrictsList = ({ city }: Props) => {
       bgcolor={theme.palette.custom.blueLight}
     >
       <Box padding="30px 35px">
-        <SectionCenterHeader
-          header="Dzielnice w których działamy"
-          topHeader="Dzielnice"
-        />
+        <SectionCenterHeader header="Dzielnice w których działamy" />
         <LocationsList
           locsTitle={`JESTEŚMY W TYCH DZIELNICACH MIASTA ${city.name}`}
           locationsList={districtsLinks}

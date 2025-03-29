@@ -10,5 +10,12 @@ export const convertPhoneNum = (phoneNumber?: string, forCall?: boolean) => {
     return `+48${sanitizedNumber}`;
   }
 
-  return `+48 ${sanitizedNumber.replace(/(\d{3})(\d{3})(\d{3})/, "$1 $2 $3")}`;
+  if (/^\d{9}$/.test(sanitizedNumber)) {
+    return `+48 ${sanitizedNumber.replace(
+      /(\d{3})(\d{3})(\d{3})/,
+      "$1 $2 $3"
+    )}`;
+  }
+
+  return `+48 ${sanitizedNumber}`;
 };
