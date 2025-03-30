@@ -68,9 +68,7 @@ const AboutUs = ({ content, bgColor, phoneNumber }: Props) => {
         <Box padding={sectionXPadding}>
           <Box sx={headerSx}>
             <SectionHeader
-              subHeaderColor={theme.palette.secondary.main}
               headerColor={theme.palette.primary.main}
-              subHeader="O NAS"
               header={aboutUs_h2}
             />
 

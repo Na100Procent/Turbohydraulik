@@ -98,9 +98,7 @@ const AboutService = ({
         <Box sx={textSx}>
           <Box sx={headersSx}>
             <SectionHeader
-              subHeaderColor={theme.palette.secondary.main}
               headerColor={theme.palette.primary.main}
-              subHeader="O USŁUDZE"
               header={aboutService_h2}
             />
 
