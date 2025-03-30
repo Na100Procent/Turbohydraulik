@@ -23,8 +23,8 @@ const container = {
     lg: "400px",
     md: "400px",
     sm: "350px",
-    xs: "350px",
-    xxs: "350px",
+    xs: "300px",
+    xxs: "250px",
   },
 
   padding: "0px 10px 10px 10px ",
@@ -41,6 +41,7 @@ const imgSx = {
   width: "90%",
   maxHeight: "180px",
   objectFit: "cover",
+  borderRadius: "5px",
 };
 const cityNameSx = {
   fontWeight: "bold",
@@ -74,14 +75,6 @@ const titleButtonSx = {
   },
 };
 
-const description = {
-  color: theme.palette.custom.darkGray,
-  padding: "0 0 10px 20px",
-  fontFamily: "UniteaSans",
-  fontWeight: 500,
-  opacity: 0.8,
-  mt: "5px",
-};
 const CityCard = ({ cityName, cityUrl, cityCardUrl }: Props) => {
   return (
     <Link href={`${cityUrl}`}>
@@ -103,10 +96,6 @@ const CityCard = ({ cityName, cityUrl, cityCardUrl }: Props) => {
             bgColor={theme.palette.secondary.main}
           />
         </Box>
-        <Typography sx={description}>
-          Działamy w najpopularniejszych dzielnicach aby dostarczyć ci
-          profesjonalna usługę.
-        </Typography>
       </Box>
     </Link>
   );

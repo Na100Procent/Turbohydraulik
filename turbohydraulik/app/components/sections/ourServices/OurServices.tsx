@@ -1,7 +1,7 @@
 import React from "react";
 import BackgroundWrapper from "../../shared/BackgroundWrapper";
 import theme from "@/app/theme/theme";
-import { Box } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import ServiceContainer from "./ServiceContainer";
 import { sectionXPadding } from "@/app/constants/styles";
 import SectionPaddingWrapper from "../../shared/SectionWrapper";
@@ -23,7 +23,6 @@ interface Props {
 }
 
 const headerSx = {
-  padding: sectionXPadding,
   display: "flex",
   alignItems: "center",
   gap: "20px",
@@ -37,7 +36,23 @@ const headerSx = {
     xxs: "column",
   },
 };
+const textSx = {
+  fontWeight: "500",
+  fontSize: "25px",
+  color: theme.palette.secondary.main,
+  marginTop: "20px",
+  fontFamily: "UniteaSans",
+  textAlign: {
+    xl: "center",
+    lg: "center",
+    md: "center",
+    sm: "left",
+    xs: "left",
+    xxs: "left",
+  },
 
+  padding: sectionXPadding,
+};
 const OurServices = ({
   city,
   bgColor,
@@ -58,12 +73,14 @@ const OurServices = ({
               headerColor={
                 headerColor ? headerColor : theme.palette.custom.background
               }
-              topHeader={service_h3}
               header={service_h2}
               bottomHeader={service_text}
               bottomHeaderColor={bottomHeaderColor}
             />
           </Box>
+          <Typography variant="h3" sx={textSx}>
+            {service_h3}
+          </Typography>
         </SectionPaddingWrapper>
         <ServiceContainer city={city} />
         <Box display={"flex"} justifyContent={"center"} mt="20px">

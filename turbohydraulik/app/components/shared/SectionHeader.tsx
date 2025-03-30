@@ -1,9 +1,8 @@
+import theme from "@/app/theme/theme";
 import { Box, Typography } from "@mui/material";
 import React from "react";
 
 interface Props {
-  subHeader: string;
-  subHeaderColor: string;
   header: string;
   headerColor: string;
 }
@@ -17,12 +16,7 @@ const fontSize = {
   xxs: "30px",
 };
 
-const SectionHeader = ({
-  subHeader,
-  subHeaderColor,
-  header,
-  headerColor,
-}: Props) => {
+const SectionHeader = ({ header, headerColor }: Props) => {
   const headerSx = {
     fontWeight: "700",
     zIndex: 10,
@@ -33,21 +27,17 @@ const SectionHeader = ({
     color: headerColor,
     textAlign: "left",
   };
-  const subHeaderSx = {
-    color: subHeaderColor,
-    fontWeight: "600",
-    zIndex: 10,
-    fontFamily: "UniteaSans",
-    textTransform: "uppercase",
-    letterSpacing: "1px",
-    fontSize: "15px",
-    marginBottom: "10px",
-    textAlign: "left",
-  };
 
   return (
     <Box sx={{ maxWidth: "800px" }}>
-      <Typography sx={subHeaderSx}>{subHeader}</Typography>
+      <Box
+        sx={{
+          width: "100px",
+          height: "5px",
+          backgroundColor: theme.palette.secondary.main,
+          marginBottom: "20px",
+        }}
+      />
       <Typography variant="h2" sx={headerSx}>
         {header}
       </Typography>

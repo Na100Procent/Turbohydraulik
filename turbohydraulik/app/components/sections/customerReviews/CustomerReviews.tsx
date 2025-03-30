@@ -48,12 +48,7 @@ const CustomerReviews = ({ content, phoneNumber }: Props) => {
             zIndex="10"
             position="relative"
           >
-            <SectionHeader
-              subHeaderColor={mainColor}
-              headerColor={mainColor}
-              subHeader={"OPINIE O NAS"}
-              header={testimonials_h2}
-            />
+            <SectionHeader headerColor={mainColor} header={testimonials_h2} />
             <Typography
               mt="30px"
               color={mainColor}

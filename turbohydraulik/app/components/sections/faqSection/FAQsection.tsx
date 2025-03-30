@@ -10,6 +10,7 @@ import { sectionIds } from "@/app/constants/appConstants";
 import { sectionXPadding } from "@/app/constants/styles";
 import FAQElements from "./FAQElements";
 import SectionIdentifier from "../../shared/SectionIdentifier";
+import { faqImageUrl } from "@/app/constants/imagesUrls";
 
 interface Props {
   phoneNumber?: string;
@@ -58,7 +59,6 @@ const FAQsection = ({ phoneNumber }: Props) => {
         <SectionIdentifier sectionId={sectionIds.faq} />
         <Box>
           <SectionCenterHeader
-            topHeader="FAQ’S"
             header="Najczęściej zadawane pytania"
             bottomHeader="Znajdź odpowiedzi na najczęściej zadawane pytania dotyczące naszych usług hydraulicznych. Jeśli nie możesz znaleźć odpowiedzi, skontaktuj się z nami!"
             headerColor={theme.palette.primary.main}
@@ -71,7 +71,7 @@ const FAQsection = ({ phoneNumber }: Props) => {
               alignItems={"center"}
             >
               <Image
-                src="https://github.com/user-attachments/assets/ca378ab7-a9b2-4736-ac5f-fe20ad776b11"
+                src={faqImageUrl}
                 alt="Turbo hydraulik FAQ"
                 layout="responsive"
                 width={500}

@@ -3,10 +3,9 @@ import TitledVerticalList, {
 } from "@/app/components/shared/TitledVerticalList";
 import { Box } from "@mui/material";
 import React from "react";
-import FailureForm from "./FailureForm";
+import ServiceForm from "./ServiceForm";
 import { websiteData } from "@/app/data/data";
 import { sectionXPadding } from "@/app/constants/styles";
-import CitiesList from "./LocationsList";
 import OpenHours from "./OpenHours";
 import { CityData } from "@/app/data/types/dataTypes";
 interface Props {
@@ -26,7 +25,14 @@ const containerSx = {
     xxs: "column",
   },
   alignItems: "top",
-  gap: "20px",
+  gap: {
+    xl: "100px",
+    lg: "30px",
+    md: "0",
+    sm: "0",
+    xs: "0",
+    xxs: "0",
+  },
 };
 
 const linkListsSx = {
@@ -39,14 +45,7 @@ const linkListsSx = {
     xs: "column",
     xxs: "column",
   },
-  justifyContent: {
-    xl: "left",
-    lg: "left",
-    md: "left",
-    sm: "space-between",
-    xs: "space-between",
-    xxs: "space-between",
-  },
+  justifyContent: "space-between",
   width: "100%",
   gap: {
     xl: "80px",
@@ -79,12 +78,12 @@ const LinksAndServices = ({ cityData }: Props) => {
   return (
     <Box sx={containerSx}>
       <Box sx={linkListsSx}>
-        <CitiesList locationsList={locationsNamesUrls} />
+        <TitledVerticalList title="LOKALIZACJE" list={locationsNamesUrls} />
         <TitledVerticalList title="USŁUGI" list={servicesNamesUrls} />
         <OpenHours cityName={cityData?.name} />
       </Box>
 
-      <FailureForm />
+      <ServiceForm />
     </Box>
   );
 };

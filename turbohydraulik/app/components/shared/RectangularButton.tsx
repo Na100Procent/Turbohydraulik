@@ -10,6 +10,7 @@ interface Props {
   icon?: JSX.Element;
   bgColor?: string;
   titleColor?: string;
+  disabled?: boolean;
 }
 
 const RectangularButton = ({
@@ -18,6 +19,7 @@ const RectangularButton = ({
   icon,
   bgColor,
   titleColor,
+  disabled,
 }: Props) => {
   const buttonSx = {
     background: bgColor ? bgColor : theme.palette.custom.background,
@@ -51,7 +53,7 @@ const RectangularButton = ({
     minWidth: "100px",
   };
   return (
-    <Button onClick={onClick} sx={buttonSx}>
+    <Button onClick={onClick} sx={buttonSx} disabled={disabled}>
       <Typography sx={titleSx}>{title}</Typography>
       <Box mt="5px">
         {icon ? (

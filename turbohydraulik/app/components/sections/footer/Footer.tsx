@@ -3,7 +3,7 @@ import BackgroundWrapper from "../../shared/BackgroundWrapper";
 import theme from "@/app/theme/theme";
 import Policy from "./Policy";
 import { Box } from "@mui/material";
-import LogoContact from "./LogoContact";
+import ContactElements from "./ContactElements";
 import HorizontalSeparator from "./components/HorizontalSeparator";
 import LinksAndServices from "./components/LinksAndServices";
 import SocialMediasSeparator from "./components/SocialMediasSeparator";
@@ -38,7 +38,7 @@ const Footer = ({ phoneNumber, postalCode, street, cityData }: Props) => {
           gap="50px"
           position={"relative"}
         >
-          <LogoContact
+          <ContactElements
             phoneNumber={phoneNumber}
             address={address}
             cityName={cityData?.name}

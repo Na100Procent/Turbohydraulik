@@ -4,14 +4,31 @@ import { Box, Typography } from "@mui/material";
 import React from "react";
 
 interface Props {
-  topHeader?: string;
-  topHeaderColor?: string;
   header: string;
   headerColor?: string;
   bottomHeader?: string;
   bottomHeaderColor?: string;
 }
 
+const separatorContainer = {
+  display: "flex",
+  justifyContent: {
+    xl: "center",
+    lg: "center",
+    md: "center",
+    sm: "left",
+    xs: "left",
+    xxs: "left",
+  },
+  alignItems: "center",
+  width: "100%",
+  marginBottom: "20px",
+};
+const separatorSx = {
+  width: "100px",
+  height: "5px",
+  backgroundColor: theme.palette.secondary.main,
+};
 const containerSx = {
   display: "flex",
   justifyContent: "center",
@@ -30,9 +47,7 @@ const fontSize = {
 };
 
 const SectionCenterHeader = ({
-  topHeader,
   bottomHeader,
-  topHeaderColor,
   header,
   headerColor,
   bottomHeaderColor,
@@ -53,31 +68,6 @@ const SectionCenterHeader = ({
     lineHeight: fontSize,
     fontFamily: "UniteaSans",
   };
-  const topHeaderSx = {
-    color: topHeaderColor
-      ? (topHeaderColor as string)
-      : theme.palette.secondary.main,
-    fontWeight: "600",
-    textTransform: "uppercase",
-    letterSpacing: "1px",
-    fontSize: {
-      xl: "15px",
-      lg: "15px",
-      md: "13px",
-      sm: "12px",
-      xs: "12px",
-      xxs: "12px",
-    },
-    textAlign: {
-      xl: "center",
-      lg: "center",
-      md: "center",
-      sm: "center",
-      xs: "left",
-      xxs: "left",
-    },
-    width: "100%",
-  };
 
   const bottomHeaderSx = {
     fontWeight: "500",
@@ -97,7 +87,9 @@ const SectionCenterHeader = ({
 
   return (
     <Box sx={containerSx}>
-      {topHeader && <Typography sx={topHeaderSx}>{topHeader}</Typography>}
+      <Box sx={separatorContainer}>
+        <Box sx={separatorSx} />
+      </Box>
       <Typography variant="h2" sx={headerSx}>
         {header}
       </Typography>

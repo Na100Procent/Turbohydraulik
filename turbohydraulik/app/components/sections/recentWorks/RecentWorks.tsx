@@ -26,7 +26,6 @@ const RecentWorks = ({ content, phoneNumber }: Props) => {
       <Box>
         <SectionPaddingWrapper>
           <SectionCenterHeader
-            topHeader="NASZE OSTATNIE PRACE"
             header={portfolio_h2}
             bottomHeader={portfolio_text}
           />

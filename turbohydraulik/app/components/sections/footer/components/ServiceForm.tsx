@@ -1,7 +1,8 @@
+"use client";
 import RectangularButton from "@/app/components/shared/RectangularButton";
 import theme from "@/app/theme/theme";
 import { Box, Input, Typography } from "@mui/material";
-import React from "react";
+import useFormMessage from "../hooks/useFormMessageHook";
 
 const container = {
   display: "flex",
@@ -19,28 +20,37 @@ const headerSx = {
   mb: "10px",
 };
 
-const phoneInput = {};
-
-const input = {
+const inputSx = {
   background: theme.palette.custom.background,
   color: theme.palette.custom.darkBlue,
+  borderRadius: "5px",
+  fontSize: "14px",
+  padding: "10px 20px",
+  border: "none",
   "&:focus": {
     boxShadow: "none",
     borderColor: "transparent",
   },
-  border: "none",
-  borderRadius: "5px",
-  fontSize: "14px",
-  padding: "10px 20px",
 };
 
-const problemInput = {
+const problemInputSx = {
   minHeight: "100px",
   display: "flex",
   alignItems: "flex-start",
 };
 
-const FailureForm = () => {
+const ServiceForm = () => {
+  const {
+    phone,
+    setPhone,
+    problem,
+    setProblem,
+    loading,
+    error,
+    success,
+    handleSubmit,
+  } = useFormMessage();
+
   return (
     <Box sx={container}>
       <Typography variant="h3" sx={headerSx}>
@@ -48,18 +58,44 @@ const FailureForm = () => {
       </Typography>
       <Input
         disableUnderline
-        sx={{ ...phoneInput, ...input }}
+        sx={inputSx}
         placeholder="Twój numer telefonu"
+        value={phone}
+        onChange={(e) => {
+          const value = e.target.value.replace(/\D/g, "").slice(0, 9);
+
+          setPhone(value);
+        }}
       />
       <Input
         disableUnderline
-        sx={{ ...problemInput, ...input }}
+        sx={{ ...inputSx, ...problemInputSx }}
         placeholder="Opisz swój problem"
+        value={problem}
+        onChange={(e) => setProblem(e.target.value)}
+        multiline
       />
       <RectangularButton
-        title="Zamawiam usługę"
+        title={loading ? "Wysyłanie..." : "Zamawiam usługę"}
         bgColor={theme.palette.secondary.main}
+        onClick={handleSubmit}
+        disabled={loading || !phone || !problem}
       />
+      {error && (
+        <Typography color="error" fontSize="14px">
+          {error}
+        </Typography>
+      )}
+      {success && (
+        <Typography
+          color={theme.palette.custom.positiveGreen}
+          fontSize="16px"
+          fontWeight="bold"
+          textAlign="center"
+        >
+          Wiadomość została wysłana!
+        </Typography>
+      )}
       <Typography
         width="100%"
         fontFamily={"UniteaSans"}
@@ -81,4 +117,4 @@ const FailureForm = () => {
   );
 };
 
-export default FailureForm;
+export default ServiceForm;

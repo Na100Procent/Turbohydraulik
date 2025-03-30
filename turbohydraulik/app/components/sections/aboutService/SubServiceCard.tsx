@@ -32,9 +32,10 @@ const container = {
     scale: 1.02,
   },
   mt: "10px",
+  height: "100%",
   maxHeight: {
     xl: "430px",
-    lg: "550px",
+    lg: "500px",
     md: "500px",
     sm: "500px",
     xs: "1000px",

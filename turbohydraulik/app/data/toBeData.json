@@ -3,7 +3,6 @@
     "meta_title": "Turbo Hydraulik - Najlepszy Hydraulik w Polsce home",
     "meta_description": " home Profesjonalne usługi hydrauliczne w Polsce. Instalacja i wymiana zaworów, naprawa rur, awaryjne usługi hydrauliczne.",
     "hero_h1": "Turbo Hydraulik",
-    "hero_bg_url": "https://www.turbohydraulik.pl/assets/images/heroBg.webp",
     "hero_h2": "Turbo jakość. Turbo podejście. Turbo Hydraulik.",
     "hero_text": "Skorzystaj z naszej kompleksowej usługi instalacji i wymiany zaworów już dziś!",
     "locations_h2": "Hydraulika w Twoim mieście",
@@ -151,7 +150,7 @@
           "content": {
             "meta_title": "Instalacja i Wymiana Zaworów | Turbo Hydraulik Częstochowa",
             "meta_description": "Zachęcamy do skorzystania z profesjonalnej usługi instalacji i wymiany zaworów w Częstochowie. Zadzwoń do nas!",
-            "phone": "654654654",
+            "phone": "123456789",
             "hero_h1": "Instalacja i Wymiana Zaworów w Częstochowie",
             "hero_h2": "Twój niezawodny hydraulik w Częstochowie!",
             "hero_text": "Turbo Hydraulik – Twój superbohater w świecie hydrauliki, gotowy rozwiązać wszelkie problemy z zaworami!",
@@ -186,7 +185,7 @@
             "contact_h2": "Kontakt Turbo Hydraulik Częstochowa",
             "contact_text": "Skontaktuj się z nami już dziś, aby zamówić instalację lub wymianę zaworów!",
             "postalCode": "12-401",
-        "street": "Wiejska 14A"
+            "street": "Wiejska 14A"
           }
         }
       },
@@ -385,7 +384,7 @@
             "contact_h2": "Kontakt Turbo Hydraulik Częstochowa",
             "contact_text": "Skontaktuj się z nami już dziś i skorzystaj z naszych usług hydraulicznych!",
             "postalCode": "12-401",
-        "street": "Wiejska 14A"
+            "street": "Wiejska 14A"
           }
         }
       }
@@ -501,7 +500,7 @@
             "contact_h2": "Kontakt Turbo Hydraulik Częstochowa",
             "contact_text": "Nie czekaj, skontaktuj się z nami już dziś, aby umówić się na podłączenie sprzętów AGD!",
             "postalCode": "12-401",
-        "street": "Wiejska 14A"
+            "street": "Wiejska 14A"
           }
         }
       }
@@ -512,9 +511,7 @@
       "name": "Warszawa",
       "slug": "warszawa",
       "cityCardUrl": "https://www.turbohydraulik.pl/assets/images/warszawa.webp",
-      "availableServices": [
-        "instalacja_i_wymiana_zaworow"
-      ],
+      "availableServices": ["instalacja_i_wymiana_zaworow"],
       "content": {
         "meta_title": "Instalacja i wymiana zaworów | Turbo Hydraulik Warszawa",
         "meta_description": "Skorzystaj z profesjonalnych usług hydraulicznych - instalacja i wymiana zaworów w Warszawie. Zadzwoń i umów się na wizytę!",
@@ -987,7 +984,7 @@
       "content": {
         "meta_title": "Instalacja i Wymiana Zaworów | Turbo Hydraulik Wrocław",
         "meta_description": "Skorzystaj z usług instalacji i wymiany zaworów w Wrocławiu. Turbo Hydraulik zapewnia profesjonalną obsługę.",
-        "phone": "697697697",
+        "phone": "796082796",
         "hero_h1": "Turbo Hydraulik Wrocław",
         "hero_h2": "Your trusted Hydraulik in Wrocław",
         "hero_text": "Hydraulik, który zawsze przychodzi na ratunek!",
@@ -1457,7 +1454,7 @@
       "content": {
         "meta_title": "Turbo Hydraulik Częstochowa",
         "meta_description": "Skorzystaj z naszych usług hydraulicznych w Częstochowie. Szybka i profesjonalna pomoc hydrauliczna na każdą sytuację!",
-        "phone": "654654654",
+        "phone": "993456789",
         "hero_h1": "Turbo Hydraulik Częstochowa",
         "hero_h2": "Profesjonalne usługi hydrauliczne w Częstochowie",
         "hero_text": "Jesteśmy ekspertami w hydraulice, zawsze gotowi do szybkiej i profesjonalnej pomocy w każdej sytuacji.",
@@ -1700,7 +1697,7 @@
             "contact_h2": "Turbo Hydraulik Północ – szybki kontakt, błyskawiczna pomoc!",
             "contact_text": "Skontaktuj się z nami już dziś, aby uzyskać szybką pomoc hydrauliczną w Północ!",
             "postalCode": "12-401",
-        "street": "Wiejska 14A"
+            "street": "Wiejska 14A"
           }
         },
         "rakow": {

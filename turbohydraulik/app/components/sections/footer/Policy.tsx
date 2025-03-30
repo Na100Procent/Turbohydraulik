@@ -9,6 +9,7 @@ import {
   policyPath,
   termsPath,
 } from "@/app/constants/appConstants";
+import { convertPhoneNum } from "../../shared/helpers/convertPhoneNum";
 
 const container = {
   display: "flex",
@@ -67,7 +68,8 @@ const policyButtonsSx = {
 
 const Policy: React.FC = () => {
   const handlePhoneClick = () => {
-    window.open(`tel:${defaultPhoneNUmber}`);
+    const convertedPhoneNum = convertPhoneNum(defaultPhoneNUmber);
+    window.open(`tel:${convertedPhoneNum}`);
   };
   return (
     <Box sx={container}>

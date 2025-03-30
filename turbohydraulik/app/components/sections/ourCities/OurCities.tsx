@@ -36,7 +36,6 @@ const OurCities = () => {
       >
         <SectionPaddingWrapper>
           <SectionCenterHeader
-            topHeader="LOKALIZACJE"
             header={websiteData.homepageContent.locations_h2}
           />
         </SectionPaddingWrapper>
@@ -46,6 +45,7 @@ const OurCities = () => {
         </div>
         <Box sx={LocationsListSx}>
           <LocationsList
+            locsTitle="JESTEŚMY W MIASTACH"
             addSx={{ color: theme.palette.primary.main }}
             locationsList={cityNamesUrls}
           />

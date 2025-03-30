@@ -44,12 +44,10 @@ const contentSx = {
 };
 const IntroSection = ({ content, phoneNumber }: Props) => {
   const heroSectionData = content ? content : websiteData.homepageContent;
-  const { hero_h1, hero_h2, hero_text, hero_bg_url } = heroSectionData;
+  const { hero_h1, hero_h2, hero_text } = heroSectionData;
+
   return (
-    <BackgroundWrapper
-      bgImage={hero_bg_url ? hero_bg_url : introBgUrl}
-      sx={containerSx}
-    >
+    <BackgroundWrapper bgImage={introBgUrl} sx={containerSx}>
       <Box padding="20px 0 0 0">
         <Box sx={contentSx}>
           <Box sx={heroSx}>
