@@ -3,7 +3,7 @@ import TitledVerticalList, {
 } from "@/app/components/shared/TitledVerticalList";
 import { Box } from "@mui/material";
 import React from "react";
-import FailureForm from "./FailureForm";
+import ServiceForm from "./ServiceForm";
 import { websiteData } from "@/app/data/data";
 import { sectionXPadding } from "@/app/constants/styles";
 import OpenHours from "./OpenHours";
@@ -83,7 +83,7 @@ const LinksAndServices = ({ cityData }: Props) => {
         <OpenHours cityName={cityData?.name} />
       </Box>
 
-      <FailureForm />
+      <ServiceForm />
     </Box>
   );
 };

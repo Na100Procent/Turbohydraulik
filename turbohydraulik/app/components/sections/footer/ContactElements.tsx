@@ -30,7 +30,7 @@ const titleSx = {
   textAlign: "left",
   color: theme.palette.custom.background,
 };
-const LogoContact = ({ phoneNumber, address, cityName }: Props) => {
+const ContactElements = ({ phoneNumber, address, cityName }: Props) => {
   const phone = phoneNumber ? phoneNumber : defaultPhoneNUmber;
   const convertedPhoneNumber = convertPhoneNum(phone);
   return (
@@ -68,4 +68,4 @@ const LogoContact = ({ phoneNumber, address, cityName }: Props) => {
   );
 };
 
-export default LogoContact;
+export default ContactElements;

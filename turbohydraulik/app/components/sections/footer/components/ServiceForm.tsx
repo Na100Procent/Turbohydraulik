@@ -39,7 +39,7 @@ const problemInputSx = {
   alignItems: "flex-start",
 };
 
-const FailureForm = () => {
+const ServiceForm = () => {
   const {
     phone,
     setPhone,
@@ -88,7 +88,7 @@ const FailureForm = () => {
       )}
       {success && (
         <Typography
-          color="green"
+          color={theme.palette.custom.positiveGreen}
           fontSize="16px"
           fontWeight="bold"
           textAlign="center"
@@ -117,4 +117,4 @@ const FailureForm = () => {
   );
 };
 
-export default FailureForm;
+export default ServiceForm;
