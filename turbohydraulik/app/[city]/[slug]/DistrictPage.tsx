@@ -73,7 +73,11 @@ export default function DistrictPage({ districtData, city }: Props) {
           bottomHeaderColor={theme.palette.custom.background}
           phoneNumber={phoneNumber}
         />
-        <CustomerReviews content={reviewsContent} phoneNumber={phoneNumber} />
+        <CustomerReviews
+          content={reviewsContent}
+          phoneNumber={phoneNumber}
+          citySlug={city.slug}
+        />
         <HowToOrderUs phoneNumber={phoneNumber} />
         <AboutUs
           content={aboutUsContent}

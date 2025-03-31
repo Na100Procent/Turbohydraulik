@@ -73,7 +73,11 @@ export default function CityPage({ cityData }: Props) {
           bottomHeaderColor={theme.palette.custom.background}
           phoneNumber={phoneNumber}
         />
-        <CustomerReviews content={reviewsContent} phoneNumber={phoneNumber} />
+        <CustomerReviews
+          content={reviewsContent}
+          phoneNumber={phoneNumber}
+          citySlug={cityData.slug}
+        />
         <HowToOrderUs content={howToContent} phoneNumber={phoneNumber} />
         <AboutUs
           content={aboutUsContent}
