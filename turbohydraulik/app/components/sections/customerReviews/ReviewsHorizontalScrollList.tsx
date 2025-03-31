@@ -1,38 +1,40 @@
 "use client";
 
 import { Box, useMediaQuery } from "@mui/material";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useMemo } from "react";
 import { useSpring, animated } from "@react-spring/web";
 import ReviewCard, { ReviewCardProps } from "./components/ReviewCard";
 import theme from "@/app/theme/theme";
-import reviewsData from "../../../data/reviewsData.json";
+import { getCityReviewsList } from "./helpers/getCityReviewsList";
 
-const ReviewsHorizontalScrollList = () => {
+interface ReviewsHorizontalScrollListProps {
+  citySlug?: string;
+}
+
+const ReviewsHorizontalScrollList: React.FC<
+  ReviewsHorizontalScrollListProps
+> = ({ citySlug }) => {
   const [start, setStart] = useState(false);
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
   const animationDest = isMobile ? "-600%" : "-100%";
   const scrollAnimation = useSpring({
     from: { transform: "translateX(-3%)" },
-    to: {
-      transform: `translateX(${animationDest})`,
-    },
+    to: { transform: `translateX(${animationDest})` },
     loop: true,
     config: { duration: 20000 },
   });
+
   const AnimatedBox = animated(Box);
 
-  const mappedServiceElements = reviewsData.map(
-    (review: ReviewCardProps, index) => (
-      <Box key={index} sx={{ margin: "0 10px" }}>
-        <ReviewCard {...review} />
-      </Box>
-    )
+  const filteredReviews = useMemo(
+    () => getCityReviewsList(citySlug),
+    [citySlug]
   );
 
   useEffect(() => {
     setStart(true);
-  });
+  }, []);
 
   return (
     <AnimatedBox
@@ -43,7 +45,11 @@ const ReviewsHorizontalScrollList = () => {
         marginBottom: "50px",
       }}
     >
-      {mappedServiceElements}
+      {filteredReviews.map((review: ReviewCardProps, index: number) => (
+        <Box key={index} sx={{ margin: "0 10px" }}>
+          <ReviewCard {...review} />
+        </Box>
+      ))}
     </AnimatedBox>
   );
 };

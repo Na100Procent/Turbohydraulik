@@ -41,7 +41,7 @@ const Footer = ({ phoneNumber, postalCode, street, cityData }: Props) => {
           <ContactElements
             phoneNumber={phoneNumber}
             address={address}
-            cityName={cityData?.name}
+            cityData={cityData}
           />
           <HorizontalSeparator />
           <LinksAndServices cityData={cityData} />

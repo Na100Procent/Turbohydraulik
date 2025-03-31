@@ -82,7 +82,11 @@ export default function ServicePage({ serviceData, cityService, city }: Props) {
           subServices={subServices}
           phoneNumber={phoneNumber}
         />
-        <CustomerReviews content={reviewsContent} phoneNumber={phoneNumber} />
+        <CustomerReviews
+          content={reviewsContent}
+          phoneNumber={phoneNumber}
+          citySlug={city.slug}
+        />
         <AboutUs content={aboutUsContent} phoneNumber={phoneNumber} />
         <HowToOrderUs content={howToContent} phoneNumber={phoneNumber} />
         <InNumbers
@@ -109,7 +113,11 @@ export default function ServicePage({ serviceData, cityService, city }: Props) {
             phoneNumber={phoneNumber}
           />
         </Box>
-        <Footer phoneNumber={phoneNumber} {...fullFooterContent} />
+        <Footer
+          phoneNumber={phoneNumber}
+          {...fullFooterContent}
+          cityData={city}
+        />
       </Box>
     </>
   );

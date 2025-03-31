@@ -23,9 +23,10 @@ const ReviewsHorizontalScrollList = dynamic(
 interface Props {
   content?: ReviewsContent;
   phoneNumber?: string;
+  citySlug?: string;
 }
 
-const CustomerReviews = ({ content, phoneNumber }: Props) => {
+const CustomerReviews = ({ content, phoneNumber, citySlug }: Props) => {
   const reviewsContent = content || websiteData.homepageContent;
 
   const {
@@ -59,7 +60,7 @@ const CustomerReviews = ({ content, phoneNumber }: Props) => {
           </Box>
         </SectionPaddingWrapper>
         <CommaIcon />
-        <ReviewsHorizontalScrollList />
+        <ReviewsHorizontalScrollList citySlug={citySlug} />
         <SubHeaders
           testimonials_h3={testimonials_h3}
           testimonials_text_2={testimonials_text_2}

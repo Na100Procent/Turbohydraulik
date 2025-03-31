@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v15-appRouter";
 import Head from "next/head";
+import NoscriptContent from "./components/shared/NoScriptContent";
 
 export const metadata: Metadata = {
   openGraph: {
@@ -35,6 +36,7 @@ export default function RootLayout({
       </Head>
       <body style={{ overflowX: "hidden", width: "100%" }}>
         <AppRouterCacheProvider>{children}</AppRouterCacheProvider>
+        <NoscriptContent />
       </body>
     </html>
   );

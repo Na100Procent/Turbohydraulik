@@ -49,8 +49,9 @@ const contentSx = {
 };
 
 const imageSx = {
-  marginBottom: "20px",
+  marginBottom: "30px",
   borderRadius: "15px",
+  maxWidth: "700px",
 };
 const FAQsection = ({ phoneNumber }: Props) => {
   return (
