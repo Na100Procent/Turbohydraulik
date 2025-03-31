@@ -1,31 +1,40 @@
 "use client";
+import { GoogleMap, Marker, useJsApiLoader } from "@react-google-maps/api";
+import ErrorMessage from "../ErrorMessage";
 
-import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
+export interface CityCords {
+  lat: number;
+  lng: number;
+}
+
+interface Props {
+  cityCords: CityCords;
+}
 
 const containerStyle = {
   width: "100%",
   height: "500px",
 };
 
-const center = {
-  lat: 52.2298,
-  lng: 21.0122,
-};
-
-const GoogleMapContainer = () => {
+const GoogleMapContainer = ({ cityCords }: Props) => {
   const apiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY;
 
-  if (!apiKey) {
-    console.error("Brak klucza API Google Maps.");
-    return null;
+  const { isLoaded, loadError } = useJsApiLoader({
+    googleMapsApiKey: apiKey || "",
+  });
+
+  if (loadError) {
+    return <ErrorMessage message={"Błąd ładowania Google Maps"} />;
+  }
+
+  if (!isLoaded) {
+    return <p style={{ textAlign: "center" }}>Ładowanie mapy...</p>;
   }
 
   return (
-    <LoadScript googleMapsApiKey={apiKey}>
-      <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={12}>
-        <Marker position={center} />
-      </GoogleMap>
-    </LoadScript>
+    <GoogleMap mapContainerStyle={containerStyle} center={cityCords} zoom={12}>
+      <Marker position={cityCords} />
+    </GoogleMap>
   );
 };
 

@@ -13,7 +13,6 @@ import { sectionIds } from "./constants/appConstants";
 import OurCities from "./components/sections/ourCities/OurCities";
 import theme from "./theme/theme";
 import { websiteData } from "./data/data";
-import GoogleMapContainer from "./components/shared/googleMap/GoogleMapContainer";
 
 export const metadata = {
   title: websiteData.homepageContent.meta_title,
@@ -36,7 +35,6 @@ export default function Home() {
       <Box sx={containerSx} id={sectionIds.home}>
         <TopMenu />
         <IntroSection />
-        {/* <GoogleMapContainer /> */}
         <OurCities />
         <AboutUs />
         <OurServices bottomHeaderColor={theme.palette.custom.background} />

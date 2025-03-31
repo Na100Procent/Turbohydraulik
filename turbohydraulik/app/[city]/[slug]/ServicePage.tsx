@@ -113,7 +113,11 @@ export default function ServicePage({ serviceData, cityService, city }: Props) {
             phoneNumber={phoneNumber}
           />
         </Box>
-        <Footer phoneNumber={phoneNumber} {...fullFooterContent} />
+        <Footer
+          phoneNumber={phoneNumber}
+          {...fullFooterContent}
+          cityData={city}
+        />
       </Box>
     </>
   );

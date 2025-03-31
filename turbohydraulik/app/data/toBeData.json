@@ -510,6 +510,10 @@
     "warszawa": {
       "name": "Warszawa",
       "slug": "warszawa",
+      "googleMapCords": {
+        "lat": 52.2297,
+        "lng": 21.0122
+      },
       "cityCardUrl": "https://www.turbohydraulik.pl/assets/images/warszawa.webp",
       "availableServices": ["instalacja_i_wymiana_zaworow"],
       "content": {
@@ -976,6 +980,10 @@
     "wroclaw": {
       "name": "Wrocław",
       "slug": "wroclaw",
+      "googleMapCords": {
+        "lat": 51.1079,
+        "lng": 17.0385
+      },
       "cityCardUrl": "https://www.turbohydraulik.pl/assets/images/wroclaw.webp",
       "availableServices": [
         "instalacja_i_wymiana_zaworow",
@@ -1445,6 +1453,10 @@
     "czestochowa": {
       "name": "Częstochowa",
       "slug": "czestochowa",
+      "googleMapCords": {
+        "lat": 50.8118,
+        "lng": 19.1203
+      },
       "cityCardUrl": "https://www.turbohydraulik.pl/assets/images/czestochowa.webp",
       "availableServices": [
         "instalacja_i_wymiana_zaworow",
