@@ -36,6 +36,7 @@ const GoogleMapContainer = ({
 
   const { isLoaded, loadError } = useJsApiLoader({
     googleMapsApiKey: apiKey || "",
+    language: "pl",
   });
 
   if (!apiKey) {
