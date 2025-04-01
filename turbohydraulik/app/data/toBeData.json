@@ -510,9 +510,12 @@
     "warszawa": {
       "name": "Warszawa",
       "slug": "warszawa",
-      "googleMapCords": {
-        "lat": 52.2297,
-        "lng": 21.0122
+      "googleMapData": {
+        "cityCords": { "lat": 52.2297, "lng": 21.0122 },
+        "title": "Revele.pl",
+        "address1": "Wiejska 14A",
+        "address2": "12-401 Warszawa",
+        "placeId": "ChIJpy-UUJ-xEEcRCO2gpmE6lWA"
       },
       "cityCardUrl": "https://www.turbohydraulik.pl/assets/images/warszawa.webp",
       "availableServices": ["instalacja_i_wymiana_zaworow"],
@@ -980,9 +983,12 @@
     "wroclaw": {
       "name": "Wrocław",
       "slug": "wroclaw",
-      "googleMapCords": {
-        "lat": 51.1079,
-        "lng": 17.0385
+      "googleMapData": {
+        "cityCords": { "lat": 51.1079, "lng": 17.0385 },
+        "title": "Revele.pl",
+        "address1": "Wiejska 14A",
+        "address2": "12-401 Wrocław",
+        "placeId": "ChIJsdsvpy-UUJ-xEEvdscRCO2gpmE6lWA"
       },
       "cityCardUrl": "https://www.turbohydraulik.pl/assets/images/wroclaw.webp",
       "availableServices": [
@@ -1453,9 +1459,12 @@
     "czestochowa": {
       "name": "Częstochowa",
       "slug": "czestochowa",
-      "googleMapCords": {
-        "lat": 50.8118,
-        "lng": 19.1203
+      "googleMapData": {
+        "cityCords": { "lat": 50.8118, "lng": 19.1203 },
+        "title": "Revele.pl",
+        "address1": "Gombrowicza 5",
+        "address2": "42-200 Częstochowa",
+        "placeId": "ChIJsdsvpy-UUJ-xEEvdscRCO2gpmE6lWA"
       },
       "cityCardUrl": "https://www.turbohydraulik.pl/assets/images/czestochowa.webp",
       "availableServices": [

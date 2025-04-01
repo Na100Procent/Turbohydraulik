@@ -57,7 +57,7 @@ const ContactElements = ({ phoneNumber, address, cityData }: Props) => {
   const phone = phoneNumber ? phoneNumber : defaultPhoneNUmber;
   const convertedPhoneNumber = convertPhoneNum(phone);
 
-  const { googleMapCords, name } = cityData || {};
+  const { googleMapData, name } = cityData || {};
   return (
     <Box sx={container}>
       <Typography sx={titleSx} variant="h2">
@@ -90,9 +90,9 @@ const ContactElements = ({ phoneNumber, address, cityData }: Props) => {
           )}
         </Box>
 
-        {googleMapCords && (
+        {googleMapData && (
           <Box sx={googleMapSx}>
-            <GoogleMapContainer cityCords={googleMapCords} />
+            <GoogleMapContainer {...googleMapData} />
           </Box>
         )}
       </Box>

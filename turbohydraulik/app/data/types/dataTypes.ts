@@ -1,4 +1,4 @@
-import { CityCords } from "@/app/components/shared/googleMap/GoogleMapContainer";
+import { GoogleMapData } from "@/app/components/shared/googleMap/types";
 
 export interface DistrictData {
   name: string;
@@ -12,7 +12,7 @@ export interface CityData {
   cityCardUrl: string;
   availableServices: string[];
   content: CityContent;
-  googleMapCords: CityCords;
+  googleMapData: GoogleMapData;
   districts: Record<string, DistrictData>;
 }
 

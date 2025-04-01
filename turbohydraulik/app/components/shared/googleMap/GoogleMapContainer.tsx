@@ -1,14 +1,21 @@
 "use client";
-import { GoogleMap, Marker, useJsApiLoader } from "@react-google-maps/api";
+import {
+  GoogleMap,
+  Marker,
+  useJsApiLoader,
+  InfoWindow,
+} from "@react-google-maps/api";
+import { useState } from "react";
 import ErrorMessage from "../ErrorMessage";
-
-export interface CityCords {
-  lat: number;
-  lng: number;
-}
+import { CityCords } from "./types";
+import { Box } from "@mui/material";
 
 interface Props {
   cityCords: CityCords;
+  title: string;
+  address1: string;
+  address2?: string;
+  placeId?: string;
 }
 
 const containerStyle = {
@@ -16,13 +23,23 @@ const containerStyle = {
   height: "500px",
 };
 
-const GoogleMapContainer = ({ cityCords }: Props) => {
+const GoogleMapContainer = ({
+  cityCords,
+  title,
+  address1,
+  address2,
+  placeId,
+}: Props) => {
   const apiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY;
+  const [showInfo, setShowInfo] = useState(false);
 
   const { isLoaded, loadError } = useJsApiLoader({
     googleMapsApiKey: apiKey || "",
   });
 
+  if (!apiKey) {
+    return <ErrorMessage message={"Błąd klucza API KEY"} />;
+  }
   if (loadError) {
     return <ErrorMessage message={"Błąd ładowania Google Maps"} />;
   }
@@ -33,7 +50,24 @@ const GoogleMapContainer = ({ cityCords }: Props) => {
 
   return (
     <GoogleMap mapContainerStyle={containerStyle} center={cityCords} zoom={12}>
-      <Marker position={cityCords} />
+      <Marker position={cityCords} onClick={() => setShowInfo(true)} />
+      {showInfo && (
+        <InfoWindow
+          position={cityCords}
+          onCloseClick={() => setShowInfo(false)}
+        >
+          <Box>
+            <h3>{title}</h3>
+            <p>{address1}</p>
+            {address2 && <p>{address2}</p>}
+            {placeId && (
+              <p>
+                <strong>Place ID:</strong> {placeId}
+              </p>
+            )}
+          </Box>
+        </InfoWindow>
+      )}
     </GoogleMap>
   );
 };
