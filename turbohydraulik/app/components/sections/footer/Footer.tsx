@@ -27,12 +27,12 @@ const Footer = ({ phoneNumber, postalCode, street, cityData }: Props) => {
   return (
     <BackgroundWrapper
       bgColor={theme.palette.primary.main}
-      sx={{ padding: "0" }}
+      sx={{ padding: "0", mt: "100px" }}
     >
       <SectionIdentifier sectionId={sectionIds.contact} />
       <Box>
         <Box
-          padding={"150px 0 0 0"}
+          padding={"250px 0 0 0"}
           display={"flex"}
           flexDirection={"column"}
           gap="50px"

@@ -10,6 +10,7 @@ import ApartmentOutlinedIcon from "@mui/icons-material/ApartmentOutlined";
 import { convertPhoneNum } from "../../shared/helpers/convertPhoneNum";
 import GoogleMapContainer from "../../shared/googleMap/GoogleMapContainer";
 import { CityData } from "@/app/data/types/dataTypes";
+
 interface Props {
   phoneNumber?: string;
   address?: string;
@@ -26,11 +27,26 @@ const container = {
 const titleSx = {
   fontSize: "40px",
   position: "relative",
-  top: "-80px",
+  top: {
+    xl: "-180px",
+    lg: "-180px",
+    md: "-180px",
+    sm: "0",
+    xs: "0",
+    xxs: "0",
+  },
   fontWeight: "600",
   width: "100%",
   textAlign: "left",
   color: theme.palette.custom.background,
+  maxWidth: {
+    xl: "800px",
+    lg: "500px",
+    md: "400px",
+    sm: "800px",
+    xs: "800px",
+    xxs: "800px",
+  },
 };
 
 const mapContactSx = {
@@ -49,7 +65,33 @@ const mapContactSx = {
 
 const googleMapSx = {
   width: "100%",
-  maxWidth: "1000px",
+  zIndex: 2,
+  position: "absolute",
+  top: "-420px",
+  right: {
+    xl: "80px",
+    lg: "80px",
+    md: "50px",
+    sm: "0",
+    xs: "0",
+    xxs: "0",
+  },
+  maxWidth: {
+    xl: "700px",
+    lg: "620px",
+    md: "500px",
+    sm: "950px",
+    xs: "900px",
+    xxs: "900px",
+  },
+  height: {
+    xl: "400px",
+    lg: "350px",
+    md: "400px",
+    sm: "400px",
+    xs: "400px",
+    xxs: "400px",
+  },
   borderRadius: "15px",
   overflow: "hidden",
 };
@@ -60,6 +102,12 @@ const ContactElements = ({ phoneNumber, address, cityData }: Props) => {
   const { googleMapData, name } = cityData || {};
   return (
     <Box sx={container}>
+      {googleMapData && (
+        <Box sx={googleMapSx}>
+          <GoogleMapContainer {...googleMapData} />
+        </Box>
+      )}
+
       <Typography sx={titleSx} variant="h2">
         Kontakt Turbo Hydraulik {name}
       </Typography>
@@ -89,12 +137,6 @@ const ContactElements = ({ phoneNumber, address, cityData }: Props) => {
             />
           )}
         </Box>
-
-        {googleMapData && (
-          <Box sx={googleMapSx}>
-            <GoogleMapContainer {...googleMapData} />
-          </Box>
-        )}
       </Box>
     </Box>
   );

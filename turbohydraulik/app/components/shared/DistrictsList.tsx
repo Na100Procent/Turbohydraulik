@@ -20,7 +20,7 @@ const DistrictsList = ({ city }: Props) => {
       width="100%"
       bgcolor={theme.palette.custom.blueLight}
     >
-      <Box padding="30px 35px">
+      <Box paddingY="30px">
         <SectionCenterHeader header="Dzielnice w których działamy" />
         <LocationsList
           locsTitle={`JESTEŚMY W TYCH DZIELNICACH MIASTA ${city.name}`}
