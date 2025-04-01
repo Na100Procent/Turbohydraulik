@@ -36,6 +36,10 @@ const ReviewsHorizontalScrollList: React.FC<
     setStart(true);
   }, []);
 
+  const multipleArray =
+    filteredReviews.length < 10
+      ? [...filteredReviews, ...filteredReviews, ...filteredReviews]
+      : [...filteredReviews, ...filteredReviews];
   return (
     <AnimatedBox
       key={start.toString()}
@@ -45,7 +49,7 @@ const ReviewsHorizontalScrollList: React.FC<
         marginBottom: "50px",
       }}
     >
-      {filteredReviews.map((review: ReviewCardProps, index: number) => (
+      {multipleArray.map((review: ReviewCardProps, index: number) => (
         <Box key={index} sx={{ margin: "0 10px" }}>
           <ReviewCard {...review} />
         </Box>

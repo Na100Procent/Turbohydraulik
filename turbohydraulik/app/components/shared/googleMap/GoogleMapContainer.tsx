@@ -8,7 +8,7 @@ import {
 import { useState } from "react";
 import ErrorMessage from "../ErrorMessage";
 import { CityCords } from "./types";
-import { Box } from "@mui/material";
+import { Box, Link } from "@mui/material";
 
 interface Props {
   cityCords: CityCords;
@@ -31,6 +31,7 @@ const GoogleMapContainer = ({
   placeId,
 }: Props) => {
   const apiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY;
+
   const [showInfo, setShowInfo] = useState(false);
 
   const { isLoaded, loadError } = useJsApiLoader({
@@ -68,6 +69,15 @@ const GoogleMapContainer = ({
             {placeId && (
               <p>
                 <strong>Place ID:</strong> {placeId}
+                <br />
+                <Link
+                  href={`https://www.google.com/maps/place/?q=place_id:${placeId}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  sx={{ display: "block", marginTop: "8px", color: "blue" }}
+                >
+                  Zobacz w Google Maps
+                </Link>
               </p>
             )}
           </Box>
