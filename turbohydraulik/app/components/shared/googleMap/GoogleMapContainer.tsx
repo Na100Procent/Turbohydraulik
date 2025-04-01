@@ -49,7 +49,12 @@ const GoogleMapContainer = ({
   }
 
   return (
-    <GoogleMap mapContainerStyle={containerStyle} center={cityCords} zoom={12}>
+    <GoogleMap
+      mapContainerStyle={containerStyle}
+      center={cityCords}
+      zoom={12}
+      key={apiKey}
+    >
       <Marker position={cityCords} onClick={() => setShowInfo(true)} />
       {showInfo && (
         <InfoWindow
