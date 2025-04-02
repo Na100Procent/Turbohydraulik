@@ -209,9 +209,7 @@
               "service_h2": "Sprawdź nasze inne usługi hydrauliczne!",
               "service_h3": "Kompleksowe usługi dla Twojej wygody",
               "service_text": "Wykonujemy wiele innych usług hydraulicznych. Zaufaj naszemu doświadczeniu i umów się na konsultację. Pozwól nam pomóc z każdą instalacją!",
-              "content": "",
-              "postalCode": "50-148",
-              "street": "Biskupia 7/16"
+              "content": ""
           },
           "citiesContent": {
               "wroclaw": {
@@ -253,7 +251,9 @@
                       "priceList_text": "Rozsądne ceny, brak ukrytych kosztów – z Turbo Hydraulikiem zawsze wiesz, za co płacisz!",
                       "faq_h2": "Często Zadawane Pytania - Turbo Hydraulik Wrocław",
                       "contact_h2": "Skontaktuj się z Turbo Hydraulik Wrocław",
-                      "contact_text": "Jeśli masz problem z rurami we Wrocławiu, nie zwlekaj – skontaktuj się z nami już teraz i pozwól, że rozwiążemy Twój problem szybko i skutecznie!"
+                      "contact_text": "Jeśli masz problem z rurami we Wrocławiu, nie zwlekaj – skontaktuj się z nami już teraz i pozwól, że rozwiążemy Twój problem szybko i skutecznie!",
+                      "postalCode": "50-148",
+                      "street": "Biskupia 7/16"
                   }
               }
           }
@@ -287,11 +287,11 @@
               }
           ],
           "heroServiceImages": [
-              "http://www.turbohydraulik.pl/assets/images/silikonowanie_i_uszczelnienia/1.com-resize.webp",
-              "http://www.turbohydraulik.pl/assets/images/silikonowanie_i_uszczelnienia/2.com-resize.webp",
-              "http://www.turbohydraulik.pl/assets/images/silikonowanie_i_uszczelnienia/3.com-resize.webp",
-              "http://www.turbohydraulik.pl/assets/images/silikonowanie_i_uszczelnienia/4.com-resize.webp",
-              "http://www.turbohydraulik.pl/assets/images/silikonowanie_i_uszczelnienia/5.com-resize.webp"
+              "http://www.turbohydraulik.pl/assets/images/silikonowanie_i_uszczelnienia/1.webp",
+              "http://www.turbohydraulik.pl/assets/images/silikonowanie_i_uszczelnienia/2.webp",
+              "http://www.turbohydraulik.pl/assets/images/silikonowanie_i_uszczelnienia/3.webp",
+              "http://www.turbohydraulik.pl/assets/images/silikonowanie_i_uszczelnienia/4.webp",
+              "http://www.turbohydraulik.pl/assets/images/silikonowanie_i_uszczelnienia/5.webp"
           ],
           "mainContent": {
               "meta_title": "Silikonowanie i uszczelnienia | Turbo Hydraulik W Twojej Okolicy",
@@ -403,11 +403,11 @@
               }
           ],
           "heroServiceImages": [
-              "http://www.turbohydraulik.pl/assets/images/montaz_i_serwis_podgrzewaczy_wody/1.com-resize.webp",
-              "http://www.turbohydraulik.pl/assets/images/montaz_i_serwis_podgrzewaczy_wody/2.com-optiwebp.webp",
-              "http://www.turbohydraulik.pl/assets/images/montaz_i_serwis_podgrzewaczy_wody/3.com-resize.webp",
+              "http://www.turbohydraulik.pl/assets/images/montaz_i_serwis_podgrzewaczy_wody/1.webp",
+              "http://www.turbohydraulik.pl/assets/images/montaz_i_serwis_podgrzewaczy_wody/2.webp",
+              "http://www.turbohydraulik.pl/assets/images/montaz_i_serwis_podgrzewaczy_wody/3.webp",
               "http://www.turbohydraulik.pl/assets/images/montaz_i_serwis_podgrzewaczy_wody/4.webp",
-              "http://www.turbohydraulik.pl/assets/images/montaz_i_serwis_podgrzewaczy_wody/5.com-optiwebp.webp"
+              "http://www.turbohydraulik.pl/assets/images/montaz_i_serwis_podgrzewaczy_wody/5.webp"
           ],
           "mainContent": {
               "meta_title": "Montaż i serwis podgrzewaczy wody | Turbo Hydraulik W Twojej Okolicy",
@@ -519,10 +519,10 @@
               }
           ],
           "heroServiceImages": [
-              "http://www.turbohydraulik.pl/assets/images/podlaczanie_sprzetow_agd/1.com-optiwebp.webp",
-              "http://www.turbohydraulik.pl/assets/images/podlaczanie_sprzetow_agd/2.com-optiwebp.webp",
-              "http://www.turbohydraulik.pl/assets/images/podlaczanie_sprzetow_agd/3.com-optiwebp.webp",
-              "http://www.turbohydraulik.pl/assets/images/podlaczanie_sprzetow_agd/4.com-optiwebp.webp",
+              "http://www.turbohydraulik.pl/assets/images/podlaczanie_sprzetow_agd/1.webp",
+              "http://www.turbohydraulik.pl/assets/images/podlaczanie_sprzetow_agd/2.webp",
+              "http://www.turbohydraulik.pl/assets/images/podlaczanie_sprzetow_agd/3.webp",
+              "http://www.turbohydraulik.pl/assets/images/podlaczanie_sprzetow_agd/4.webp",
               "http://www.turbohydraulik.pl/assets/images/podlaczanie_sprzetow_agd/5.webp"
           ],
           "mainContent": {
@@ -562,7 +562,7 @@
           "citiesContent": {
               "wroclaw": {
                   "name": "Podłączanie sprzętów AGD",
-                  "slug": "wroclaw-podlaczanie_sprzetow_agd",
+                  "slug": "podlaczanie_sprzetow_agd",
                   "content": {
                       "meta_title": "Podłączanie sprzętów AGD | Turbo Hydraulik Wrocław",
                       "meta_description": "Skorzystaj z profesjonalnej usługi podłączania sprzętów AGD we Wrocławiu. Zaufaj ekspertom Turbo Hydraulik i ciesz się bezproblemowym działaniem swoich urządzeń!",
@@ -789,7 +789,7 @@
           "citiesContent": {
               "wroclaw": {
                   "name": "Montaż i Naprawa Centralnego Ogrzewania",
-                  "slug": "montaz_i_naprawa_centralnego_ogrzewania-wroclaw",
+                  "slug": "montaz_i_naprawa_centralnego_ogrzewania",
                   "content": {
                       "meta_title": "Montaż i Naprawa Centralnego Ogrzewania | Turbo Hydraulik Wrocław",
                       "meta_description": "Profesjonalny montaż i naprawa centralnego ogrzewania we Wrocławiu. Skorzystaj z usług Turbo Hydraulik - Twojego eksperta hydrauliki!",
@@ -862,10 +862,10 @@
               }
           ],
           "heroServiceImages": [
-              "http://www.turbohydraulik.pl/assets/images/kompleksowy_serwis_toalet/1.com-resize.webp",
-              "http://www.turbohydraulik.pl/assets/images/kompleksowy_serwis_toalet/2.com-resize.webp",
-              "http://www.turbohydraulik.pl/assets/images/kompleksowy_serwis_toalet/3.com-resize.webp",
-              "http://www.turbohydraulik.pl/assets/images/kompleksowy_serwis_toalet/4.com-optiwebp.webp",
+              "http://www.turbohydraulik.pl/assets/images/kompleksowy_serwis_toalet/1.webp",
+              "http://www.turbohydraulik.pl/assets/images/kompleksowy_serwis_toalet/2.webp",
+              "http://www.turbohydraulik.pl/assets/images/kompleksowy_serwis_toalet/3.webp",
+              "http://www.turbohydraulik.pl/assets/images/kompleksowy_serwis_toalet/4.webp",
               "http://www.turbohydraulik.pl/assets/images/kompleksowy_serwis_toalet/5.webp"
           ],
           "mainContent": {
@@ -905,7 +905,7 @@
           "citiesContent": {
               "wroclaw": {
                   "name": "kompleksowy serwis toalet",
-                  "slug": "kompleksowy_serwis_toalet_wroclaw",
+                  "slug": "kompleksowy_serwis_toalet",
                   "content": {
                       "meta_title": "Kompleksowy Serwis Toalet | Turbo Hydraulik Wrocław",
                       "meta_description": "Skorzystaj z profesjonalnego kompleksowego serwisu toalet we Wrocławiu. Zaufaj naszym ekspertom i ciesz się niezawodną instalacją oraz serwisem!",
@@ -949,10 +949,17 @@
               }
           }
       },
-      "montaz_zlewów_i_umywalek": {
+      "montaz_zlewow_i_umywalek": {
           "name": "Montaż zlewów i umywalek",
           "slug": "montaz_zlewów_i_umywalek",
           "price": 250,
+          "heroServiceImages": [
+            "http://www.turbohydraulik.pl/assets/images/montaz_zlewów_i_umywalek/1.webp",
+            "http://www.turbohydraulik.pl/assets/images/montaz_zlewów_i_umywalek/2.webp",
+            "http://www.turbohydraulik.pl/assets/images/montaz_zlewów_i_umywalek/3.webp",
+            "http://www.turbohydraulik.pl/assets/images/montaz_zlewów_i_umywalek/4.webp",
+            "http://www.turbohydraulik.pl/assets/images/montaz_zlewów_i_umywalek/5.webp"
+        ],
           "cardDescription": "Zajmujemy się montażem zlewów kuchennych i łazienkowych wraz z podłączeniem odpływu oraz baterii. Solidnie i estetycznie.",
           "cardImageUrl": "https://www.turbohydraulik.pl/assets/images/montaz_zlewow_i_umywalek/montaz_zlewow_i_umywalek.webp",
           "subServices": [
@@ -1014,7 +1021,7 @@
           "citiesContent": {
               "wroclaw": {
                   "name": "Montaż zlewów i umywalek",
-                  "slug": "montaz_zlewów_i_umywalek-wroclaw",
+                  "slug": "montaz_zlewow_i_umywalek",
                   "content": {
                       "meta_title": "Montaż zlewów i umywalek | Turbo Hydraulik Wrocław",
                       "meta_description": "Skorzystaj z profesjonalnej usługi montażu zlewów i umywalek we Wrocławiu. Zadzwoń: 788998370 i umów wizytę z Turbo Hydraulik.",
@@ -1125,7 +1132,7 @@
           "citiesContent": {
               "wroclaw": {
                   "name": "Instalacja i Wymiana Zaworów",
-                  "slug": "instalacja_i_wymiana_zaworow-wroclaw",
+                  "slug": "instalacja_i_wymiana_zaworow",
                   "content": {
                       "meta_title": "Instalacja i Wymiana Zaworów | Turbo Hydraulik Wrocław",
                       "meta_description": "Zachęcamy do skorzystania z usługi Instalacja i Wymiana Zaworów w Wrocławiu. Profesjonalna obsługa i szybki czas realizacji. Zadzwoń: 788 998 370.",
@@ -1173,6 +1180,13 @@
           "name": "Serwis, montaż i wymiana baterii",
           "slug": "serwis_montaz_i_wymiana_baterii",
           "price": 150,
+          "heroServiceImages": [
+            "http://www.turbohydraulik.pl/assets/images/serwis_montaz_i_wymiana_baterii/1.webp",
+            "http://www.turbohydraulik.pl/assets/images/serwis_montaz_i_wymiana_baterii/2.webp",
+            "http://www.turbohydraulik.pl/assets/images/serwis_montaz_i_wymiana_baterii/3.webp",
+            "http://www.turbohydraulik.pl/assets/images/serwis_montaz_i_wymiana_baterii/4.webp",
+            "http://www.turbohydraulik.pl/assets/images/serwis_montaz_i_wymiana_baterii/5.webp"
+        ],
           "cardDescription": "Instalacja baterii umywalkowych, wannowych, prysznicowych i kuchennych. Zapewniamy szczelność i estetyczne wykończenie.",
           "cardImageUrl": "https://www.turbohydraulik.pl/assets/images/serwis,_montaz_i_wymiana_baterii/serwis,_montaz_i_wymiana_baterii.webp",
           "subServices": [
@@ -1307,10 +1321,10 @@
               }
           ],
           "heroServiceImages": [
-              "http://www.turbohydraulik.pl/assets/images/serwis_kabin_prysznicowych/1.com-resize.webp",
-              "http://www.turbohydraulik.pl/assets/images/serwis_kabin_prysznicowych/2.com-optiwebp.webp",
-              "http://www.turbohydraulik.pl/assets/images/serwis_kabin_prysznicowych/3.com-optiwebp.webp",
-              "http://www.turbohydraulik.pl/assets/images/serwis_kabin_prysznicowych/4.com-resize.webp",
+              "http://www.turbohydraulik.pl/assets/images/serwis_kabin_prysznicowych/1.webp",
+              "http://www.turbohydraulik.pl/assets/images/serwis_kabin_prysznicowych/2.webp",
+              "http://www.turbohydraulik.pl/assets/images/serwis_kabin_prysznicowych/3.webp",
+              "http://www.turbohydraulik.pl/assets/images/serwis_kabin_prysznicowych/4.webp",
               "http://www.turbohydraulik.pl/assets/images/serwis_kabin_prysznicowych/5.webp"
           ],
           "mainContent": {
@@ -1350,7 +1364,7 @@
           "citiesContent": {
               "wroclaw": {
                   "name": "Serwis Kabin Prysznicowych",
-                  "slug": "serwis_kabin_prysznicowych-wroclaw",
+                  "slug": "serwis_kabin_prysznicowych",
                   "content": {
                       "meta_title": "Serwis Kabin Prysznicowych | Turbo Hydraulik Wrocław",
                       "meta_description": "Profesjonalny serwis kabin prysznicowych we Wrocławiu. Szybko i skutecznie naprawimy każdą kabinę. Zadzwoń: 788998370.",
