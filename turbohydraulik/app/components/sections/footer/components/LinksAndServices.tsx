@@ -8,6 +8,7 @@ import { websiteData } from "@/app/data/data";
 import { sectionXPadding } from "@/app/constants/styles";
 import OpenHours from "./OpenHours";
 import { CityData } from "@/app/data/types/dataTypes";
+import { getServicesOfCity } from "@/app/components/shared/helpers/getServicesOfCity";
 interface Props {
   cityData?: CityData;
 }
@@ -59,9 +60,8 @@ const linkListsSx = {
 };
 
 const LinksAndServices = ({ cityData }: Props) => {
-  const servicesNamesUrls: LinkElement[] = Object.values(
-    websiteData.services
-  ).map((service) => ({
+  const servicesOfCity = getServicesOfCity(cityData);
+  const servicesNamesUrls: LinkElement[] = servicesOfCity.map((service) => ({
     title: service.name,
     url: cityData ? `/${cityData.slug}/${service.slug}` : `/${service.slug}`,
   }));

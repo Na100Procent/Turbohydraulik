@@ -8,14 +8,16 @@ import {
 import { useState } from "react";
 import ErrorMessage from "../ErrorMessage";
 import { CityCords } from "./types";
-import { Box, Link } from "@mui/material";
+import { Box } from "@mui/material";
+import PlaceDetails from "./components/PlaceDetails";
+import SimpleInfo from "./components/SimpleInfo";
 
 interface Props {
   cityCords: CityCords;
-  title: string;
   address1: string;
   address2?: string;
   placeId?: string;
+  cityName?: string;
 }
 
 const containerStyle = {
@@ -25,30 +27,23 @@ const containerStyle = {
 
 const GoogleMapContainer = ({
   cityCords,
-  title,
   address1,
   address2,
   placeId,
+  cityName,
 }: Props) => {
   const apiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY;
-
   const [showInfo, setShowInfo] = useState(false);
-
   const { isLoaded, loadError } = useJsApiLoader({
     googleMapsApiKey: apiKey || "",
+    libraries: ["places"],
     language: "pl",
   });
 
-  if (!apiKey) {
-    return <ErrorMessage message={"Błąd klucza API KEY"} />;
-  }
-  if (loadError) {
-    return <ErrorMessage message={"Błąd ładowania Google Maps"} />;
-  }
-
-  if (!isLoaded) {
+  if (!apiKey) return <ErrorMessage message="Błąd klucza API KEY" />;
+  if (loadError) return <ErrorMessage message="Błąd ładowania Google Maps" />;
+  if (!isLoaded)
     return <p style={{ textAlign: "center" }}>Ładowanie mapy...</p>;
-  }
 
   return (
     <GoogleMap
@@ -64,22 +59,14 @@ const GoogleMapContainer = ({
           onCloseClick={() => setShowInfo(false)}
         >
           <Box>
-            <h3>{title}</h3>
-            <p>{address1}</p>
-            {address2 && <p>{address2}</p>}
-            {placeId && (
-              <p>
-                <strong>Place ID:</strong> {placeId}
-                <br />
-                <Link
-                  href={`https://www.google.com/maps/place/?q=place_id:${placeId}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  sx={{ display: "block", marginTop: "8px", color: "blue" }}
-                >
-                  Zobacz w Google Maps
-                </Link>
-              </p>
+            {placeId ? (
+              <PlaceDetails placeId={placeId} />
+            ) : (
+              <SimpleInfo
+                cityName={cityName}
+                address1={address1}
+                address2={address2}
+              />
             )}
           </Box>
         </InfoWindow>

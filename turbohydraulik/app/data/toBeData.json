@@ -512,7 +512,7 @@
       "slug": "warszawa",
       "googleMapData": {
         "cityCords": { "lat": 52.2297, "lng": 21.0122 },
-        "title": "Revele.pl",
+
         "address1": "Wiejska 14A",
         "address2": "12-401 Warszawa",
         "placeId": "ChIJe-JHfYDPFkcRSrfCzzkX_xE"
@@ -985,7 +985,7 @@
       "slug": "wroclaw",
       "googleMapData": {
         "cityCords": { "lat": 51.1079, "lng": 17.0385 },
-        "title": "Revele.pl",
+
         "address1": "Wiejska 14A",
         "address2": "12-401 Wrocław",
         "placeId": "ChIJe-JHfYDPFkcRSrfCzzkX_xE"
@@ -1461,7 +1461,7 @@
       "slug": "czestochowa",
       "googleMapData": {
         "cityCords": { "lat": 50.8118, "lng": 19.1203 },
-        "title": "Revele.pl",
+
         "address1": "Gombrowicza 5",
         "address2": "42-200 Częstochowa",
         "placeId": "ChIJe-JHfYDPFkcRSrfCzzkX_xE"

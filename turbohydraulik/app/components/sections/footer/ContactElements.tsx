@@ -104,7 +104,7 @@ const ContactElements = ({ phoneNumber, address, cityData }: Props) => {
     <Box sx={container}>
       {googleMapData && (
         <Box sx={googleMapSx}>
-          <GoogleMapContainer {...googleMapData} />
+          <GoogleMapContainer {...googleMapData} cityName={name} />
         </Box>
       )}
 

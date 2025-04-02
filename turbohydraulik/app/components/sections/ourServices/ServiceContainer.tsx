@@ -1,22 +1,16 @@
 import React from "react";
 import { Box } from "@mui/material";
 import ServiceCard from "./ServiceCard";
-import { websiteData } from "@/app/data/data";
-import { CityData, ServiceData } from "@/app/data/types/dataTypes";
+import { CityData } from "@/app/data/types/dataTypes";
+import { getServicesOfCity } from "../../shared/helpers/getServicesOfCity";
 
 interface Props {
   city?: CityData;
 }
 
 const ServiceContainer = ({ city }: Props) => {
-  const cityServices = city?.availableServices;
-
-  const services: ServiceData[] = cityServices
-    ? Object.values(websiteData.services).filter((service) =>
-        cityServices.includes(service.slug)
-      )
-    : [];
-  const mappedServiceElements = services.map((service, index) => (
+  const servicesOfCity = getServicesOfCity(city);
+  const mappedServiceElements = servicesOfCity.map((service, index) => (
     <Box key={index} sx={{ margin: "0 10px" }}>
       <ServiceCard
         service={{
