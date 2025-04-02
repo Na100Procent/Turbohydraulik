@@ -36,6 +36,7 @@
           "name": "Usługi Hydrauliczne",
           "slug": "uslugi_hydrauliczne",
           "price": 150,
+          "cardDescription": "Kompleksowa obsługa w zakresie napraw, montażu i modernizacji instalacji wodno-kanalizacyjnych. Działamy szybko, fachowo i z gwarancją jakości.",
           "cardImageUrl": "https://www.turbohydraulik.pl/assets/images/uslugi_hydrauliczne/uslugi_hydrauliczne.webp",
           "subServices": [
               {
@@ -94,7 +95,9 @@
                       "priceList_text": "Zapewniamy przejrzyste ceny bez ukrytych kosztów, dostosowane do Twoich potrzeb.",
                       "faq_h2": "FAQ – Wszystko, co chcesz wiedzieć o Turbo Hydrauliku Wrocław",
                       "contact_h2": "Kontakt z Turbo Hydraulik Wrocław",
-                      "contact_text": "Skontaktuj się z Turbo Hydraulik Wrocław i skorzystaj z naszych profesjonalnych usług już dziś!"
+                      "contact_text": "Skontaktuj się z Turbo Hydraulik Wrocław i skorzystaj z naszych profesjonalnych usług już dziś!",
+                      "postalCode": "50-148",
+                      "street": "Biskupia 7/16"
                   }
               }
           },
@@ -143,6 +146,7 @@
           "name": "Udrażnianie i czyszczenie rur",
           "slug": "udraznianie_i_czyszczenie_rur",
           "price": 150,
+          "cardDescription": "Szybkie i skuteczne usuwanie zatorów w rurach kanalizacyjnych. Używamy profesjonalnych narzędzi, które pozwalają na bezinwazyjne udrożnienie odpływów w kuchni, łazience i toalecie.",
           "cardImageUrl": "https://www.turbohydraulik.pl/assets/images/udraznianie_i_czyszczenie_rur/udraznianie_i_czyszczenie_rur.webp",
           "subServices": [
               {
@@ -205,7 +209,9 @@
               "service_h2": "Sprawdź nasze inne usługi hydrauliczne!",
               "service_h3": "Kompleksowe usługi dla Twojej wygody",
               "service_text": "Wykonujemy wiele innych usług hydraulicznych. Zaufaj naszemu doświadczeniu i umów się na konsultację. Pozwól nam pomóc z każdą instalacją!",
-              "content": ""
+              "content": "",
+              "postalCode": "50-148",
+              "street": "Biskupia 7/16"
           },
           "citiesContent": {
               "wroclaw": {
@@ -256,6 +262,7 @@
           "name": "Silikonowanie i uszczelnienia",
           "slug": "silikonowanie_i_uszczelnienia",
           "price": 150,
+          "cardDescription": "Precyzyjne uszczelnianie kabin prysznicowych, wanien, zlewów i umywalek. Wymieniamy stary silikon i nakładamy nowy, odporny na pleśń i wilgoć.",
           "cardImageUrl": "https://www.turbohydraulik.pl/assets/images/silikonowanie_i_uszczelnienia/silikonowanie_i_uszczelnienia.webp",
           "subServices": [
               {
@@ -360,7 +367,9 @@
                       "priceList_text": "Jasne zasady i brak ukrytych kosztów – nasze ceny są przejrzyste i uczciwe, abyś zawsze wiedział, za co płacisz.",
                       "faq_h2": "Często Zadawane Pytania – Turbo Hydraulik Wrocław",
                       "contact_h2": "Skontaktuj się z Turbo Hydraulik Wrocław",
-                      "contact_text": "Skorzystaj z usług Turbo Hydraulik we Wrocławiu – zadzwoń już teraz i zapewnij sobie profesjonalne uszczelnienia i silikonowanie!"
+                      "contact_text": "Skorzystaj z usług Turbo Hydraulik we Wrocławiu – zadzwoń już teraz i zapewnij sobie profesjonalne uszczelnienia i silikonowanie!",
+                      "postalCode": "50-148",
+                      "street": "Biskupia 7/16"
                   }
               }
           }
@@ -369,6 +378,7 @@
           "name": "Montaż i serwis podgrzewaczy wody",
           "slug": "montaz_i_serwis_podgrzewaczy_wody",
           "price": 200,
+          "cardDescription": "Profesjonalny montaż elektrycznych i gazowych podgrzewaczy wody. Zapewniamy prawidłowe podłączenie do instalacji wodnej i elektrycznej oraz pierwsze uruchomienie.",
           "cardImageUrl": "https://www.turbohydraulik.pl/assets/images/montaz_i_serwis_podgrzewaczy_wody/montaz_i_serwis_podgrzewaczy_wody.webp",
           "subServices": [
               {
@@ -473,7 +483,9 @@
                       "priceList_text": "Proste i przejrzyste ceny, żadnych ukrytych opłat. Skontaktuj się z nami, aby uzyskać więcej informacji!",
                       "faq_h2": "FAQ – Najważniejsze Pytania - Turbo Hydraulik Wrocław",
                       "contact_h2": "Kontakt z Turbo Hydraulik we Wrocławiu",
-                      "contact_text": "Potrzebujesz pomocy hydraulika we Wrocławiu? Zadzwoń już teraz: 788998370"
+                      "contact_text": "Potrzebujesz pomocy hydraulika we Wrocławiu? Zadzwoń już teraz: 788998370",
+                      "postalCode": "50-148",
+                      "street": "Biskupia 7/16"
                   }
               }
           }
@@ -482,6 +494,7 @@
           "name": "Podłączanie sprzętów AGD",
           "slug": "podlaczanie_sprzetow_agd",
           "price": 150,
+          "cardDescription": "Bezpieczne podłączenie pralek, zmywarek i lodówek do instalacji wodno-kanalizacyjnej. Sprawdzamy szczelność i prawidłowe działanie urządzeń",
           "cardImageUrl": "https://www.turbohydraulik.pl/assets/images/podlaczanie_sprzetow_agd/podlaczanie_sprzetow_agd.webp",
           "subServices": [
               {
@@ -586,7 +599,9 @@
                       "priceList_text": "Przejrzyste ceny bez ukrytych kosztów i niemiłych niespodzianek.",
                       "faq_h2": "Najczęściej Zadawane Pytania - Turbo Hydraulik Wrocław",
                       "contact_h2": "Skontaktuj się z Turbo Hydraulik Wrocław",
-                      "contact_text": "Zadzwoń już teraz do Turbo Hydraulik we Wrocławiu i skorzystaj z najlepszej obsługi w mieście!"
+                      "contact_text": "Zadzwoń już teraz do Turbo Hydraulik we Wrocławiu i skorzystaj z najlepszej obsługi w mieście!",
+                      "postalCode": "50-148",
+                      "street": "Biskupia 7/16"
                   }
               }
           }
@@ -595,6 +610,7 @@
           "name": "Serwis i montaż syfonów",
           "slug": "serwis_i_montaz_syfonow",
           "price": 150,
+          "cardDescription": "Naprawa, wymiana i czyszczenie syfonów w zlewach, umywalkach i wannach. Eliminujemy przecieki i nieprzyjemne zapachy",
           "cardImageUrl": "https://www.turbohydraulik.pl/assets/images/serwis_i_montaz_syfonow/serwis_i_montaz_syfonow.webp",
           "subServices": [
               {
@@ -653,7 +669,9 @@
                       "priceList_text": "Klarowne zasady i brak ukrytych kosztów, to nasze standardy przy każdym projekcie.",
                       "faq_h2": "Często Zadawane Pytania - Turbo Hydraulik Wrocław",
                       "contact_h2": "Skontaktuj się z nami – Turbo Hydraulik Wrocław",
-                      "contact_text": "Zadzwoń do nas już teraz i doświadcz profesjonalnej obsługi – Turbo Hydraulik we Wrocławiu czeka na Twój telefon!"
+                      "contact_text": "Zadzwoń do nas już teraz i doświadcz profesjonalnej obsługi – Turbo Hydraulik we Wrocławiu czeka na Twój telefon!",
+                      "postalCode": "50-148",
+                      "street": "Biskupia 7/16"
                   }
               }
           },
@@ -703,6 +721,7 @@
           "name": "Montaż i naprawa centralnego ogrzewania",
           "slug": "montaz_i_naprawa_centralnego_ogrzewania",
           "price": 150,
+          "cardDescription": "Montaż, modernizacja i naprawa instalacji centralnego ogrzewania. Podłączamy grzejniki, rozprowadzamy rury i odpowietrzamy system.",
           "cardImageUrl": "https://www.turbohydraulik.pl/assets/images/montaz_i_naprawa_centralnego_ogrzewania/montaz_i_naprawa_centralnego_ogrzewania.webp",
           "subServices": [
               {
@@ -807,7 +826,9 @@
                       "priceList_text": "Jasne i uczciwe ceny, bez ukrytych kosztów. Skontaktuj się z Turbo Hydraulik Wrocław już dziś!",
                       "faq_h2": "Najczęściej Zadawane Pytania - Turbo Hydraulik Wrocław",
                       "contact_h2": "Skontaktuj się z Turbo Hydraulik Wrocław",
-                      "contact_text": "Turbo Hydraulik Wrocław - Jesteśmy tu, aby Ci pomóc! Zadzwoń teraz pod numer 788998370 lub napisz do nas, aby uzyskać więcej informacji."
+                      "contact_text": "Turbo Hydraulik Wrocław - Jesteśmy tu, aby Ci pomóc! Zadzwoń teraz pod numer 788998370 lub napisz do nas, aby uzyskać więcej informacji.",
+                      "postalCode": "50-148",
+                      "street": "Biskupia 7/16"
                   }
               }
           }
@@ -816,6 +837,7 @@
           "name": "Kompleksowy serwis toalet",
           "slug": "kompleksowy_serwis_toalet",
           "price": 150,
+          "cardDescription": "Naprawa spłuczek, wymiana mechanizmów, usuwanie wycieków oraz montaż nowych misek WC. Gwarantujemy cichą i bezawaryjną pracę toalety.",
           "cardImageUrl": "https://www.turbohydraulik.pl/assets/images/kompleksowy_serwis_toalet/kompleksowy_serwis_toalet.webp",
           "subServices": [
               {
@@ -920,7 +942,9 @@
                       "priceList_text": "Jasne zasady, uczciwe ceny i brak ukrytych kosztów – tak działa Turbo Hydraulik we Wrocławiu.",
                       "faq_h2": "FAQ – Najczęściej Zadawane Pytania - Turbo Hydraulik Wrocław",
                       "contact_h2": "Jak się z nami skontaktować – Turbo Hydraulik Wrocław",
-                      "contact_text": "Jeśli potrzebujesz niezawodnego serwisu toalet, zaufaj profesjonalistom z Turbo Hydraulik we Wrocławiu. Skontaktuj się z nami już dziś telefonicznie pod numerem 788998370!"
+                      "contact_text": "Jeśli potrzebujesz niezawodnego serwisu toalet, zaufaj profesjonalistom z Turbo Hydraulik we Wrocławiu. Skontaktuj się z nami już dziś telefonicznie pod numerem 788998370!",
+                      "postalCode": "50-148",
+                      "street": "Biskupia 7/16"
                   }
               }
           }
@@ -929,6 +953,7 @@
           "name": "Montaż zlewów i umywalek",
           "slug": "montaz_zlewów_i_umywalek",
           "price": 250,
+          "cardDescription": "Zajmujemy się montażem zlewów kuchennych i łazienkowych wraz z podłączeniem odpływu oraz baterii. Solidnie i estetycznie.",
           "cardImageUrl": "https://www.turbohydraulik.pl/assets/images/montaz_zlewow_i_umywalek/montaz_zlewow_i_umywalek.webp",
           "subServices": [
               {
@@ -1026,7 +1051,9 @@
                       "priceList_text": "Jasne ceny, zero ukrytych kosztów. Postaw na przejrzystość i profesjonalizm.",
                       "faq_h2": "Najczęściej zadawane pytania - Turbo Hydraulik Wrocław",
                       "contact_h2": "Skontaktuj się z Turbo Hydraulik Wrocław",
-                      "contact_text": "Zadzwoń już teraz do Turbo Hydraulik Wrocław i doświadcz niezawodnej usługi montażu zlewów i umywalek!"
+                      "contact_text": "Zadzwoń już teraz do Turbo Hydraulik Wrocław i doświadcz niezawodnej usługi montażu zlewów i umywalek!",
+                      "postalCode": "50-148",
+                      "street": "Biskupia 7/16"
                   }
               }
           }
@@ -1035,6 +1062,7 @@
           "name": "Instalacja i wymiana zaworów",
           "slug": "instalacja_i_wymiana_zaworow",
           "price": 150,
+          "cardDescription": "Wymieniamy stare, niesprawne lub cieknące zawory wodne i gazowe. Montujemy nowoczesne i bezpieczne rozwiązania.",
           "cardImageUrl": "https://www.turbohydraulik.pl/assets/images/instalacja_i_wymiana_zaworow/instalacja_i_wymiana_zaworow.webp",
           "subServices": [
               {
@@ -1134,7 +1162,9 @@
                       "priceList_text": "Przejrzyste ceny i brak ukrytych kosztów – zawsze wiesz, za co płacisz.",
                       "faq_h2": "Najczęściej Zadawane Pytania - Turbo Hydraulik Wrocław",
                       "contact_h2": "Skontaktuj się z Turbo Hydraulik w Wrocławiu",
-                      "contact_text": "Zadzwoń do nas teraz i dowiedz się, jak możemy Ci pomóc! Turbo Hydraulik Wrocław czeka na Twój telefon."
+                      "contact_text": "Zadzwoń do nas teraz i dowiedz się, jak możemy Ci pomóc! Turbo Hydraulik Wrocław czeka na Twój telefon.",
+                      "postalCode": "50-148",
+                      "street": "Biskupia 7/16"
                   }
               }
           }
@@ -1143,6 +1173,7 @@
           "name": "Serwis, montaż i wymiana baterii",
           "slug": "serwis_montaz_i_wymiana_baterii",
           "price": 150,
+          "cardDescription": "Instalacja baterii umywalkowych, wannowych, prysznicowych i kuchennych. Zapewniamy szczelność i estetyczne wykończenie.",
           "cardImageUrl": "https://www.turbohydraulik.pl/assets/images/serwis,_montaz_i_wymiana_baterii/serwis,_montaz_i_wymiana_baterii.webp",
           "subServices": [
               {
@@ -1240,7 +1271,9 @@
                       "priceList_text": "Konkurencyjne ceny, które są jasne i bez ukrytych kosztów. Zawsze wiesz za co płacisz.",
                       "faq_h2": "Najczęściej Zadawane Pytania - Turbo Hydraulik Wrocław",
                       "contact_h2": "Skontaktuj się z Turbo Hydraulik Wrocław",
-                      "contact_text": "Zadzwoń teraz i skorzystaj z naszych usług! Nasz numer: 788998370. Turbo Hydraulik Wrocław na straży Twojego komfortu!"
+                      "contact_text": "Zadzwoń teraz i skorzystaj z naszych usług! Nasz numer: 788998370. Turbo Hydraulik Wrocław na straży Twojego komfortu!",
+                      "postalCode": "50-148",
+                      "street": "Biskupia 7/16"
                   }
               }
           }
@@ -1249,6 +1282,7 @@
           "name": "Serwis Kabin Prysznicowych",
           "slug": "serwis_kabin_prysznicowych",
           "price": 150,
+          "cardDescription": "Usuwamy nieszczelności, wymieniamy uszczelki, zawiasy i rolki. Przywracamy kabiny do pełnej sprawności, dbając o komfort i estetykę łazienki.",
           "cardImageUrl": "https://www.turbohydraulik.pl/assets/images/serwis_kabin_prysznicowych/serwis_kabin_prysznicowych.webp",
           "subServices": [
               {
@@ -1353,7 +1387,9 @@
                       "priceList_text": "Uczciwe ceny i żadnych ukrytych kosztów – to nasza obietnica dla Ciebie.",
                       "faq_h2": "Często zadawane pytania - Turbo Hydraulik Wrocław",
                       "contact_h2": "Skontaktuj się z Turbo Hydraulik Wrocław",
-                      "contact_text": "Masz pytania lub potrzebujesz porady? Jesteśmy tu, aby pomóc. Skontaktuj się z nami już dziś!"
+                      "contact_text": "Masz pytania lub potrzebujesz porady? Jesteśmy tu, aby pomóc. Skontaktuj się z nami już dziś!",
+                      "postalCode": "50-148",
+                      "street": "Biskupia 7/16"
                   }
               }
           }
