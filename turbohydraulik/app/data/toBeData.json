@@ -512,10 +512,9 @@
       "slug": "warszawa",
       "googleMapData": {
         "cityCords": { "lat": 52.2297, "lng": 21.0122 },
-
         "address1": "Wiejska 14A",
         "address2": "12-401 Warszawa",
-        "placeId": "ChIJe-JHfYDPFkcRSrfCzzkX_xE"
+        "placeId": ""
       },
       "cityCardUrl": "https://www.turbohydraulik.pl/assets/images/warszawa.webp",
       "availableServices": ["instalacja_i_wymiana_zaworow"],
