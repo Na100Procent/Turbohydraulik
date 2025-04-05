@@ -17,6 +17,8 @@ export const getCityServiceDataContent = (
   cityServiceData: DistrictData,
   cityService: ServiceData
 ) => {
+  console.log(cityServiceData.content);
+
   const metaContent: MetaContent = {
     title: cityServiceData.content.meta_title,
     description: cityServiceData.content.meta_description,
@@ -29,10 +31,10 @@ export const getCityServiceDataContent = (
   };
 
   const aboutServiceContent: AboutServiceContent = {
-    aboutService_h2: cityService.mainContent.aboutService_h2,
-    aboutService_text1: cityService.mainContent.aboutService_text1,
-    aboutService_h3: cityService.mainContent.aboutService_h3,
-    aboutService_text2: cityService.mainContent.aboutService_text2,
+    aboutService_h2: cityServiceData.content.aboutService_h2,
+    aboutService_text1: cityServiceData.content.aboutService_text1,
+    aboutService_h3: cityServiceData.content.aboutService_h3,
+    aboutService_text2: cityServiceData.content.aboutService_text2,
   };
 
   const ourServicesContent: OurServiceContent = {

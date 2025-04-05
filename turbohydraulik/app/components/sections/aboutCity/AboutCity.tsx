@@ -74,7 +74,7 @@ const AboutCity = ({ content, bgColor, phoneNumber }: Props) => {
         <Box padding={sectionXPadding}>
           <SectionHeader
             headerColor={theme.palette.primary.main}
-            header={aboutCity_h2}
+            header={aboutCity_h2 ? aboutCity_h2 : ""}
           />
 
           <Box sx={contentSx}>
