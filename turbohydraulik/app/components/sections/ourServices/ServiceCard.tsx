@@ -27,8 +27,15 @@ const container = {
     xs: "310px",
     xxs: "310px",
   },
+  height: {
+    xl: "400px",
+    lg: "400px",
+    md: "400px",
+    sm: "auto",
+    xs: "auto",
+    xxs: "auto",
+  },
 
-  height: "100%",
   borderRadius: "12px",
   overflow: "hidden",
   backgroundColor: theme.palette.custom.background,
@@ -36,7 +43,14 @@ const container = {
   flexDirection: "column",
   alignItems: "left",
   boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
-  padding: "10px 20px 60px 20px",
+  padding: {
+    xl: "10px 20px 50px 20px",
+    lg: "10px 20px 50px 20px",
+    md: "10px 20px 50px 20px",
+    sm: "10px 20px 20px 20px",
+    xs: "10px 20px 10px 20px",
+    xxs: "10px 20px 10px 20px",
+  },
   transition: "background-color 0.3s ease, scale 0.3s ease",
   "&:hover": {
     cursor: "pointer",
@@ -44,10 +58,18 @@ const container = {
     scale: 1.05,
   },
 };
+
 const imgSx = {
   marginTop: "10px",
-  height: "65%",
-  maxHeight: "300px",
+  height: "100%",
+  maxHeight: {
+    xl: "200px",
+    lg: "200px",
+    md: "200px",
+    sm: "200px",
+    xs: "200px",
+    xxs: "200px",
+  },
   objectFit: "cover",
 };
 
@@ -66,7 +88,17 @@ const descriptionSx = {
   fontFamily: "UniteaSans",
   fontWeight: 500,
   mt: "10px",
-  opacity: 0.8,
+  display: "-webkit-box",
+  WebkitBoxOrient: "vertical",
+  overflow: "hidden",
+  textOverflow: "ellipsis",
+  WebkitLineClamp: {
+    xs: 3,
+    sm: 3,
+    md: 5,
+    lg: 5,
+    xl: 5,
+  },
 };
 
 const ServiceCard = ({ city, service }: Props) => {
@@ -74,16 +106,13 @@ const ServiceCard = ({ city, service }: Props) => {
   const pathSegments = pathname.split("/").filter(Boolean);
 
   let newPath = `/${service.slug}`;
-
-  if (pathSegments.length > 0) {
-    if (city?.slug) {
-      newPath = `/${city?.slug}/${service.slug}`;
-    }
+  if (pathSegments.length > 0 && city?.slug) {
+    newPath = `/${city.slug}/${service.slug}`;
   }
-  const cityTitle = city ? city?.name : "";
-  const serviceImg = service.serviceImgUrl
-    ? service.serviceImgUrl
-    : serviceCardUrl;
+
+  const cityTitle = city ? city.name : "";
+  const serviceImg = service.serviceImgUrl || serviceCardUrl;
+
   return (
     <Link href={newPath}>
       <Box sx={container}>

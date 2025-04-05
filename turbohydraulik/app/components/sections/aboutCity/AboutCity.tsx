@@ -6,11 +6,11 @@ import { Box, Typography } from "@mui/material";
 import { sectionXPadding } from "@/app/constants/styles";
 import SectionPaddingWrapper from "../../shared/SectionWrapper";
 import Image from "next/image";
-import { aboutUsUrl } from "@/app/constants/imagesUrls";
 import CallUsButton from "../../shared/CallUsButton";
 import { sectionIds } from "@/app/constants/appConstants";
 import { AboutCityContent } from "@/app/data/types/sectionTypes";
 import SectionIdentifier from "../../shared/SectionIdentifier";
+import { aboutUsUrl } from "@/app/constants/imagesUrls";
 
 interface Props {
   content: AboutCityContent;
@@ -39,14 +39,14 @@ const contentSx = {
     xs: "20px",
     xxs: "20px",
   },
-  gap: "100px",
+  gap: "20px",
 };
 
 const imgSx = {
-  maxWidth: "400px",
+  maxWidth: "700px",
   width: "100%",
   height: "100%",
-  maxHeight: "490px",
+
   borderRadius: "15px",
   overflow: "hidden",
 };
@@ -62,8 +62,13 @@ const header3Sx = {
   textAlign: "left",
 };
 const AboutCity = ({ content, bgColor, phoneNumber }: Props) => {
-  const { aboutCity_h2, aboutCity_text1, aboutCity_h3, aboutCity_text2 } =
-    content;
+  const {
+    aboutCity_h2,
+    aboutCity_text1,
+    aboutCity_h3,
+    aboutCity_text2,
+    cityCardUrl,
+  } = content;
 
   return (
     <BackgroundWrapper
@@ -74,7 +79,7 @@ const AboutCity = ({ content, bgColor, phoneNumber }: Props) => {
         <Box padding={sectionXPadding}>
           <SectionHeader
             headerColor={theme.palette.primary.main}
-            header={aboutCity_h2}
+            header={aboutCity_h2 ? aboutCity_h2 : ""}
           />
 
           <Box sx={contentSx}>
@@ -83,6 +88,8 @@ const AboutCity = ({ content, bgColor, phoneNumber }: Props) => {
               flexDirection="column"
               gap="30px"
               justifyContent="space-between"
+              maxWidth="650px"
+              width={"100%"}
             >
               <Typography
                 sx={{
@@ -113,10 +120,10 @@ const AboutCity = ({ content, bgColor, phoneNumber }: Props) => {
             <Box sx={imgSx}>
               <Image
                 layout="responsive"
-                src={aboutUsUrl}
+                src={cityCardUrl ? cityCardUrl : aboutUsUrl}
                 alt={`Turbo Hydraulik ${aboutCity_h2}`}
-                width={400}
-                height={490}
+                width={500}
+                height={590}
               />
             </Box>
           </Box>

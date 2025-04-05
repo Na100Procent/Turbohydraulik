@@ -66,7 +66,7 @@ const OurServices = ({
   return (
     <BackgroundWrapper bgColor={bgColor ? bgColor : theme.palette.primary.main}>
       <SectionIdentifier sectionId={sectionIds.services} />
-      <Box display={"flex"} flexDirection={"column"} gap="0px">
+      <Box display={"flex"} flexDirection={"column"}>
         <SectionPaddingWrapper>
           <Box sx={headerSx}>
             <SectionCenterHeader

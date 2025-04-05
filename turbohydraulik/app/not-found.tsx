@@ -27,7 +27,7 @@ const NotFoundPage = () => {
   const router = useRouter();
   return (
     <Box sx={{ background: theme.palette.custom.background }}>
-      <BackgroundWrapper sx={{ padding: 0 }}>
+      <BackgroundWrapper sx={{ padding: 0 }} ableOverflow>
         <Box sx={contentSx}>
           <Box sx={logoButtonSx}>
             <Link href={homePagePath}>

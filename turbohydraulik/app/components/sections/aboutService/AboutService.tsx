@@ -89,6 +89,7 @@ const AboutService = ({
     aboutService_text2,
     aboutService_h3,
   } = content;
+
   return (
     <BackgroundWrapper
       bgColor={bgColor ? bgColor : theme.palette.custom.background}

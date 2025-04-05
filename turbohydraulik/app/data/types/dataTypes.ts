@@ -36,10 +36,10 @@ export interface CityContent {
   aboutUs_text: string;
   aboutUs_text_2: string;
   aboutUs_h3_2: string;
-  aboutCity_h2: string;
-  aboutCity_text1: string;
-  aboutCity_h3: string;
-  aboutCity_text2: string;
+  aboutCity_h2?: string;
+  aboutCity_text1?: string;
+  aboutCity_h3?: string;
+  aboutCity_text2?: string;
   portfolio_h2: string;
   portfolio_text: string;
   aboutUsNumbers_h2: string;
@@ -52,6 +52,11 @@ export interface CityContent {
   contact_text: string;
   postalCode: string;
   street: string;
+
+  aboutService_h2?: string;
+  aboutService_text1?: string;
+  aboutService_h3?: string;
+  aboutService_text2?: string;
 }
 
 export interface ServiceData {
@@ -65,7 +70,6 @@ export interface ServiceData {
   mainContent: ServiceContent;
   citiesContent: Record<string, DistrictData>;
 }
-
 export interface ServiceContent {
   meta_title: string;
   meta_description: string;

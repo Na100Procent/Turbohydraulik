@@ -6,9 +6,16 @@ interface Props {
   sx?: SxProps<Theme>;
   bgImage?: string;
   bgColor?: string;
+  ableOverflow?: boolean;
 }
 
-const BackgroundWrapper = ({ children, sx, bgImage, bgColor }: Props) => {
+const BackgroundWrapper = ({
+  children,
+  sx,
+  bgImage,
+  bgColor,
+  ableOverflow,
+}: Props) => {
   const bgImageElement = `url(${bgImage}) center  /cover no-repeat`;
   const containerSx: SxProps<Theme> = {
     background: {
@@ -29,7 +36,7 @@ const BackgroundWrapper = ({ children, sx, bgImage, bgColor }: Props) => {
       xs: "20px 10px",
       xxs: "10px 10px",
     },
-
+    overflowX: ableOverflow ? "hidden" : "visible",
     width: "100%",
     ...sx,
   };
