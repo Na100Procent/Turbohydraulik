@@ -100,7 +100,7 @@ const AboutService = ({
           <Box sx={headersSx}>
             <SectionHeader
               headerColor={theme.palette.primary.main}
-              header={aboutService_h2}
+              header={aboutService_h2 ? aboutService_h2 : ""}
             />
 
             <Typography sx={descriptionSx} mt="20px">
