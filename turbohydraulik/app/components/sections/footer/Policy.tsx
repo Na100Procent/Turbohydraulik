@@ -73,7 +73,7 @@ const Policy: React.FC = () => {
   };
   return (
     <Box sx={container}>
-      <Typography sx={{ ...textSx, opacity: 0.5 }}>
+      <Typography sx={{ ...textSx }}>
         Copyright ©2025. Turbo Hydraulik.pl, Wszystkie prawa zastrzeżone
       </Typography>
       <Box sx={policyButtonsSx}>

@@ -11,7 +11,7 @@ const SimpleInfo = ({
   address2?: string;
 }) => (
   <>
-    <h3>Turbohydraulik {cityName}</h3>
+    <h3>Turbo Hydraulik {cityName}</h3>
     <Typography>
       {address1} {address2}
     </Typography>

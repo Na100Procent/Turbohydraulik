@@ -49,6 +49,10 @@ export default function DistrictPage({ districtData, city }: Props) {
     cityName: city.name,
   };
 
+  const aboutCityContentWithImg = {
+    ...aboutCityContent,
+    cityCardUrl: city.cityCardUrl,
+  };
   return (
     <>
       {schema && (
@@ -84,7 +88,10 @@ export default function DistrictPage({ districtData, city }: Props) {
           bgColor={theme.palette.custom.blueLight}
           phoneNumber={phoneNumber}
         />
-        <AboutCity content={aboutCityContent} phoneNumber={phoneNumber} />
+        <AboutCity
+          content={aboutCityContentWithImg}
+          phoneNumber={phoneNumber}
+        />
         <RecentWorks content={recentWorksContent} phoneNumber={phoneNumber} />
         <InNumbers content={inNumbersContent} phoneNumber={phoneNumber} />
         <PriceList content={priceListContent} items={availableServices} />

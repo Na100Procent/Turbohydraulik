@@ -54,6 +54,7 @@ export const getCityDataContent = (cityData: CityData) => {
     aboutCity_text1: cityData.content.aboutCity_text1,
     aboutCity_h3: cityData.content.aboutCity_h3,
     aboutCity_text2: cityData.content.aboutCity_text2,
+    cityCardUrl: cityData.cityCardUrl,
   };
 
   const recentWorksContent: RecentWorksContent = {

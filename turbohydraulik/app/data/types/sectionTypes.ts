@@ -49,6 +49,7 @@ export interface AboutCityContent {
   aboutCity_text1?: string;
   aboutCity_h3?: string;
   aboutCity_text2?: string;
+  cityCardUrl?: string;
 }
 
 export interface RecentWorksContent {
