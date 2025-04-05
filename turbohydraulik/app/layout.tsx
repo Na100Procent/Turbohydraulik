@@ -35,6 +35,7 @@ export default function RootLayout({
       style={{ width: "100%", maxWidth: "100vw", overflowX: "hidden" }}
     >
       <Head>
+        <link rel="canonical" href="https://turbohydraulik.pl/" />
         <meta charSet="UTF-8" />
       </Head>
       <body style={{ width: "100%", maxWidth: "100vw", overflowX: "hidden" }}>
