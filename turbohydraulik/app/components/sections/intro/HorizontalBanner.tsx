@@ -3,6 +3,7 @@ import theme from "@/app/theme/theme";
 import { Box } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import { useSpring, animated } from "@react-spring/web";
+import { websiteData } from "@/app/data/data";
 
 const styles = {
   background: theme.palette.secondary.main,
@@ -33,14 +34,6 @@ const contentSx = {
   alignItems: "center",
 };
 
-const positions = [
-  "Odkurzanie i czyszczenie rur",
-  "Silikonowanie i uszczelnianie",
-  "Serwis, instalacja i wymiana baterii",
-  "Usługi hydrauliczne",
-];
-const separator = " * ";
-
 const HorizontalBanner = () => {
   const [start, setStart] = useState(false);
 
@@ -48,9 +41,19 @@ const HorizontalBanner = () => {
     from: { transform: "translateX(25%)" },
     to: { transform: "translateX(-35%)" },
     loop: true,
-    config: { duration: 35000 },
+    config: { duration: 90000 },
   });
   const AnimatedBox = animated(Box);
+
+  const positions = React.useMemo(() => {
+    return Object.keys(websiteData.services).map((key) => {
+      const service =
+        websiteData.services[key as keyof typeof websiteData.services];
+      return service.name;
+    });
+  }, [websiteData.services]);
+
+  const separator = " * ";
 
   const multiplePositions = [
     ...positions,

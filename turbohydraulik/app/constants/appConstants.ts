@@ -16,7 +16,9 @@ export const termsPath = "/regulamin";
 
 // contact
 export const defaultPhoneNUmber = "923 423 123";
-export const email = "kontakt@turbohydraulik.pl";
+export const email = "kontakt";
+export const emailDomain = "@turbohydraulik.pl";
+export const emailAddress = `${email}${emailDomain}`;
 export const facebookUrl =
   "https://www.facebook.com/profile.php?id=61574953101896";
 

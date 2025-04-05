@@ -6,6 +6,7 @@ import { PageProps } from "@/.next/types/app/[city]/page";
 import { CityData, ServiceData } from "../data/types/dataTypes";
 import { getServiceDataContent } from "../components/shared/helpers/getServiceDataContent";
 import { getCityDataContent } from "../components/shared/helpers/getCityDataContent";
+import { notFound } from "next/navigation";
 
 export const generateStaticParams = async () => {
   const cities = Object.keys(websiteData.cities);
@@ -53,6 +54,14 @@ const CityOrServicePage: FC<PageProps> = async ({ params }) => {
   const { city: currentSlug } = await params;
 
   const slugIsCity = Object.keys(websiteData.cities).includes(currentSlug);
+  const isValidCity = Object.keys(websiteData.cities).includes(currentSlug);
+  const isValidService = Object.keys(websiteData.services).includes(
+    currentSlug
+  );
+
+  if (!isValidCity && !isValidService) {
+    notFound();
+  }
 
   const slug: CityData | ServiceData = slugIsCity
     ? websiteData.cities[currentSlug as keyof typeof websiteData.cities]

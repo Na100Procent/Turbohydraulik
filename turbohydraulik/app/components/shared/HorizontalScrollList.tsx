@@ -17,25 +17,11 @@ const container = {
   overflowY: "hidden",
 };
 
-const arrowSx = {
-  color: theme.palette.secondary.main,
-  position: "absolute",
-  transform: "translateY(-50%)",
-  zIndex: 1,
-  bottom: "20px",
-  padding: "0px 60px",
-  "&:hover": {
-    cursor: "pointer",
-    background: "transparent",
-  },
-  transition: "background 0.3s ease-in-out",
-};
-
 const HorizontalScrollList: React.FC<HorizontalScrollListProps> = ({
   mappedItems,
 }) => {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
-
+  const showArrows = mappedItems.length > 1;
   const scrollLeft = () => {
     if (scrollContainerRef.current) {
       scrollContainerRef.current.scrollBy({
@@ -52,6 +38,21 @@ const HorizontalScrollList: React.FC<HorizontalScrollListProps> = ({
         behavior: "smooth",
       });
     }
+  };
+
+  const arrowSx = {
+    color: theme.palette.secondary.main,
+    position: "absolute",
+    transform: "translateY(-50%)",
+    zIndex: 1,
+    bottom: "20px",
+    padding: "0px 60px",
+    "&:hover": {
+      cursor: "pointer",
+      background: "transparent",
+    },
+    transition: "background 0.3s ease-in-out",
+    display: showArrows ? "block" : "none",
   };
 
   return (

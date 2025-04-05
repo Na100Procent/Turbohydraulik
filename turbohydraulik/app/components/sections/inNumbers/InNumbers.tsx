@@ -10,22 +10,21 @@ import { InNumbersContent } from "@/app/data/types/sectionTypes";
 import { websiteData } from "@/app/data/data";
 
 interface Props {
-  bgColor?: string;
   phoneNumber?: string;
   content?: InNumbersContent;
 }
-const InNumbers = ({ bgColor, content, phoneNumber }: Props) => {
+const InNumbers = ({ content, phoneNumber }: Props) => {
   const inNumbersContent = content ? content : websiteData.homepageContent;
   const { aboutUsNumbers_h2, aboutUsNumbers_text } = inNumbersContent;
   return (
-    <BackgroundWrapper
-      bgColor={bgColor ? bgColor : theme.palette.custom.background}
-    >
+    <BackgroundWrapper bgColor={theme.palette.primary.main}>
       <SectionPaddingWrapper>
         <Box display="flex" flexDirection="column" justifyContent="center">
           <SectionCenterHeader
             header={aboutUsNumbers_h2}
+            headerColor={theme.palette.custom.background}
             bottomHeader={aboutUsNumbers_text}
+            bottomHeaderColor={theme.palette.custom.background}
           />
           <CompanyInNumbers />
           <Box display="flex" justifyContent="center" mt="10px">

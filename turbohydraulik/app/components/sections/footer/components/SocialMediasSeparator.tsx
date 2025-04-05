@@ -4,7 +4,7 @@ import { Box, IconButton } from "@mui/material";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import EmailIcon from "@mui/icons-material/Email";
 import theme from "@/app/theme/theme";
-import { email, facebookUrl } from "@/app/constants/appConstants";
+import { emailAddress, facebookUrl } from "@/app/constants/appConstants";
 import Link from "next/link";
 
 interface Props {
@@ -21,7 +21,7 @@ const iconBtn = {
 };
 const SocialMediasSeparator = ({ separatorColor }: Props) => {
   const handleEmailClick = () => {
-    window.open(`mailto:${email}`);
+    window.open(`mailto:${emailAddress}`);
   };
   return (
     <Box

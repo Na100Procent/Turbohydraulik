@@ -44,10 +44,10 @@ const HeaderBox = ({ hero_h1, hero_h2, hero_text }: Props) => {
   return (
     <>
       <Typography variant="h1" sx={headerSx}>
-        <Box component="span" sx={{ color: theme.palette.custom.background }}>
+        <Box component="p" sx={{ color: theme.palette.custom.background }}>
           {headerPart1}
         </Box>
-        <Box component="span" sx={{ color: theme.palette.secondary.main }}>
+        <Box component="p" sx={{ color: theme.palette.secondary.main }}>
           {headerPart2}
         </Box>
       </Typography>

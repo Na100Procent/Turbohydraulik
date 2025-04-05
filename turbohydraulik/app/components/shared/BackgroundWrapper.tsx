@@ -9,8 +9,16 @@ interface Props {
 }
 
 const BackgroundWrapper = ({ children, sx, bgImage, bgColor }: Props) => {
+  const bgImageElement = `url(${bgImage}) center  /cover no-repeat`;
   const containerSx: SxProps<Theme> = {
-    background: bgImage ? `url(${bgImage}) center  /cover no-repeat` : bgColor,
+    background: {
+      xl: bgImage ? bgImageElement : bgColor,
+      lg: bgImage ? bgImageElement : bgColor,
+      md: bgImage ? bgImageElement : bgColor,
+      sm: bgImage ? bgImageElement : bgColor,
+      xs: bgColor,
+      xxs: bgColor,
+    },
     backgroundPosition: "10% 20%",
     position: "relative",
     padding: {
@@ -21,6 +29,7 @@ const BackgroundWrapper = ({ children, sx, bgImage, bgColor }: Props) => {
       xs: "20px 10px",
       xxs: "10px 10px",
     },
+
     width: "100%",
     ...sx,
   };
