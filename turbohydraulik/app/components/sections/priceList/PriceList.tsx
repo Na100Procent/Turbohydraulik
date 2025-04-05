@@ -60,7 +60,7 @@ const PriceList = ({ items, content, phoneNumber }: Props) => {
             >
               <Typography
                 sx={{
-                  minWidth: "250px",
+                  minWidth: "200px",
                   fontSize: "18px",
                 }}
               >
@@ -75,7 +75,9 @@ const PriceList = ({ items, content, phoneNumber }: Props) => {
                   mx: 2,
                 }}
               />
-              <Typography sx={{ fontWeight: "bold" }}>{item.price}</Typography>
+              <Typography sx={{ minWidth: "80px", fontWeight: "bold" }}>
+                od {item.price} zł
+              </Typography>
             </Box>
           ))}
         </Box>
