@@ -17,8 +17,6 @@ export const getCityServiceDataContent = (
   cityServiceData: DistrictData,
   cityService: ServiceData
 ) => {
-  console.log(cityServiceData.content);
-
   const metaContent: MetaContent = {
     title: cityServiceData.content.meta_title,
     description: cityServiceData.content.meta_description,
