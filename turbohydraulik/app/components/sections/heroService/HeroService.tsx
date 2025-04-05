@@ -15,6 +15,7 @@ import MosaicElement from "../../shared/mosaic/MosaicElement";
 import MosaicGrid from "../../shared/mosaic/MosaicGrid";
 
 interface Props {
+  serviceName: string;
   content?: HeroContent;
   phoneNumber?: string;
 }
@@ -32,9 +33,9 @@ const containerSx = {
 
 const heroSx = {
   borderRadius: "15px",
-  maxWidth: "800px",
-  padding: "40px",
+  maxWidth: "100%",
 
+  padding: "30px",
   background: theme.palette.primary.main,
 };
 const contentSx = {
@@ -82,7 +83,7 @@ const mosaicSx = {
     xxs: "100%",
   },
 };
-const HeroService = ({ content, phoneNumber }: Props) => {
+const HeroService = ({ content, phoneNumber, serviceName }: Props) => {
   const heroSectionData = content
     ? content
     : (websiteData.homepageContent as HeroContent);
@@ -96,22 +97,22 @@ const HeroService = ({ content, phoneNumber }: Props) => {
     <MosaicElement
       key={0}
       bgImage={heroSectionImgs[0]}
-      alt="servis1 Turbohydraulik"
+      alt={`${serviceName} Turbohydraulik`}
     />,
     <MosaicElement
       key={1}
       bgImage={heroSectionImgs[1]}
-      alt="servis2 Turbohydraulik"
+      alt={`${serviceName} Turbohydraulik`}
     />,
     <MosaicElement
       key={2}
       bgImage={heroSectionImgs[2]}
-      alt="servis3 Turbohydraulik"
+      alt={`${serviceName} Turbohydraulik`}
     />,
     <MosaicElement
       key={3}
       bgImage={heroSectionImgs[3]}
-      alt="servis4 Turbohydraulik"
+      alt={`${serviceName} Turbohydraulik`}
     />,
   ];
   return (
@@ -124,8 +125,8 @@ const HeroService = ({ content, phoneNumber }: Props) => {
           <Box sx={heroSx}>
             <ServiceHeaderBox
               header={hero_h1}
-              subHeader={hero_h2}
-              text={hero_text}
+              hero_h2={hero_h2}
+              hero_text={hero_text}
             />
 
             <Box mt="50px" width={"100%"} display="flex" justifyContent="left">

@@ -29,7 +29,7 @@ const container = {
 };
 
 const separatorSx = {
-  borderLeft: "2px dashed rgba(27, 95, 151, 0.55)",
+  borderLeft: "2px dashed rgba(178, 182, 186, 0.55)",
   height: "100px",
   marginLeft: "50px",
   display: {
@@ -66,7 +66,7 @@ const titleSx = {
   fontWeight: "600",
   maxWidth: "200px",
   fontSize: "14px",
-  color: theme.palette.primary.main,
+  color: theme.palette.custom.background,
 };
 
 export default function CompanyInNumbers() {

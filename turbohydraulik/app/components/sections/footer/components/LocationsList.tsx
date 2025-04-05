@@ -20,7 +20,7 @@ const elementSx = {
   fontSize: "14px",
   display: "flex",
   gap: "10px",
-  opacity: 0.8,
+
   transition: "background-color 0.3s ease",
   "&:hover": {
     cursor: "pointer",

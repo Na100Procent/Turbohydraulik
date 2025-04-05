@@ -21,7 +21,7 @@ const Score = ({ score }: Props) => {
         />
       ))}
       <Typography fontSize="13px" ml={2} position="relative" top="2px">
-        {score}.0 Star Reviews
+        {score}.0
       </Typography>
     </Box>
   );

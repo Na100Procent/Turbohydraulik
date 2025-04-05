@@ -24,7 +24,7 @@ interface Props {
 export default function ServicePage({ serviceData }: Props) {
   if (!serviceData) return <ErrorMessage message={errorPageLoad} />;
 
-  const subServices = serviceData.subServices;
+  const { subServices, name } = serviceData;
   const subServicesPriceList = subServices.map((subService: SubService) => ({
     title: subService.name,
     price: subService.price,
@@ -51,22 +51,19 @@ export default function ServicePage({ serviceData }: Props) {
       id={sectionIds.home}
     >
       <TopMenu />
-      <HeroService content={heroContent} />
+      <HeroService content={heroContent} serviceName={name} />
       <AboutService content={aboutServiceContent} subServices={subServices} />
       <CustomerReviews content={reviewsContent} />
       <AboutUs content={aboutUsContent} />
       <HowToOrderUs content={howToContent} />
-      <InNumbers
-        content={inNumbersContent}
-        bgColor={theme.palette.custom.yellowLight}
-      />
+      <InNumbers content={inNumbersContent} />
       <PriceList content={priceListContent} items={subServicesPriceList} />
       <FAQsection />
       <RecentWorks content={recentWorksContent} />
       <Box
         width={"100%"}
         bgcolor={theme.palette.custom.background}
-        padding="0px 0px 200px 0 "
+        padding="0 0 200px 0 "
       >
         <OurServices
           bgColor={theme.palette.custom.background}

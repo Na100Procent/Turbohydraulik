@@ -11,6 +11,7 @@ interface Props {
   bgColor?: string;
   titleColor?: string;
   disabled?: boolean;
+  noIcon?: boolean;
 }
 
 const RectangularButton = ({
@@ -20,6 +21,7 @@ const RectangularButton = ({
   bgColor,
   titleColor,
   disabled,
+  noIcon,
 }: Props) => {
   const buttonSx = {
     background: bgColor ? bgColor : theme.palette.custom.background,
@@ -27,7 +29,7 @@ const RectangularButton = ({
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    padding: "10px 20px",
+    padding: "15px 20px",
     gap: "10px",
 
     "&:hover": {
@@ -41,12 +43,12 @@ const RectangularButton = ({
     color: titleColor ? titleColor : theme.palette.primary.main,
     fontWeight: "900",
     fontSize: {
-      xl: "13px",
-      lg: "13px",
-      md: "12px",
-      sm: "12px",
-      xs: "11px",
-      xxs: "10px",
+      xl: "16px",
+      lg: "15px",
+      md: "14px",
+      sm: "14px",
+      xs: "14px",
+      xxs: "14px",
     },
     fontFamily: "UniteaSans",
     textTransform: "uppercase",
@@ -56,17 +58,17 @@ const RectangularButton = ({
     <Button onClick={onClick} sx={buttonSx} disabled={disabled}>
       <Typography sx={titleSx}>{title}</Typography>
       <Box mt="5px">
-        {icon ? (
-          icon
-        ) : (
-          <ArrowOutwardIcon
-            sx={{
-              width: "20px",
-              height: "20px",
-              color: titleColor,
-            }}
-          />
-        )}
+        {icon
+          ? icon
+          : !noIcon && (
+              <ArrowOutwardIcon
+                sx={{
+                  width: "20px",
+                  height: "20px",
+                  color: titleColor,
+                }}
+              />
+            )}
       </Box>
     </Button>
   );

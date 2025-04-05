@@ -23,12 +23,12 @@ const container = {
     xl: "400px",
     lg: "400px",
     md: "400px",
-    sm: "350px",
-    xs: "350px",
-    xxs: "350px",
+    sm: "400px",
+    xs: "310px",
+    xxs: "310px",
   },
 
-  height: "470px",
+  height: "100%",
   borderRadius: "12px",
   overflow: "hidden",
   backgroundColor: theme.palette.custom.background,
@@ -65,8 +65,8 @@ const descriptionSx = {
   maxWidth: "400px",
   fontFamily: "UniteaSans",
   fontWeight: 500,
+  mt: "10px",
   opacity: 0.8,
-  mt: "5px",
 };
 
 const ServiceCard = ({ city, service }: Props) => {

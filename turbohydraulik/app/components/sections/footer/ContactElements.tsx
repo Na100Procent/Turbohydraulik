@@ -4,7 +4,7 @@ import ContactForm from "./components/ContactForm";
 import LocalPhoneOutlinedIcon from "@mui/icons-material/LocalPhoneOutlined";
 import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
 import { sectionXPadding } from "@/app/constants/styles";
-import { email, defaultPhoneNUmber } from "@/app/constants/appConstants";
+import { defaultPhoneNUmber, emailAddress } from "@/app/constants/appConstants";
 import theme from "@/app/theme/theme";
 import ApartmentOutlinedIcon from "@mui/icons-material/ApartmentOutlined";
 import { convertPhoneNum } from "../../shared/helpers/convertPhoneNum";
@@ -126,7 +126,7 @@ const ContactElements = ({ phoneNumber, address, cityData }: Props) => {
           />
           <ContactForm
             subHeader="ADRES E-MAIL"
-            header={email}
+            header={emailAddress}
             icon={<EmailOutlinedIcon />}
           />
           {address && (

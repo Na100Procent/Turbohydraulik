@@ -5,7 +5,7 @@ import theme from "@/app/theme/theme";
 import LocalPhoneOutlinedIcon from "@mui/icons-material/LocalPhoneOutlined";
 import VerticalSeparator from "../../../shared/VerticalSeparator";
 import { TopMenuOrnament } from "@/public/assets/icons/icons";
-import { defaultPhoneNUmber, email } from "@/app/constants/appConstants";
+import { defaultPhoneNUmber, emailAddress } from "@/app/constants/appConstants";
 import SocialMedias from "./SocialMedias";
 import { convertPhoneNum } from "@/app/components/shared/helpers/convertPhoneNum";
 
@@ -133,7 +133,7 @@ const ContactElements = ({ phoneNumber }: Props) => {
   };
 
   const handleEmailClick = () => {
-    window.open(`mailto:${email}`);
+    window.open(`mailto:${emailAddress}`);
   };
   return (
     <Box sx={containerSx}>
@@ -151,7 +151,7 @@ const ContactElements = ({ phoneNumber }: Props) => {
 
         <Box sx={{ ...contactElement, ...emailSx }} onClick={handleEmailClick}>
           <EmailOutlinedIcon sx={contactIconSx} />
-          <Typography sx={contactTitleSx}>{email}</Typography>
+          <Typography sx={contactTitleSx}>{emailAddress}</Typography>
         </Box>
         <SocialMedias />
       </Box>

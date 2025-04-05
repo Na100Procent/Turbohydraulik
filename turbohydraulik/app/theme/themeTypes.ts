@@ -22,6 +22,7 @@ declare module "@mui/material/styles" {
       lightBorder: string;
       positiveGreen: string;
       darkBlue: string;
+      inNumbersBackground: string;
     };
   }
 
@@ -36,6 +37,7 @@ declare module "@mui/material/styles" {
       lightBorder: string;
       positiveGreen: string;
       darkBlue: string;
+      inNumbersBackground: string;
     };
   }
 

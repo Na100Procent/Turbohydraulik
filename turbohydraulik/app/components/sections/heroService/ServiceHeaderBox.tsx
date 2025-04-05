@@ -4,8 +4,8 @@ import React from "react";
 
 interface Props {
   header: string;
-  subHeader: string;
-  text: string;
+  hero_h2: string;
+  hero_text: string;
 }
 
 const fontSize = {
@@ -13,7 +13,7 @@ const fontSize = {
   lg: "60px",
   md: "50px",
   sm: "50px",
-  xs: "50px",
+  xs: "45px",
   xxs: "40px",
 };
 
@@ -21,6 +21,7 @@ const headerSx = {
   fontWeight: "600",
   fontFamily: "UniteaSans",
   lineHeight: fontSize,
+
   fontSize: fontSize,
 };
 const subHeaderSX = {
@@ -28,36 +29,30 @@ const subHeaderSX = {
   fontWeight: 500,
   fontFamily: "UniteaSans",
   letterSpacing: "1px",
-  mt: "-10px",
+  mt: "10px",
   mb: "20px",
 };
 
-const ServiceHeaderBox = ({ header, subHeader, text }: Props) => {
+const ServiceHeaderBox = ({ header, hero_h2, hero_text }: Props) => {
   const headerWords = header.split(" ");
   const headerPart1 = headerWords.slice(0, -1).join(" ");
   const headerPart2 = headerWords.slice(-1).join(" ");
 
   return (
-    <Box>
-      <Box>
-        <Box color={theme.palette.custom.background}>
-          <Typography variant="h1" sx={headerSx}>
-            {headerPart1}
-          </Typography>
+    <>
+      <Typography variant="h1" sx={headerSx}>
+        <Box component="p" sx={{ color: theme.palette.custom.background }}>
+          {headerPart1}{" "}
         </Box>
-        <Typography
-          variant="h2"
-          mb="20px"
-          sx={{ color: theme.palette.secondary.main, ...headerSx }}
-        >
+        <Box component="p" sx={{ color: theme.palette.secondary.main }}>
           {headerPart2}
-        </Typography>
-      </Box>
-      <Typography sx={subHeaderSX} variant="h5">
-        {subHeader}
+        </Box>
       </Typography>
-      <p style={subHeaderSX}>{text}</p>
-    </Box>
+      <Typography sx={subHeaderSX} variant="h2" fontSize={"30px"}>
+        {hero_h2}
+      </Typography>
+      <p style={subHeaderSX}>{hero_text}</p>
+    </>
   );
 };
 

@@ -60,7 +60,6 @@ const PriceList = ({ items, content, phoneNumber }: Props) => {
             >
               <Typography
                 sx={{
-                  whiteSpace: "nowrap",
                   minWidth: "250px",
                   fontSize: "18px",
                 }}
@@ -71,6 +70,7 @@ const PriceList = ({ items, content, phoneNumber }: Props) => {
                 sx={{
                   flexGrow: 1,
                   borderBottom: 1,
+                  minWidth: "25px",
                   borderColor: "grey.300",
                   mx: 2,
                 }}

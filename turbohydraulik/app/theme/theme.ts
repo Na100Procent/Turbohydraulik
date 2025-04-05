@@ -37,6 +37,7 @@ const theme = createTheme({
       lightBorder: "#F3F4F6",
       positiveGreen: "#3AEE7F",
       darkBlue: "#003F67",
+      inNumbersBackground: "#F5F5F5",
     },
   },
   typography: {

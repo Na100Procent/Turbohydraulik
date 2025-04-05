@@ -31,7 +31,7 @@ interface Props {
 export default function ServicePage({ serviceData, cityService, city }: Props) {
   if (!serviceData) return <ErrorMessage message={errorPageLoad} />;
 
-  const subServices = cityService.subServices;
+  const { subServices, name } = cityService;
   const subServicesPriceList = subServices.map((subService: SubService) => ({
     title: subService.name,
     price: subService.price,
@@ -76,7 +76,11 @@ export default function ServicePage({ serviceData, cityService, city }: Props) {
         id={sectionIds.home}
       >
         <TopMenu phoneNumber={phoneNumber} />
-        <HeroService content={heroContent} phoneNumber={phoneNumber} />
+        <HeroService
+          content={heroContent}
+          phoneNumber={phoneNumber}
+          serviceName={name}
+        />
         <AboutService
           content={aboutServiceContent}
           subServices={subServices}
@@ -89,11 +93,7 @@ export default function ServicePage({ serviceData, cityService, city }: Props) {
         />
         <AboutUs content={aboutUsContent} phoneNumber={phoneNumber} />
         <HowToOrderUs content={howToContent} phoneNumber={phoneNumber} />
-        <InNumbers
-          content={inNumbersContent}
-          phoneNumber={phoneNumber}
-          bgColor={theme.palette.custom.yellowLight}
-        />
+        <InNumbers content={inNumbersContent} phoneNumber={phoneNumber} />
         <PriceList
           content={priceListContent}
           items={subServicesPriceList}
@@ -104,7 +104,7 @@ export default function ServicePage({ serviceData, cityService, city }: Props) {
         <Box
           width={"100%"}
           bgcolor={theme.palette.custom.background}
-          padding="0px 0px 200px 0 "
+          padding="0px 0px 100px 0 "
         >
           <OurServices
             bgColor={theme.palette.custom.background}
