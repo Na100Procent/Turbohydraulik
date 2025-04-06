@@ -62,7 +62,7 @@ const titleSx = {
   fontWeight: "bold",
   color: theme.palette.primary.main,
   width: "100%",
-  mt: "20px",
+  pt: "20px",
   textAlign: "left",
   fontSize: "20px",
 };
@@ -72,7 +72,7 @@ const descriptionSx = {
   maxWidth: "400px",
   fontFamily: "UniteaSans",
   fontWeight: 500,
-  mt: "10px",
+  pt: "10px",
   overflow: "hidden",
 };
 

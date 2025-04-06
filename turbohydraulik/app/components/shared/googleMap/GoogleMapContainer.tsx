@@ -3,6 +3,7 @@ import React, { Suspense, useState, useEffect } from "react";
 import {
   GoogleMap,
   InfoWindow,
+  Libraries,
   Marker,
   useJsApiLoader,
 } from "@react-google-maps/api";
@@ -17,6 +18,8 @@ const containerStyle = {
   width: "100%",
   height: "100%",
 };
+
+const libraries: Libraries = ["places"];
 
 interface Props {
   cityCords: CityCords;
@@ -40,7 +43,7 @@ const GoogleMapContainer = ({
   });
   const { isLoaded, loadError } = useJsApiLoader({
     googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY || "",
-    libraries: ["places"],
+    libraries,
     language: "pl",
   });
 
