@@ -20,7 +20,11 @@ const useFormMessage = () => {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ phone, problem }),
+        body: JSON.stringify({
+          phone,
+          problem,
+          userPageUrl: window.location.href,
+        }),
       });
 
       if (!response.ok) {

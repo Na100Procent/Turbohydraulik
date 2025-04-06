@@ -5,6 +5,16 @@ import BackgroundWrapper from "../components/shared/BackgroundWrapper";
 import Link from "next/link";
 import { homePagePath } from "../constants/appConstants";
 import { TopMenuLogo } from "@/public/assets/icons/icons";
+import type { Metadata } from "next";
+
+export const generateMetadata = async (): Promise<Metadata> => {
+  return {
+    robots: {
+      index: false,
+      follow: false,
+    },
+  };
+};
 
 const contentSx = {
   position: "fixed",
