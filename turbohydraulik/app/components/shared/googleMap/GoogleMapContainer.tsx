@@ -1,16 +1,22 @@
 "use client";
+import React, { Suspense, useState, useEffect } from "react";
 import {
   GoogleMap,
+  InfoWindow,
   Marker,
   useJsApiLoader,
-  InfoWindow,
 } from "@react-google-maps/api";
-import { useState } from "react";
 import ErrorMessage from "../ErrorMessage";
 import { CityCords } from "./types";
 import { Box } from "@mui/material";
 import PlaceDetails from "./components/PlaceDetails";
 import SimpleInfo from "./components/SimpleInfo";
+import { useInView } from "react-intersection-observer";
+
+const containerStyle = {
+  width: "100%",
+  height: "100%",
+};
 
 interface Props {
   cityCords: CityCords;
@@ -20,11 +26,6 @@ interface Props {
   cityName?: string;
 }
 
-const containerStyle = {
-  width: "100%",
-  height: "100%",
-};
-
 const GoogleMapContainer = ({
   cityCords,
   address1,
@@ -32,46 +33,59 @@ const GoogleMapContainer = ({
   placeId,
   cityName,
 }: Props) => {
-  const apiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY;
   const [showInfo, setShowInfo] = useState(false);
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
   const { isLoaded, loadError } = useJsApiLoader({
-    googleMapsApiKey: apiKey || "",
+    googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY || "",
     libraries: ["places"],
     language: "pl",
   });
 
-  if (!apiKey) return <ErrorMessage message="Błąd klucza API KEY" />;
-  if (loadError) return <ErrorMessage message="Błąd ładowania Google Maps" />;
+  useEffect(() => {
+    if (!inView) return;
+  }, [inView]);
+
+  if (!inView) return <div ref={ref}></div>;
+
   if (!isLoaded)
     return <p style={{ textAlign: "center" }}>Ładowanie mapy...</p>;
 
+  if (loadError) return <ErrorMessage message="Błąd ładowania Google Maps" />;
+
   return (
-    <GoogleMap
-      mapContainerStyle={containerStyle}
-      center={cityCords}
-      zoom={12}
-      key={apiKey}
+    <Suspense
+      fallback={<p style={{ textAlign: "center" }}>Ładowanie mapy...</p>}
     >
-      <Marker position={cityCords} onClick={() => setShowInfo(true)} />
-      {showInfo && (
-        <InfoWindow
-          position={cityCords}
-          onCloseClick={() => setShowInfo(false)}
-        >
-          <Box>
-            {placeId ? (
-              <PlaceDetails placeId={placeId} />
-            ) : (
-              <SimpleInfo
-                cityName={cityName}
-                address1={address1}
-                address2={address2}
-              />
-            )}
-          </Box>
-        </InfoWindow>
-      )}
-    </GoogleMap>
+      <GoogleMap
+        mapContainerStyle={containerStyle}
+        center={cityCords}
+        zoom={12}
+        key={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}
+      >
+        <Marker position={cityCords} onClick={() => setShowInfo(true)} />
+        {showInfo && (
+          <InfoWindow
+            position={cityCords}
+            onCloseClick={() => setShowInfo(false)}
+          >
+            <Box>
+              {placeId ? (
+                <PlaceDetails placeId={placeId} />
+              ) : (
+                <SimpleInfo
+                  cityName={cityName}
+                  address1={address1}
+                  address2={address2}
+                />
+              )}
+            </Box>
+          </InfoWindow>
+        )}
+      </GoogleMap>
+    </Suspense>
   );
 };
 
