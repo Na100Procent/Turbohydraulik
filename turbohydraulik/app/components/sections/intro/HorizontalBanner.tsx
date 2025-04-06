@@ -66,7 +66,7 @@ const HorizontalBanner = () => {
 
   useEffect(() => {
     setStart(true);
-  });
+  }, []);
   return (
     <Box sx={styles}>
       <AnimatedBox
