@@ -3,13 +3,8 @@ import { errorPageLoad, sectionIds } from "../../constants/appConstants";
 import TopMenu from "../../components/sections/topMenu/TopMenu";
 import IntroSection from "../../components/sections/intro/IntroSection";
 import AboutUs from "../../components/sections/aboutUs/AboutUs";
-import OurServices from "../../components/sections/ourServices/OurServices";
-import Footer from "../../components/sections/footer/Footer";
 import InNumbers from "../../components/sections/inNumbers/InNumbers";
 import HowToOrderUs from "../../components/sections/howToOrderUs/HowToOrderUs";
-import CustomerReviews from "../../components/sections/customerReviews/CustomerReviews";
-import RecentWorks from "../../components/sections/recentWorks/RecentWorks";
-import FAQsection from "../../components/sections/faqSection/FAQsection";
 import { CityData, DistrictData } from "@/app/data/types/dataTypes";
 import theme from "@/app/theme/theme";
 import { getDistrictDataContent } from "@/app/components/shared/helpers/getDistrictDataContent";
@@ -19,7 +14,21 @@ import DistrictsList from "@/app/components/shared/DistrictsList";
 import PriceList from "@/app/components/sections/priceList/PriceList";
 import getCityServices from "@/app/components/shared/helpers/getCityServices";
 import { schemaData } from "@/app/data/data";
+import dynamic from "next/dynamic";
 
+const CustomerReviews = dynamic(
+  () => import("../../components/sections/customerReviews/CustomerReviews")
+);
+const FAQsection = dynamic(
+  () => import("../../components/sections/faqSection/FAQsection")
+);
+const RecentWorks = dynamic(
+  () => import("../../components/sections/recentWorks/RecentWorks")
+);
+const Footer = dynamic(() => import("../../components/sections/footer/Footer"));
+const OurServices = dynamic(
+  () => import("../../components/sections/ourServices/OurServices")
+);
 interface Props {
   districtData: DistrictData;
   city: CityData;

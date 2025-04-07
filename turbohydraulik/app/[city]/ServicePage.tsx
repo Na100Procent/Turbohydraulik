@@ -2,13 +2,8 @@ import { Box } from "@mui/material";
 import { errorPageLoad, sectionIds } from "../constants/appConstants";
 import TopMenu from "../components/sections/topMenu/TopMenu";
 import AboutUs from "../components/sections/aboutUs/AboutUs";
-import OurServices from "../components/sections/ourServices/OurServices";
-import Footer from "../components/sections/footer/Footer";
 import InNumbers from "../components/sections/inNumbers/InNumbers";
 import HowToOrderUs from "../components/sections/howToOrderUs/HowToOrderUs";
-import CustomerReviews from "../components/sections/customerReviews/CustomerReviews";
-import RecentWorks from "../components/sections/recentWorks/RecentWorks";
-import FAQsection from "../components/sections/faqSection/FAQsection";
 import PriceList from "../components/sections/priceList/PriceList";
 import HeroService from "../components/sections/heroService/HeroService";
 import theme from "../theme/theme";
@@ -16,6 +11,22 @@ import { ServiceData, SubService } from "../data/types/dataTypes";
 import { getServiceDataContent } from "../components/shared/helpers/getServiceDataContent";
 import ErrorMessage from "../components/shared/ErrorMessage";
 import AboutService from "../components/sections/aboutService/AboutService";
+import React from "react";
+import dynamic from "next/dynamic";
+
+const CustomerReviews = dynamic(
+  () => import("../components/sections/customerReviews/CustomerReviews")
+);
+const FAQsection = dynamic(
+  () => import("../components/sections/faqSection/FAQsection")
+);
+const RecentWorks = dynamic(
+  () => import("../components/sections/recentWorks/RecentWorks")
+);
+const Footer = dynamic(() => import("../components/sections/footer/Footer"));
+const OurServices = dynamic(
+  () => import("../components/sections/ourServices/OurServices")
+);
 
 interface Props {
   serviceData: ServiceData;

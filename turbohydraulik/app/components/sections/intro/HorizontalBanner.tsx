@@ -41,7 +41,7 @@ const HorizontalBanner = () => {
     from: { transform: "translateX(25%)" },
     to: { transform: "translateX(-35%)" },
     loop: true,
-    config: { duration: 90000 },
+    config: { duration: 60000 },
   });
   const AnimatedBox = animated(Box);
 
@@ -51,18 +51,11 @@ const HorizontalBanner = () => {
         websiteData.services[key as keyof typeof websiteData.services];
       return service.name;
     });
-  }, [websiteData.services]);
+  }, []);
 
   const separator = " * ";
 
-  const multiplePositions = [
-    ...positions,
-    ...positions,
-    ...positions,
-    ...positions,
-    ...positions,
-    ...positions,
-  ];
+  const multiplePositions = [...positions, ...positions];
 
   useEffect(() => {
     setStart(true);

@@ -1,18 +1,29 @@
+import { Suspense } from "react";
 import { Box } from "@mui/material";
 import IntroSection from "./components/sections/intro/IntroSection";
-import OurServices from "./components/sections/ourServices/OurServices";
-import HowToOrderUs from "./components/sections/howToOrderUs/HowToOrderUs";
-import InNumbers from "./components/sections/inNumbers/InNumbers";
-import AboutUs from "./components/sections/aboutUs/AboutUs";
-import CustomerReviews from "./components/sections/customerReviews/CustomerReviews";
-import RecentWorks from "./components/sections/recentWorks/RecentWorks";
-import FAQsection from "./components/sections/faqSection/FAQsection";
-import Footer from "./components/sections/footer/Footer";
-import TopMenu from "./components/sections/topMenu/TopMenu";
-import { sectionIds } from "./constants/appConstants";
 import OurCities from "./components/sections/ourCities/OurCities";
+import AboutUs from "./components/sections/aboutUs/AboutUs";
+import { sectionIds } from "./constants/appConstants";
 import theme from "./theme/theme";
 import { websiteData } from "./data/data";
+
+import dynamic from "next/dynamic";
+import InNumbers from "./components/sections/inNumbers/InNumbers";
+import TopMenu from "./components/sections/topMenu/TopMenu";
+
+const OurServices = dynamic(
+  () => import("./components/sections/ourServices/OurServices")
+);
+const CustomerReviews = dynamic(
+  () => import("./components/sections/customerReviews/CustomerReviews")
+);
+const FAQsection = dynamic(
+  () => import("./components/sections/faqSection/FAQsection")
+);
+const RecentWorks = dynamic(
+  () => import("./components/sections/recentWorks/RecentWorks")
+);
+const Footer = dynamic(() => import("./components/sections/footer/Footer"));
 
 export const metadata = {
   title: websiteData.homepageContent.meta_title,
@@ -37,13 +48,22 @@ export default function Home() {
         <IntroSection />
         <OurCities />
         <AboutUs />
-        <OurServices bottomHeaderColor={theme.palette.custom.background} />
-        <HowToOrderUs />
-        <CustomerReviews />
+        <Suspense fallback={<div>Ładowanie...</div>}>
+          <OurServices bottomHeaderColor={theme.palette.custom.background} />
+        </Suspense>
+        <Suspense fallback={<div>Ładowanie...</div>}>
+          <CustomerReviews />
+        </Suspense>
         <InNumbers />
-        <RecentWorks />
-        <FAQsection />
-        <Footer />
+        <Suspense fallback={<div>Ładowanie...</div>}>
+          <RecentWorks />
+        </Suspense>
+        <Suspense fallback={<div>Ładowanie...</div>}>
+          <FAQsection />
+        </Suspense>
+        <Suspense fallback={<div>Ładowanie...</div>}>
+          <Footer />
+        </Suspense>
       </Box>
     </>
   );

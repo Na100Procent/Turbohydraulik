@@ -83,6 +83,8 @@ const CityCard = ({ cityName, cityUrl, cityCardUrl }: Props) => {
           component="img"
           src={cityCardUrl ? cityCardUrl : mockedCityCardUrl}
           sx={imgSx}
+          width={400}
+          height={200}
           alt={`Turbo Hydraulik ${cityName}`}
         />
 
