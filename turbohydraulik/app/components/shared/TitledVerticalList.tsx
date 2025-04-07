@@ -55,7 +55,11 @@ const TitledVerticalList = ({ title, list, separator, addSx }: Props) => {
       </Typography>
 
       {list?.map((item, index) => (
-        <Link href={item.url} key={item.title + index}>
+        <Link
+          href={item.url}
+          key={item.title + index}
+          aria-label={`nawiguj do ${item.title} `}
+        >
           <Box sx={elementSx}>
             <Typography> {separator ? separator : "> "}</Typography>
             <Typography sx={itemTitle}>{item.title}</Typography>

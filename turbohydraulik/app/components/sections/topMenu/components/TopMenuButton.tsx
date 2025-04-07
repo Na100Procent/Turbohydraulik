@@ -21,7 +21,7 @@ const TopMenuButton = ({ title, section }: TopMenuButtonProps) => {
     scrollToSection(section);
   };
   return (
-    <Button sx={buttonSx} onClick={handleClick}>
+    <Button sx={buttonSx} onClick={handleClick} aria-label={title}>
       {title}
     </Button>
   );

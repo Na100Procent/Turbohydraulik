@@ -12,6 +12,7 @@ interface Props {
   titleColor?: string;
   disabled?: boolean;
   noIcon?: boolean;
+  ariaLabel?: string;
 }
 
 const RectangularButton = ({
@@ -22,6 +23,7 @@ const RectangularButton = ({
   titleColor,
   disabled,
   noIcon,
+  ariaLabel,
 }: Props) => {
   const buttonSx = {
     background: bgColor ? bgColor : theme.palette.custom.background,
@@ -55,7 +57,12 @@ const RectangularButton = ({
     minWidth: "100px",
   };
   return (
-    <Button onClick={onClick} sx={buttonSx} disabled={disabled}>
+    <Button
+      onClick={onClick}
+      sx={buttonSx}
+      disabled={disabled}
+      aria-label={ariaLabel ? ariaLabel : title}
+    >
       <Typography sx={titleSx}>{title}</Typography>
       <Box mt="5px">
         {icon

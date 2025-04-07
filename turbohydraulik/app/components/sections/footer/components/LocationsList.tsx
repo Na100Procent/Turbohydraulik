@@ -72,7 +72,12 @@ const TitledVerticalList = ({
         }}
       >
         {locationsList?.map((item, index) => (
-          <Link href={item.url} key={item.title + index} passHref>
+          <Link
+            href={item.url}
+            key={item.title + index}
+            passHref
+            aria-label="Nawiguj do miasta"
+          >
             <Box sx={elementSx}>
               <Typography>{separator ? separator : "• "}</Typography>
               <Typography sx={itemTitle}>{item.title}</Typography>

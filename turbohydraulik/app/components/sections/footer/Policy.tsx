@@ -77,7 +77,7 @@ const Policy: React.FC = () => {
         Copyright ©2025. Turbo Hydraulik.pl, Wszystkie prawa zastrzeżone
       </Typography>
       <Box sx={policyButtonsSx}>
-        <Link href={policyPath}>
+        <Link href={policyPath} aria-label="strona polityki prywatności">
           <Typography sx={{ ...textSx, ...linkSx }}>
             Polityka Prywatności
           </Typography>

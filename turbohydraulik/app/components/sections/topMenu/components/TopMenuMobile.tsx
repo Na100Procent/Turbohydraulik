@@ -23,7 +23,7 @@ const TopMenuMobile = () => {
 
   return (
     <Box sx={containerSx}>
-      <Link href={homePagePath}>
+      <Link href={homePagePath} aria-label="strona home page">
         <Box sx={{ scale: 0.6 }}>
           <TopMenuLogo />
         </Box>

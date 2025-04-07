@@ -47,6 +47,7 @@ const SocialMediasSeparator = ({ separatorColor }: Props) => {
       >
         <Link href={facebookUrl} target="_blank">
           <IconButton
+            aria-label="Facebook"
             sx={{
               backgroundColor: theme.palette.custom.darkBlue,
               color: "white",
@@ -57,6 +58,7 @@ const SocialMediasSeparator = ({ separatorColor }: Props) => {
           </IconButton>
         </Link>
         <IconButton
+          aria-label="Email"
           onClick={handleEmailClick}
           sx={{
             backgroundColor: theme.palette.custom.darkBlue,

@@ -77,6 +77,7 @@ const FAQElements = () => {
               {faq.question}
             </Typography>
             <IconButton
+              aria-label="Pokaż odpowiedź"
               onClick={() => handleToggle(index)}
               sx={{
                 background: theme.palette.secondary.main,
@@ -102,6 +103,7 @@ const FAQElements = () => {
         </Box>
       ))}
       <Button
+        aria-label="Pokaż wszystkie FAQ"
         onClick={handleShowAll}
         sx={{
           mt: 2,

@@ -16,7 +16,7 @@ const logoButtonSx = {
 const TopMenuBrowser = () => {
   return (
     <Box sx={logoButtonSx}>
-      <Link href={homePagePath}>
+      <Link href={homePagePath} aria-label="strona home page">
         <TopMenuLogo />
       </Link>
       <TopMenuButtons withSeparators />

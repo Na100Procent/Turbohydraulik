@@ -30,7 +30,7 @@ const NotFoundPage = () => {
       <BackgroundWrapper sx={{ padding: 0 }} ableOverflow>
         <Box sx={contentSx}>
           <Box sx={logoButtonSx}>
-            <Link href={homePagePath}>
+            <Link href={homePagePath} aria-label="strona home page">
               <TopMenuLogo />
             </Link>
           </Box>

@@ -42,8 +42,9 @@ const SocialMedias = () => {
   return (
     <Box sx={socialMediasSx}>
       <VerticalSeparator />
-      <Link href={facebookUrl} target="_blank">
+      <Link href={facebookUrl} target="_blank" aria-label="nawiguj facebook">
         <IconButton
+          aria-label="Facebook"
           sx={{
             backgroundColor: theme.palette.custom.darkBlue,
             color: "white",
