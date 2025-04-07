@@ -36,11 +36,7 @@ const elementsContainer = {
     xs: "5px",
   },
   background: theme.palette.primary.main,
-  mb: {
-    lg: "20px",
-    md: "10px",
-    xs: "0px",
-  },
+
   width: {
     md: "fit-content",
     xs: "100%",
