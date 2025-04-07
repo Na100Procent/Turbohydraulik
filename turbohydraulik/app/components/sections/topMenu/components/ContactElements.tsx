@@ -1,10 +1,9 @@
 import { Box, Typography } from "@mui/material";
 import React from "react";
 import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
-import theme from "@/app/theme/theme";
 import LocalPhoneOutlinedIcon from "@mui/icons-material/LocalPhoneOutlined";
+import theme from "@/app/theme/theme";
 import VerticalSeparator from "../../../shared/VerticalSeparator";
-import { TopMenuOrnament } from "@/public/assets/icons/icons";
 import { defaultPhoneNUmber, emailAddress } from "@/app/constants/appConstants";
 import SocialMedias from "./SocialMedias";
 import { convertPhoneNum } from "@/app/components/shared/helpers/convertPhoneNum";
@@ -12,23 +11,22 @@ import { convertPhoneNum } from "@/app/components/shared/helpers/convertPhoneNum
 interface Props {
   phoneNumber?: string;
 }
+
 const containerSx = {
   position: {
     md: "relative",
-    sm: "fixed",
     xs: "fixed",
-    xxs: "fixed",
   },
   bottom: 0,
   right: 0,
+  width: "100%",
 };
 
 const elementsContainer = {
   display: "flex",
   justifyContent: {
-    sm: "right",
+    md: "flex-end",
     xs: "center",
-    xxs: "center",
   },
   alignItems: "center",
   gap: {
@@ -36,97 +34,82 @@ const elementsContainer = {
     md: "10px",
     sm: "8px",
     xs: "5px",
-    xxs: "5px",
+  },
+  background: theme.palette.primary.main,
+  mb: {
+    lg: "20px",
+    md: "10px",
+    xs: "0px",
+  },
+  width: {
+    md: "fit-content",
+    xs: "100%",
+  },
+  ml: "auto",
+  borderBottomLeftRadius: {
+    md: "20px",
+    xs: "0px",
+  },
+
+  paddingLeft: {
+    xl: "70px",
+    lg: "70px",
+    md: "30px",
+    xs: "10px",
   },
 };
+
 const contactTitleSx = {
   color: theme.palette.custom.background,
   fontFamily: "UniteaSans",
-  fontSize: "14px",
-  minWidth: "100px",
-
   fontWeight: 500,
+  minWidth: "100px",
+  fontSize: {
+    sm: "16px",
+    xs: "20px",
+  },
 };
 
 const contactElement = {
   display: "flex",
   alignItems: "center",
   zIndex: 3,
-  padding: "10px",
-  gap: "6px",
+  gap: "8px",
   borderRadius: "10px",
-  transition: "background-color 0.3s ease, scale 0.3s ease",
+  padding: {
+    sm: "10px",
+    xs: "20px",
+  },
+  transition: "background-color 0.3s ease",
   "&:hover": {
     cursor: "pointer",
     backgroundColor: "rgba(255,255,255,0.1)",
-    scale: 1.05,
   },
-};
-
-const ornamentSx = {
-  position: "absolute",
-  top: {
-    md: "-60px",
-    sm: "-10px",
-    xs: "-10px",
-  },
-  right: {
-    xl: "-900px",
-    lg: "-1250px",
-    md: "-1500px",
-    sm: "-10px",
-    xs: "-10px",
-  },
-  zIndex: 1,
 };
 
 const emailSx = {
   display: {
     sm: "flex",
     xs: "none",
-    xxs: "none",
-  },
-};
-
-const phoneSx = {
-  scale: {
-    sm: "1",
-    xs: "2",
-    xxs: "2",
-  },
-  marginRight: {
-    sm: "0",
-    xs: "31vw",
-    xxs: "28vw",
-  },
-
-  padding: {
-    sm: "10px",
-    xs: "20px",
-    xxs: "20px",
-  },
-  "&:hover": {
-    cursor: "pointer",
-    backgroundColor: "rgba(255,255,255,0.1)",
-    scale: {
-      sm: "1.05",
-      xs: "2.02",
-      xxs: "2.02",
-    },
   },
 };
 
 const contactIconSx = {
-  width: "20px",
-  height: "20px",
-  mt: "-4px",
   color: theme.palette.secondary.main,
+  width: {
+    sm: "20px",
+    xs: "28px",
+  },
+  height: {
+    sm: "20px",
+    xs: "28px",
+  },
 };
 
 const ContactElements = ({ phoneNumber }: Props) => {
-  const phone = phoneNumber ? phoneNumber : defaultPhoneNUmber;
-
+  const phone = phoneNumber ?? defaultPhoneNUmber;
   const phoneToDisplay = convertPhoneNum(phone);
+
   const handlePhoneClick = () => {
     const convertedPhoneNum = convertPhoneNum(phone, true);
     window.open(`tel:${convertedPhoneNum}`);
@@ -135,16 +118,15 @@ const ContactElements = ({ phoneNumber }: Props) => {
   const handleEmailClick = () => {
     window.open(`mailto:${emailAddress}`);
   };
+
   return (
     <Box sx={containerSx}>
-      <Box sx={ornamentSx}>
-        <TopMenuOrnament />
-      </Box>
       <Box sx={elementsContainer}>
-        <Box sx={{ ...contactElement, ...phoneSx }} onClick={handlePhoneClick}>
+        <Box sx={contactElement} onClick={handlePhoneClick}>
           <LocalPhoneOutlinedIcon sx={contactIconSx} />
           <Typography sx={contactTitleSx}>{phoneToDisplay}</Typography>
         </Box>
+
         <Box sx={emailSx}>
           <VerticalSeparator />
         </Box>
@@ -153,6 +135,7 @@ const ContactElements = ({ phoneNumber }: Props) => {
           <EmailOutlinedIcon sx={contactIconSx} />
           <Typography sx={contactTitleSx}>{emailAddress}</Typography>
         </Box>
+
         <SocialMedias />
       </Box>
     </Box>

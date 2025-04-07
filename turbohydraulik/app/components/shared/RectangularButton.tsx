@@ -37,9 +37,8 @@ const RectangularButton = ({
     "&:hover": {
       cursor: "pointer",
       background: theme.palette.custom.lightGray,
-      scale: 1.05,
     },
-    transition: "background-color 0.3s ease, scale 0.3s ease",
+    transition: "background-color 0.3s ease",
   };
   const titleSx = {
     color: titleColor ? titleColor : theme.palette.primary.main,

@@ -56,14 +56,6 @@ export const AboutMeOrnament = () => (
     height={183}
   />
 );
-export const TopMenuOrnament = () => (
-  <Image
-    src="/assets/icons/TopMenuOrnament.svg"
-    alt="TopMenuOrn"
-    width={2336}
-    height={111}
-  />
-);
 
 // logo
 export const LogoIcon = () => (

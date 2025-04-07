@@ -1,0 +1,19 @@
+{
+  "entry": ["src/index.ts", "src/app/page.tsx"],
+  "ignorePatterns": [
+    "**/*.test.*",
+    "**/*.spec.*",
+    "**/*.stories.*",
+    "**/__mocks__/**",
+    "**/node_modules/**",
+    "**/.next/**",
+    "**/public/**",
+    "**/types/**",
+    "**/*.d.ts"
+  ],
+  "extensions": [".ts", ".tsx", ".js", ".jsx"],
+  "aliases": {
+    "@": "./src",
+    "@/*": "./src/*"
+  }
+}
