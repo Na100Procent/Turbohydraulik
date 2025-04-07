@@ -11,6 +11,7 @@ import {
   AboutCityContent,
   MetaContent,
   FooterContent,
+  DistrictsListContent,
 } from "../../../data/types/sectionTypes";
 
 export const getDistrictDataContent = (districtData: DistrictData) => {
@@ -75,6 +76,11 @@ export const getDistrictDataContent = (districtData: DistrictData) => {
     street: districtData.content.street,
   };
 
+  const districtsListContent: DistrictsListContent = {
+    districtsListH2: districtData.content.districtsListH2,
+    districtsListText: districtData.content.districtsListText,
+  };
+
   return {
     metaContent,
     heroContent,
@@ -87,5 +93,6 @@ export const getDistrictDataContent = (districtData: DistrictData) => {
     inNumbersContent,
     priceListContent,
     footerContent,
+    districtsListContent,
   };
 };

@@ -73,3 +73,8 @@ export interface FooterContent {
   street: string;
   cityName?: string;
 }
+
+export interface DistrictsListContent {
+  districtsListH2?: string;
+  districtsListText?: string;
+}

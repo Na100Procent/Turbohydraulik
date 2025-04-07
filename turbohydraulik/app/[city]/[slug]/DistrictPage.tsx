@@ -45,6 +45,7 @@ export default function DistrictPage({ districtData, city }: Props) {
     inNumbersContent,
     priceListContent,
     footerContent,
+    districtsListContent,
   } = getDistrictDataContent(districtData);
 
   const phoneNumber = districtData.content.phone;
@@ -111,7 +112,7 @@ export default function DistrictPage({ districtData, city }: Props) {
           bgcolor={theme.palette.custom.background}
           padding="0px 0px 200px 0 "
         >
-          <DistrictsList city={city} />
+          <DistrictsList city={city} content={districtsListContent} />
         </Box>
         <Footer
           phoneNumber={phoneNumber}

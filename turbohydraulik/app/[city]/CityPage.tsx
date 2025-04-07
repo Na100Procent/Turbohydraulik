@@ -50,6 +50,7 @@ export default function CityPage({ cityData }: Props) {
     inNumbersContent,
     priceListContent,
     footerContent,
+    districtsListContent,
   } = getCityDataContent(cityData);
 
   const phoneNumber =
@@ -108,7 +109,7 @@ export default function CityPage({ cityData }: Props) {
           bgcolor={theme.palette.custom.background}
           padding="0px 0px 200px 0 "
         >
-          <DistrictsList city={cityData} />
+          <DistrictsList city={cityData} content={districtsListContent} />
         </Box>
         <Footer
           phoneNumber={phoneNumber}

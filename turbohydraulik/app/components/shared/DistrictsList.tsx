@@ -5,11 +5,14 @@ import { sectionXPadding } from "@/app/constants/styles";
 import theme from "@/app/theme/theme";
 import SectionCenterHeader from "./SectionCenterHeader";
 import { CityData } from "@/app/data/types/dataTypes";
+import { DistrictsListContent } from "@/app/data/types/sectionTypes";
 
 interface Props {
   city: CityData;
+  content: DistrictsListContent;
 }
-const DistrictsList = ({ city }: Props) => {
+const DistrictsList = ({ city, content }: Props) => {
+  const { districtsListH2, districtsListText } = content;
   const districtsLinks = Object.values(city.districts).map((district) => ({
     title: district.name,
     url: `/${city.slug}/${district.slug}`,
@@ -21,9 +24,9 @@ const DistrictsList = ({ city }: Props) => {
       bgcolor={theme.palette.custom.blueLight}
     >
       <Box paddingY="30px">
-        <SectionCenterHeader header="Dzielnice w których działamy" />
+        <SectionCenterHeader header={districtsListH2 ? districtsListH2 : ""} />
         <LocationsList
-          locsTitle={`JESTEŚMY W TYCH DZIELNICACH MIASTA ${city.name}`}
+          locsTitle={districtsListText ? districtsListText : ""}
           locationsList={districtsLinks}
           addSx={{ color: theme.palette.primary.main, padding: "20px" }}
         />

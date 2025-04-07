@@ -52,6 +52,8 @@ export interface CityContent {
   contact_text: string;
   postalCode: string;
   street: string;
+  districtsListH2?: string;
+  districtsListText?: string;
 
   aboutService_h2?: string;
   aboutService_text1?: string;

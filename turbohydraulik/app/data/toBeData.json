@@ -1488,7 +1488,9 @@
         "contact_h2": "Kontakt",
         "contact_text": "Skontaktuj się z nami, aby uzyskać więcej informacji i umówić się na wizytę. Jesteśmy do Twojej dyspozycji 24/7. Biskupia 7, 50-148 Wrocław.",
         "postalCode": "50-148",
-        "street": "Biskupia 7"
+        "street": "Biskupia 7",
+        "districtsListH2": "dlh2wroc",
+        "districtsListText": "dltwrocc"
       },
       "districts": {
         "stare-miasto": {
@@ -1530,7 +1532,9 @@
             "contact_h2": "Turbo Hydraulik Stare Miasto – szybki kontakt, błyskawiczna pomoc!",
             "contact_text": "Potrzebujesz natychmiastowej pomocy hydraulicznej na Starym Mieście? Skontaktuj się z Turbo Hydraulik już dziś, a nasze turbo zespoły będą na miejscu w mgnieniu oka, gotowe do działania!",
             "postalCode": "50-148",
-            "street": "Biskupia 7, Wrocław"
+            "street": "Biskupia 7, Wrocław",
+            "districtsListH2": "dlh2",
+            "districtsListText": "dlt"
           }
         },
         "krzyki": {
@@ -1572,7 +1576,9 @@
             "contact_h2": "Turbo Hydraulik Krzyki – szybki kontakt, błyskawiczna pomoc!",
             "contact_text": "Skontaktuj się z nami już teraz i skorzystaj z usług Turbo Hydraulika na Krzykach. Gwarantujemy rzetelną i szybką pomoc!",
             "postalCode": "50-148",
-            "street": "Biskupia 7, Wrocław"
+            "street": "Biskupia 7, Wrocław",
+            "districtsListH2": "dlh2",
+            "districtsListText": "dlt"
           }
         },
         "psie-pole": {
@@ -1614,7 +1620,9 @@
             "contact_h2": "Turbo Hydraulik Psie Pole – szybki kontakt, błyskawiczna pomoc!",
             "contact_text": "Nie zwlekaj! Skontaktuj się z Turbo Hydraulik na Psie Pole i doświadcz najszybszej pomocy hydraulicznej w Twojej okolicy. Jesteśmy zawsze gotowi, aby sprostać Twoim potrzebom i zapewnić Ci najwyższą jakość usług. Zadzwoń teraz na numer 788998370 i przekonaj się, jak łatwo można rozwiązać problemy hydrauliczne dzięki wsparciu naszych doświadczonych specjalistów.",
             "postalCode": "51-630",
-            "street": "Biskupia 7, Wrocław"
+            "street": "Biskupia 7, Wrocław",
+            "districtsListH2": "dlh2",
+            "districtsListText": "dlt"
           }
         },
         "fabryczna": {
@@ -1656,7 +1664,9 @@
             "contact_h2": "Turbo Hydraulik Fabryczna – szybki kontakt, błyskawiczna pomoc!",
             "contact_text": "Skontaktuj się z nami już teraz, aby uzyskać szybką i efektywną pomoc hydrauliczną w Fabrycznej. Jesteśmy do Twojej dyspozycji 24/7 pod numerem telefonu 788998370. Niezależnie od skali problemu, nasi specjaliści są gotowi, by mu sprostać i zapewnić Ci pełen komfort użytkowania Twojej instalacji wodno-kanalizacyjnej.",
             "postalCode": "54-059",
-            "street": "Biskupia 7, Wrocław"
+            "street": "Biskupia 7, Wrocław",
+            "districtsListH2": "dlh2",
+            "districtsListText": "dlt"
           }
         },
         "srodmiescie": {
@@ -1698,7 +1708,9 @@
             "contact_h2": "Turbo Hydraulik Śródmieście – szybki kontakt, błyskawiczna pomoc!",
             "contact_text": "Skontaktuj się z nami już teraz i przekonaj się, jak szybko i skutecznie rozwiązujemy problemy hydrauliczne!",
             "postalCode": "50-148",
-            "street": "Biskupia 7, Wrocław"
+            "street": "Biskupia 7, Wrocław",
+            "districtsListH2": "dlh2",
+            "districtsListText": "dlt"
           }
         },
         "nadodrze": {
@@ -1740,7 +1752,9 @@
             "contact_h2": "Turbo Hydraulik Nadodrze – szybki kontakt, błyskawiczna pomoc!",
             "contact_text": "Skontaktuj się z nami już teraz, aby uzyskać natychmiastową pomoc hydrauliczną na Nadodrzu. Jesteśmy dostępni 24/7, aby zapewnić Ci spokój ducha i profesjonalne rozwiązania wszystkich problemów hydraulicznych.",
             "postalCode": "50-148",
-            "street": "Biskupia 7, Wrocław"
+            "street": "Biskupia 7, Wrocław",
+            "districtsListH2": "dlh2",
+            "districtsListText": "dlt"
           }
         },
         "biskupin": {
@@ -1782,7 +1796,9 @@
             "contact_h2": "Turbo Hydraulik Biskupin – szybki kontakt, błyskawiczna pomoc!",
             "contact_text": "Skontaktuj się z nami i skorzystaj z szybkiej i profesjonalnej pomocy hydraulicznej na Biskupinie. Turbo Hydraulik to Twój niezawodny partner!",
             "postalCode": "51-116",
-            "street": "Biskupia 7, Wrocław"
+            "street": "Biskupia 7, Wrocław",
+            "districtsListH2": "dlh2",
+            "districtsListText": "dlt"
           }
         },
         "oporow": {
@@ -1824,7 +1840,9 @@
             "contact_h2": "Turbo Hydraulik Oporów – szybki kontakt, błyskawiczna pomoc!",
             "contact_text": "Masz awarię? Potrzebujesz natychmiastowej pomocy? Skontaktuj się z nami już teraz! Turbo Hydraulik w Oporowie to gwarancja szybkiej reakcji i profesjonalnej obsługi.",
             "postalCode": "53-134",
-            "street": "Biskupia 7, Wrocław"
+            "street": "Biskupia 7, Wrocław",
+            "districtsListH2": "dlh2",
+            "districtsListText": "dlt"
           }
         },
         "strachocin": {
@@ -1866,7 +1884,9 @@
             "contact_h2": "Turbo Hydraulik Strachocin – szybki kontakt, błyskawiczna pomoc!",
             "contact_text": "Masz awarię hydrauliczną? Nie czekaj, skontaktuj się z nami! Turbo Hydraulik Strachocin to ekspresowa pomoc 24/7, aby każdy problem został rozwiązany szybko i skutecznie. Jesteśmy dostępni dla Ciebie przez całą dobę, gotowi do działania w każdej sytuacji.",
             "postalCode": "51-148",
-            "street": "Biskupia 7, Wrocław"
+            "street": "Biskupia 7, Wrocław",
+            "districtsListH2": "xxx",
+            "districtsListText": "xxxy"
           }
         },
         "lesnica": {
@@ -1908,7 +1928,9 @@
             "contact_h2": "Turbo Hydraulik Leśnica – szybki kontakt, błyskawiczna pomoc!",
             "contact_text": "Skontaktuj się z nami, aby uzyskać szybką pomoc i wsparcie hydraulika w Leśnicy. Jesteśmy gotowi na każde wyzwanie, zapewniając natychmiastową reakcję i profesjonalne podejście do każdej sprawy.",
             "postalCode": "54-148",
-            "street": "Biskupia 7, Wrocław"
+            "street": "Biskupia 7, Wrocław",
+            "districtsListH2": "dlh2",
+            "districtsListText": "dlt"
           }
         }
       }
