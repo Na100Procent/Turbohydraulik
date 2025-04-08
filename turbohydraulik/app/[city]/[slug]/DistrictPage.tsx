@@ -15,6 +15,7 @@ import PriceList from "@/app/components/sections/priceList/PriceList";
 import getCityServices from "@/app/components/shared/helpers/getCityServices";
 import { schemaData } from "@/app/data/data";
 import dynamic from "next/dynamic";
+import { pageContainer } from "@/app/constants/styles";
 
 const CustomerReviews = dynamic(
   () => import("../../components/sections/customerReviews/CustomerReviews")
@@ -72,13 +73,7 @@ export default function DistrictPage({ districtData, city }: Props) {
         />
       )}
 
-      <Box
-        display="flex"
-        justifyContent="center"
-        alignItems="center"
-        flexDirection="column"
-        id={sectionIds.home}
-      >
+      <Box sx={pageContainer} id={sectionIds.home}>
         <TopMenu phoneNumber={phoneNumber} />
         <IntroSection content={heroContent} phoneNumber={phoneNumber} />
         <OurServices

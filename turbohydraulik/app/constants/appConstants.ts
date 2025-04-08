@@ -13,6 +13,7 @@ export const sectionIds = {
 export const homePagePath = "/";
 export const policyPath = "/policy";
 export const termsPath = "/regulamin";
+export const addReviewPath = "/dodaj-opinie";
 
 // contact
 export const defaultPhoneNUmber = "923 423 123";

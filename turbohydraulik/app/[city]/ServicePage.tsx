@@ -13,6 +13,7 @@ import ErrorMessage from "../components/shared/ErrorMessage";
 import AboutService from "../components/sections/aboutService/AboutService";
 import React from "react";
 import dynamic from "next/dynamic";
+import { pageContainer } from "../constants/styles";
 
 const CustomerReviews = dynamic(
   () => import("../components/sections/customerReviews/CustomerReviews")
@@ -54,13 +55,7 @@ export default function ServicePage({ serviceData }: Props) {
   } = getServiceDataContent(serviceData);
 
   return (
-    <Box
-      display="flex"
-      justifyContent="center"
-      alignItems="center"
-      flexDirection="column"
-      id={sectionIds.home}
-    >
+    <Box sx={pageContainer} id={sectionIds.home}>
       <TopMenu />
       <HeroService content={heroContent} serviceName={name} />
       <AboutService content={aboutServiceContent} subServices={subServices} />

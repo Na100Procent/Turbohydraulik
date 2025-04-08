@@ -4,6 +4,9 @@ import theme from "@/app/theme/theme";
 import { Box, Input, Typography } from "@mui/material";
 import useFormMessage from "../hooks/useFormMessageHook";
 
+interface Props {
+  actionButtonTitle?: string;
+}
 const container = {
   display: "flex",
   flexDirection: "column",
@@ -39,7 +42,7 @@ const problemInputSx = {
   alignItems: "flex-start",
 };
 
-const ServiceForm = () => {
+const ServiceForm = ({ actionButtonTitle }: Props) => {
   const {
     phone,
     setPhone,
@@ -51,6 +54,7 @@ const ServiceForm = () => {
     handleSubmit,
   } = useFormMessage();
 
+  const buttonDisabled = loading || !phone || !problem;
   return (
     <Box sx={container}>
       <Typography variant="h3" sx={headerSx}>
@@ -76,10 +80,20 @@ const ServiceForm = () => {
         multiline
       />
       <RectangularButton
-        title={loading ? "Wysyłanie..." : "Zamawiam usługę"}
-        bgColor={theme.palette.secondary.main}
+        title={
+          loading
+            ? "Wysyłanie..."
+            : actionButtonTitle
+            ? actionButtonTitle
+            : "Zamawiam usługę"
+        }
+        bgColor={
+          buttonDisabled
+            ? theme.palette.custom.lightGray
+            : theme.palette.secondary.main
+        }
         onClick={handleSubmit}
-        disabled={loading || !phone || !problem}
+        disabled={buttonDisabled}
       />
       {error && (
         <Typography color="error" fontSize="14px">

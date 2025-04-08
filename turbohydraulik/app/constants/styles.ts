@@ -6,3 +6,10 @@ export const sectionXPadding = {
   xs: "0 30px",
   xxs: "0 20px",
 };
+
+export const pageContainer = {
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  flexDirection: "column",
+};

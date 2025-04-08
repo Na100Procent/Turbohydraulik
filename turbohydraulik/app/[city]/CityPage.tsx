@@ -15,6 +15,7 @@ import getCityServices from "../components/shared/helpers/getCityServices";
 import { getCityDataContent } from "../components/shared/helpers/getCityDataContent";
 import { schemaData, websiteData } from "../data/data";
 import dynamic from "next/dynamic";
+import { pageContainer } from "../constants/styles";
 
 const CustomerReviews = dynamic(
   () => import("../components/sections/customerReviews/CustomerReviews")
@@ -67,13 +68,7 @@ export default function CityPage({ cityData }: Props) {
         />
       )}
 
-      <Box
-        display="flex"
-        justifyContent="center"
-        alignItems="center"
-        flexDirection="column"
-        id={sectionIds.home}
-      >
+      <Box sx={pageContainer} id={sectionIds.home}>
         <TopMenu phoneNumber={phoneNumber} />
         <IntroSection content={heroContent} phoneNumber={phoneNumber} />
 
