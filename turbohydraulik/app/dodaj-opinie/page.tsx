@@ -53,7 +53,7 @@ const ReviewPage = () => {
             textAlign: isMobile ? "center" : "left",
           }}
         >
-          <Box maxWidth="500px">
+          <Box maxWidth="500px" pt="10px">
             <Typography variant="h4" fontWeight={300}>
               JESTEŚ ZADOWOLONY
             </Typography>
