@@ -121,6 +121,7 @@ export default function ServicePage({ serviceData, cityService, city }: Props) {
             headerColor={theme.palette.primary.main}
             content={ourServicesContent}
             phoneNumber={phoneNumber}
+            city={city}
           />
         </Box>
         <Footer
