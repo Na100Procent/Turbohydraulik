@@ -10,7 +10,7 @@ interface Props {
 
 const headerSx = {
   fontWeight: "600",
-  fontFamily: "UniteaSans",
+
   lineHeight: 1,
   fontSize: {
     xl: "60px",

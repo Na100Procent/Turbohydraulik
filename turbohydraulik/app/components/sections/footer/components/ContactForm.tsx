@@ -12,14 +12,12 @@ const subHeaderSx = {
   fontWeight: "400",
   fontSize: "11px",
   color: theme.palette.custom.background,
-  fontFamily: "UniteaSans",
 };
 
 const headerSx = {
   fontWeight: "600",
   fontSize: "17px",
   color: theme.palette.custom.background,
-  fontFamily: "UniteaSans",
 };
 
 const ContactForm = ({ subHeader, header, icon }: ContactFormProps) => {

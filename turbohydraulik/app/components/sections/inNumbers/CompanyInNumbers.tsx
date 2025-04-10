@@ -57,7 +57,7 @@ const numberSx = {
     xxs: "40px",
   },
   fontWeight: "800",
-  fontFamily: "UniteaSans",
+
   color: theme.palette.secondary.main,
   minWidth: "140px",
 };

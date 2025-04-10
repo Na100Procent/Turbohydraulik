@@ -12,7 +12,7 @@ interface TopMenuButtonProps {
 const buttonSx = {
   color: theme.palette.custom.darkGray,
   fontSize: "14px",
-  fontFamily: "UniteaSans",
+
   fontWeight: 500,
   minWidth: "100px",
 };

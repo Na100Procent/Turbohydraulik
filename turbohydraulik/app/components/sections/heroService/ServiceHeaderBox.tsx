@@ -19,7 +19,7 @@ const fontSize = {
 
 const headerSx = {
   fontWeight: "600",
-  fontFamily: "UniteaSans",
+
   lineHeight: fontSize,
 
   fontSize: fontSize,
@@ -27,7 +27,7 @@ const headerSx = {
 const subHeaderSX = {
   color: theme.palette.custom.background,
   fontWeight: 500,
-  fontFamily: "UniteaSans",
+
   letterSpacing: "1px",
   mt: "10px",
   mb: "20px",

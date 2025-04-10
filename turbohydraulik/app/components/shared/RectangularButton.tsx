@@ -51,7 +51,7 @@ const RectangularButton = ({
       xs: "14px",
       xxs: "14px",
     },
-    fontFamily: "UniteaSans",
+
     textTransform: "uppercase",
     minWidth: "100px",
   };

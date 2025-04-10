@@ -69,7 +69,7 @@ const titleSx = {
 const descriptionSx = {
   color: theme.palette.custom.darkGray,
   maxWidth: "400px",
-  fontFamily: "UniteaSans",
+
   fontWeight: 500,
   pt: "10px",
   overflow: "hidden",

@@ -32,7 +32,7 @@ const container = {
 const questionSx = {
   fontWeight: "bold",
   color: theme.palette.primary.main,
-  fontFamily: "UniteaSans",
+
   fontSize: {
     xl: "18px",
     lg: "18px",
@@ -93,7 +93,7 @@ const FAQElements = () => {
               variant="body1"
               sx={{
                 color: theme.palette.custom.darkGray,
-                fontFamily: "UniteaSans",
+
                 fontWeight: 500,
               }}
             >

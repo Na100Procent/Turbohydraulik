@@ -41,59 +41,7 @@ const theme = createTheme({
     },
   },
   typography: {
-    subtitle1: {
-      fontStyle: "normal",
-      fontWeight: 700,
-      fontSize: "12px",
-      lineHeight: "14px",
-    },
-    subtitle2: {
-      fontStyle: "normal",
-      fontWeight: 400,
-      fontSize: "12px",
-      lineHeight: "14px",
-      color: "gray",
-    },
-    headline1: {
-      fontSize: "48px",
-      fontWeight: "bold",
-    },
-    headline2: {
-      fontSize: "36px",
-      fontWeight: "bold",
-    },
-    headline3: {
-      fontSize: "24px",
-      fontWeight: "bold",
-    },
-    label1: {
-      fontSize: "20px",
-      fontWeight: "bold",
-    },
-    label2: {
-      fontSize: "18px",
-      fontWeight: "bold",
-    },
-    label3: {
-      fontSize: "16px",
-      fontWeight: "bold",
-    },
-    label4: {
-      fontSize: "14px",
-      fontWeight: "bold",
-    },
-    text1: {
-      fontSize: "16px",
-    },
-    text2: {
-      fontSize: "14px",
-    },
-    text3: {
-      fontSize: "12px",
-    },
-    text4: {
-      fontSize: "10px",
-    },
+    fontFamily: "Inter, sans-serif",
   },
   components: {
     MuiButton: {
@@ -112,6 +60,7 @@ const theme = createTheme({
           cursor: "inherit",
           textTransform: "none",
           userSelect: "none",
+          fontFamily: "Inter, sans-serif",
         },
       },
     },

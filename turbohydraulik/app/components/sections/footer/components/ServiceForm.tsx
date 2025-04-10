@@ -19,7 +19,7 @@ const headerSx = {
   fontWeight: "600",
   fontSize: "17px",
   color: theme.palette.custom.background,
-  fontFamily: "UniteaSans",
+
   mb: "10px",
 };
 

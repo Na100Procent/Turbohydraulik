@@ -66,7 +66,6 @@ const SectionCenterHeader = ({
       xxs: "left",
     },
     lineHeight: fontSize,
-    fontFamily: "UniteaSans",
   };
 
   const bottomHeaderSx = {
@@ -74,7 +73,7 @@ const SectionCenterHeader = ({
     fontSize: "15px",
     color: bottomHeaderColor ? bottomHeaderColor : "#565656",
     marginTop: "20px",
-    fontFamily: "UniteaSans",
+
     textAlign: {
       xl: "center",
       lg: "center",

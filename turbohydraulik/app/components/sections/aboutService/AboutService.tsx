@@ -58,7 +58,7 @@ const textSx = {
 
 const descriptionSx = {
   color: theme.palette.custom.darkGray,
-  fontFamily: "UniteaSans",
+
   fontWeight: "500",
   maxWidth: "3000px",
   textAlign: "left",
@@ -119,7 +119,7 @@ const AboutService = ({
                   sx={{
                     fontWeight: "600",
                     fontSize: "30px",
-                    fontFamily: "UniteaSans",
+
                     color: theme.palette.primary.main,
                   }}
                 >

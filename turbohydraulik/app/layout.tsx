@@ -4,6 +4,14 @@ import { AppRouterCacheProvider } from "@mui/material-nextjs/v15-appRouter";
 import Head from "next/head";
 import NoscriptContent from "./components/shared/NoScriptContent";
 
+import { Inter } from "next/font/google";
+
+const inter = Inter({
+  subsets: ["latin"],
+  display: "swap",
+  weight: ["400", "500", "600", "700", "800", "900"],
+});
+
 export const metadata: Metadata = {
   openGraph: {
     type: "website",
@@ -37,7 +45,10 @@ export default function RootLayout({
         <link rel="canonical" href="https://turbohydraulik.pl/" />
         <meta charSet="UTF-8" />
       </Head>
-      <body style={{ width: "100%", maxWidth: "100vw", overflowX: "hidden" }}>
+      <body
+        className={inter.className}
+        style={{ width: "100%", maxWidth: "100vw", overflowX: "hidden" }}
+      >
         <AppRouterCacheProvider>{children}</AppRouterCacheProvider>
         <NoscriptContent />
       </body>
