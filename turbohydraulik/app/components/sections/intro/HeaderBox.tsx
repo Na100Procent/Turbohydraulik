@@ -1,6 +1,7 @@
+"use client";
 import theme from "@/app/theme/theme";
 import { Box, Typography } from "@mui/material";
-import React from "react";
+import React, { useMemo } from "react";
 
 interface Props {
   hero_h1: string;
@@ -10,7 +11,6 @@ interface Props {
 
 const headerSx = {
   fontWeight: "600",
-
   lineHeight: 1,
   fontSize: {
     xl: "60px",
@@ -25,34 +25,26 @@ const headerSx = {
   alignItems: "start",
   flexDirection: "column",
 };
-const subHeaderSX = {
-  color: theme.palette.custom.background,
-  fontWeight: 500,
-  letterSpacing: "1px",
-  mt: "10px",
-  mb: "20px",
-};
 
 const HeaderBox = ({ hero_h1, hero_h2, hero_text }: Props) => {
-  const headerWords = hero_h1.split(" ");
-  const headerPart1 = headerWords.slice(0, -1).join(" ");
-  const headerPart2 = headerWords.slice(-1).join(" ");
+  const [headerPart1, headerPart2] = useMemo(() => {
+    const words = hero_h1.trim().split(" ");
+    return [words.slice(0, -1).join(" "), words.at(-1) ?? ""];
+  }, [hero_h1]);
 
   return (
-    <>
+    <Box sx={{ color: theme.palette.custom.background }}>
       <Typography variant="h1" sx={headerSx}>
-        <Box component="span" sx={{ color: theme.palette.custom.background }}>
-          {headerPart1}{" "}
-        </Box>
+        <Box component="span">{headerPart1} </Box>
         <Box component="span" sx={{ color: theme.palette.secondary.main }}>
           {headerPart2}
         </Box>
       </Typography>
-      <Typography sx={subHeaderSX} variant="h2" fontSize={"30px"}>
+      <Typography my="15px" variant="h2" fontSize={"30px"}>
         {hero_h2}
       </Typography>
-      <Typography sx={subHeaderSX}>{hero_text}</Typography>
-    </>
+      <Typography my="15px">{hero_text}</Typography>
+    </Box>
   );
 };
 

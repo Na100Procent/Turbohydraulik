@@ -48,7 +48,7 @@ const IntroSection = ({ content, phoneNumber }: Props) => {
 
   return (
     <BackgroundWrapper bgImage={introBgUrl} sx={containerSx}>
-      <Box padding="20px 0 0 0">
+      <Box pt="20px">
         <Box sx={contentSx}>
           <Box sx={heroSx}>
             <HeaderBox
@@ -56,7 +56,7 @@ const IntroSection = ({ content, phoneNumber }: Props) => {
               hero_h2={hero_h2}
               hero_text={hero_text}
             />
-            <Box mt="30px">
+            <Box mt={3}>
               <CallUsButton phoneNumber={phoneNumber} />
             </Box>
           </Box>

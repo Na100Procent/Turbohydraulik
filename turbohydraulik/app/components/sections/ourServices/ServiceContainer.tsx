@@ -1,5 +1,6 @@
-import React from "react";
-import { Box } from "@mui/material";
+"use client";
+import React, { useEffect, useRef, useState } from "react";
+import { Box, Fade } from "@mui/material";
 import ServiceCard from "./ServiceCard";
 import { CityData } from "@/app/data/types/dataTypes";
 import { getServicesOfCity } from "../../shared/helpers/getServicesOfCity";
@@ -9,29 +10,57 @@ interface Props {
 }
 
 const ServiceContainer = ({ city }: Props) => {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [isVisible, setIsVisible] = useState(false);
   const servicesOfCity = getServicesOfCity(city);
-  const mappedServiceElements = servicesOfCity.map((service, index) => (
-    <Box key={index} sx={{ margin: "0 10px" }}>
-      <ServiceCard
-        service={{
-          name: service.name,
-          slug: service.slug,
-          serviceImgUrl: service.cardImageUrl,
-          cardDescription: service.cardDescription,
-        }}
-        city={city}
-      />
-    </Box>
-  ));
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect();
+        }
+      },
+      {
+        threshold: 0.1,
+        rootMargin: "0px 0px -100px 0px",
+      }
+    );
+
+    if (containerRef.current) {
+      observer.observe(containerRef.current);
+    }
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
 
   return (
-    <Box
-      display={"flex"}
-      flexWrap={"wrap"}
-      justifyContent={"center"}
-      gap={"20px"}
-    >
-      {mappedServiceElements}
+    <Box ref={containerRef}>
+      <Fade in={isVisible} timeout={800}>
+        <Box
+          display={"flex"}
+          flexWrap={"wrap"}
+          justifyContent={"center"}
+          gap={"20px"}
+        >
+          {servicesOfCity.map((service, index) => (
+            <Box key={index} sx={{ margin: "0 10px" }}>
+              <ServiceCard
+                service={{
+                  name: service.name,
+                  slug: service.slug,
+                  serviceImgUrl: service.cardImageUrl,
+                  cardDescription: service.cardDescription,
+                }}
+                city={city}
+              />
+            </Box>
+          ))}
+        </Box>
+      </Fade>
     </Box>
   );
 };
