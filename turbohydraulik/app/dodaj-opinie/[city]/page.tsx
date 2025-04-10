@@ -1,16 +1,38 @@
-"use client";
 import { Box, Typography, Button, useMediaQuery } from "@mui/material";
-import Footer from "../components/sections/footer/Footer";
-import BackgroundWrapper from "../components/shared/BackgroundWrapper";
 import Link from "next/link";
-import { homePagePath } from "../constants/appConstants";
 import { TopMenuLogo } from "@/public/assets/icons/icons";
 import Image from "next/image";
-import theme from "../theme/theme";
-import { aboutUsUrl } from "../constants/imagesUrls";
+import theme from "@/app/theme/theme";
+import BackgroundWrapper from "@/app/components/shared/BackgroundWrapper";
+import { homePagePath } from "@/app/constants/appConstants";
+import { aboutUsUrl } from "@/app/constants/imagesUrls";
+import Footer from "@/app/components/sections/footer/Footer";
+import { websiteData } from "@/app/data/data";
+import { notFound } from "next/navigation";
 
-const ReviewPage = () => {
+export const generateStaticParams = async () => {
+  const cities = Object.keys(websiteData.cities);
+  return cities.map((city) => ({ city }));
+};
+
+type PageProps = {
+  params: { city: string };
+};
+
+const ReviewPage = ({ params }: PageProps) => {
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+
+  const { city } = params;
+  const isValidCity = Object.keys(websiteData.cities).includes(city);
+
+  if (!isValidCity) {
+    notFound();
+  }
+
+  const placeId =
+    websiteData.cities[city as keyof typeof websiteData.cities].googleMapData
+      .placeId;
+  const googleReviewUrl = `https://search.google.com/local/writereview?placeid=${placeId}`;
 
   return (
     <Box
@@ -67,7 +89,7 @@ const ReviewPage = () => {
             </Typography>
             <Box display="flex" flexDirection="column" gap={2}>
               <a
-                href="https://search.google.com/local/writereview?placeid=xxx"
+                href={googleReviewUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{ textDecoration: "none" }}

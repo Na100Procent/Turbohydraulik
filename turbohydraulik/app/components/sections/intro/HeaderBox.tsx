@@ -8,20 +8,18 @@ interface Props {
   hero_text: string;
 }
 
-const fontSize = {
-  xl: "60px",
-  lg: "60px",
-  md: "50px",
-  sm: "50px",
-  xs: "40px",
-  xxs: "35px",
-};
-
 const headerSx = {
   fontWeight: "600",
   fontFamily: "UniteaSans",
-  lineHeight: fontSize,
-  fontSize: fontSize,
+  lineHeight: 1,
+  fontSize: {
+    xl: "60px",
+    lg: "60px",
+    md: "50px",
+    sm: "50px",
+    xs: "40px",
+    xxs: "35px",
+  },
   display: "flex",
   justifyContent: "center",
   alignItems: "start",
@@ -30,7 +28,6 @@ const headerSx = {
 const subHeaderSX = {
   color: theme.palette.custom.background,
   fontWeight: 500,
-  fontFamily: "UniteaSans",
   letterSpacing: "1px",
   mt: "10px",
   mb: "20px",
@@ -54,7 +51,7 @@ const HeaderBox = ({ hero_h1, hero_h2, hero_text }: Props) => {
       <Typography sx={subHeaderSX} variant="h2" fontSize={"30px"}>
         {hero_h2}
       </Typography>
-      <p style={subHeaderSX}>{hero_text}</p>
+      <Typography sx={subHeaderSX}>{hero_text}</Typography>
     </>
   );
 };
