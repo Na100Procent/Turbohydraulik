@@ -31,7 +31,7 @@ const OpenHours = ({ cityName }: Props) => {
         mb="30px"
         fontSize="20px"
         color={theme.palette.custom.background}
-        sx={{ fontFamily: "UniteaSans" }}
+        sx={{}}
       >
         Godziny otwarcia Turbo Hydraulik {cityName}
       </Typography>

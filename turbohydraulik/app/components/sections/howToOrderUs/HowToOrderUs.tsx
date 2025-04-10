@@ -22,12 +22,7 @@ const HowToOrderUs = ({ content, phoneNumber }: Props) => {
     <BackgroundWrapper bgColor={theme.palette.custom.background}>
       <SectionIdentifier sectionId={sectionIds.orderUs} />
       <SectionPaddingWrapper>
-        <Box
-          display="flex"
-          flexDirection="column"
-          gap="60px"
-          sx={{ fontFamily: "UniteaSans" }}
-        >
+        <Box display="flex" flexDirection="column" gap="60px" sx={{}}>
           <SectionCenterHeader
             header={steps_h2}
             bottomHeader="Aby zamówić usługę hydrauliczną, skontaktuj się z nami telefonicznie lub za pomocą formularza kontaktowego na naszej stronie internetowej."

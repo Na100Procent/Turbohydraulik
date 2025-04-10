@@ -26,7 +26,7 @@ const bottomHeaderSx = {
   mb: "40px",
   color: "#565656",
   marginTop: "20px",
-  fontFamily: "UniteaSans",
+
   textAlign: "center",
 };
 

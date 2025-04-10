@@ -13,7 +13,7 @@ const ErrorMessage: React.FC<ErrorMessageProps> = ({ message }) => {
         width: "100%",
         textAlign: "center",
         marginTop: "150px",
-        fontFamily: "UniteaSans",
+
         fontSize: "20px",
         fontWeight: "600",
       }}

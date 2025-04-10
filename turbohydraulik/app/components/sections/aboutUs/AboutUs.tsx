@@ -95,7 +95,7 @@ const AboutUs = ({ content, bgColor, phoneNumber }: Props) => {
                 sx={{
                   fontWeight: "600",
                   fontSize: "30px",
-                  fontFamily: "UniteaSans",
+
                   color: theme.palette.primary.main,
                 }}
               >
@@ -104,7 +104,7 @@ const AboutUs = ({ content, bgColor, phoneNumber }: Props) => {
               <Typography
                 sx={{
                   color: theme.palette.custom.darkGray,
-                  fontFamily: "UniteaSans",
+
                   fontWeight: "500",
                 }}
               >

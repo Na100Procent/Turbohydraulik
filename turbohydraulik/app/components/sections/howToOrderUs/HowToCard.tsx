@@ -41,7 +41,6 @@ const HowToCard: React.FC<HowToCardProps> = ({
         <Typography
           variant="h3"
           sx={{
-            fontFamily: "UniteaSans",
             fontWeight: "bold",
             mb: "10px",
             fontSize: "20px",
@@ -51,7 +50,6 @@ const HowToCard: React.FC<HowToCardProps> = ({
         </Typography>
         <Typography
           sx={{
-            fontFamily: "UniteaSans",
             maxWidth: "300px",
             fontWeight: "500",
           }}

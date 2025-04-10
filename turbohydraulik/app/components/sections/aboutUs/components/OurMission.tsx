@@ -16,16 +16,10 @@ const container = {
 const OurMission = ({ aboutUs_h3_2, aboutUs_text_2 }: Props) => {
   return (
     <Box sx={container}>
-      <Typography
-        variant="h3"
-        sx={{ fontWeight: "600", fontSize: "30px", fontFamily: "UniteaSans" }}
-      >
+      <Typography variant="h3" sx={{ fontWeight: "600", fontSize: "30px" }}>
         {aboutUs_h3_2}
       </Typography>
-      <Typography
-        mt="15px"
-        sx={{ fontFamily: "UniteaSans", fontWeight: "500" }}
-      >
+      <Typography mt="15px" sx={{ fontWeight: "500" }}>
         {aboutUs_text_2}
       </Typography>
     </Box>

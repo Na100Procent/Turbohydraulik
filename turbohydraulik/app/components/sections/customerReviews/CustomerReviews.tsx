@@ -50,11 +50,7 @@ const CustomerReviews = ({ content, phoneNumber, citySlug }: Props) => {
             position="relative"
           >
             <SectionHeader headerColor={mainColor} header={testimonials_h2} />
-            <Typography
-              mt="30px"
-              color={mainColor}
-              sx={{ fontFamily: "UniteaSans", fontWeight: "500" }}
-            >
+            <Typography mt="30px" color={mainColor} sx={{ fontWeight: "500" }}>
               {testimonials_text_1}
             </Typography>
           </Box>

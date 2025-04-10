@@ -41,7 +41,7 @@ const textSx = {
   fontSize: "25px",
   color: theme.palette.secondary.main,
   marginTop: "20px",
-  fontFamily: "UniteaSans",
+
   textAlign: {
     xl: "center",
     lg: "center",

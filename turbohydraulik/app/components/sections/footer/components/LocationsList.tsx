@@ -35,7 +35,6 @@ const containerSx = {
 };
 
 const itemTitle = {
-  fontFamily: "UniteaSans",
   fontWeight: 500,
   fontSize: "18px",
   maxWidth: "300px",
@@ -50,12 +49,7 @@ const TitledVerticalList = ({
   return (
     <Box sx={{ ...containerSx, ...addSx }}>
       {locsTitle && (
-        <Typography
-          fontWeight="600"
-          mb="30px"
-          fontSize="20px"
-          sx={{ fontFamily: "UniteaSans" }}
-        >
+        <Typography fontWeight="600" mb="30px" fontSize="20px" sx={{}}>
           {locsTitle}
         </Typography>
       )}

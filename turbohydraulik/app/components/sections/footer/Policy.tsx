@@ -40,7 +40,7 @@ const textSx = {
   padding: "20px",
   fontSize: "12px",
   fontWeight: "600",
-  fontFamily: "UniteaSans",
+
   textAlign: "center",
   borderRadius: "15px",
 };

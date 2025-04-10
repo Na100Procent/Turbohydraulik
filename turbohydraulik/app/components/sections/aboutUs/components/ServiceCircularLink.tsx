@@ -32,7 +32,6 @@ export default function ServiceCircularLink() {
             href="#circlePath"
             startOffset="0%"
             style={{
-              fontFamily: "UniteaSans",
               fontWeight: 600,
               fill: theme.palette.primary.main,
             }}

@@ -12,7 +12,7 @@ interface Props {
 
 const descriptionSx = {
   fontSize: "15px",
-  fontFamily: "UniteaSans",
+
   fontWeight: "500",
   opacity: 0.8,
 };
@@ -53,7 +53,7 @@ const ProjectElement = ({ bgImage, title, description }: Props) => {
           sx={{
             fontWeight: "600",
             fontSize: "30px",
-            fontFamily: "UniteaSans",
+
             textAlign: "left",
           }}
         >
@@ -70,7 +70,6 @@ const ProjectElement = ({ bgImage, title, description }: Props) => {
               textTransform: "uppercase",
               fontWeight: "600",
               fontSize: "12px",
-              fontFamily: "UniteaSans",
             }}
           >
             Dowiedz się więcej

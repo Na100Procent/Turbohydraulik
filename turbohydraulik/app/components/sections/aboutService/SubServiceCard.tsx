@@ -49,7 +49,7 @@ const titleSx = {
 };
 const descriptionSx = {
   color: theme.palette.custom.darkGray,
-  fontFamily: "UniteaSans",
+
   fontWeight: 500,
   opacity: 0.8,
   mt: "5px",

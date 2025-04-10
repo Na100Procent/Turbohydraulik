@@ -21,7 +21,7 @@ const SectionHeader = ({ header, headerColor }: Props) => {
     fontWeight: "700",
     zIndex: 10,
     lineHeight: fontSize,
-    fontFamily: "UniteaSans",
+
     fontSize: fontSize,
     maxWidth: "700px",
     color: headerColor,

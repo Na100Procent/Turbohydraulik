@@ -46,7 +46,6 @@ const imgSx = {
   maxWidth: "700px",
   width: "100%",
   height: "100%",
-
   borderRadius: "15px",
   overflow: "hidden",
 };
@@ -55,7 +54,6 @@ const header3Sx = {
   fontWeight: "700",
   zIndex: 10,
   lineHeight: "30px",
-  fontFamily: "UniteaSans",
   fontSize: "30px",
   maxWidth: "700px",
   color: theme.palette.primary.main,
@@ -94,7 +92,7 @@ const AboutCity = ({ content, bgColor, phoneNumber }: Props) => {
               <Typography
                 sx={{
                   color: theme.palette.custom.darkGray,
-                  fontFamily: "UniteaSans",
+
                   fontWeight: "500",
                 }}
               >
@@ -106,7 +104,7 @@ const AboutCity = ({ content, bgColor, phoneNumber }: Props) => {
               <Typography
                 sx={{
                   color: theme.palette.custom.darkGray,
-                  fontFamily: "UniteaSans",
+
                   fontWeight: "500",
                   selfAlign: "top",
                 }}

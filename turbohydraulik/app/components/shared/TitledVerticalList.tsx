@@ -36,7 +36,6 @@ const containerSx = {
 };
 
 const itemTitle = {
-  fontFamily: "UniteaSans",
   fontWeight: 500,
   fontSize: "18px",
   maxWidth: "300px",
@@ -45,12 +44,7 @@ const itemTitle = {
 const TitledVerticalList = ({ title, list, separator, addSx }: Props) => {
   return (
     <Box sx={{ ...containerSx, ...addSx }}>
-      <Typography
-        fontWeight="600"
-        mb="30px"
-        fontSize={"20px"}
-        sx={{ fontFamily: "UniteaSans" }}
-      >
+      <Typography fontWeight="600" mb="30px" fontSize={"20px"} sx={{}}>
         {title}
       </Typography>
 

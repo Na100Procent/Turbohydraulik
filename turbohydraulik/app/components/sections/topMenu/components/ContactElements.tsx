@@ -57,7 +57,7 @@ const elementsContainer = {
 
 const contactTitleSx = {
   color: theme.palette.custom.background,
-  fontFamily: "UniteaSans",
+
   fontWeight: 500,
   minWidth: "100px",
   fontSize: {
