@@ -41,7 +41,7 @@ const theme = createTheme({
     },
   },
   typography: {
-    fontFamily: "Inter, sans-serif",
+    fontFamily: "Inter",
   },
   components: {
     MuiButton: {
@@ -60,7 +60,7 @@ const theme = createTheme({
           cursor: "inherit",
           textTransform: "none",
           userSelect: "none",
-          fontFamily: "Inter, sans-serif",
+          fontFamily: "Inter",
         },
       },
     },

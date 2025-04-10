@@ -112,7 +112,6 @@ const ServiceForm = ({ actionButtonTitle }: Props) => {
       )}
       <Typography
         width="100%"
-        fontFamily={"UniteaSans"}
         fontSize={"14px"}
         color={theme.palette.custom.blueLight}
       >

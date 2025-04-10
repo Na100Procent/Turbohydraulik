@@ -19,8 +19,7 @@ const SubHeaders = ({ testimonials_h3, testimonials_text_2 }: Props) => {
       <Typography
         variant="h3"
         color={theme.palette.primary.main}
-        fontWeight="700"
-        fontFamily="UniteaSans"
+        fontWeight="900"
         fontSize="35px"
       >
         {testimonials_h3}
@@ -28,10 +27,8 @@ const SubHeaders = ({ testimonials_h3, testimonials_text_2 }: Props) => {
       <Typography
         mt="20px"
         color={theme.palette.custom.darkGray}
-        fontFamily="UniteaSans"
         fontSize="18px"
-        fontWeight="500"
-        sx={{ opacity: 0.8 }}
+        fontWeight="400"
       >
         {testimonials_text_2}
       </Typography>

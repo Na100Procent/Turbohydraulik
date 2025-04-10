@@ -26,7 +26,25 @@ const BackgroundWrapper = ({
       xs: bgColor,
       xxs: bgColor,
     },
-    backgroundPosition: "10% 20%",
+
+    backgroundImage: {
+      xl: bgImage ? `url(${bgImage})` : undefined,
+      lg: bgImage ? `url(${bgImage})` : undefined,
+      md: bgImage ? `url(${bgImage})` : undefined,
+      sm: bgImage ? `url(${bgImage})` : undefined,
+      xs: "none",
+      xxs: "none",
+    },
+    backgroundRepeat: "no-repeat",
+    backgroundSize: "cover",
+    backgroundPosition: {
+      xl: "center",
+      lg: "center",
+      md: "center",
+      sm: "center",
+      xs: "unset",
+      xxs: "unset",
+    },
     position: "relative",
     padding: {
       xl: "50px 50px",

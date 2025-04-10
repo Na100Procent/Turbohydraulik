@@ -1,5 +1,4 @@
 "use client";
-
 import React from "react";
 import { Box, Typography } from "@mui/material";
 import theme from "@/app/theme/theme";
@@ -17,17 +16,30 @@ interface Props {
     cardDescription: string;
   };
 }
+const imgSx = {
+  width: "100%",
+  height: "auto",
+  maxHeight: {
+    xl: "200px",
+    lg: "200px",
+    md: "200px",
+    sm: "180px",
+    xs: "150px",
+    xxs: "150px",
+  },
+  objectFit: "cover",
+};
 
 const container = {
-  width: {
+  width: "100%",
+  maxWidth: {
     xl: "400px",
     lg: "400px",
     md: "400px",
-    sm: "400px",
+    sm: "310px",
     xs: "310px",
     xxs: "310px",
   },
-
   height: "100%",
   borderRadius: "12px",
   overflow: "hidden",
@@ -42,19 +54,6 @@ const container = {
     cursor: "pointer",
     backgroundColor: "rgba(243, 239, 239, 0.9)",
   },
-};
-
-const imgSx = {
-  height: "100%",
-  maxHeight: {
-    xl: "200px",
-    lg: "200px",
-    md: "200px",
-    sm: "200px",
-    xs: "200px",
-    xxs: "200px",
-  },
-  objectFit: "cover",
 };
 
 const titleSx = {

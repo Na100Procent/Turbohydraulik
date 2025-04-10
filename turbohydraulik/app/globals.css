@@ -1,57 +1,9 @@
-/* @font-face {
-  font-family: "UniteaSans";
-  src: url("/fonts/UniteaSans-Regular.otf") format("opentype");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "UniteaSans";
-  src: url("/fonts/UniteaSans-Medium.otf") format("opentype");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "UniteaSans";
-  src: url("/fonts/UniteaSans-SemiBold.otf") format("opentype");
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "UniteaSans";
-  src: url("/fonts/UniteaSans-Bold.otf") format("opentype");
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "UniteaSans";
-  src: url("/fonts/UniteaSans-ExtraBold.otf") format("opentype");
-  font-weight: 800;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "UniteaSans";
-  src: url("/fonts/UniteaSans-Black.otf") format("opentype");
-  font-weight: 900;
-  font-style: normal;
-  font-display: swap;
-} */
-
 html,
 body,
 #root {
   margin: 0;
   padding: 0;
   background: #f9fafb;
-
   box-sizing: border-box;
   height: 100% !important;
   width: 100%;

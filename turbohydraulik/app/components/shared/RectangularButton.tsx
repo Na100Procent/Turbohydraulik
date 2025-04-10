@@ -42,7 +42,7 @@ const RectangularButton = ({
   };
   const titleSx = {
     color: titleColor ? titleColor : theme.palette.primary.main,
-    fontWeight: "900",
+    fontWeight: 900,
     fontSize: {
       xl: "16px",
       lg: "15px",
