@@ -39,7 +39,7 @@ const Footer = ({ phoneNumber, postalCode, street, cityData }: Props) => {
       },
       {
         threshold: 0.1,
-        rootMargin: "0px 0px -100px 0px",
+        rootMargin: "0px 0px 0px 0px",
       }
     );
 

@@ -5,7 +5,7 @@ import { TopMenuLogo } from "@/public/assets/icons/icons";
 import Image from "next/image";
 import theme from "@/app/theme/theme";
 import BackgroundWrapper from "@/app/components/shared/BackgroundWrapper";
-import { homePagePath } from "@/app/constants/appConstants";
+import { homePagePath, reviewFormPath } from "@/app/constants/appConstants";
 import { aboutUsUrl } from "@/app/constants/imagesUrls";
 import Footer from "@/app/components/sections/footer/Footer";
 
@@ -67,7 +67,7 @@ const ReviewPage = () => {
             </Typography>
             <Box display="flex" flexDirection="column" gap={2}>
               <a
-                href={`https://search.google.com/local/writereview?placeid=placeId`}
+                href={`https://g.page/r/CUq3ws85F_8REBM/review`}
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{ textDecoration: "none" }}
@@ -84,7 +84,7 @@ const ReviewPage = () => {
                   TAK JESTEM ZADOWOLONY/A
                 </Button>
               </a>
-              <Link href={homePagePath}>
+              <Link href={reviewFormPath}>
                 <Button
                   variant="contained"
                   sx={{

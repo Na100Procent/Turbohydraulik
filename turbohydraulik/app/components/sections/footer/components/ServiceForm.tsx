@@ -6,26 +6,21 @@ import useFormMessage from "../hooks/useFormMessageHook";
 
 interface Props {
   actionButtonTitle?: string;
+  customTitle?: string;
+  includeBg?: boolean;
 }
-const container = {
-  display: "flex",
-  flexDirection: "column",
-  gap: "10px",
-  width: "100%",
-  maxWidth: "400px",
-};
-
+const themeCustom = theme.palette.custom;
 const headerSx = {
   fontWeight: "600",
   fontSize: "17px",
-  color: theme.palette.custom.background,
+  color: themeCustom.background,
 
   mb: "10px",
 };
 
 const inputSx = {
-  background: theme.palette.custom.background,
-  color: theme.palette.custom.darkBlue,
+  background: themeCustom.background,
+  color: themeCustom.darkBlue,
   borderRadius: "5px",
   fontSize: "14px",
   padding: "10px 20px",
@@ -42,7 +37,7 @@ const problemInputSx = {
   alignItems: "flex-start",
 };
 
-const ServiceForm = ({ actionButtonTitle }: Props) => {
+const ServiceForm = ({ actionButtonTitle, customTitle, includeBg }: Props) => {
   const {
     phone,
     setPhone,
@@ -54,11 +49,22 @@ const ServiceForm = ({ actionButtonTitle }: Props) => {
     handleSubmit,
   } = useFormMessage();
 
+  const container = {
+    display: "flex",
+    flexDirection: "column",
+    gap: "10px",
+    width: "100%",
+    maxWidth: "400px",
+    padding: includeBg ? "30px 20px" : 0,
+    borderRadius: "10px",
+    background: includeBg ? theme.palette.primary.main : "transparent",
+  };
+
   const buttonDisabled = loading || !phone || !problem;
   return (
     <Box sx={container}>
       <Typography variant="h3" sx={headerSx}>
-        ZAMÓW USŁUGĘ HYDRAULICZNĄ
+        {customTitle ? customTitle : "ZAMÓW USŁUGĘ HYDRAULICZNĄ"}
       </Typography>
       <Input
         disableUnderline
@@ -88,9 +94,7 @@ const ServiceForm = ({ actionButtonTitle }: Props) => {
             : "Zamawiam usługę"
         }
         bgColor={
-          buttonDisabled
-            ? theme.palette.custom.lightGray
-            : theme.palette.secondary.main
+          buttonDisabled ? themeCustom.lightGray : theme.palette.secondary.main
         }
         onClick={handleSubmit}
         disabled={buttonDisabled}
@@ -102,7 +106,7 @@ const ServiceForm = ({ actionButtonTitle }: Props) => {
       )}
       {success && (
         <Typography
-          color={theme.palette.custom.positiveGreen}
+          color={themeCustom.positiveGreen}
           fontSize="16px"
           fontWeight="bold"
           textAlign="center"
@@ -110,17 +114,13 @@ const ServiceForm = ({ actionButtonTitle }: Props) => {
           Wiadomość została wysłana!
         </Typography>
       )}
-      <Typography
-        width="100%"
-        fontSize={"14px"}
-        color={theme.palette.custom.blueLight}
-      >
+      <Typography width="100%" fontSize={"14px"} color={themeCustom.blueLight}>
         Przesłanie formularza oznacza&nbsp;
         <Typography
           fontSize={"13px"}
           component="span"
           fontWeight="bold"
-          color={theme.palette.custom.background}
+          color={themeCustom.background}
         >
           Akceptację Regulaminu i Polityki Prywatności
         </Typography>
