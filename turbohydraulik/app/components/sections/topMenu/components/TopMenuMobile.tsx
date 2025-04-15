@@ -1,12 +1,10 @@
 "use client";
 import React, { useState } from "react";
-import { TopMenuLogo } from "@/public/assets/icons/icons";
-import Link from "next/link";
-import { homePagePath } from "@/app/constants/appConstants";
 import { Box, IconButton } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import theme from "@/app/theme/theme";
 import SideMenu from "./sideMenu/SideMenu";
+import LogoContainer from "@/app/components/shared/LogoContainer";
 
 const containerSx = {
   display: "flex",
@@ -23,11 +21,10 @@ const TopMenuMobile = () => {
 
   return (
     <Box sx={containerSx}>
-      <Link href={homePagePath} aria-label="strona home page">
-        <Box sx={{ scale: 0.6 }}>
-          <TopMenuLogo />
-        </Box>
-      </Link>
+      <Box sx={{ scale: 0.6 }}>
+        <LogoContainer />
+      </Box>
+
       <IconButton
         aria-label="menu"
         sx={{ mr: "20px", color: theme.palette.primary.main }}

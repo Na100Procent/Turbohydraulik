@@ -10,6 +10,7 @@ import LocationsList from "../footer/components/LocationsList";
 import { LinkElement } from "../../shared/TitledVerticalList";
 import { sectionXPadding } from "@/app/constants/styles";
 import { citiesData, homepageDataContent } from "@/app/data/data";
+import LazyReveal from "./LazyReveal";
 
 const LocationsListSx = {
   width: "100%",
@@ -37,17 +38,17 @@ const OurCities = () => {
         <SectionPaddingWrapper>
           <SectionCenterHeader header={homepageDataContent.locations_h2} />
         </SectionPaddingWrapper>
-        <ScrollCityList />
-        <div>
+        <LazyReveal>
+          <ScrollCityList />
           <CallUsButton />
-        </div>
-        <Box sx={LocationsListSx}>
-          <LocationsList
-            locsTitle="JESTEŚMY W MIASTACH"
-            addSx={{ color: theme.palette.primary.main }}
-            locationsList={cityNamesUrls}
-          />
-        </Box>
+          <Box sx={LocationsListSx}>
+            <LocationsList
+              locsTitle="JESTEŚMY W MIASTACH"
+              addSx={{ color: theme.palette.primary.main }}
+              locationsList={cityNamesUrls}
+            />
+          </Box>
+        </LazyReveal>
       </Box>
     </BackgroundWrapper>
   );

@@ -2,13 +2,12 @@
 import { Box, Typography } from "@mui/material";
 import theme from "@/app/theme/theme";
 import Link from "next/link";
-import { TopMenuLogo } from "@/public/assets/icons/icons";
-
 import { useRouter } from "next/navigation";
 import BackgroundWrapper from "@/app/components/shared/BackgroundWrapper";
 import { homePagePath } from "@/app/constants/appConstants";
 import RectangularButton from "@/app/components/shared/RectangularButton";
 import Footer from "@/app/components/sections/footer/Footer";
+import LogoContainer from "@/app/components/shared/LogoContainer";
 
 const contentSx = {
   position: "fixed",
@@ -46,7 +45,7 @@ const NotFoundPage = () => {
         <Box sx={contentSx}>
           <Box sx={logoButtonSx}>
             <Link href={homePagePath} aria-label="strona home page">
-              <TopMenuLogo />
+              <LogoContainer notNavigateHome />
             </Link>
           </Box>
         </Box>

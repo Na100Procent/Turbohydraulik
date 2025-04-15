@@ -1,10 +1,10 @@
-import { TopMenuLogo } from "@/public/assets/icons/icons";
 import { Box } from "@mui/material";
 import React from "react";
 import TopMenuButtons from "../../TopMenuButtons";
 import ContactUsButton from "@/app/components/shared/ContactUsButton";
 import SocialMediasSeparator from "../../../footer/components/SocialMediasSeparator";
 import theme from "@/app/theme/theme";
+import LogoContainer from "@/app/components/shared/LogoContainer";
 
 interface Props {
   handleDrawerToggle: () => void;
@@ -28,7 +28,7 @@ const buttonsSx = {
 const SideMenuContent = ({ handleDrawerToggle }: Props) => {
   return (
     <Box sx={container}>
-      <TopMenuLogo />
+      <LogoContainer />
       <TopMenuButtons
         isVertical
         addSx={buttonsSx}

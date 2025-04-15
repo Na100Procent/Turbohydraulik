@@ -1,6 +1,6 @@
 "use client";
 import React, { useRef, JSX } from "react";
-import { Box, IconButton } from "@mui/material";
+import { Box, IconButton, useMediaQuery } from "@mui/material";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import theme from "@/app/theme/theme";
@@ -10,94 +10,80 @@ interface HorizontalScrollListProps {
 }
 
 const container = {
-  position: "relative",
   width: "100%",
-  overflowX: "hidden",
+  overflow: "hidden",
   padding: "0 0 100px 0",
-  overflowY: "hidden",
 };
 
 const HorizontalScrollList: React.FC<HorizontalScrollListProps> = ({
   mappedItems,
 }) => {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
-  const showArrows = mappedItems.length > 1;
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+
   const scrollLeft = () => {
-    if (scrollContainerRef.current) {
-      scrollContainerRef.current.scrollBy({
-        left: -250,
-        behavior: "smooth",
-      });
-    }
+    scrollContainerRef.current?.scrollBy({ left: -250, behavior: "smooth" });
   };
 
   const scrollRight = () => {
-    if (scrollContainerRef.current) {
-      scrollContainerRef.current.scrollBy({
-        left: 250,
-        behavior: "smooth",
-      });
-    }
-  };
-
-  const arrowSx = {
-    color: theme.palette.secondary.main,
-    position: "absolute",
-    transform: "translateY(-50%)",
-    zIndex: 1,
-    bottom: "20px",
-    padding: "0px 60px",
-    "&:hover": {
-      cursor: "pointer",
-      background: "transparent",
-    },
-    transition: "background 0.3s ease-in-out",
-    display: showArrows ? "block" : "none",
+    scrollContainerRef.current?.scrollBy({ left: 250, behavior: "smooth" });
   };
 
   return (
     <Box sx={container}>
       <Box
+        ref={scrollContainerRef}
         sx={{
           display: "flex",
           gap: "20px",
           overflowX: "auto",
-          padding: "0 0 100px 0",
+          overflowY: "hidden",
           scrollBehavior: "smooth",
+          paddingBottom: "20px",
+          WebkitOverflowScrolling: "touch",
           scrollbarWidth: "none",
           msOverflowStyle: "none",
-          WebkitOverflowScrolling: "touch",
+          touchAction: isMobile ? "pan-x" : "auto",
+          "&::-webkit-scrollbar": {
+            display: "none",
+          },
         }}
-        ref={scrollContainerRef}
       >
         {mappedItems}
       </Box>
 
-      <IconButton
-        onClick={scrollLeft}
-        sx={{
-          ...arrowSx,
-          left: "10px",
-          position: "absolute",
-          top: "70%",
-          transform: "translateY(-50%)",
-        }}
-      >
-        <ArrowBackIosIcon />
-      </IconButton>
-
-      <IconButton
-        onClick={scrollRight}
-        sx={{
-          ...arrowSx,
-          right: "10px",
-          position: "absolute",
-          top: "70%",
-          transform: "translateY(-50%)",
-        }}
-      >
-        <ArrowForwardIosIcon />
-      </IconButton>
+      {!isMobile && (
+        <>
+          <IconButton
+            aria-label="scroll left"
+            onClick={scrollLeft}
+            sx={{
+              position: "absolute",
+              left: "10px",
+              top: "55%",
+              transform: "translateY(-50%)",
+              zIndex: 1,
+              color: theme.palette.secondary.main,
+            }}
+          >
+            <ArrowBackIosIcon />
+          </IconButton>
+          <IconButton
+            aria-label="scroll right"
+            onClick={scrollRight}
+            sx={{
+              position: "absolute",
+              right: "10px",
+              top: "55%",
+              transform: "translateY(-50%)",
+              zIndex: 1,
+              color: theme.palette.secondary.main,
+            }}
+          >
+            <ArrowForwardIosIcon />
+          </IconButton>
+        </>
+      )}
     </Box>
   );
 };

@@ -92,7 +92,7 @@ const Policy: React.FC = () => {
           <Typography sx={{ ...textSx, ...linkSx }}>Regulamin</Typography>
         </Link>
         <Box sx={verticalDivider} />
-        <Box onClick={handlePhoneClick}>
+        <Box onClick={handlePhoneClick} aria-label="telefon kontaktowy">
           <Typography sx={{ ...textSx, ...linkSx }}>Kontakt</Typography>
         </Box>
       </Box>

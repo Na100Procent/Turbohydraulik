@@ -1,7 +1,6 @@
 import { Suspense } from "react";
 import { Box } from "@mui/material";
 import IntroSection from "./components/sections/intro/IntroSection";
-import OurCities from "./components/sections/ourCities/OurCities";
 import { sectionIds } from "./constants/appConstants";
 import theme from "./theme/theme";
 import dynamic from "next/dynamic";
@@ -25,6 +24,10 @@ const Footer = dynamic(() => import("./components/sections/footer/Footer"));
 
 const AboutUs = dynamic(() => import("./components/sections/aboutUs/AboutUs"));
 
+const OurCities = dynamic(
+  () => import("./components/sections/ourCities/OurCities")
+);
+
 export const metadata = {
   title: homepageDataContent.meta_title,
   description: homepageDataContent.meta_description,
@@ -46,7 +49,9 @@ export default function Home() {
       <Box sx={containerSx} id={sectionIds.home}>
         <TopMenu />
         <IntroSection />
-        <OurCities />
+        <Suspense fallback={<div>Ładowanie...</div>}>
+          <OurCities />
+        </Suspense>
         <Suspense fallback={<div>Ładowanie...</div>}>
           <AboutUs />
         </Suspense>
