@@ -4,11 +4,11 @@ import TitledVerticalList, {
 import { Box } from "@mui/material";
 import React from "react";
 import ServiceForm from "./ServiceForm";
-import { websiteData } from "@/app/data/data";
 import { sectionXPadding } from "@/app/constants/styles";
 import OpenHours from "./OpenHours";
 import { CityData } from "@/app/data/types/dataTypes";
 import { getServicesOfCity } from "@/app/components/shared/helpers/getServicesOfCity";
+import { citiesData } from "@/app/data/data";
 interface Props {
   cityData?: CityData;
 }
@@ -66,7 +66,7 @@ const LinksAndServices = ({ cityData }: Props) => {
     url: cityData ? `/${cityData.slug}/${service.slug}` : `/${service.slug}`,
   }));
 
-  const locations = cityData ? cityData.districts : websiteData.cities;
+  const locations = cityData ? cityData.districts : citiesData;
 
   const locationsNamesUrls: LinkElement[] = Object.values(locations).map(
     (city) => ({

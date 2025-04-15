@@ -9,9 +9,9 @@ import CallUsButton from "../../shared/CallUsButton";
 import { CityData } from "@/app/data/types/dataTypes";
 import SectionCenterHeader from "../../shared/SectionCenterHeader";
 import { OurServiceContent } from "@/app/data/types/sectionTypes";
-import { websiteData } from "@/app/data/data";
 import { sectionIds } from "@/app/constants/appConstants";
 import SectionIdentifier from "../../shared/SectionIdentifier";
+import { homepageDataContent } from "@/app/data/data";
 
 interface Props {
   city?: CityData;
@@ -61,7 +61,7 @@ const OurServices = ({
   bottomHeaderColor,
   phoneNumber,
 }: Props) => {
-  const serviceContent = content ? content : websiteData.homepageContent;
+  const serviceContent = content ? content : homepageDataContent;
   const { service_h2, service_h3, service_text } = serviceContent;
   return (
     <BackgroundWrapper bgColor={bgColor ? bgColor : theme.palette.primary.main}>

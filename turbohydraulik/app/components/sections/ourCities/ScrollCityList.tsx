@@ -1,11 +1,11 @@
 import React from "react";
 import HorizontalScrollList from "../../shared/HorizontalScrollList";
-import websiteData from "../../../data/toBeData.json";
 import CityCard from "./CityCard";
 import { Box } from "@mui/material";
+import { citiesData } from "@/app/data/data";
 
 const ScrollCityList = () => {
-  const cityNamesUrls = Object.values(websiteData.cities).map((city) => ({
+  const cityNamesUrls = Object.values(citiesData).map((city) => ({
     title: city.name,
     url: `/${city.slug}`,
     cityCardUrl: city.cityCardUrl,

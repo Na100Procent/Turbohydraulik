@@ -7,14 +7,14 @@ import CompanyInNumbers from "./CompanyInNumbers";
 import CallUsButton from "../../shared/CallUsButton";
 import { Box } from "@mui/material";
 import { InNumbersContent } from "@/app/data/types/sectionTypes";
-import { websiteData } from "@/app/data/data";
+import { homepageDataContent } from "@/app/data/data";
 
 interface Props {
   phoneNumber?: string;
   content?: InNumbersContent;
 }
 const InNumbers = ({ content, phoneNumber }: Props) => {
-  const inNumbersContent = content ? content : websiteData.homepageContent;
+  const inNumbersContent = content ? content : homepageDataContent;
   const { aboutUsNumbers_h2, aboutUsNumbers_text } = inNumbersContent;
   return (
     <BackgroundWrapper bgColor={theme.palette.primary.main}>

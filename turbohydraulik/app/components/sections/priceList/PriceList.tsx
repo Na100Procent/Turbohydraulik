@@ -5,8 +5,8 @@ import BackgroundWrapper from "../../shared/BackgroundWrapper";
 import theme from "@/app/theme/theme";
 import CallUsButton from "../../shared/CallUsButton";
 import { PriceListContent } from "@/app/data/types/sectionTypes";
-import { websiteData } from "@/app/data/data";
 import { sectionXPadding } from "@/app/constants/styles";
+import { homepageDataContent } from "@/app/data/data";
 
 interface Props {
   items: { title: string; price: number }[];
@@ -31,7 +31,7 @@ const bottomHeaderSx = {
 };
 
 const PriceList = ({ items, content, phoneNumber }: Props) => {
-  const priceListContent = content ? content : websiteData.homepageContent;
+  const priceListContent = content ? content : homepageDataContent;
   const { priceList_h2, priceList_h3, priceList_text } = priceListContent;
 
   return (

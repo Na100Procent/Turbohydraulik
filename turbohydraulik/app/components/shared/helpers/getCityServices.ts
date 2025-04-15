@@ -1,8 +1,8 @@
-import websiteData from "../../../data/toBeData.json";
+import { servicesData } from "@/app/data/data";
 import { ServiceData } from "@/app/data/types/dataTypes";
 
 const getCityServices = (cityServices: string[]) => {
-  const services: ServiceData[] = Object.values(websiteData.services);
+  const services: ServiceData[] = Object.values(servicesData);
 
   const servicesPriceList = cityServices
     .map((serviceSlug: string) => {

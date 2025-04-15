@@ -3,7 +3,7 @@ import theme from "@/app/theme/theme";
 import { Box } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import { useSpring, animated } from "@react-spring/web";
-import { websiteData } from "@/app/data/data";
+import { servicesData } from "@/app/data/data";
 
 const styles = {
   background: theme.palette.secondary.main,
@@ -46,9 +46,8 @@ const HorizontalBanner = () => {
   const AnimatedBox = animated(Box);
 
   const positions = React.useMemo(() => {
-    return Object.keys(websiteData.services).map((key) => {
-      const service =
-        websiteData.services[key as keyof typeof websiteData.services];
+    return Object.keys(servicesData).map((key) => {
+      const service = servicesData[key as keyof typeof servicesData];
       return service.name;
     });
   }, []);

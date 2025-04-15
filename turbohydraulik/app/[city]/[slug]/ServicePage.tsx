@@ -16,7 +16,7 @@ import theme from "@/app/theme/theme";
 import ErrorMessage from "@/app/components/shared/ErrorMessage";
 import { getCityServiceDataContent } from "@/app/components/shared/helpers/getCityServiceDataContent";
 import AboutService from "@/app/components/sections/aboutService/AboutService";
-import { schemaData, websiteData } from "@/app/data/data";
+import { citiesData, schemaData } from "@/app/data/data";
 import dynamic from "next/dynamic";
 import { pageContainer } from "@/app/constants/styles";
 
@@ -62,8 +62,7 @@ export default function ServicePage({ serviceData, cityService, city }: Props) {
   } = getCityServiceDataContent(serviceData, cityService);
 
   const phoneNumber =
-    websiteData.cities[city.slug as keyof typeof websiteData.cities]?.content
-      .phone;
+    citiesData[city.slug as keyof typeof citiesData]?.content.phone;
 
   const schema = schemaData[city.slug as keyof typeof schemaData];
 
