@@ -55,7 +55,10 @@ const HorizontalBanner = () => {
 
   const separator = " * ";
 
-  const multiplePositions = [...positions, ...positions];
+  const multiplePositions = [
+    ...positions,
+    ...positions.slice(0, positions.length / 2),
+  ];
 
   useEffect(() => {
     setStart(true);

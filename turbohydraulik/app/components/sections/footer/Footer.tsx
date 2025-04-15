@@ -58,7 +58,6 @@ const Footer = ({ phoneNumber, postalCode, street, cityData }: Props) => {
       sx={{
         padding: "0",
         mt: "100px",
-        overflow: "hidden",
         position: "relative",
       }}
     >

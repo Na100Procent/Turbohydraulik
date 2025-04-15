@@ -16,12 +16,9 @@ interface Props {
 
 const containerSx = {
   padding: {
-    xl: "120px 0 0 0",
-    lg: "120px 0 0 0",
-    md: "120px 0 0 0",
-    sm: "100px 0 0 0",
     xs: "50px 0 0 0",
-    xxs: "50px 0 0 0",
+    sm: "100px 0 0 0",
+    md: "120px 0 0 0",
   },
 };
 

@@ -29,7 +29,7 @@ const container = {
   padding: sectionXPadding,
   gap: "20px",
   maxWidth: "100vw",
-  overflowX: "hidden",
+  overflow: "hidden",
 };
 
 const verticalDivider = {
