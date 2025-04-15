@@ -3,7 +3,6 @@ import "./globals.css";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v15-appRouter";
 import Head from "next/head";
 import NoscriptContent from "./components/shared/NoScriptContent";
-
 import { Inter } from "next/font/google";
 
 const inter = Inter({

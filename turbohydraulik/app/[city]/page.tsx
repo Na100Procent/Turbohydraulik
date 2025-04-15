@@ -6,7 +6,7 @@ import { PageProps } from "@/.next/types/app/[city]/page";
 import { CityData, ServiceData } from "../data/types/dataTypes";
 import { getServiceDataContent } from "../components/shared/helpers/getServiceDataContent";
 import { getCityDataContent } from "../components/shared/helpers/getCityDataContent";
-import { notFound } from "next/navigation";
+import NotFoundPage from "../not-found";
 
 export const generateStaticParams = async () => {
   const cities = Object.keys(websiteData.cities);
@@ -60,7 +60,7 @@ const CityOrServicePage: FC<PageProps> = async ({ params }) => {
   );
 
   if (!isValidCity && !isValidService) {
-    notFound();
+    return <NotFoundPage />;
   }
 
   const slug: CityData | ServiceData = slugIsCity

@@ -10,6 +10,7 @@ import {
 } from "@/app/data/types/dataTypes";
 import { getCityServiceDataContent } from "@/app/components/shared/helpers/getCityServiceDataContent";
 import { getDistrictDataContent } from "@/app/components/shared/helpers/getDistrictDataContent";
+import NotFoundPage from "./not-found";
 
 export const generateStaticParams = async () => {
   const cities = Object.keys(websiteData.cities);
@@ -93,6 +94,9 @@ const DynamicPage: FC<PageProps> = async ({ params }) => {
   const cityServiceContent =
     cityService?.citiesContent[cityParam as keyof typeof websiteData.cities];
 
+  if (!cityService && !district) {
+    return <NotFoundPage />;
+  }
   return (
     <div>
       {cityService ? (
@@ -104,7 +108,7 @@ const DynamicPage: FC<PageProps> = async ({ params }) => {
       ) : district ? (
         <DistrictPage districtData={district} city={foundCity} />
       ) : (
-        <h2>Not Found</h2>
+        <p>Not Found</p>
       )}
     </div>
   );

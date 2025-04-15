@@ -3,11 +3,12 @@ import { Box, Typography } from "@mui/material";
 import theme from "@/app/theme/theme";
 import Link from "next/link";
 import { TopMenuLogo } from "@/public/assets/icons/icons";
+
 import { useRouter } from "next/navigation";
-import BackgroundWrapper from "../components/shared/BackgroundWrapper";
-import { homePagePath } from "../constants/appConstants";
-import RectangularButton from "../components/shared/RectangularButton";
-import Footer from "../components/sections/footer/Footer";
+import BackgroundWrapper from "@/app/components/shared/BackgroundWrapper";
+import { homePagePath } from "@/app/constants/appConstants";
+import RectangularButton from "@/app/components/shared/RectangularButton";
+import Footer from "@/app/components/sections/footer/Footer";
 
 const contentSx = {
   position: "fixed",

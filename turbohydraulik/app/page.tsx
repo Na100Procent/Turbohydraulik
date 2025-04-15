@@ -6,7 +6,6 @@ import AboutUs from "./components/sections/aboutUs/AboutUs";
 import { sectionIds } from "./constants/appConstants";
 import theme from "./theme/theme";
 import { websiteData } from "./data/data";
-
 import dynamic from "next/dynamic";
 import InNumbers from "./components/sections/inNumbers/InNumbers";
 import TopMenu from "./components/sections/topMenu/TopMenu";
