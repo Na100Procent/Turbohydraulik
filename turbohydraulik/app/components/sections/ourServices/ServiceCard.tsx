@@ -76,10 +76,10 @@ const descriptionSx = {
 
 const ServiceCard = ({ city, service }: Props) => {
   const pathname = usePathname();
-  const pathSegments = pathname.split("/").filter(Boolean);
+  const pathSegments = pathname?.split("/").filter(Boolean);
 
   let newPath = `/${service.slug}`;
-  if (pathSegments.length > 0 && city?.slug) {
+  if (pathSegments && pathSegments.length > 0 && city?.slug) {
     newPath = `/${city.slug}/${service.slug}`;
   }
 
