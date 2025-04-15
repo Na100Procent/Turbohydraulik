@@ -55,7 +55,12 @@ const Footer = ({ phoneNumber, postalCode, street, cityData }: Props) => {
   return (
     <BackgroundWrapper
       bgColor={theme.palette.primary.main}
-      sx={{ padding: "0", mt: "100px" }}
+      sx={{
+        padding: "0",
+        mt: "100px",
+        overflow: "hidden",
+        position: "relative",
+      }}
     >
       <SectionIdentifier sectionId={sectionIds.contact} />
       <Box ref={footerRef}>
@@ -66,6 +71,8 @@ const Footer = ({ phoneNumber, postalCode, street, cityData }: Props) => {
             flexDirection={"column"}
             gap="50px"
             position={"relative"}
+            maxWidth={"100%"}
+            justifyContent={"center"}
           >
             <ContactElements
               phoneNumber={phoneNumber}

@@ -45,7 +45,7 @@ const NotFoundPage = () => {
           <Typography variant="h2" color="error" fontWeight="500">
             404
           </Typography>
-          <Typography variant="h3" mt={2}>
+          <Typography variant="h3" mt={2} textAlign="center">
             Strona nie została znaleziona.
           </Typography>
           <RectangularButton
@@ -55,7 +55,6 @@ const NotFoundPage = () => {
           />
         </Box>
       </BackgroundWrapper>
-
       <Footer />
     </Box>
   );

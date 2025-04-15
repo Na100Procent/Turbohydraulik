@@ -39,6 +39,7 @@ const itemTitle = {
   fontWeight: 500,
   fontSize: "18px",
   maxWidth: "300px",
+  color: "#FFFFFF",
 };
 
 const TitledVerticalList = ({ title, list, separator, addSx }: Props) => {
@@ -53,9 +54,12 @@ const TitledVerticalList = ({ title, list, separator, addSx }: Props) => {
           href={item.url}
           key={item.title + index}
           aria-label={`nawiguj do ${item.title} `}
+          style={{ textDecoration: "none" }}
         >
           <Box sx={elementSx}>
-            <Typography> {separator ? separator : "> "}</Typography>
+            <Typography color="#ffffff" sx={{ textDecoration: "none" }}>
+              {separator ? separator : "> "}
+            </Typography>
             <Typography sx={itemTitle}>{item.title}</Typography>
           </Box>
         </Link>

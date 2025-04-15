@@ -28,6 +28,8 @@ const container = {
   color: theme.palette.custom.background,
   padding: sectionXPadding,
   gap: "20px",
+  maxWidth: "100vw",
+  overflowX: "hidden",
 };
 
 const verticalDivider = {
@@ -40,12 +42,12 @@ const textSx = {
   padding: "20px",
   fontSize: "12px",
   fontWeight: "600",
-
   textAlign: "center",
   borderRadius: "15px",
 };
 
 const linkSx = {
+  color: "#FFFFFF",
   "&:hover": {
     backgroundColor: "rgba(243, 239, 239, 0.1)",
     cursor: "pointer",
@@ -73,17 +75,21 @@ const Policy: React.FC = () => {
   };
   return (
     <Box sx={container}>
-      <Typography sx={{ ...textSx }}>
+      <Typography sx={textSx}>
         Copyright ©2025. Turbo Hydraulik.pl, Wszystkie prawa zastrzeżone
       </Typography>
       <Box sx={policyButtonsSx}>
-        <Link href={policyPath} aria-label="strona polityki prywatności">
+        <Link
+          href={policyPath}
+          aria-label="strona polityki prywatności"
+          style={{ textDecoration: "none" }}
+        >
           <Typography sx={{ ...textSx, ...linkSx }}>
             Polityka Prywatności
           </Typography>
         </Link>
         <Box sx={verticalDivider} />
-        <Link href={termsPath}>
+        <Link href={termsPath} style={{ textDecoration: "none" }}>
           <Typography sx={{ ...textSx, ...linkSx }}>Regulamin</Typography>
         </Link>
         <Box sx={verticalDivider} />
