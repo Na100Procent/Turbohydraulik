@@ -3,7 +3,6 @@ import BackgroundWrapper from "../../shared/BackgroundWrapper";
 import theme from "@/app/theme/theme";
 import { Box } from "@mui/material";
 import CallUsButton from "../../shared/CallUsButton";
-import { websiteData } from "@/app/data/data";
 import { HeroContent } from "@/app/data/types/sectionTypes";
 import ServiceHeaderBox from "./ServiceHeaderBox";
 import {
@@ -13,6 +12,7 @@ import {
 } from "@/app/constants/imagesUrls";
 import MosaicElement from "../../shared/mosaic/MosaicElement";
 import MosaicGrid from "../../shared/mosaic/MosaicGrid";
+import { homepageDataContent } from "@/app/data/data";
 
 interface Props {
   serviceName: string;
@@ -86,7 +86,7 @@ const mosaicSx = {
 const HeroService = ({ content, phoneNumber, serviceName }: Props) => {
   const heroSectionData = content
     ? content
-    : (websiteData.homepageContent as HeroContent);
+    : (homepageDataContent as HeroContent);
   const { hero_h1, hero_h2, hero_text, hero_images } = heroSectionData;
 
   const heroSectionImgs = hero_images

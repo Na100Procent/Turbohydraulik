@@ -8,8 +8,8 @@ import ScrollCityList from "./ScrollCityList";
 import CallUsButton from "../../shared/CallUsButton";
 import LocationsList from "../footer/components/LocationsList";
 import { LinkElement } from "../../shared/TitledVerticalList";
-import websiteData from "../../../data/toBeData.json";
 import { sectionXPadding } from "@/app/constants/styles";
+import { citiesData, homepageDataContent } from "@/app/data/data";
 
 const LocationsListSx = {
   width: "100%",
@@ -19,7 +19,7 @@ const LocationsListSx = {
 };
 
 const OurCities = () => {
-  const cityNamesUrls: LinkElement[] = Object.values(websiteData.cities).map(
+  const cityNamesUrls: LinkElement[] = Object.values(citiesData).map(
     (city) => ({
       title: city.name,
       url: `/${city.slug}`,
@@ -35,9 +35,7 @@ const OurCities = () => {
         padding={sectionXPadding}
       >
         <SectionPaddingWrapper>
-          <SectionCenterHeader
-            header={websiteData.homepageContent.locations_h2}
-          />
+          <SectionCenterHeader header={homepageDataContent.locations_h2} />
         </SectionPaddingWrapper>
         <ScrollCityList />
         <div>

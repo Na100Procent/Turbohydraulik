@@ -8,15 +8,15 @@ import { Box } from "@mui/material";
 import CallUsButton from "../../shared/CallUsButton";
 import { sectionIds } from "@/app/constants/appConstants";
 import { HowToContent } from "@/app/data/types/sectionTypes";
-import { websiteData } from "@/app/data/data";
 import SectionIdentifier from "../../shared/SectionIdentifier";
+import { homepageDataContent } from "@/app/data/data";
 
 interface Props {
   content?: HowToContent;
   phoneNumber?: string;
 }
 const HowToOrderUs = ({ content, phoneNumber }: Props) => {
-  const howToContent = content ? content : websiteData.homepageContent;
+  const howToContent = content ? content : homepageDataContent;
   const steps_h2 = howToContent.steps_h2;
   return (
     <BackgroundWrapper bgColor={theme.palette.custom.background}>

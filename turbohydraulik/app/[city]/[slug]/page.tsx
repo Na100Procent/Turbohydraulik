@@ -1,4 +1,3 @@
-import { websiteData } from "@/app/data/data";
 import ServicePage from "./ServicePage";
 import DistrictPage from "./DistrictPage";
 import { FC } from "react";
@@ -10,10 +9,11 @@ import {
 } from "@/app/data/types/dataTypes";
 import { getCityServiceDataContent } from "@/app/components/shared/helpers/getCityServiceDataContent";
 import { getDistrictDataContent } from "@/app/components/shared/helpers/getDistrictDataContent";
+import { citiesData, servicesData } from "@/app/data/data";
 
 export const generateStaticParams = async () => {
-  const cities = Object.keys(websiteData.cities);
-  const services = Object.keys(websiteData.services);
+  const cities = Object.keys(citiesData);
+  const services = Object.keys(servicesData);
 
   const paths: { city: string; slug: string }[] = [];
 
@@ -24,8 +24,7 @@ export const generateStaticParams = async () => {
   });
 
   cities.forEach((city) => {
-    const cityData =
-      websiteData.cities[city as keyof typeof websiteData.cities];
+    const cityData = citiesData[city as keyof typeof citiesData];
     Object.keys(cityData.districts).forEach((district) => {
       paths.push({ city, slug: district });
     });
@@ -45,14 +44,13 @@ export const generateMetadata = async ({
   };
 
   const cityService: ServiceData =
-    websiteData.services[slugParam as keyof typeof websiteData.services];
+    servicesData[slugParam as keyof typeof servicesData];
 
-  const foundCity: CityData =
-    websiteData.cities[cityParam as keyof typeof websiteData.cities];
+  const foundCity: CityData = citiesData[cityParam as keyof typeof citiesData];
 
   if (cityService) {
     const cityServiceContent: DistrictData =
-      cityService.citiesContent[cityParam as keyof typeof websiteData.cities];
+      cityService.citiesContent[cityParam as keyof typeof citiesData];
 
     if (!cityServiceContent) return errorMetaData;
     const { metaContent } = getCityServiceDataContent(
@@ -82,16 +80,15 @@ const DynamicPage: FC<PageProps> = async ({ params }) => {
   const { city: cityParam, slug: slugParam } = await params;
 
   const cityService: ServiceData =
-    websiteData.services[slugParam as keyof typeof websiteData.services];
+    servicesData[slugParam as keyof typeof servicesData];
 
-  const foundCity: CityData =
-    websiteData.cities[cityParam as keyof typeof websiteData.cities];
+  const foundCity: CityData = citiesData[cityParam as keyof typeof citiesData];
 
   const district =
     foundCity.districts[slugParam as keyof typeof foundCity.districts];
 
   const cityServiceContent =
-    cityService?.citiesContent[cityParam as keyof typeof websiteData.cities];
+    cityService?.citiesContent[cityParam as keyof typeof citiesData];
 
   return (
     <div>

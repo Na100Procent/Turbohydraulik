@@ -8,9 +8,17 @@ import { defaultPhoneNUmber, emailAddress } from "@/app/constants/appConstants";
 import theme from "@/app/theme/theme";
 import ApartmentOutlinedIcon from "@mui/icons-material/ApartmentOutlined";
 import { convertPhoneNum } from "../../shared/helpers/convertPhoneNum";
-import GoogleMapContainer from "../../shared/googleMap/GoogleMapContainer";
 import { CityData } from "@/app/data/types/dataTypes";
+import dynamic from "next/dynamic";
+import { useInView } from "react-intersection-observer";
 
+const GoogleMapContainer = dynamic(
+  () => import("../../shared/googleMap/GoogleMapContainer"),
+  {
+    ssr: false,
+    loading: () => <p style={{ textAlign: "center" }}>Ładowanie mapy...</p>,
+  }
+);
 interface Props {
   phoneNumber?: string;
   address?: string;
@@ -99,12 +107,17 @@ const ContactElements = ({ phoneNumber, address, cityData }: Props) => {
   const phone = phoneNumber ? phoneNumber : defaultPhoneNUmber;
   const convertedPhoneNumber = convertPhoneNum(phone);
 
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
   const { googleMapData, name } = cityData || {};
   return (
     <Box sx={container}>
       {googleMapData && (
-        <Box sx={googleMapSx}>
-          <GoogleMapContainer {...googleMapData} cityName={name} />
+        <Box ref={ref} sx={googleMapSx}>
+          {inView && <GoogleMapContainer {...googleMapData} cityName={name} />}
         </Box>
       )}
 

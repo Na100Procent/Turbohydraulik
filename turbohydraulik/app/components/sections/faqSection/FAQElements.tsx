@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useCallback, useMemo } from "react";
 import { Box, Typography, IconButton, Collapse, Button } from "@mui/material";
 import AddIcon from "@mui/icons-material/Add";
 import ClearOutlinedIcon from "@mui/icons-material/ClearOutlined";
@@ -11,13 +11,11 @@ interface FAQItem {
   answer: string;
 }
 
-const container = {
+const containerSx = {
   marginBottom: 2,
   borderBottom: "2px solid #ccc",
-  paddingBottom: 1,
   padding: "20px 20px",
   background: theme.palette.custom.lightGray,
-
   minWidth: {
     xl: "400px",
     lg: "400px",
@@ -32,7 +30,6 @@ const container = {
 const questionSx = {
   fontWeight: "bold",
   color: theme.palette.primary.main,
-
   fontSize: {
     xl: "18px",
     lg: "18px",
@@ -43,35 +40,49 @@ const questionSx = {
   },
 };
 
+const toggleIconButtonSx = {
+  background: theme.palette.secondary.main,
+  borderRadius: "5px",
+};
+
+const answerSx = {
+  color: theme.palette.custom.darkGray,
+  fontWeight: 500,
+  mt: "10px",
+};
+
+const showAllBtnSx = {
+  mt: 2,
+  color: theme.palette.primary.main,
+  textTransform: "none",
+  fontWeight: "bold",
+  background: theme.palette.secondary.main,
+};
+
 const FAQElements = () => {
-  const [expandedIndex, setExpandedIndex] = useState<null | number>(null);
+  const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
   const [showAll, setShowAll] = useState(false);
 
-  const handleToggle = (index: number) => {
-    setExpandedIndex(expandedIndex === index ? null : index);
-  };
+  const handleToggle = useCallback((index: number) => {
+    setExpandedIndex((prev) => (prev === index ? null : index));
+  }, []);
 
-  const handleShowAll = () => {
-    setShowAll(!showAll);
-  };
+  const handleShowAll = useCallback(() => {
+    setShowAll((prev) => !prev);
+  }, []);
 
-  const displayedFaqs = showAll ? faqData : faqData.slice(0, 6);
+  const displayedFaqs = useMemo(() => {
+    return showAll ? faqData : faqData.slice(0, 6);
+  }, [showAll]);
 
   return (
-    <Box
-      display={"flex"}
-      flexDirection={"column"}
-      alignItems={"center"}
-      mb="50px"
-    >
+    <Box display="flex" flexDirection="column" alignItems="center" mb="50px">
       {displayedFaqs.map((faq: FAQItem, index) => (
-        <Box key={index} sx={container}>
+        <Box key={index} sx={containerSx}>
           <Box
-            sx={{
-              display: "flex",
-              justifyContent: "space-between",
-              alignItems: "center",
-            }}
+            display="flex"
+            justifyContent="space-between"
+            alignItems="center"
           >
             <Typography variant="h3" sx={questionSx}>
               {faq.question}
@@ -79,24 +90,13 @@ const FAQElements = () => {
             <IconButton
               aria-label="Pokaż odpowiedź"
               onClick={() => handleToggle(index)}
-              sx={{
-                background: theme.palette.secondary.main,
-                borderRadius: "5px",
-              }}
+              sx={toggleIconButtonSx}
             >
               {expandedIndex === index ? <ClearOutlinedIcon /> : <AddIcon />}
             </IconButton>
           </Box>
           <Collapse in={expandedIndex === index}>
-            <Typography
-              mt="10px"
-              variant="body1"
-              sx={{
-                color: theme.palette.custom.darkGray,
-
-                fontWeight: 500,
-              }}
-            >
+            <Typography variant="body1" sx={answerSx}>
               {faq.answer}
             </Typography>
           </Collapse>
@@ -105,13 +105,7 @@ const FAQElements = () => {
       <Button
         aria-label="Pokaż wszystkie FAQ"
         onClick={handleShowAll}
-        sx={{
-          mt: 2,
-          color: theme.palette.primary.main,
-          textTransform: "none",
-          fontWeight: "bold",
-          background: theme.palette.secondary.main,
-        }}
+        sx={showAllBtnSx}
       >
         {showAll ? "Pokaż mniej" : "Pokaż wszystkie"}
       </Button>

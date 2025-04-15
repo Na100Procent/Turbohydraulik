@@ -12,8 +12,8 @@ import CommaIcon from "./components/CommaIcon";
 import CallUsButton from "../../shared/CallUsButton";
 import SubHeaders from "./components/SubHeaders";
 import { ReviewsContent } from "@/app/data/types/sectionTypes";
-import { websiteData } from "@/app/data/data";
 import SectionIdentifier from "../../shared/SectionIdentifier";
+import { homepageDataContent } from "@/app/data/data";
 
 const ReviewsHorizontalScrollList = dynamic(
   () => import("./ReviewsHorizontalScrollList"),
@@ -27,7 +27,7 @@ interface Props {
 }
 
 const CustomerReviews = ({ content, phoneNumber, citySlug }: Props) => {
-  const reviewsContent = content || websiteData.homepageContent;
+  const reviewsContent = content || homepageDataContent;
 
   const {
     testimonials_h2,

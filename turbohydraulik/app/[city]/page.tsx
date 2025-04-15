@@ -1,15 +1,15 @@
 import { FC } from "react";
-import websiteData from "../data/toBeData.json";
 import CityPage from "./CityPage";
 import ServicePage from "./ServicePage";
 import { PageProps } from "@/.next/types/app/[city]/page";
 import { CityData, ServiceData } from "../data/types/dataTypes";
 import { getServiceDataContent } from "../components/shared/helpers/getServiceDataContent";
 import { getCityDataContent } from "../components/shared/helpers/getCityDataContent";
+import { citiesData, servicesData } from "../data/data";
 
 export const generateStaticParams = async () => {
-  const cities = Object.keys(websiteData.cities);
-  const services = Object.keys(websiteData.services);
+  const cities = Object.keys(citiesData);
+  const services = Object.keys(servicesData);
 
   const paths: { city: string; slug: string }[] = [];
 
@@ -29,11 +29,11 @@ export const generateMetadata = async ({
 }: PageProps): Promise<{ title: string; description: string }> => {
   const { city: currentSlug } = await params;
 
-  const slugIsCity = Object.keys(websiteData.cities).includes(currentSlug);
+  const slugIsCity = Object.keys(citiesData).includes(currentSlug);
 
   const slug: CityData | ServiceData = slugIsCity
-    ? websiteData.cities[currentSlug as keyof typeof websiteData.cities]
-    : websiteData.services[currentSlug as keyof typeof websiteData.services];
+    ? citiesData[currentSlug as keyof typeof citiesData]
+    : servicesData[currentSlug as keyof typeof servicesData];
 
   if (slugIsCity) {
     const { metaContent } = getCityDataContent(slug as CityData);
@@ -52,11 +52,11 @@ export const generateMetadata = async ({
 const CityOrServicePage: FC<PageProps> = async ({ params }) => {
   const { city: currentSlug } = await params;
 
-  const slugIsCity = Object.keys(websiteData.cities).includes(currentSlug);
+  const slugIsCity = Object.keys(citiesData).includes(currentSlug);
 
   const slug: CityData | ServiceData = slugIsCity
-    ? websiteData.cities[currentSlug as keyof typeof websiteData.cities]
-    : websiteData.services[currentSlug as keyof typeof websiteData.services];
+    ? citiesData[currentSlug as keyof typeof citiesData]
+    : servicesData[currentSlug as keyof typeof servicesData];
 
   return (
     <>

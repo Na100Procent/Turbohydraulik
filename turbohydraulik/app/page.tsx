@@ -2,13 +2,12 @@ import { Suspense } from "react";
 import { Box } from "@mui/material";
 import IntroSection from "./components/sections/intro/IntroSection";
 import OurCities from "./components/sections/ourCities/OurCities";
-import AboutUs from "./components/sections/aboutUs/AboutUs";
 import { sectionIds } from "./constants/appConstants";
 import theme from "./theme/theme";
-import { websiteData } from "./data/data";
 import dynamic from "next/dynamic";
 import InNumbers from "./components/sections/inNumbers/InNumbers";
 import TopMenu from "./components/sections/topMenu/TopMenu";
+import { homepageDataContent } from "./data/data";
 
 const OurServices = dynamic(
   () => import("./components/sections/ourServices/OurServices")
@@ -24,9 +23,11 @@ const RecentWorks = dynamic(
 );
 const Footer = dynamic(() => import("./components/sections/footer/Footer"));
 
+const AboutUs = dynamic(() => import("./components/sections/aboutUs/AboutUs"));
+
 export const metadata = {
-  title: websiteData.homepageContent.meta_title,
-  description: websiteData.homepageContent.meta_description,
+  title: homepageDataContent.meta_title,
+  description: homepageDataContent.meta_description,
 };
 
 export default function Home() {
@@ -46,7 +47,9 @@ export default function Home() {
         <TopMenu />
         <IntroSection />
         <OurCities />
-        <AboutUs />
+        <Suspense fallback={<div>Ładowanie...</div>}>
+          <AboutUs />
+        </Suspense>
         <Suspense fallback={<div>Ładowanie...</div>}>
           <OurServices bottomHeaderColor={theme.palette.custom.background} />
         </Suspense>

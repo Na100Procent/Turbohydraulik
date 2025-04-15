@@ -13,7 +13,7 @@ import ErrorMessage from "../components/shared/ErrorMessage";
 import { CityData } from "../data/types/dataTypes";
 import getCityServices from "../components/shared/helpers/getCityServices";
 import { getCityDataContent } from "../components/shared/helpers/getCityDataContent";
-import { schemaData, websiteData } from "../data/data";
+import { citiesData, schemaData } from "../data/data";
 import dynamic from "next/dynamic";
 import { pageContainer } from "../constants/styles";
 
@@ -55,8 +55,7 @@ export default function CityPage({ cityData }: Props) {
   } = getCityDataContent(cityData);
 
   const phoneNumber =
-    websiteData.cities[cityData.slug as keyof typeof websiteData.cities]
-      ?.content.phone;
+    citiesData[cityData.slug as keyof typeof citiesData]?.content.phone;
 
   const schema = schemaData[cityData.slug as keyof typeof schemaData];
   return (

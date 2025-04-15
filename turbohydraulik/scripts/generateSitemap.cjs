@@ -1,14 +1,16 @@
-// eslint-disable-next-line @typescript-eslint/no-require-imports
+/* eslint-disable @typescript-eslint/no-require-imports */
+
 const { SitemapStream, streamToPromise } = require("sitemap");
-// eslint-disable-next-line @typescript-eslint/no-require-imports
+
 const fs = require("fs");
-// eslint-disable-next-line @typescript-eslint/no-require-imports
-const websiteData = require("../app/data/toBeData.json");
+
+const citiesData = require("../app/data/citiesData.json");
+const servicesData = require("../app/data/servicesData.json");
 
 const hostname = "https://turbohydraulik.pl";
 
-const cities = Object.keys(websiteData.cities);
-const services = Object.keys(websiteData.services);
+const cities = Object.keys(citiesData);
+const services = Object.keys(servicesData);
 
 const cityPriority = 0.9;
 const districtPriority = 0.7;
@@ -28,7 +30,7 @@ cities.forEach((city) => {
     });
   });
 
-  const cityData = websiteData.cities[city];
+  const cityData = citiesData[city];
   Object.keys(cityData.districts).forEach((district) => {
     urls.push({
       url: `/${city}/${district}`,

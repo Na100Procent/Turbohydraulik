@@ -6,8 +6,8 @@ import { Box } from "@mui/material";
 import HorizontalBanner from "./HorizontalBanner";
 import CallUsButton from "../../shared/CallUsButton";
 import { HeroContent } from "@/app/data/types/sectionTypes";
-import { websiteData } from "@/app/data/data";
 import { introBgUrl } from "@/app/constants/imagesUrls";
+import { homepageDataContent } from "@/app/data/data";
 
 interface Props {
   content?: HeroContent;
@@ -16,12 +16,9 @@ interface Props {
 
 const containerSx = {
   padding: {
-    xl: "120px 0 0 0",
-    lg: "120px 0 0 0",
-    md: "120px 0 0 0",
-    sm: "100px 0 0 0",
     xs: "50px 0 0 0",
-    xxs: "50px 0 0 0",
+    sm: "100px 0 0 0",
+    md: "120px 0 0 0",
   },
 };
 
@@ -43,7 +40,7 @@ const contentSx = {
   },
 };
 const IntroSection = ({ content, phoneNumber }: Props) => {
-  const heroSectionData = content ? content : websiteData.homepageContent;
+  const heroSectionData = content ? content : homepageDataContent;
   const { hero_h1, hero_h2, hero_text } = heroSectionData;
 
   return (

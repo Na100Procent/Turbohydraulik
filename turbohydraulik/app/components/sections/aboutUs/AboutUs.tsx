@@ -12,8 +12,8 @@ import OurMission from "./components/OurMission";
 import CallUsButton from "../../shared/CallUsButton";
 import { sectionIds } from "@/app/constants/appConstants";
 import { AboutUsContent } from "@/app/data/types/sectionTypes";
-import { websiteData } from "@/app/data/data";
 import SectionIdentifier from "../../shared/SectionIdentifier";
+import { homepageDataContent } from "@/app/data/data";
 
 interface Props {
   content?: AboutUsContent;
@@ -55,7 +55,7 @@ const imgSx = {
 };
 
 const AboutUs = ({ content, bgColor, phoneNumber }: Props) => {
-  const aboutUsContent = content ? content : websiteData.homepageContent;
+  const aboutUsContent = content ? content : homepageDataContent;
   const { aboutUs_h2, aboutUs_h3, aboutUs_text, aboutUs_h3_2, aboutUs_text_2 } =
     aboutUsContent as AboutUsContent;
 
