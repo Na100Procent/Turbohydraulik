@@ -27,11 +27,13 @@ const logoButtonSx = {
 
 const containerSx = {
   display: "flex",
+  padding: 0,
   flexDirection: "column",
   justifyContent: "center",
   alignItems: "center",
   overflowX: "hidden",
   width: "100%",
+  height: "100%",
   position: "relative",
   background: theme.palette.custom.background,
 };
