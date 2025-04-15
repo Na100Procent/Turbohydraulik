@@ -1,11 +1,5 @@
 /** @type {import('next').NextConfig} */
 
-import withBundleAnalyzer from "@next/bundle-analyzer";
-
-const bundleAnalyzer = withBundleAnalyzer({
-  enabled: process.env.ANALYZE === "true",
-});
-
 const nextConfig = {
   trailingSlash: true,
   output: "export",
@@ -75,4 +69,3 @@ const nextConfig = {
 };
 
 module.exports = nextConfig;
-module.exports = bundleAnalyzer;
