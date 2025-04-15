@@ -59,6 +59,7 @@ const Footer = ({ phoneNumber, postalCode, street, cityData }: Props) => {
         padding: "0",
         mt: "100px",
         position: "relative",
+        width: "100%",
       }}
     >
       <SectionIdentifier sectionId={sectionIds.contact} />
