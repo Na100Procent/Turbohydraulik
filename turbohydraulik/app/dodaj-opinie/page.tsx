@@ -73,6 +73,7 @@ const ReviewPage = () => {
                 style={{ textDecoration: "none" }}
               >
                 <Button
+                  aria-label="opinia pozytywna"
                   variant="contained"
                   sx={{
                     backgroundColor: "rgb(41, 190, 86)",
@@ -86,6 +87,7 @@ const ReviewPage = () => {
               </a>
               <Link href={reviewFormPath}>
                 <Button
+                  aria-label="opinia negatywna"
                   variant="contained"
                   sx={{
                     backgroundColor: "#FF3E17",

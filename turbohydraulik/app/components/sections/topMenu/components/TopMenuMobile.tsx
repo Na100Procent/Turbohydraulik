@@ -29,6 +29,7 @@ const TopMenuMobile = () => {
         </Box>
       </Link>
       <IconButton
+        aria-label="menu"
         sx={{ mr: "20px", color: theme.palette.primary.main }}
         onClick={handleDrawerToggle}
       >

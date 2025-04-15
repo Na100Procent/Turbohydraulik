@@ -21,13 +21,14 @@ const socialMediasSx = {
   gap: "10px",
   padding: "8px 0",
 };
-
 const socialIconSx = {
-  width: "15px",
-  height: "15px",
+  width: "20px",
+  height: "20px",
 };
 
 const iconBtn = {
+  width: "48px",
+  height: "48px",
   borderRadius: "50%",
   margin: "0 5px",
   zIndex: 3,
