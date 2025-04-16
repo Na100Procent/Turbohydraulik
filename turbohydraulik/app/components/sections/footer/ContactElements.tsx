@@ -3,10 +3,10 @@ import React from "react";
 import ContactForm from "./components/ContactForm";
 import LocalPhoneOutlinedIcon from "@mui/icons-material/LocalPhoneOutlined";
 import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
+import ApartmentOutlinedIcon from "@mui/icons-material/ApartmentOutlined";
 import { sectionXPadding } from "@/app/constants/styles";
 import { defaultPhoneNUmber, emailAddress } from "@/app/constants/appConstants";
 import theme from "@/app/theme/theme";
-import ApartmentOutlinedIcon from "@mui/icons-material/ApartmentOutlined";
 import { convertPhoneNum } from "../../shared/helpers/convertPhoneNum";
 import { CityData } from "@/app/data/types/dataTypes";
 import dynamic from "next/dynamic";
@@ -19,11 +19,13 @@ const GoogleMapContainer = dynamic(
     loading: () => <p style={{ textAlign: "center" }}>Ładowanie mapy...</p>,
   }
 );
+
 interface Props {
   phoneNumber?: string;
   address?: string;
   cityData?: CityData;
 }
+
 const container = {
   position: "relative",
   display: "flex",
@@ -32,105 +34,64 @@ const container = {
   flexDirection: "column",
 };
 
-const titleSx = {
-  fontSize: "40px",
-  position: "relative",
-  top: {
-    xl: "-180px",
-    lg: "-180px",
-    md: "-180px",
-    sm: "0",
-    xs: "0",
-    xxs: "0",
-  },
-  fontWeight: "600",
-  width: "100%",
-  textAlign: "left",
-  color: theme.palette.custom.background,
-  maxWidth: {
-    xl: "800px",
-    lg: "500px",
-    md: "400px",
-    sm: "800px",
-    xs: "800px",
-    xxs: "800px",
-  },
-};
-
 const mapContactSx = {
   display: "flex",
-  gap: "50px",
+  gap: { xs: "30px", md: "50px" },
   justifyContent: "space-between",
-  flexDirection: {
-    xl: "row",
-    lg: "row",
-    md: "column",
-    sm: "column",
-    xs: "column",
-    xxs: "column",
-  },
+  flexDirection: { xs: "column", md: "column", lg: "row" },
 };
 
 const googleMapSx = {
   width: "100%",
   zIndex: 2,
   position: "absolute",
-  top: "-420px",
-  right: {
-    xl: "80px",
-    lg: "80px",
-    md: "50px",
-    sm: "0",
-    xs: "0",
-    xxs: "0",
-  },
-  maxWidth: {
-    xl: "700px",
-    lg: "620px",
-    md: "500px",
-    sm: "950px",
-    xs: "900px",
-    xxs: "900px",
-  },
-  height: {
-    xl: "400px",
-    lg: "350px",
-    md: "400px",
-    sm: "400px",
-    xs: "400px",
-    xxs: "400px",
-  },
+  top: "-100px",
+  right: { xl: "20px", lg: "80px", md: "0", sm: "0", xs: "0" },
+  maxWidth: { xl: "700px", lg: "620px", md: "100%", sm: "100%", xs: "100%" },
+  height: { xl: "400px", lg: "380px", md: "400px", sm: "400px", xs: "300px" },
   borderRadius: "15px",
   overflow: "hidden",
 };
+
 const ContactElements = ({ phoneNumber, address, cityData }: Props) => {
-  const phone = phoneNumber ? phoneNumber : defaultPhoneNUmber;
+  const phone = phoneNumber || defaultPhoneNUmber;
   const convertedPhoneNumber = convertPhoneNum(phone);
 
-  const { ref, inView } = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
-  });
+  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.1 });
 
   const { googleMapData, name } = cityData || {};
+  const hasMap = !!googleMapData;
+
   return (
     <Box sx={container}>
-      {googleMapData && (
+      {hasMap && (
         <Box ref={ref} sx={googleMapSx}>
           {inView && <GoogleMapContainer {...googleMapData} cityName={name} />}
         </Box>
       )}
 
-      <Typography sx={titleSx} variant="h2">
+      <Typography
+        variant="h2"
+        sx={{
+          fontSize: { xs: "28px", sm: "34px", md: "40px" },
+          fontWeight: "600",
+          width: "100%",
+          textAlign: "left",
+          color: theme.palette.custom.background,
+          maxWidth: { xl: "500px", lg: "500px", md: "450px", xs: "100%" },
+          mt: hasMap
+            ? { xs: "250px", sm: "340px", md: "350px", lg: "170px" }
+            : "0px",
+        }}
+      >
         Kontakt Turbo Hydraulik {name}
       </Typography>
 
       <Box sx={mapContactSx}>
         <Box
-          display={"flex"}
-          gap={"50px"}
+          display="flex"
           flexWrap="wrap"
-          justifyContent={"left"}
+          gap={{ xs: "30px", sm: "40px", md: "50px" }}
         >
           <ContactForm
             subHeader="NUMER TELEFONU"

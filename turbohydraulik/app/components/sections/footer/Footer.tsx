@@ -66,7 +66,7 @@ const Footer = ({ phoneNumber, postalCode, street, cityData }: Props) => {
       <Box ref={footerRef}>
         <Fade in={isVisible} timeout={800}>
           <Box
-            padding={"250px 0 0 0"}
+            padding={"50px 0 0 0"}
             display={"flex"}
             flexDirection={"column"}
             gap="50px"
