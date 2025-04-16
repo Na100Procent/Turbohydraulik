@@ -47,7 +47,7 @@ const ServiceContainer = ({ city }: Props) => {
           gap={"20px"}
         >
           {servicesOfCity.map((service, index) => (
-            <Box key={index} sx={{ margin: "0 10px" }}>
+            <Box key={index}>
               <ServiceCard
                 service={{
                   name: service.name,

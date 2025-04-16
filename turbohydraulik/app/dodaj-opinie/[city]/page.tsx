@@ -1,5 +1,4 @@
-"use client";
-import { Box, Typography, Button, useMediaQuery } from "@mui/material";
+import { Box, Typography, Button } from "@mui/material";
 import Link from "next/link";
 import Image from "next/image";
 import theme from "@/app/theme/theme";
@@ -7,15 +6,19 @@ import BackgroundWrapper from "@/app/components/shared/BackgroundWrapper";
 import { homePagePath, reviewFormPath } from "@/app/constants/appConstants";
 import { aboutUsUrl } from "@/app/constants/imagesUrls";
 import Footer from "@/app/components/sections/footer/Footer";
-import LogoContainer from "../components/shared/LogoContainer";
+import LogoContainer from "../../components/shared/LogoContainer";
+import { citiesData } from "@/app/data/data";
+import GoodReview from "../GoodReview";
+
+export const generateStaticParams = async () => {
+  const cities = Object.keys(citiesData);
+
+  return cities.map((city) => ({ city }));
+};
 
 const ReviewPage = () => {
-  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
-
   return (
-    <Box
-      sx={{ background: theme.palette.custom.background, minHeight: "100vh" }}
-    >
+    <Box sx={{ background: theme.palette.custom.background, mt: "100px" }}>
       <BackgroundWrapper sx={{ padding: 0 }}>
         <Box
           sx={{
@@ -43,14 +46,28 @@ const ReviewPage = () => {
         <Box
           sx={{
             display: "flex",
-            flexDirection: isMobile ? "column" : "row",
             justifyContent: "center",
             alignItems: "center",
             paddingTop: "120px",
             px: 3,
             pb: 8,
             gap: 5,
-            textAlign: isMobile ? "center" : "left",
+            textAlign: {
+              xl: "left",
+              lg: "left",
+              md: "left",
+              sm: "center",
+              xs: "center",
+              xxs: "center",
+            },
+            flexDirection: {
+              xl: "row",
+              lg: "row",
+              md: "row",
+              sm: "column",
+              xs: "column",
+              xxs: "column",
+            },
           }}
         >
           <Box maxWidth="500px" pt="10px">
@@ -66,25 +83,7 @@ const ReviewPage = () => {
               zadzwoń do mnie lub zostaw wiadomość.
             </Typography>
             <Box display="flex" flexDirection="column" gap={2}>
-              <a
-                href={`https://g.page/r/CUq3ws85F_8REBM/review`}
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{ textDecoration: "none" }}
-              >
-                <Button
-                  aria-label="opinia pozytywna"
-                  variant="contained"
-                  sx={{
-                    backgroundColor: "rgb(41, 190, 86)",
-                    color: "#1A1A1A",
-                    fontWeight: 700,
-                    "&:hover": { backgroundColor: "#A3D92F" },
-                  }}
-                >
-                  TAK JESTEM ZADOWOLONY/A
-                </Button>
-              </a>
+              <GoodReview />
               <Link href={reviewFormPath}>
                 <Button
                   aria-label="opinia negatywna"
