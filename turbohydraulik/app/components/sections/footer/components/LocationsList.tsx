@@ -20,7 +20,7 @@ const elementSx = {
   fontSize: "14px",
   display: "flex",
   gap: "10px",
-  minWidth: "100px",
+  width: "150px",
 
   transition: "background-color 0.3s ease",
   "&:hover": {
@@ -34,6 +34,16 @@ const elementSx = {
 const containerSx = {
   color: theme.palette.custom.background,
   maxWidth: "100%",
+  display: "flex",
+
+  alignItems: {
+    xl: "start",
+    lg: "start",
+    md: "start",
+    sm: "center",
+    xs: "center",
+    xxs: "center",
+  },
 };
 
 const itemTitle = {
@@ -49,9 +59,15 @@ const TitledVerticalList = ({
   addSx,
 }: Props) => {
   return (
-    <Box sx={{ ...containerSx, ...addSx }}>
+    <Box sx={{ ...containerSx, ...addSx, flexDirection: "column" }}>
       {locsTitle && (
-        <Typography fontWeight="600" mb="30px" fontSize="20px" sx={{}}>
+        <Typography
+          fontWeight="200"
+          pt="20px"
+          pb="50px"
+          fontSize="22px"
+          color={theme.palette.custom.darkGray}
+        >
           {locsTitle}
         </Typography>
       )}
@@ -60,16 +76,15 @@ const TitledVerticalList = ({
         sx={{
           display: "flex",
           flexWrap: "wrap",
-          justifyContent: "left",
+          justifyContent: {
+            xl: "start",
+            lg: "start",
+            md: "start",
+            sm: "start",
+            xs: "center",
+            xxs: "center",
+          },
           gap: "20px",
-
-          // display: "grid",
-          // gridTemplateColumns: "repeat(3, minmax(0, 1fr))",
-          // gap: "20px",
-          // "@media (max-width: 900px)": {
-          //   gridTemplateColumns: "repeat(2, minmax(0, 1fr))",
-          // },
-          // "@media (max-width: 600px)": { gridTemplateColumns: "1fr" },
         }}
       >
         {locationsList?.map((item, index) => (

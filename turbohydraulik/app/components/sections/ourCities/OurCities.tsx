@@ -15,7 +15,14 @@ import LazyReveal from "./LazyReveal";
 const LocationsListSx = {
   width: "100%",
   display: "flex",
-  justifyContent: "left",
+  justifyContent: {
+    xl: "left",
+    lg: "left",
+    md: "left",
+    sm: "center",
+    xs: "center",
+    xxs: "center",
+  },
   mt: "50px",
 };
 
@@ -40,7 +47,9 @@ const OurCities = () => {
         </SectionPaddingWrapper>
         <LazyReveal>
           <ScrollCityList />
-          <CallUsButton />
+          <Box display={"flex"} justifyContent="center">
+            <CallUsButton />
+          </Box>
           <Box sx={LocationsListSx}>
             <LocationsList
               locsTitle="JESTEŚMY W MIASTACH"

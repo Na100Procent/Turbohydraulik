@@ -5,11 +5,13 @@ import { Box } from "@mui/material";
 import { citiesData } from "@/app/data/data";
 
 const ScrollCityList = () => {
-  const cityNamesUrls = Object.values(citiesData).map((city) => ({
-    title: city.name,
-    url: `/${city.slug}`,
-    cityCardUrl: city.cityCardUrl,
-  }));
+  const cityNamesUrls = Object.values(citiesData)
+    .map((city) => ({
+      title: city.name,
+      url: `/${city.slug}`,
+      cityCardUrl: city.cityCardUrl,
+    }))
+    .sort((a, b) => a.title.localeCompare(b.title));
 
   const citiesElements = cityNamesUrls.map((city) => (
     <Box key={city.title} padding="5px">
@@ -20,6 +22,7 @@ const ScrollCityList = () => {
       />
     </Box>
   ));
+
   return <HorizontalScrollList mappedItems={citiesElements} />;
 };
 
