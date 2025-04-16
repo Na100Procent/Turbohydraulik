@@ -57,7 +57,7 @@ const Footer = ({ phoneNumber, postalCode, street, cityData }: Props) => {
       bgColor={theme.palette.primary.main}
       sx={{
         padding: "0",
-        mt: "100px",
+        mt: "70px",
         position: "relative",
         width: "100%",
       }}
@@ -66,7 +66,7 @@ const Footer = ({ phoneNumber, postalCode, street, cityData }: Props) => {
       <Box ref={footerRef}>
         <Fade in={isVisible} timeout={800}>
           <Box
-            padding={"50px 0 0 0"}
+            padding={"40px 0 0 0"}
             display={"flex"}
             flexDirection={"column"}
             gap="50px"

@@ -69,7 +69,7 @@ export default function ServicePage({ serviceData }: Props) {
       <Box
         width={"100%"}
         bgcolor={theme.palette.custom.background}
-        padding="0 0 200px 0 "
+        padding="0 0 100px 0 "
       >
         <OurServices
           bgColor={theme.palette.custom.background}

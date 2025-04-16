@@ -45,7 +45,7 @@ const googleMapSx = {
   width: "100%",
   zIndex: 2,
   position: "absolute",
-  top: "-100px",
+  top: "-230px",
   right: { xl: "20px", lg: "80px", md: "0", sm: "0", xs: "0" },
   maxWidth: { xl: "700px", lg: "620px", md: "100%", sm: "100%", xs: "100%" },
   height: { xl: "400px", lg: "380px", md: "400px", sm: "400px", xs: "300px" },
@@ -80,7 +80,7 @@ const ContactElements = ({ phoneNumber, address, cityData }: Props) => {
           color: theme.palette.custom.background,
           maxWidth: { xl: "500px", lg: "500px", md: "450px", xs: "100%" },
           mt: hasMap
-            ? { xs: "250px", sm: "340px", md: "350px", lg: "170px" }
+            ? { xs: "100px", sm: "220px", md: "210px", lg: "50px" }
             : "0px",
         }}
       >
