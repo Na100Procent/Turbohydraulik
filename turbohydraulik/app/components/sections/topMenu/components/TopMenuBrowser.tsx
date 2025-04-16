@@ -1,13 +1,12 @@
 import React from "react";
-import { TopMenuLogo } from "@/public/assets/icons/icons";
-import Link from "next/link";
-import { homePagePath } from "@/app/constants/appConstants";
 import { Box } from "@mui/material";
 import TopMenuButtons from "../TopMenuButtons";
 import ContactUsButton from "@/app/components/shared/ContactUsButton";
+import LogoContainer from "@/app/components/shared/LogoContainer";
 
 const logoButtonSx = {
-  padding: "0 20px 20px 20px",
+  mt: "-35px",
+  padding: "0 20px 10px 20px",
   display: "flex",
   justifyContent: "space-between",
   alignItems: "end",
@@ -16,13 +15,9 @@ const logoButtonSx = {
 const TopMenuBrowser = () => {
   return (
     <Box sx={logoButtonSx}>
-      <Link href={homePagePath} aria-label="strona home page">
-        <TopMenuLogo />
-      </Link>
+      <LogoContainer />
       <TopMenuButtons withSeparators />
-      <Box mb="-5px">
-        <ContactUsButton />
-      </Box>
+      <ContactUsButton />
     </Box>
   );
 };

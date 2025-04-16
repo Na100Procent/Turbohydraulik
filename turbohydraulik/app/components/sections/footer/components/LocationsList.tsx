@@ -20,6 +20,7 @@ const elementSx = {
   fontSize: "14px",
   display: "flex",
   gap: "10px",
+  minWidth: "100px",
 
   transition: "background-color 0.3s ease",
   "&:hover": {
@@ -32,6 +33,7 @@ const elementSx = {
 
 const containerSx = {
   color: theme.palette.custom.background,
+  maxWidth: "100%",
 };
 
 const itemTitle = {
@@ -56,13 +58,18 @@ const TitledVerticalList = ({
 
       <Box
         sx={{
-          display: "grid",
-          gridTemplateColumns: "repeat(3, minmax(0, 1fr))",
+          display: "flex",
+          flexWrap: "wrap",
+          justifyContent: "left",
           gap: "20px",
-          "@media (max-width: 900px)": {
-            gridTemplateColumns: "repeat(2, minmax(0, 1fr))",
-          },
-          "@media (max-width: 600px)": { gridTemplateColumns: "1fr" },
+
+          // display: "grid",
+          // gridTemplateColumns: "repeat(3, minmax(0, 1fr))",
+          // gap: "20px",
+          // "@media (max-width: 900px)": {
+          //   gridTemplateColumns: "repeat(2, minmax(0, 1fr))",
+          // },
+          // "@media (max-width: 600px)": { gridTemplateColumns: "1fr" },
         }}
       >
         {locationsList?.map((item, index) => (

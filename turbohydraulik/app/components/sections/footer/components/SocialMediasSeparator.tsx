@@ -45,7 +45,7 @@ const SocialMediasSeparator = ({ separatorColor }: Props) => {
         mx={2}
         mt="-20px"
       >
-        <Link href={facebookUrl} target="_blank">
+        <Link href={facebookUrl} target="_blank" aria-label="nawiguj facebook">
           <IconButton
             aria-label="Facebook"
             sx={{

@@ -12,11 +12,10 @@ interface Props {
 }
 
 const container = {
-  transition: "background-color 0.3s ease, transform 0.3s ease",
+  transition: "background-color 0.3s ease",
   "&:hover": {
     cursor: "pointer",
     backgroundColor: "rgba(41, 40, 40, 0.1)",
-    transform: "scale(1.02)",
   },
   width: {
     xl: "400px",

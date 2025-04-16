@@ -1,13 +1,13 @@
 "use client";
 import { Box, Typography, Button, useMediaQuery } from "@mui/material";
 import Link from "next/link";
-import { TopMenuLogo } from "@/public/assets/icons/icons";
 import Image from "next/image";
 import theme from "@/app/theme/theme";
 import BackgroundWrapper from "@/app/components/shared/BackgroundWrapper";
 import { homePagePath, reviewFormPath } from "@/app/constants/appConstants";
 import { aboutUsUrl } from "@/app/constants/imagesUrls";
 import Footer from "@/app/components/sections/footer/Footer";
+import LogoContainer from "../components/shared/LogoContainer";
 
 const ReviewPage = () => {
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
@@ -34,8 +34,8 @@ const ReviewPage = () => {
               alignItems: "end",
             }}
           >
-            <Link href={homePagePath} aria-label="strona home page">
-              <TopMenuLogo />
+            <Link href={homePagePath}>
+              <LogoContainer notNavigateHome />
             </Link>
           </Box>
         </Box>

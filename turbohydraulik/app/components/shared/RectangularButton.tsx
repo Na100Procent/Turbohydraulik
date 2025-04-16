@@ -31,7 +31,7 @@ const RectangularButton = ({
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    padding: "15px 20px",
+    padding: "10px 20px",
     gap: "10px",
 
     "&:hover": {

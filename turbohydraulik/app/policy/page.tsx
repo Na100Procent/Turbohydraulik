@@ -2,10 +2,8 @@ import { Box, Container, Typography } from "@mui/material";
 import theme from "@/app/theme/theme";
 import Footer from "../components/sections/footer/Footer";
 import BackgroundWrapper from "../components/shared/BackgroundWrapper";
-import Link from "next/link";
-import { homePagePath } from "../constants/appConstants";
-import { TopMenuLogo } from "@/public/assets/icons/icons";
 import type { Metadata } from "next";
+import LogoContainer from "../components/shared/LogoContainer";
 
 export const generateMetadata = async (): Promise<Metadata> => {
   return {
@@ -36,9 +34,7 @@ const PolicyPage = () => {
       <BackgroundWrapper sx={{ padding: 0 }}>
         <Box sx={contentSx}>
           <Box sx={logoButtonSx}>
-            <Link href={homePagePath} aria-label="strona home page">
-              <TopMenuLogo />
-            </Link>
+            <LogoContainer />
           </Box>
         </Box>
       </BackgroundWrapper>
@@ -55,6 +51,9 @@ const PolicyPage = () => {
             color={theme.palette.primary.main}
             gutterBottom
             fontWeight="bold"
+            mt="20px"
+            fontSize="40px"
+            textAlign={"center"}
           >
             Polityka Prywatności
           </Typography>

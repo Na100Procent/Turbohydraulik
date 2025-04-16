@@ -44,12 +44,11 @@ const TopMenuButtons = ({
     <Box
       sx={{ ...container, ...(addSx && { ...addSx }) }}
       onClick={onButtonClick && onButtonClick}
+      aria-label="nawiguj do sekcji"
     >
       <TopMenuButton title="Home" section={sectionIds.home} />
       <Separator />
       <TopMenuButton title="O nas" section={sectionIds.about} />
-      <Separator />
-      <TopMenuButton title="Zamów" section={sectionIds.orderUs} />
       <Separator />
       <TopMenuButton title="Opinie" section={sectionIds.reviews} />
       <Separator />

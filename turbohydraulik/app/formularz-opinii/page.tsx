@@ -3,10 +3,8 @@ import theme from "@/app/theme/theme";
 import BackgroundWrapper from "@/app/components/shared/BackgroundWrapper";
 import Footer from "@/app/components/sections/footer/Footer";
 import ServiceForm from "../components/sections/footer/components/ServiceForm";
-import { TopMenuLogo } from "@/public/assets/icons/icons";
-import Link from "next/link";
-import { homePagePath } from "../constants/appConstants";
 import { sectionXPadding } from "../constants/styles";
+import LogoContainer from "../components/shared/LogoContainer";
 
 const formContainer = {
   width: "100%",
@@ -38,9 +36,7 @@ const ReviewPage = () => {
               alignItems: "end",
             }}
           >
-            <Link href={homePagePath} aria-label="strona home page">
-              <TopMenuLogo />
-            </Link>
+            <LogoContainer notNavigateHome />
           </Box>
         </Box>
         <Box sx={formContainer}>

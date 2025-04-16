@@ -18,40 +18,47 @@ const socialMediasSx = {
     xs: "none",
     xxs: "none",
   },
-  gap: "10px",
-  padding: "8px 0",
-};
-const socialIconSx = {
-  width: "20px",
-  height: "20px",
+  gap: "24px",
+  padding: "12px 0",
 };
 
 const iconBtn = {
+  padding: "12px",
+  minWidth: "48px",
+  minHeight: "48px",
   width: "48px",
   height: "48px",
   borderRadius: "50%",
-  margin: "0 5px",
   zIndex: 3,
+  backgroundColor: theme.palette.custom.darkBlue,
+  color: "white",
   "&:hover": {
     background: theme.palette.custom.blueLight,
     color: theme.palette.primary.main,
   },
   transition: "background 0.3s ease-in-out, color 0.3s ease-in-out",
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+};
+
+const socialIconSx = {
+  width: "24px",
+  height: "24px",
 };
 
 const SocialMedias = () => {
   return (
     <Box sx={socialMediasSx}>
       <VerticalSeparator />
-      <Link href={facebookUrl} target="_blank" aria-label="nawiguj facebook">
-        <IconButton
-          aria-label="Facebook"
-          sx={{
-            backgroundColor: theme.palette.custom.darkBlue,
-            color: "white",
-            ...iconBtn,
-          }}
-        >
+
+      <Link
+        href={facebookUrl}
+        target="_blank"
+        aria-label="Facebook"
+        style={{ display: "inline-flex" }}
+      >
+        <IconButton aria-label="Facebook" sx={iconBtn}>
           <FacebookIcon sx={socialIconSx} />
         </IconButton>
       </Link>
