@@ -13,10 +13,12 @@ interface Props {
 }
 const DistrictsList = ({ city, content }: Props) => {
   const { districtsListH2, districtsListText } = content;
-  const districtsLinks = Object.values(city.districts).map((district) => ({
-    title: district.name,
-    url: `/${city.slug}/${district.slug}`,
-  }));
+  const districtsLinks = Object.values(city.districts)
+    .map((district) => ({
+      title: district.name,
+      url: `/${city.slug}/${district.slug}`,
+    }))
+    .sort((a, b) => a.title.localeCompare(b.title));
   return (
     <Box
       padding={sectionXPadding}

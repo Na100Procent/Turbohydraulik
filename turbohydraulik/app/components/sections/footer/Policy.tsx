@@ -11,6 +11,9 @@ import {
 } from "@/app/constants/appConstants";
 import { convertPhoneNum } from "../../shared/helpers/convertPhoneNum";
 
+interface Props {
+  withoutMobileNumber?: boolean;
+}
 const container = {
   display: "flex",
   justifyContent: "space-between",
@@ -54,23 +57,25 @@ const linkSx = {
   transition: "background 0.3s ease-in-out",
 };
 
-const policyButtonsSx = {
-  display: "flex",
-  alignItems: "center",
-  mb: {
-    xl: "0",
-    lg: "0",
-    md: "0",
-    sm: "60px",
-    xs: "70px",
-    xxs: "70px",
-  },
-};
-
-const Policy: React.FC = () => {
+const Policy = ({ withoutMobileNumber }: Props) => {
   const handlePhoneClick = () => {
     const convertedPhoneNum = convertPhoneNum(defaultPhoneNUmber);
     window.open(`tel:${convertedPhoneNum}`);
+  };
+
+  const policyButtonsSx = {
+    display: "flex",
+    alignItems: "center",
+    mb: withoutMobileNumber
+      ? 0
+      : {
+          xl: "0",
+          lg: "0",
+          md: "0",
+          sm: "70px",
+          xs: "70px",
+          xxs: "70px",
+        },
   };
   return (
     <Box sx={container}>

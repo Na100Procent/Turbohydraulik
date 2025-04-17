@@ -18,29 +18,25 @@ export const generateStaticParams = async () => {
 
 const ReviewPage = () => {
   return (
-    <Box sx={{ background: theme.palette.custom.background, mt: "100px" }}>
-      <BackgroundWrapper sx={{ padding: 0 }}>
+    <Box sx={{ background: theme.palette.custom.background }}>
+      <BackgroundWrapper sx={{ mt: "20px" }}>
         <Box
           sx={{
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "end",
             position: "fixed",
-            width: "100%",
+            width: "105%",
             zIndex: 100,
             top: 0,
+            left: "-10px",
             backgroundColor: theme.palette.custom.background,
+            paddingX: "10px",
           }}
         >
-          <Box
-            sx={{
-              padding: "20px",
-              display: "flex",
-              justifyContent: "space-between",
-              alignItems: "end",
-            }}
-          >
-            <Link href={homePagePath}>
-              <LogoContainer notNavigateHome />
-            </Link>
-          </Box>
+          <Link href={homePagePath}>
+            <LogoContainer notNavigateHome />
+          </Link>
         </Box>
 
         <Box
@@ -49,9 +45,8 @@ const ReviewPage = () => {
             justifyContent: "center",
             alignItems: "center",
             paddingTop: "120px",
-            px: 3,
-            pb: 8,
-            gap: 5,
+            gap: "40px",
+
             textAlign: {
               xl: "left",
               lg: "left",
@@ -70,7 +65,7 @@ const ReviewPage = () => {
             },
           }}
         >
-          <Box maxWidth="500px" pt="10px">
+          <Box maxWidth="500px">
             <Typography variant="h4" fontWeight={300}>
               JESTEŚ ZADOWOLONY
             </Typography>
@@ -100,7 +95,7 @@ const ReviewPage = () => {
             </Box>
           </Box>
 
-          <Box sx={{ maxWidth: 400, width: "100%" }}>
+          <Box sx={{ maxWidth: 400, width: "100%", zIndex: 20 }}>
             <Image
               src={aboutUsUrl}
               alt="Twój Hydraulik Logo"
@@ -112,7 +107,7 @@ const ReviewPage = () => {
         </Box>
       </BackgroundWrapper>
 
-      <Footer />
+      <Footer withoutMobileNumber />
     </Box>
   );
 };

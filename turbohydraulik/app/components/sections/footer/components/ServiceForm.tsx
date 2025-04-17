@@ -14,7 +14,6 @@ const headerSx = {
   fontWeight: "600",
   fontSize: "17px",
   color: themeCustom.background,
-
   mb: "10px",
 };
 

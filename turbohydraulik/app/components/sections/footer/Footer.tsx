@@ -18,9 +18,16 @@ interface Props {
   postalCode?: string;
   street?: string;
   cityData?: CityData;
+  withoutMobileNumber?: boolean;
 }
 
-const Footer = ({ phoneNumber, postalCode, street, cityData }: Props) => {
+const Footer = ({
+  phoneNumber,
+  postalCode,
+  street,
+  cityData,
+  withoutMobileNumber,
+}: Props) => {
   const footerRef = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -82,7 +89,7 @@ const Footer = ({ phoneNumber, postalCode, street, cityData }: Props) => {
             <HorizontalSeparator />
             <LinksAndServices cityData={cityData} />
             <SocialMediasSeparator />
-            <Policy />
+            <Policy withoutMobileNumber={withoutMobileNumber} />
             <Box position={"absolute"} top={"-130px"} left={"-10px"}>
               <YellowRightOrnament />
             </Box>

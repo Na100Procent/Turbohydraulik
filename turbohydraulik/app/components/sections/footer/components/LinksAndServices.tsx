@@ -68,12 +68,12 @@ const LinksAndServices = ({ cityData }: Props) => {
 
   const locations = cityData ? cityData.districts : citiesData;
 
-  const locationsNamesUrls: LinkElement[] = Object.values(locations).map(
-    (city) => ({
+  const locationsNamesUrls: LinkElement[] = Object.values(locations)
+    .map((city) => ({
       title: city.name,
       url: cityData ? `/${cityData.slug}/${city.slug}` : `/${city.slug}`,
-    })
-  );
+    }))
+    .sort((a, b) => a.title.localeCompare(b.title));
 
   return (
     <Box sx={containerSx}>

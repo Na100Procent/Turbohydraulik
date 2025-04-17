@@ -39,12 +39,12 @@ const buttonSx = {
 };
 
 const OurCities = () => {
-  const cityNamesUrls: LinkElement[] = Object.values(citiesData).map(
-    (city) => ({
+  const cityNamesUrls: LinkElement[] = Object.values(citiesData)
+    .map((city) => ({
       title: city.name,
       url: `/${city.slug}`,
-    })
-  );
+    }))
+    .sort((a, b) => a.title.localeCompare(b.title));
 
   return (
     <BackgroundWrapper bgColor={theme.palette.custom.background}>
