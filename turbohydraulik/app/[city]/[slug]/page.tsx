@@ -10,6 +10,7 @@ import {
 import { getCityServiceDataContent } from "@/app/components/shared/helpers/getCityServiceDataContent";
 import { getDistrictDataContent } from "@/app/components/shared/helpers/getDistrictDataContent";
 import { citiesData, servicesData } from "@/app/data/data";
+import { Metadata } from "next";
 
 export const generateStaticParams = async () => {
   const cities = Object.keys(citiesData);
@@ -35,13 +36,14 @@ export const generateStaticParams = async () => {
 
 export const generateMetadata = async ({
   params,
-}: PageProps): Promise<{ title: string; description: string }> => {
+}: PageProps): Promise<Metadata> => {
   const { city: cityParam, slug: slugParam } = await params;
 
   const errorMetaData = {
     title: "Turbohydraulik ",
     description: "Turbohydraulik ",
   };
+  const fullPath = `https://turbohydraulik.pl/${cityParam}/${slugParam}`;
 
   const cityService: ServiceData =
     servicesData[slugParam as keyof typeof servicesData];
@@ -61,6 +63,9 @@ export const generateMetadata = async ({
     return {
       title: metaContent?.title,
       description: metaContent?.description,
+      alternates: {
+        canonical: fullPath,
+      },
     };
   }
   if (foundCity) {
@@ -71,6 +76,9 @@ export const generateMetadata = async ({
     return {
       title: metaContent?.title,
       description: metaContent?.description,
+      alternates: {
+        canonical: fullPath,
+      },
     };
   }
   return errorMetaData;

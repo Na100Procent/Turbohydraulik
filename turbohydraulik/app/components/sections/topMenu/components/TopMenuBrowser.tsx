@@ -4,17 +4,17 @@ import TopMenuButtons from "../TopMenuButtons";
 import ContactUsButton from "@/app/components/shared/ContactUsButton";
 import LogoContainer from "@/app/components/shared/LogoContainer";
 
-const logoButtonSx = {
-  mt: "-35px",
+const containerSx = {
   padding: "0 20px 10px 20px",
   display: "flex",
   justifyContent: "space-between",
   alignItems: "end",
+  mt: { xl: "-50px", lg: "-50px", md: "-30px" },
 };
 
 const TopMenuBrowser = () => {
   return (
-    <Box sx={logoButtonSx}>
+    <Box sx={containerSx}>
       <LogoContainer />
       <TopMenuButtons withSeparators />
       <ContactUsButton />

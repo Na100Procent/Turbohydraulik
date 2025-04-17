@@ -35,7 +35,7 @@ const LazyReveal = ({
     observer.observe(ref.current);
 
     return () => observer.disconnect();
-  }, [ref]);
+  }, [ref, rootMargin, threshold]);
 
   return (
     <Fade in={isVisible} timeout={800}>

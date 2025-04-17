@@ -12,13 +12,14 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: "/",
+  },
   metadataBase: new URL("https://turbohydraulik.pl"),
   title: "TurboHydraulik - Fachowa pomoc hydrauliczna 24/7",
   description:
     "Profesjonalne usługi hydrauliczne dostępne 24/7. Szybka i niezawodna pomoc w nagłych awariach oraz kompleksowe instalacje hydrauliczne.",
-  alternates: {
-    canonical: "/",
-  },
+
   openGraph: {
     type: "website",
     url: "https://turbohydraulik.pl",

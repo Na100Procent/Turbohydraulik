@@ -6,6 +6,7 @@ import { CityData, ServiceData } from "../data/types/dataTypes";
 import { getServiceDataContent } from "../components/shared/helpers/getServiceDataContent";
 import { getCityDataContent } from "../components/shared/helpers/getCityDataContent";
 import { citiesData, servicesData } from "../data/data";
+import { Metadata } from "next";
 
 export const generateStaticParams = async () => {
   const cities = Object.keys(citiesData);
@@ -26,8 +27,10 @@ export const generateStaticParams = async () => {
 
 export const generateMetadata = async ({
   params,
-}: PageProps): Promise<{ title: string; description: string }> => {
+}: PageProps): Promise<Metadata> => {
   const { city: currentSlug } = await params;
+
+  const fullPath = `https://turbohydraulik.pl/${currentSlug}`;
 
   const slugIsCity = Object.keys(citiesData).includes(currentSlug);
 
@@ -40,12 +43,18 @@ export const generateMetadata = async ({
     return {
       title: metaContent.title,
       description: metaContent.description,
+      alternates: {
+        canonical: fullPath,
+      },
     };
   }
   const { metaContent } = getServiceDataContent(slug as ServiceData);
   return {
     title: metaContent.title,
     description: metaContent.description,
+    alternates: {
+      canonical: fullPath,
+    },
   };
 };
 

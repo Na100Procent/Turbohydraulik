@@ -47,40 +47,94 @@ const elementsContainer = {
     xs: "0px",
   },
 
-  paddingLeft: {
-    xl: "70px",
-    lg: "70px",
-    md: "30px",
-    xs: "10px",
+  padding: {
+    xl: "0 0 0 50px",
+    lg: "0 0 0 50px",
+    md: "0 0 0 30px",
+    sm: "8px 0px 8px 10px",
+    xs: "8px 0px 8px 10px",
   },
 };
 
-const contactTitleSx = {
-  color: theme.palette.custom.background,
-
-  fontWeight: 500,
-  minWidth: "100px",
-  fontSize: {
-    sm: "16px",
-    xs: "20px",
-  },
-};
-
-const contactElement = {
+const phoneButtonSx = {
   display: "flex",
   alignItems: "center",
-  zIndex: 3,
-  gap: "8px",
-  borderRadius: "10px",
+  justifyContent: "center",
+  position: "relative",
+  backgroundColor: "rgba(255, 255, 255, 0.08)",
+  borderRadius: "999px",
   padding: {
-    sm: "10px",
-    xs: "20px",
+    sm: "10px 20px",
+    xs: "15px 25px",
   },
   transition: "background-color 0.3s ease",
+  cursor: "pointer",
   "&:hover": {
-    cursor: "pointer",
-    backgroundColor: "rgba(255,255,255,0.1)",
+    backgroundColor: "rgba(255, 255, 255, 0.15)",
   },
+  pl: {
+    sm: "50px",
+    xs: "60px",
+  },
+  minWidth: "230px",
+};
+const emailButtonSx = {
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  position: "relative",
+  backgroundColor: "rgba(255, 255, 255, 0.08)",
+  borderRadius: "100px",
+  padding: {
+    sm: "10px 12px",
+    xs: "15px 25px",
+  },
+
+  cursor: "pointer",
+  "&:hover": {
+    backgroundColor: "rgba(255, 255, 255, 0.15)",
+  },
+  transition: "background-color 0.3s ease",
+};
+
+const phoneIconWrapperSx = {
+  position: "absolute",
+  left: "15px",
+  top: "50%",
+  transform: "translateY(-50%)",
+};
+
+const phoneIconSx = {
+  color: theme.palette.secondary.main,
+  fontSize: {
+    sm: "30px",
+    xs: "36px",
+  },
+  animation: "vibrateWithPause 2s infinite ease-in-out",
+  transformOrigin: "center",
+  "@keyframes vibrateWithPause": {
+    "0%": { transform: "rotate(0deg)" },
+    "5%": { transform: "rotate(-10deg)" },
+    "10%": { transform: "rotate(10deg)" },
+    "15%": { transform: "rotate(-6deg)" },
+    "20%": { transform: "rotate(6deg)" },
+    "25%": { transform: "rotate(0deg)" },
+    "50%": { transform: "rotate(0deg)" },
+    "100%": { transform: "rotate(0deg)" },
+  },
+};
+
+const iconTextSx = {
+  color: theme.palette.custom.background,
+  fontWeight: 500,
+  fontSize: {
+    xl: "18px",
+    lg: "18px",
+    md: "15px",
+    sm: "20px",
+    xs: "24px",
+  },
+  textAlign: "center",
 };
 
 const emailSx = {
@@ -90,7 +144,7 @@ const emailSx = {
   },
 };
 
-const contactIconSx = {
+const emailIconSx = {
   color: theme.palette.secondary.main,
   width: {
     sm: "20px",
@@ -100,6 +154,7 @@ const contactIconSx = {
     sm: "20px",
     xs: "28px",
   },
+  mr: "10px",
 };
 
 const ContactElements = ({ phoneNumber }: Props) => {
@@ -118,18 +173,20 @@ const ContactElements = ({ phoneNumber }: Props) => {
   return (
     <Box sx={containerSx}>
       <Box sx={elementsContainer}>
-        <Box sx={contactElement} onClick={handlePhoneClick}>
-          <LocalPhoneOutlinedIcon sx={contactIconSx} />
-          <Typography sx={contactTitleSx}>{phoneToDisplay}</Typography>
+        <Box sx={phoneButtonSx} onClick={handlePhoneClick}>
+          <Box sx={phoneIconWrapperSx}>
+            <LocalPhoneOutlinedIcon sx={phoneIconSx} />
+          </Box>
+          <Typography sx={iconTextSx}>{phoneToDisplay}</Typography>
         </Box>
 
         <Box sx={emailSx}>
           <VerticalSeparator />
         </Box>
 
-        <Box sx={{ ...contactElement, ...emailSx }} onClick={handleEmailClick}>
-          <EmailOutlinedIcon sx={contactIconSx} />
-          <Typography sx={contactTitleSx}>{emailAddress}</Typography>
+        <Box sx={{ ...emailButtonSx, ...emailSx }} onClick={handleEmailClick}>
+          <EmailOutlinedIcon sx={emailIconSx} />
+          <Typography sx={iconTextSx}>{emailAddress}</Typography>
         </Box>
 
         <SocialMedias />
