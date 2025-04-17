@@ -29,6 +29,7 @@ const DistrictsList = ({ city, content }: Props) => {
           locsTitle={districtsListText ? districtsListText : ""}
           locationsList={districtsLinks}
           addSx={{ color: theme.palette.primary.main, padding: "20px" }}
+          alignItems="start"
         />
       </Box>
     </Box>

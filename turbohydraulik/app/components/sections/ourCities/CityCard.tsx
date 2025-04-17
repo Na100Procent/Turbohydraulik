@@ -25,8 +25,7 @@ const container = {
     xs: "300px",
     xxs: "250px",
   },
-
-  padding: "0px 10px 10px 10px ",
+  padding: "20px",
   borderRadius: "12px",
   overflow: "hidden",
   backgroundColor: "#f5f5f5",
@@ -35,34 +34,27 @@ const container = {
   alignItems: "center",
   boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
 };
+
 const imgSx = {
-  marginTop: "10px",
-  width: "90%",
+  width: "100%",
   maxHeight: "180px",
   objectFit: "cover",
   borderRadius: "5px",
-};
-const cityNameSx = {
-  fontWeight: "bold",
-  color: theme.palette.primary.main,
-  fontSize: "18px",
-  minWidth: "100px",
 };
 
 const titleButtonSx = {
   display: "flex",
   justifyContent: "space-between",
   width: "100%",
-
   alignItems: {
     xl: "center",
     lg: "center",
     md: "center",
-    sm: "left",
-    xs: "left",
-    xxs: "left",
+    sm: "flex-start",
+    xs: "flex-start",
+    xxs: "flex-start",
   },
-  padding: "20px 20px 10px 20px",
+  marginTop: "10px",
   gap: "20px",
   flexDirection: {
     xl: "row",
@@ -74,6 +66,12 @@ const titleButtonSx = {
   },
 };
 
+const cityNameSx = {
+  fontWeight: "bold",
+  color: theme.palette.primary.main,
+  fontSize: "18px",
+  minWidth: "100px",
+};
 const CityCard = ({ cityName, cityUrl, cityCardUrl }: Props) => {
   return (
     <Link href={`${cityUrl}`}>

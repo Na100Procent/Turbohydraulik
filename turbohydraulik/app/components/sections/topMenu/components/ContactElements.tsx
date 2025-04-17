@@ -56,22 +56,25 @@ const elementsContainer = {
   },
 };
 
-const phoneButtonSx = {
+const contactButton = {
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
   position: "relative",
   backgroundColor: "rgba(255, 255, 255, 0.08)",
-  borderRadius: "999px",
-  padding: {
-    sm: "10px 20px",
-    xs: "15px 25px",
-  },
+  borderRadius: "5px",
   transition: "background-color 0.3s ease",
   cursor: "pointer",
   "&:hover": {
     backgroundColor: "rgba(255, 255, 255, 0.15)",
   },
+  padding: {
+    sm: "8px 20px",
+    xs: "8px 25px",
+  },
+};
+const phoneButtonSx = {
+  ...contactButton,
   pl: {
     sm: "50px",
     xs: "60px",
@@ -79,22 +82,7 @@ const phoneButtonSx = {
   minWidth: "230px",
 };
 const emailButtonSx = {
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-  position: "relative",
-  backgroundColor: "rgba(255, 255, 255, 0.08)",
-  borderRadius: "100px",
-  padding: {
-    sm: "10px 12px",
-    xs: "15px 25px",
-  },
-
-  cursor: "pointer",
-  "&:hover": {
-    backgroundColor: "rgba(255, 255, 255, 0.15)",
-  },
-  transition: "background-color 0.3s ease",
+  ...contactButton,
 };
 
 const phoneIconWrapperSx = {

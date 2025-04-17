@@ -13,23 +13,8 @@ interface Props {
   locationsList: LinkElement[];
   separator?: string;
   addSx?: SxProps<Theme>;
+  alignItems?: "start" | "center";
 }
-
-const elementSx = {
-  fontWeight: "300",
-  fontSize: "14px",
-  display: "flex",
-  gap: "10px",
-  width: "150px",
-
-  transition: "background-color 0.3s ease",
-  "&:hover": {
-    cursor: "pointer",
-    backgroundColor: "rgba(15, 14, 14, 0.1)",
-  },
-  padding: "5px",
-  borderRadius: "5px",
-};
 
 const containerSx = {
   color: theme.palette.custom.background,
@@ -57,14 +42,37 @@ const TitledVerticalList = ({
   locationsList,
   separator,
   addSx,
+  alignItems,
 }: Props) => {
+  const elementSx = {
+    fontWeight: "300",
+    fontSize: "14px",
+    display: "flex",
+    gap: "20px",
+
+    transition: "background-color 0.3s ease",
+    "&:hover": {
+      cursor: "pointer",
+      backgroundColor: "rgba(15, 14, 14, 0.1)",
+    },
+    padding: "5px",
+    borderRadius: "5px",
+    minWidth: {
+      xl: "auto",
+      lg: "auto",
+      md: "auto",
+      sm: alignItems ? "150px" : "auto",
+      xs: alignItems ? "150px" : "auto",
+      xxs: alignItems ? "150px" : "auto",
+    },
+  };
+
   return (
     <Box sx={{ ...containerSx, ...addSx, flexDirection: "column" }}>
       {locsTitle && (
         <Typography
           fontWeight="200"
-          pt="20px"
-          pb="50px"
+          py="20px"
           fontSize="22px"
           color={theme.palette.custom.darkGray}
         >
@@ -76,14 +84,7 @@ const TitledVerticalList = ({
         sx={{
           display: "flex",
           flexWrap: "wrap",
-          justifyContent: {
-            xl: "start",
-            lg: "start",
-            md: "start",
-            sm: "start",
-            xs: "center",
-            xxs: "center",
-          },
+          justifyContent: alignItems ? alignItems : "center",
           gap: "20px",
         }}
       >

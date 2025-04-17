@@ -14,7 +14,7 @@ const ScrollCityList = () => {
     .sort((a, b) => a.title.localeCompare(b.title));
 
   const citiesElements = cityNamesUrls.map((city) => (
-    <Box key={city.title} padding="5px">
+    <Box key={city.title} paddingX="5px">
       <CityCard
         cityName={city.title}
         cityUrl={city.url}

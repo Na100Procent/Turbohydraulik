@@ -12,7 +12,7 @@ import { sectionXPadding } from "@/app/constants/styles";
 import { citiesData, homepageDataContent } from "@/app/data/data";
 import LazyReveal from "./LazyReveal";
 
-const LocationsListSx = {
+const locationsListSx = {
   width: "100%",
   display: "flex",
   justifyContent: {
@@ -23,7 +23,19 @@ const LocationsListSx = {
     xs: "center",
     xxs: "center",
   },
-  mt: "50px",
+};
+
+const buttonSx = {
+  display: "flex",
+  justifyContent: {
+    xl: "left",
+    lg: "left",
+    md: "left",
+    sm: "center",
+    xs: "center",
+    xxs: "center",
+  },
+  mt: "30px",
 };
 
 const OurCities = () => {
@@ -47,15 +59,15 @@ const OurCities = () => {
         </SectionPaddingWrapper>
         <LazyReveal>
           <ScrollCityList />
-          <Box display={"flex"} justifyContent="center">
-            <CallUsButton />
-          </Box>
-          <Box sx={LocationsListSx}>
+          <Box sx={locationsListSx}>
             <LocationsList
               locsTitle="JESTEŚMY W MIASTACH"
               addSx={{ color: theme.palette.primary.main }}
               locationsList={cityNamesUrls}
             />
+          </Box>
+          <Box sx={buttonSx}>
+            <CallUsButton />
           </Box>
         </LazyReveal>
       </Box>

@@ -10,6 +10,7 @@ const containerSx = {
   display: "flex",
   justifyContent: "space-between",
   alignItems: "center",
+  paddingX: "10px",
 };
 
 const TopMenuMobile = () => {
@@ -21,9 +22,7 @@ const TopMenuMobile = () => {
 
   return (
     <Box sx={containerSx}>
-      <Box sx={{ scale: 0.6 }}>
-        <LogoContainer />
-      </Box>
+      <LogoContainer small />
 
       <IconButton
         aria-label="menu"
