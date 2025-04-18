@@ -8,6 +8,7 @@ interface Props {
   headerColor?: string;
   bottomHeader?: string;
   bottomHeaderColor?: string;
+  middleHeader?: string;
 }
 
 const separatorContainer = {
@@ -51,6 +52,7 @@ const SectionCenterHeader = ({
   header,
   headerColor,
   bottomHeaderColor,
+  middleHeader,
 }: Props) => {
   const headerSx = {
     fontWeight: "700",
@@ -92,6 +94,18 @@ const SectionCenterHeader = ({
       <Typography variant="h2" sx={headerSx}>
         {header}
       </Typography>
+      {middleHeader && (
+        <Typography
+          variant="h3"
+          sx={{
+            ...headerSx,
+            fontSize: "25px",
+            color: "rgb(158, 157, 157)",
+          }}
+        >
+          {middleHeader}
+        </Typography>
+      )}
       {bottomHeader && (
         <Typography sx={bottomHeaderSx}>{bottomHeader}</Typography>
       )}

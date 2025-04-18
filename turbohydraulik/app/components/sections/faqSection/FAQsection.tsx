@@ -63,6 +63,7 @@ const FAQsection = ({ phoneNumber }: Props) => {
             header="Najczęściej zadawane pytania"
             bottomHeader="Znajdź odpowiedzi na najczęściej zadawane pytania dotyczące naszych usług hydraulicznych. Jeśli nie możesz znaleźć odpowiedzi, skontaktuj się z nami!"
             headerColor={theme.palette.primary.main}
+            middleHeader="FAQ"
           />
           <Box sx={contentSx}>
             <FAQElements />
