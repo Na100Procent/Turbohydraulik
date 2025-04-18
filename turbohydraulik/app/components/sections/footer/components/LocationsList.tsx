@@ -74,6 +74,7 @@ const TitledVerticalList = ({
           fontWeight="200"
           py="20px"
           fontSize="22px"
+          textAlign={"center"}
           color={theme.palette.custom.darkGray}
         >
           {locsTitle}

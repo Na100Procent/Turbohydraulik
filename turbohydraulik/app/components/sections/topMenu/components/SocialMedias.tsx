@@ -55,6 +55,7 @@ const SocialMedias = () => {
       <Link
         href={facebookUrl}
         target="_blank"
+        rel="noopener noreferrer"
         aria-label="Facebook"
         style={{ display: "inline-flex" }}
       >

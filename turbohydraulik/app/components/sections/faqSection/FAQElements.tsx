@@ -84,7 +84,7 @@ const FAQElements = () => {
             justifyContent="space-between"
             alignItems="center"
           >
-            <Typography variant="h3" sx={questionSx}>
+            <Typography variant="h4" sx={questionSx}>
               {faq.question}
             </Typography>
             <IconButton
