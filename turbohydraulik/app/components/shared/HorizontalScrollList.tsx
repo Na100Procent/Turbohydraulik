@@ -12,7 +12,14 @@ interface HorizontalScrollListProps {
 const container = {
   width: "100%",
   overflow: "hidden",
-  padding: "0 0 60px 0",
+  paddingBottom: {
+    xl: "60px",
+    lg: "60px",
+    md: "60px",
+    sm: "60px",
+    xs: "10px",
+    xxs: "10px",
+  },
 };
 
 const HorizontalScrollList: React.FC<HorizontalScrollListProps> = ({

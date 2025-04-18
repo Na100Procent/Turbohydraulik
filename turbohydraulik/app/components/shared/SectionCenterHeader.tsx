@@ -74,7 +74,7 @@ const SectionCenterHeader = ({
     fontWeight: "500",
     fontSize: "15px",
     color: bottomHeaderColor ? bottomHeaderColor : "#565656",
-    marginTop: "20px",
+    marginTop: "10px",
 
     textAlign: {
       xl: "center",
@@ -100,6 +100,7 @@ const SectionCenterHeader = ({
           sx={{
             ...headerSx,
             fontSize: "25px",
+
             color: "rgb(158, 157, 157)",
           }}
         >
